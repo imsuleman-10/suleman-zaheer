@@ -22,6 +22,11 @@
     "trailingSlash": false,
     "redirects": [
       {
+        "source": "/",
+        "destination": "https://suleman-zaheer.vercel.app/",
+        "type": 301
+      },
+      {
         "source": "/:path*",
         "destination": "https://suleman-zaheer.vercel.app/:path*",
         "type": 301
