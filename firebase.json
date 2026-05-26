@@ -20,6 +20,13 @@
     ],
     "cleanUrls": true,
     "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/:path*",
+        "destination": "https://suleman-zaheer.vercel.app/:path*",
+        "type": 301
+      }
+    ],
     "headers": [
       {
         "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
