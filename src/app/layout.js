@@ -34,7 +34,7 @@ export const metadata = {
     canonical: "https://suleman-zaheer.web.app/",
   },
   verification: {
-    google: "0MvPeAkskh56BvOsK06ljmPRdUT3uTfblP47yllkbb4",
+    google: "uBDdd9LVXSMHdf7bez07kPshlb4k5-mAPjCA1MbMGco",
     yandex: "e8f75b1744e6f354",
     bing: "66d27f4ee0ae43e381cbf88082fcfd01",
   },
