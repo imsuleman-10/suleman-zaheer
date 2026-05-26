@@ -13,16 +13,16 @@ export const metadata = {
   title: 'Developer Blog | Suleman Zaheer — Full Stack Engineer',
   description: '16 in-depth technical articles on MERN Stack, Next.js, React performance, Node.js security, TypeScript, freelancing, and UI/UX — written from real project experience by Suleman Zaheer.',
   keywords: 'Web Development, MERN Stack, Next.js, React, Node.js, TypeScript, Frontend, Backend, Full Stack Developer, Freelancer, Pakistan Tech, Software Engineering, System Design',
-  alternates: { canonical: 'https://suleman-zaheer.web.app/blog' },
+  alternates: { canonical: 'https://suleman-zaheer.vercel.app/blog' },
   openGraph: {
     title: 'Developer Blog | Suleman Zaheer',
     description: '16 in-depth technical articles on MERN Stack, Next.js, React, and modern web engineering.',
-    url: 'https://suleman-zaheer.web.app/blog',
+    url: 'https://suleman-zaheer.vercel.app/blog',
     siteName: 'Suleman Zaheer Portfolio',
     type: 'website',
     images: [
       {
-        url: 'https://suleman-zaheer.web.app/assets/author.jpg',
+        url: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
         width: 1200,
         height: 1200,
         alt: 'Suleman Zaheer - Full Stack Developer & Technical Writer',
@@ -39,7 +39,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Developer Blog | Suleman Zaheer',
     description: '16 expert articles on MERN, Next.js, React, Node.js, TypeScript, and more.',
-    image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+    image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
   },
 };
 
@@ -90,18 +90,18 @@ export default async function BlogPage() {
     '@type': 'Blog',
     name: 'Suleman Zaheer – Developer Blog',
     description: 'In-depth articles on MERN Stack, Next.js, React, Node.js, UI/UX, freelancing, and software engineering by Suleman Zaheer.',
-    url: 'https://suleman-zaheer.web.app/blog',
+    url: 'https://suleman-zaheer.vercel.app/blog',
     author: {
       '@type': 'Person',
       name: 'Suleman Zaheer',
-      url: 'https://suleman-zaheer.web.app',
-      image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+      url: 'https://suleman-zaheer.vercel.app',
+      image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
       sameAs: [
         'https://github.com/imsuleman-10',
         'https://www.linkedin.com/in/suleman-zaheer-mughal',
       ],
     },
-    image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+    image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
     blogPost: posts.map(post => ({
       '@type': 'BlogPosting',
       headline: post.title,
@@ -111,12 +111,12 @@ export default async function BlogPage() {
       author: { 
         '@type': 'Person', 
         name: 'Suleman Zaheer',
-        image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+        image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
       },
-      url: `https://suleman-zaheer.web.app/blog/${post.slug}`,
+      url: `https://suleman-zaheer.vercel.app/blog/${post.slug}`,
       image: {
         '@type': 'ImageObject',
-        url: post.coverImage || 'https://suleman-zaheer.web.app/assets/author.jpg',
+        url: post.coverImage || 'https://suleman-zaheer.vercel.app/assets/author.jpg',
         width: 1200,
         height: 630,
       },

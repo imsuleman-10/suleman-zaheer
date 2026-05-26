@@ -83,7 +83,7 @@ export async function generateMetadata({ params }) {
     title,
     description: desc,
     keywords: keywords.join(', '),
-    alternates: { canonical: `https://suleman-zaheer.web.app/poetry/${poem.slug}` },
+    alternates: { canonical: `https://suleman-zaheer.vercel.app/poetry/${poem.slug}` },
     openGraph: {
       title,
       description: desc,
@@ -92,7 +92,7 @@ export async function generateMetadata({ params }) {
       authors: ['Suleman Zaheer'],
       images: [
         {
-          url: 'https://suleman-zaheer.web.app/assets/author.jpg',
+          url: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
           width: 1200,
           height: 1200,
           alt: 'Suleman Zaheer - Poet & Author',
@@ -109,7 +109,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title,
       description: desc,
-      image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+      image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
     },
   };
 }
@@ -138,7 +138,7 @@ export default async function Page({ params }) {
     dateModified: poem.updatedAt || poem.publishedAt || new Date().toISOString(),
     image: {
       '@type': 'ImageObject',
-      url: 'https://suleman-zaheer.web.app/assets/author.jpg',
+      url: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
       width: 1200,
       height: 1200,
       alt: 'Suleman Zaheer - Poet & Author',
@@ -146,8 +146,8 @@ export default async function Page({ params }) {
     author: {
       '@type': 'Person',
       name: 'Suleman Zaheer',
-      url: 'https://suleman-zaheer.web.app',
-      image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+      url: 'https://suleman-zaheer.vercel.app',
+      image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
       sameAs: [
         'https://github.com/imsuleman-10',
         'https://www.linkedin.com/in/suleman-zaheer-mughal',
@@ -155,7 +155,7 @@ export default async function Page({ params }) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://suleman-zaheer.web.app/poetry/${poem.slug}`,
+      '@id': `https://suleman-zaheer.vercel.app/poetry/${poem.slug}`,
     },
     breadcrumb: {
       '@type': 'BreadcrumbList',
@@ -164,19 +164,19 @@ export default async function Page({ params }) {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://suleman-zaheer.web.app',
+          item: 'https://suleman-zaheer.vercel.app',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Poetry',
-          item: 'https://suleman-zaheer.web.app/poetry',
+          item: 'https://suleman-zaheer.vercel.app/poetry',
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: poem.title,
-          item: `https://suleman-zaheer.web.app/poetry/${poem.slug}`,
+          item: `https://suleman-zaheer.vercel.app/poetry/${poem.slug}`,
         },
       ],
     },

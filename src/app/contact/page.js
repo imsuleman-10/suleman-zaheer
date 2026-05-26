@@ -11,12 +11,12 @@ export const metadata = {
     "Hire Next.js Developer Pakistan", "Hire Node.js Developer Pakistan"
   ],
   alternates: {
-    canonical: "https://suleman-zaheer.web.app/contact",
+    canonical: "https://suleman-zaheer.vercel.app/contact",
   },
   openGraph: {
     title: "Contact Suleman Zaheer – Hire Full Stack Developer",
     description: "Hire Suleman Zaheer for enterprise-grade web development. MERN Stack, Next.js, React, Node.js expert based in Lahore, Pakistan.",
-    url: "https://suleman-zaheer.web.app/contact",
+    url: "https://suleman-zaheer.vercel.app/contact",
     images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Contact Suleman Zaheer – Full Stack Developer" }],
   },
 };
@@ -26,8 +26,8 @@ export default function ContactPage() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Suleman Zaheer Web Development Services",
-    "image": "https://suleman-zaheer.web.app/assets/suleman-zaheer-full-stack-developer.jpg",
-    "url": "https://suleman-zaheer.web.app/contact",
+    "image": "https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg",
+    "url": "https://suleman-zaheer.vercel.app/contact",
     "telephone": "+923284146031",
     "priceRange": "$$",
     "address": {

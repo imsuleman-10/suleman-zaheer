@@ -10,12 +10,12 @@ export const metadata = {
     "Full Stack Developer CV Lahore", "UET Lahore Student CV"
   ],
   alternates: {
-    canonical: "https://suleman-zaheer.web.app/cv",
+    canonical: "https://suleman-zaheer.vercel.app/cv",
   },
   openGraph: {
     title: "Suleman Zaheer CV – Professional Resume & Qualifications",
     description: "View and download the professional CV of Suleman Zaheer. Full Stack Developer and CS student at UET Lahore.",
-    url: "https://suleman-zaheer.web.app/cv",
+    url: "https://suleman-zaheer.vercel.app/cv",
     images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer CV" }],
   },
 };

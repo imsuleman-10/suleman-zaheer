@@ -44,7 +44,7 @@ export default function CVClient() {
               <div className="flex items-center gap-2"><Linkedin size={12} className="text-primary" /> suleman-zaheer-mughal</div>
               <div className="flex items-center gap-2"><Github size={12} className="text-primary" /> imsuleman-10</div>
               <div className="flex items-center gap-2"><MapPin size={12} className="text-primary" /> Lahore, Pakistan</div>
-              <div className="flex items-center gap-2"><Globe size={12} className="text-primary" /> suleman-zaheer.web.app</div>
+              <div className="flex items-center gap-2"><Globe size={12} className="text-primary" /> suleman-zaheer.vercel.app</div>
             </div>
           </div>
         </div>

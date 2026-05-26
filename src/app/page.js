@@ -12,12 +12,12 @@ export const metadata = {
     "Next.js", "Node.js", "Web Developer Lahore", "UET Lahore", "Software Engineer"
   ],
   alternates: {
-    canonical: "https://suleman-zaheer.web.app/",
+    canonical: "https://suleman-zaheer.vercel.app/",
   },
   openGraph: {
     title: "Suleman Zaheer – Full Stack Developer",
     description: "Portfolio of Suleman Zaheer. MERN Stack & Next.js developer from UET Lahore.",
-    url: "https://suleman-zaheer.web.app/",
+    url: "https://suleman-zaheer.vercel.app/",
     images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer" }],
   },
 };

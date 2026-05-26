@@ -208,7 +208,7 @@ Respond ONLY with a valid JSON object matching this structure:
           headers: {
             'Authorization': `Bearer ${apiKey}`,
             'Content-Type': 'application/json',
-            ...(provider === 'OpenRouter' && { 'HTTP-Referer': 'https://suleman-zaheer.web.app', 'X-Title': 'Portfolio Admin' })
+            ...(provider === 'OpenRouter' && { 'HTTP-Referer': 'https://suleman-zaheer.vercel.app', 'X-Title': 'Portfolio Admin' })
           },
           body: JSON.stringify({
             model: fetchModel,

@@ -15,12 +15,12 @@ export const metadata = {
     "React Developer Pakistan", "Node.js Laravel Developer Pakistan"
   ],
   alternates: {
-    canonical: "https://suleman-zaheer.web.app/about",
+    canonical: "https://suleman-zaheer.vercel.app/about",
   },
   openGraph: {
     title: "About Suleman Zaheer – Full Stack Developer, Software Engineer & Writer",
     description: "Suleman Zaheer is a Full Stack Developer, Writer, and CS student at UET Lahore. Specializing in MERN Stack, Next.js, Laravel, and scalable web applications.",
-    url: "https://suleman-zaheer.web.app/about",
+    url: "https://suleman-zaheer.vercel.app/about",
     images: [{ url: "/assets/suleman-zaheer-software-engineer.jpg", width: 800, height: 800, alt: "Suleman Zaheer – Full Stack Developer, Software Engineer and Writer" }],
   },
   twitter: {

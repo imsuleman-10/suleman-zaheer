@@ -284,7 +284,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     keywords: tagsStr,
-    alternates: { canonical: `https://suleman-zaheer.web.app/blog/${blog.slug}` },
+    alternates: { canonical: `https://suleman-zaheer.vercel.app/blog/${blog.slug}` },
     openGraph: {
       title,
       description,
@@ -295,8 +295,8 @@ export async function generateMetadata({ params }) {
       images: blog.coverImage
         ? [{ url: blog.coverImage, width: 1200, height: 630, alt: blog.title }]
         : [
-            { url: 'https://suleman-zaheer.web.app/assets/author.jpg', width: 1200, height: 1200, alt: 'Suleman Zaheer - Author' },
-            { url: 'https://suleman-zaheer.web.app/assets/suleman-zaheer-full-stack-developer.jpg', width: 1200, height: 630 }
+            { url: 'https://suleman-zaheer.vercel.app/assets/author.jpg', width: 1200, height: 1200, alt: 'Suleman Zaheer - Author' },
+            { url: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg', width: 1200, height: 630 }
           ],
     },
     twitter: {
@@ -305,7 +305,7 @@ export async function generateMetadata({ params }) {
       description,
       images: blog.coverImage
         ? [blog.coverImage]
-        : ['https://suleman-zaheer.web.app/assets/author.jpg'],
+        : ['https://suleman-zaheer.vercel.app/assets/author.jpg'],
     },
   };
 }
@@ -331,8 +331,8 @@ export default async function Page({ params }) {
     author: {
       '@type': 'Person',
       name: 'Suleman Zaheer',
-      url: 'https://suleman-zaheer.web.app',
-      image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+      url: 'https://suleman-zaheer.vercel.app',
+      image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
       sameAs: [
         'https://github.com/imsuleman-10',
         'https://www.linkedin.com/in/suleman-zaheer-mughal',
@@ -343,7 +343,7 @@ export default async function Page({ params }) {
       name: 'Suleman Zaheer',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://suleman-zaheer.web.app/assets/suleman-zaheer-logo.png',
+        url: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-logo.png',
         width: 400,
         height: 400,
       },
@@ -351,14 +351,14 @@ export default async function Page({ params }) {
     keywords: blog.tags ? blog.tags.join(', ') : '',
     image: {
       '@type': 'ImageObject',
-      url: blog.coverImage || 'https://suleman-zaheer.web.app/assets/author.jpg',
+      url: blog.coverImage || 'https://suleman-zaheer.vercel.app/assets/author.jpg',
       width: 1200,
       height: 630,
       alt: blog.title,
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://suleman-zaheer.web.app/blog/${blog.slug}`,
+      '@id': `https://suleman-zaheer.vercel.app/blog/${blog.slug}`,
     },
     breadcrumb: {
       '@type': 'BreadcrumbList',
@@ -367,19 +367,19 @@ export default async function Page({ params }) {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://suleman-zaheer.web.app',
+          item: 'https://suleman-zaheer.vercel.app',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Blog',
-          item: 'https://suleman-zaheer.web.app/blog',
+          item: 'https://suleman-zaheer.vercel.app/blog',
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: blog.title,
-          item: `https://suleman-zaheer.web.app/blog/${blog.slug}`,
+          item: `https://suleman-zaheer.vercel.app/blog/${blog.slug}`,
         },
       ],
     },

@@ -1,6 +1,6 @@
 import https from 'https';
 
-const host = 'suleman-zaheer.web.app';
+const host = 'suleman-zaheer.vercel.app';
 const key = '66d27f4ee0ae43e381cbf88082fcfd01';
 const keyLocation = `https://${host}/${key}.txt`;
 

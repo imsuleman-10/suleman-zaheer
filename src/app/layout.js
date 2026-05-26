@@ -15,7 +15,7 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://suleman-zaheer.web.app'),
+  metadataBase: new URL('https://suleman-zaheer.vercel.app'),
   title: {
     default: "Suleman Zaheer – Full Stack Developer & Software Engineer | Official Portfolio",
     template: "%s | Suleman Zaheer – Full Stack Developer"
@@ -26,12 +26,12 @@ export const metadata = {
     "UET Lahore", "MERN Stack", "React", "Next.js", "Laravel"
   ],
   authors: [
-    { name: "Suleman Zaheer", url: "https://suleman-zaheer.web.app/" }
+    { name: "Suleman Zaheer", url: "https://suleman-zaheer.vercel.app/" }
   ],
   creator: "Suleman Zaheer",
   publisher: "Suleman Zaheer",
   alternates: {
-    canonical: "https://suleman-zaheer.web.app/",
+    canonical: "https://suleman-zaheer.vercel.app/",
   },
   verification: {
     google: "uBDdd9LVXSMHdf7bez07kPshlb4k5-mAPjCA1MbMGco",
@@ -50,7 +50,7 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  sitemaps: ["https://suleman-zaheer.web.app/sitemap.xml"],
+  sitemaps: ["https://suleman-zaheer.vercel.app/sitemap.xml"],
   icons: {
     icon: [
       { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
@@ -63,7 +63,7 @@ export const metadata = {
   openGraph: {
     title: "Suleman Zaheer – Full Stack Developer & Software Engineer | Official Portfolio",
     description: "Official portfolio of Suleman Zaheer. Full Stack MERN Developer, Next.js & React Expert, Software Engineering student at UET Lahore. Building premium, scalable web applications. Based in Lahore, Pakistan.",
-    url: "https://suleman-zaheer.web.app/",
+    url: "https://suleman-zaheer.vercel.app/",
     siteName: "Suleman Zaheer – Official Portfolio",
     images: [
       {
@@ -126,20 +126,20 @@ export default function RootLayout({ children }) {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      '@id': 'https://suleman-zaheer.web.app/#website',
+      '@id': 'https://suleman-zaheer.vercel.app/#website',
       name: 'Suleman Zaheer – Official Portfolio',
       alternateName: ['Suleman Zaheer Portfolio', 'Suleman Zaheer Website', 'Suleman Zaheer Official'],
       description: 'Official portfolio website of Suleman Zaheer – Full Stack Developer, Software Engineer, and MERN Stack Expert from UET Lahore, Pakistan.',
-      url: 'https://suleman-zaheer.web.app/',
+      url: 'https://suleman-zaheer.vercel.app/',
       inLanguage: 'en-PK',
       publisher: {
-        '@id': 'https://suleman-zaheer.web.app/#person'
+        '@id': 'https://suleman-zaheer.vercel.app/#person'
       },
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://suleman-zaheer.web.app/?q={search_term_string}'
+          urlTemplate: 'https://suleman-zaheer.vercel.app/?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }
@@ -149,15 +149,15 @@ export default function RootLayout({ children }) {
     {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://suleman-zaheer.web.app/#person',
+      '@id': 'https://suleman-zaheer.vercel.app/#person',
       name: 'Suleman Zaheer',
       givenName: 'Suleman',
       familyName: 'Zaheer',
       additionalName: 'Mughal',
-      url: 'https://suleman-zaheer.web.app/',
+      url: 'https://suleman-zaheer.vercel.app/',
       image: {
         '@type': 'ImageObject',
-        url: 'https://suleman-zaheer.web.app/assets/suleman-zaheer-full-stack-developer.jpg',
+        url: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg',
         width: 1200,
         height: 630,
         caption: 'Suleman Zaheer – Full Stack Developer and Software Engineer'
@@ -190,11 +190,11 @@ export default function RootLayout({ children }) {
       },
       worksFor: {
         '@type': 'Organization',
-        '@id': 'https://suleman-zaheer.web.app/#organization',
+        '@id': 'https://suleman-zaheer.vercel.app/#organization',
         name: 'Suleman Zaheer Tech',
-        url: 'https://suleman-zaheer.web.app/',
+        url: 'https://suleman-zaheer.vercel.app/',
         founder: {
-          '@id': 'https://suleman-zaheer.web.app/#person'
+          '@id': 'https://suleman-zaheer.vercel.app/#person'
         }
       },
       alumniOf: [
@@ -276,11 +276,11 @@ export default function RootLayout({ children }) {
         'https://pk.linkedin.com/in/suleman-zaheer-mughal',
         'https://www.instagram.com/imsuleman.10/',
         'https://web.facebook.com/Iamsuleman.10',
-        'https://suleman-zaheer.web.app/'
+        'https://suleman-zaheer.vercel.app/'
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://suleman-zaheer.web.app/'
+        '@id': 'https://suleman-zaheer.vercel.app/'
       }
     },
 
@@ -288,28 +288,28 @@ export default function RootLayout({ children }) {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      '@id': 'https://suleman-zaheer.web.app/#webpage',
-      url: 'https://suleman-zaheer.web.app/',
+      '@id': 'https://suleman-zaheer.vercel.app/#webpage',
+      url: 'https://suleman-zaheer.vercel.app/',
       name: 'Suleman Zaheer – Full Stack Developer & Software Engineer | Official Portfolio',
       description: 'Official portfolio of Suleman Zaheer – Full Stack MERN Developer and Software Engineer from UET Lahore, Pakistan.',
       inLanguage: 'en-PK',
       isPartOf: {
-        '@id': 'https://suleman-zaheer.web.app/#website'
+        '@id': 'https://suleman-zaheer.vercel.app/#website'
       },
       about: {
-        '@id': 'https://suleman-zaheer.web.app/#person'
+        '@id': 'https://suleman-zaheer.vercel.app/#person'
       },
       datePublished: '2024-01-01',
       dateModified: new Date().toISOString().split('T')[0],
       author: {
-        '@id': 'https://suleman-zaheer.web.app/#person'
+        '@id': 'https://suleman-zaheer.vercel.app/#person'
       },
       primaryImageOfPage: {
         '@type': 'ImageObject',
-        url: 'https://suleman-zaheer.web.app/assets/suleman-zaheer-full-stack-developer.jpg'
+        url: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg'
       },
       breadcrumb: {
-        '@id': 'https://suleman-zaheer.web.app/#breadcrumb'
+        '@id': 'https://suleman-zaheer.vercel.app/#breadcrumb'
       }
     },
 
@@ -317,43 +317,43 @@ export default function RootLayout({ children }) {
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      '@id': 'https://suleman-zaheer.web.app/#breadcrumb',
+      '@id': 'https://suleman-zaheer.vercel.app/#breadcrumb',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Suleman Zaheer – Home',
-          item: 'https://suleman-zaheer.web.app/'
+          item: 'https://suleman-zaheer.vercel.app/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'About Suleman Zaheer',
-          item: 'https://suleman-zaheer.web.app/about'
+          item: 'https://suleman-zaheer.vercel.app/about'
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: 'Suleman Zaheer Projects',
-          item: 'https://suleman-zaheer.web.app/projects'
+          item: 'https://suleman-zaheer.vercel.app/projects'
         },
         {
           '@type': 'ListItem',
           position: 4,
           name: 'Suleman Zaheer Blog',
-          item: 'https://suleman-zaheer.web.app/blog'
+          item: 'https://suleman-zaheer.vercel.app/blog'
         },
         {
           '@type': 'ListItem',
           position: 5,
           name: 'Suleman Zaheer CV',
-          item: 'https://suleman-zaheer.web.app/cv'
+          item: 'https://suleman-zaheer.vercel.app/cv'
         },
         {
           '@type': 'ListItem',
           position: 6,
           name: 'Contact Suleman Zaheer',
-          item: 'https://suleman-zaheer.web.app/contact'
+          item: 'https://suleman-zaheer.vercel.app/contact'
         }
       ]
     },
@@ -362,16 +362,16 @@ export default function RootLayout({ children }) {
     {
       '@context': 'https://schema.org',
       '@type': 'ProfessionalService',
-      '@id': 'https://suleman-zaheer.web.app/#service',
+      '@id': 'https://suleman-zaheer.vercel.app/#service',
       name: 'Suleman Zaheer – Web Development Services',
       description: 'Professional Full Stack Web Development services by Suleman Zaheer. Specializing in MERN Stack, Next.js, React, Node.js, Laravel, and enterprise-grade web solutions.',
-      url: 'https://suleman-zaheer.web.app/',
-      image: 'https://suleman-zaheer.web.app/assets/suleman-zaheer-full-stack-developer.jpg',
+      url: 'https://suleman-zaheer.vercel.app/',
+      image: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg',
       telephone: '+923285778715',
       email: 'samstacktechs@gmail.com',
       priceRange: '$$',
       founder: {
-        '@id': 'https://suleman-zaheer.web.app/#person'
+        '@id': 'https://suleman-zaheer.vercel.app/#person'
       },
       address: {
         '@type': 'PostalAddress',
@@ -421,13 +421,13 @@ export default function RootLayout({ children }) {
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      '@id': 'https://suleman-zaheer.web.app/#organization',
+      '@id': 'https://suleman-zaheer.vercel.app/#organization',
       name: 'Suleman Zaheer Tech',
       alternateName: 'SAM Tech',
-      url: 'https://suleman-zaheer.web.app/',
-      logo: 'https://suleman-zaheer.web.app/sfavicon.png',
+      url: 'https://suleman-zaheer.vercel.app/',
+      logo: 'https://suleman-zaheer.vercel.app/sfavicon.png',
       founder: {
-        '@id': 'https://suleman-zaheer.web.app/#person'
+        '@id': 'https://suleman-zaheer.vercel.app/#person'
       },
       description: 'Technology brand founded by Suleman Zaheer, offering professional web development and software engineering services.',
       address: {
@@ -454,12 +454,12 @@ export default function RootLayout({ children }) {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       itemListElement: [
-        { '@type': 'SiteNavigationElement', position: 1, name: 'Home', url: 'https://suleman-zaheer.web.app/' },
-        { '@type': 'SiteNavigationElement', position: 2, name: 'About Suleman Zaheer', url: 'https://suleman-zaheer.web.app/about' },
-        { '@type': 'SiteNavigationElement', position: 3, name: 'Projects by Suleman Zaheer', url: 'https://suleman-zaheer.web.app/projects' },
-        { '@type': 'SiteNavigationElement', position: 4, name: 'Suleman Zaheer Blog', url: 'https://suleman-zaheer.web.app/blog' },
-        { '@type': 'SiteNavigationElement', position: 5, name: 'Suleman Zaheer CV', url: 'https://suleman-zaheer.web.app/cv' },
-        { '@type': 'SiteNavigationElement', position: 6, name: 'Contact Suleman Zaheer', url: 'https://suleman-zaheer.web.app/contact' }
+        { '@type': 'SiteNavigationElement', position: 1, name: 'Home', url: 'https://suleman-zaheer.vercel.app/' },
+        { '@type': 'SiteNavigationElement', position: 2, name: 'About Suleman Zaheer', url: 'https://suleman-zaheer.vercel.app/about' },
+        { '@type': 'SiteNavigationElement', position: 3, name: 'Projects by Suleman Zaheer', url: 'https://suleman-zaheer.vercel.app/projects' },
+        { '@type': 'SiteNavigationElement', position: 4, name: 'Suleman Zaheer Blog', url: 'https://suleman-zaheer.vercel.app/blog' },
+        { '@type': 'SiteNavigationElement', position: 5, name: 'Suleman Zaheer CV', url: 'https://suleman-zaheer.vercel.app/cv' },
+        { '@type': 'SiteNavigationElement', position: 6, name: 'Contact Suleman Zaheer', url: 'https://suleman-zaheer.vercel.app/contact' }
       ]
     }
   ];

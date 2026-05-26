@@ -32,7 +32,7 @@ export async function generateMetadata() {
     title: `Portfolio Gallery (${imageCount} Projects) | Suleman Zaheer`,
     description: `Explore ${imageCount > 0 ? imageCount + '+' : 'the complete'} portfolio images of Suleman Zaheer. Creative work, web designs, and software architectures.`,
     alternates: {
-      canonical: 'https://suleman-zaheer.web.app/gallery-seo',
+      canonical: 'https://suleman-zaheer.vercel.app/gallery-seo',
     },
     openGraph: {
       title: 'Creative Portfolio Gallery | Suleman Zaheer',
@@ -51,7 +51,7 @@ const buildGallerySchema = (images) => ({
   '@type': 'ImageGallery',
   name: 'Portfolio Image Gallery - Suleman Zaheer',
   description: 'A showcase of creative work, web designs, and projects by Suleman Zaheer.',
-  url: 'https://suleman-zaheer.web.app/gallery-seo',
+  url: 'https://suleman-zaheer.vercel.app/gallery-seo',
   image: images.map(img => ({
     '@type': 'ImageObject',
     url: img.url,

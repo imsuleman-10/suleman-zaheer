@@ -12,17 +12,17 @@ export const metadata = {
     'Explore a curated sanctuary of deep Urdu Ghazals, Nazms, and English poems by Suleman Zaheer. An immersive journey where silence meets expression.',
   keywords:
     'Poetry, Ghazals, Nazms, Urdu Poetry, English Poetry, Suleman Zaheer, Writer, Pakistani Poet, Urdu Shayari, اردو شاعری',
-  alternates: { canonical: 'https://suleman-zaheer.web.app/poetry' },
+  alternates: { canonical: 'https://suleman-zaheer.vercel.app/poetry' },
   openGraph: {
     title: 'Poetry & Ghazals | Suleman Zaheer',
     description:
       'A curated sanctuary of deep and soulful Urdu Ghazals, Nazms, and English poems. Words that feel.',
-    url: 'https://suleman-zaheer.web.app/poetry',
+    url: 'https://suleman-zaheer.vercel.app/poetry',
     siteName: 'Suleman Zaheer Portfolio',
     type: 'website',
     images: [
       {
-        url: 'https://suleman-zaheer.web.app/assets/author.jpg',
+        url: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
         width: 1200,
         height: 1200,
         alt: 'Suleman Zaheer - Poet & Writer from Lahore',
@@ -39,7 +39,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Poetry & Ghazals | Suleman Zaheer',
     description: 'A curated sanctuary of deep Urdu Ghazals, Nazms, and English poems.',
-    image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+    image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
   },
 };
 
@@ -101,12 +101,12 @@ export default async function PoetryPage() {
     name: 'Poetry Collection — Suleman Zaheer',
     description:
       'A premium collection of Urdu Ghazals, Nazms, and English poems by Suleman Zaheer. Immersive, deep, and soulful.',
-    url: 'https://suleman-zaheer.web.app/poetry',
+    url: 'https://suleman-zaheer.vercel.app/poetry',
     author: {
       '@type': 'Person',
       name: 'Suleman Zaheer',
-      url: 'https://suleman-zaheer.web.app',
-      image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+      url: 'https://suleman-zaheer.vercel.app',
+      image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
       sameAs: ['https://github.com/imsuleman-10', 'https://www.linkedin.com/in/suleman-zaheer-mughal'],
     },
     hasPart: poems.map((poem) => ({
@@ -119,9 +119,9 @@ export default async function PoetryPage() {
       author: { 
         '@type': 'Person', 
         name: 'Suleman Zaheer',
-        image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+        image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
       },
-      url: `https://suleman-zaheer.web.app/poetry/${poem.slug}`,
+      url: `https://suleman-zaheer.vercel.app/poetry/${poem.slug}`,
     })),
   };
 

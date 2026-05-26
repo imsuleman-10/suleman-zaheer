@@ -11,17 +11,17 @@ export const metadata = {
     'Meet Suleman Zaheer — a multifaceted writer, Urdu/English poet, researcher, and full-stack developer from Lahore, Pakistan. Explore his literary journey, research insights, and creative vision.',
   keywords:
     'Suleman Zaheer, Author, Researcher, Blogger, Urdu Poet, English Poet, Writer Pakistan, Academic Research, Literature, Creative Writing, Lahore Pakistan',
-  alternates: { canonical: 'https://suleman-zaheer.web.app/author' },
+  alternates: { canonical: 'https://suleman-zaheer.vercel.app/author' },
   openGraph: {
     title: 'About the Author & Researcher | Suleman Zaheer',
     description:
       'Poet, blogger, researcher, and full-stack developer. A creative mind bridging technology and literature.',
-    url: 'https://suleman-zaheer.web.app/author',
+    url: 'https://suleman-zaheer.vercel.app/author',
     siteName: 'Suleman Zaheer',
     type: 'profile',
     images: [
       {
-        url: 'https://suleman-zaheer.web.app/assets/author.jpg',
+        url: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
         width: 1200,
         height: 1200,
         alt: 'Suleman Zaheer — Author, Poet & Researcher from Lahore, Pakistan',
@@ -38,7 +38,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'About the Author & Researcher | Suleman Zaheer',
     description: 'Poet, blogger, researcher, and full-stack developer from Lahore, Pakistan.',
-    image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+    image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
   },
 };
 
@@ -83,8 +83,8 @@ function buildJsonLd(poems, blogCount) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Suleman Zaheer',
-    url: 'https://suleman-zaheer.web.app',
-    image: 'https://suleman-zaheer.web.app/assets/author.jpg',
+    url: 'https://suleman-zaheer.vercel.app',
+    image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
     sameAs: [
       'https://github.com/imsuleman-10',
       'https://www.linkedin.com/in/suleman-zaheer-mughal',
@@ -112,7 +112,7 @@ function buildJsonLd(poems, blogCount) {
       name: p.title,
       genre: p.type,
       inLanguage: p.language === 'Urdu' ? 'ur' : 'en',
-      url: `https://suleman-zaheer.web.app/poetry/${p.slug}`,
+      url: `https://suleman-zaheer.vercel.app/poetry/${p.slug}`,
     })),
   };
 }

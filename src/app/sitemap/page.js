@@ -5,7 +5,7 @@ export const metadata = {
   title: "HTML Sitemap | Suleman Zaheer",
   description: "Complete list of pages on Suleman Zaheer's professional portfolio — including blogs, poetry, and projects.",
   alternates: {
-    canonical: "https://suleman-zaheer.web.app/sitemap",
+    canonical: "https://suleman-zaheer.vercel.app/sitemap",
   },
 };
 

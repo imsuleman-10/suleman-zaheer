@@ -13,12 +13,12 @@ export const metadata = {
     "Web Developer Projects Lahore", "JavaScript Projects Pakistan"
   ],
   alternates: {
-    canonical: "https://suleman-zaheer.web.app/projects",
+    canonical: "https://suleman-zaheer.vercel.app/projects",
   },
   openGraph: {
     title: "Projects by Suleman Zaheer – Full Stack Web Development Portfolio",
     description: "Web applications built by Suleman Zaheer using MERN Stack, PHP, Laravel, and React. View Suleman Zaheer's complete project portfolio.",
-    url: "https://suleman-zaheer.web.app/projects",
+    url: "https://suleman-zaheer.vercel.app/projects",
     images: [{ url: "/assets/elearning_mockup_1775925031066.png", width: 1200, height: 630, alt: "Suleman Zaheer Projects Portfolio" }],
   },
   twitter: {
