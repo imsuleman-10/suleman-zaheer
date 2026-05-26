@@ -1,0 +1,3 @@
+module.exports=[58384,a=>{"use strict";var b=a.i(87924),c=a.i(46271);a.s(["FadeIn",0,({children:a,delay:d=0,direction:e="up",duration:f=.5,className:g=""})=>(0,b.jsx)(c.motion.div,{initial:{opacity:1,x:0,y:0},whileInView:{opacity:1,x:0,y:0},viewport:{once:!0},transition:{duration:f,delay:d,ease:"easeOut"},className:g,children:a}),"ScaleIn",0,({children:a,delay:d=0,duration:e=.5,className:f=""})=>(0,b.jsx)(c.motion.div,{initial:{opacity:1,scale:1},whileInView:{opacity:1,scale:1},viewport:{once:!0},transition:{duration:e,delay:d,ease:"easeOut"},className:f,children:a})])}];
+
+//# sourceMappingURL=src_components_animations_MotionWrapper_jsx_01zg73y._.js.map

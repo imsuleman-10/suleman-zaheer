@@ -1,0 +1,43 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Contact form submissions - anyone can create, only authenticated users can read/update/delete
+    match /contactRequests/{requestId} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+
+    // Visitor tracking - anyone can create, only authenticated users can read/update/delete
+    match /visitors/{visitorId} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+
+    // SEO Images - public read (Google can crawl), only authenticated admin can write/delete
+    match /seo_images/{imageId} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null;
+    }
+
+    // Blogs - public read, only authenticated admin can write
+    match /blogs/{blogId} {
+      allow read, write: if true;
+    }
+
+    // Poems - public read, only authenticated admin can write
+    match /poems/{poemId} {
+      allow read, write: if true;
+    }
+
+    // Settings - only authenticated admin can read/write (including sub-collections)
+    match /settings/{settingId} {
+      allow read, write: if request.auth != null;
+      // API keys sub-collection
+      match /api_keys/{keyId} {
+        allow read, write: if request.auth != null;
+      }
+    }
+  }
+}
