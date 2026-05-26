@@ -4,4 +4,4 @@ Disallow: /admin/
 Disallow: /login/
 Disallow: /api/
 
-Sitemap: https://suleman-zaheer.web.app/sitemap.xml
+Sitemap: https://suleman-zaheer.vercel.app/sitemap.xml
