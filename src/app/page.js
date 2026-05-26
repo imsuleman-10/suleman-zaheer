@@ -5,20 +5,35 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: "Suleman Zaheer – Full Stack MERN Developer",
-  description: "Portfolio of Suleman Zaheer. Specializing in MERN Stack, React, Node.js, and web application development. CS Student at UET Lahore.",
+  title: "Suleman Zaheer – Full Stack Developer & Software Engineer | Portfolio",
+  description: "Suleman Zaheer is a Full Stack MERN Developer, Software Engineer & CS student at UET Lahore. Expert in React, Next.js, Node.js, MongoDB & Laravel. Hire for scalable web apps.",
   keywords: [
-    "Suleman Zaheer", "Full Stack Developer", "MERN Stack", "React Developer",
-    "Next.js", "Node.js", "Web Developer Lahore", "UET Lahore", "Software Engineer"
+    "Suleman Zaheer", "Suleman Zaheer Developer", "Suleman Zaheer Portfolio",
+    "Full Stack Developer Pakistan", "Full Stack Developer Lahore",
+    "MERN Stack Developer Pakistan", "React Developer Lahore",
+    "Next.js Developer Pakistan", "Node.js Developer Lahore",
+    "Software Engineer UET Lahore", "Hire Web Developer Pakistan",
+    "Laravel Developer Pakistan", "Web Application Developer Lahore",
+    "JavaScript Developer Pakistan", "MongoDB Developer Pakistan"
   ],
   alternates: {
     canonical: "https://suleman-zaheer.vercel.app/",
   },
   openGraph: {
-    title: "Suleman Zaheer – Full Stack Developer",
-    description: "Portfolio of Suleman Zaheer. MERN Stack & Next.js developer from UET Lahore.",
+    title: "Suleman Zaheer – Full Stack Developer & Software Engineer | Portfolio",
+    description: "Official portfolio of Suleman Zaheer. Full Stack MERN Developer, Next.js & React Expert, CS student at UET Lahore. Building premium, scalable web applications from Lahore, Pakistan.",
     url: "https://suleman-zaheer.vercel.app/",
-    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer" }],
+    siteName: "Suleman Zaheer – Official Portfolio",
+    type: "website",
+    locale: "en_US",
+    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer – Full Stack Developer & Software Engineer from Lahore, Pakistan" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Suleman Zaheer – Full Stack Developer & Software Engineer",
+    description: "Full Stack MERN Developer & CS student at UET Lahore. Building scalable web apps with React, Next.js, Node.js & Laravel.",
+    images: ["/assets/suleman-zaheer-full-stack-developer.jpg"],
+    creator: "@imsuleman_10",
   },
 };
 

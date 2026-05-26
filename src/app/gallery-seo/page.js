@@ -30,16 +30,29 @@ export async function generateMetadata() {
 
   return {
     title: `Portfolio Gallery (${imageCount} Projects) | Suleman Zaheer`,
-    description: `Explore ${imageCount > 0 ? imageCount + '+' : 'the complete'} portfolio images of Suleman Zaheer. Creative work, web designs, and software architectures.`,
+    description: `Explore ${imageCount > 0 ? imageCount + '+' : 'the complete'} portfolio images of Suleman Zaheer — creative work, web designs, UI showcases, and software architectures by a Full Stack Developer from Lahore, Pakistan.`,
+    keywords: [
+      "Suleman Zaheer Gallery", "Suleman Zaheer Portfolio Images",
+      "Web Developer Portfolio Pakistan", "Full Stack Developer Work Showcase",
+      "UI Design Portfolio Lahore", "Web Design Projects Pakistan"
+    ],
     alternates: {
       canonical: 'https://suleman-zaheer.vercel.app/gallery-seo',
     },
     openGraph: {
-      title: 'Creative Portfolio Gallery | Suleman Zaheer',
-      description: 'Explore the creative work and software architectures by Suleman Zaheer.',
-      // Use the latest uploaded image as the OG image, fallback to default if empty
-      images: images[0]?.url ? [{ url: images[0].url }] : [], 
-    }
+      title: `Creative Portfolio Gallery (${imageCount} Projects) | Suleman Zaheer`,
+      description: 'Explore the creative work, UI designs, and software architectures by Suleman Zaheer — Full Stack Developer from Lahore, Pakistan.',
+      url: 'https://suleman-zaheer.vercel.app/gallery-seo',
+      siteName: 'Suleman Zaheer – Official Portfolio',
+      images: images[0]?.url ? [{ url: images[0].url, width: 1200, height: 630, alt: 'Suleman Zaheer Portfolio Gallery' }] : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Portfolio Gallery | Suleman Zaheer`,
+      description: 'Creative work, web designs, and software projects by Suleman Zaheer.',
+      images: images[0]?.url ? [images[0].url] : [],
+      creator: '@imsuleman_10',
+    },
   };
 }
 
