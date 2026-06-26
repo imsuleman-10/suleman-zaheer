@@ -95,7 +95,10 @@ const Hero = () => {
             <Link href="/projects" className="px-8 py-4 bg-primary text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all hover:scale-105 shadow-xl shadow-primary/20">
               Explore Projects <ArrowRight size={20} />
             </Link>
-            <Link href="/cv" className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-bold hover:bg-white/10 transition-all text-center">
+            <Link href="https://wa.me/923285778715" target="_blank" className="px-8 py-4 bg-[#25D366] text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all hover:scale-105 shadow-xl shadow-[#25D366]/20">
+              WhatsApp Me
+            </Link>
+            <Link href="/cv" className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-bold hover:bg-white/10 transition-all text-center flex items-center justify-center">
               Download CV
             </Link>
           </motion.div>

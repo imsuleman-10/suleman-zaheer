@@ -163,8 +163,8 @@ export default function RootLayout({ children }) {
         caption: 'Suleman Zaheer – Full Stack Developer and Software Engineer'
       },
       description: "Suleman Zaheer is a Full Stack MERN Developer and Computer Science student at the University of Engineering & Technology (UET) Lahore. He specializes in Next.js, React.js, Node.js, Express.js, MongoDB, Laravel, and building scalable web applications. Based in Lahore, Pakistan.",
-      jobTitle: 'Writer and Full Stack Developer',
-      disambiguatingDescription: 'Suleman Zaheer – Full Stack Web Developer based in Lahore, Pakistan. CS student at UET Lahore. Known as imsuleman-10 on GitHub.',
+      jobTitle: 'Poet, Writer, Author & Full Stack Developer',
+      disambiguatingDescription: 'Suleman Zaheer – Full Stack Web Developer, Poet, and Author based in Lahore, Pakistan. CS student at UET Lahore. Known as imsuleman-10 on GitHub.',
       knowsAbout: [
         'Full Stack Web Development',
         'MERN Stack',
@@ -252,16 +252,16 @@ export default function RootLayout({ children }) {
       ],
       hasOccupation: {
         '@type': 'Occupation',
-        name: 'Writer & Full Stack Software Engineer',
+        name: 'Poet, Writer, Author & Full Stack Software Engineer',
         occupationLocation: {
           '@type': 'City',
           name: 'Lahore'
         },
-        skills: 'React.js, Next.js, Node.js, Express.js, MongoDB, Laravel, PHP, MySQL, Firebase, REST APIs, JavaScript, TypeScript, Tailwind CSS'
+        skills: 'Creative Writing, Poetry, React.js, Next.js, Node.js, Express.js, MongoDB, Laravel, PHP, MySQL, Firebase, REST APIs, JavaScript, TypeScript, Tailwind CSS'
       },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Shahdara Town',
+        streetAddress: 'Qazi Park, Shahdara',
         addressLocality: 'Lahore',
         addressRegion: 'Punjab',
         postalCode: '54000',
@@ -375,11 +375,38 @@ export default function RootLayout({ children }) {
       },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Shahdara Town',
+        streetAddress: 'Qazi Park, Shahdara',
         addressLocality: 'Lahore',
         addressRegion: 'Punjab',
         postalCode: '54000',
         addressCountry: 'PK'
+      },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Web Development Packages',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            name: 'Simple Website (Small Studio/Business)',
+            price: '45000',
+            priceCurrency: 'PKR',
+            description: 'Professional 40k-50k PKR standard website for small businesses.'
+          },
+          {
+            '@type': 'Offer',
+            name: 'Medium Web Application',
+            price: '75000',
+            priceCurrency: 'PKR',
+            description: 'Advanced 50k-100k PKR web app with database and backend integration.'
+          },
+          {
+            '@type': 'Offer',
+            name: 'Large Enterprise / Custom Software',
+            price: '125000',
+            priceCurrency: 'PKR',
+            description: 'Complex 100k-150k+ PKR enterprise software and custom solutions.'
+          }
+        ]
       },
       geo: {
         '@type': 'GeoCoordinates',
@@ -432,6 +459,7 @@ export default function RootLayout({ children }) {
       description: 'Technology brand founded by Suleman Zaheer, offering professional web development and software engineering services.',
       address: {
         '@type': 'PostalAddress',
+        streetAddress: 'Qazi Park, Shahdara',
         addressLocality: 'Lahore',
         addressRegion: 'Punjab',
         addressCountry: 'PK'
