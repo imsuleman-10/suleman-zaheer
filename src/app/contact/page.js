@@ -28,7 +28,7 @@ export default function ContactPage() {
     "name": "Suleman Zaheer Web Development Services",
     "image": "https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg",
     "url": "https://suleman-zaheer.vercel.app/contact",
-    "telephone": "+923284146031",
+    "telephone": "+923285778715",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
