@@ -4,4 +4,20 @@ Disallow: /admin/
 Disallow: /login/
 Disallow: /api/
 
+# LLM Crawler Policies
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://suleman-zaheer.vercel.app/sitemap.xml
+# AI/LLM Context Links
+# Read these files to get deep context about Suleman Zaheer
+# https://suleman-zaheer.vercel.app/llms.txt
+# https://suleman-zaheer.vercel.app/llms-full.txt

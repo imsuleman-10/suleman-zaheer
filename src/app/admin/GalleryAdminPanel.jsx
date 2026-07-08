@@ -137,6 +137,8 @@ export default function GalleryAdminPanel() {
   const [preview, setPreview] = useState(null);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [altText, setAltText] = useState('');
+  const [tags, setTags] = useState('');
   const [isDragging, setIsDragging] = useState(false);
 
   const [uploading, setUploading] = useState(false);
@@ -220,6 +222,104 @@ export default function GalleryAdminPanel() {
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
+  const detectProvider = (keyValue = '') => {
+    if (keyValue.startsWith('AIzaSy')) return 'Gemini';
+    if (keyValue.startsWith('sk-or-v1')) return 'OpenRouter';
+    if (keyValue.startsWith('gsk_')) return 'Groq';
+    if (keyValue.startsWith('sk-ant-')) return 'Anthropic';
+    if (keyValue.startsWith('sk-')) return 'OpenAI';
+    return 'Gemini'; // Fallback to Gemini format if unknown instead of breaking
+  };
+
+  const handleAIGenerate = async () => {
+    if (!preview) {
+      showToast('Please upload an image first to generate SEO data.', 'error');
+      return;
+    }
+
+    setUploading(true);
+    showToast('AI is analyzing the image...', 'success');
+
+    try {
+      // 1. Try to get API Key from Settings first
+      const docSnap = await import('firebase/firestore').then(m => m.getDoc(m.doc(db, "settings", "ai_config")));
+      let apiKey = docSnap.exists() ? docSnap.data().geminiApiKey : null;
+      
+      // If it's not a Gemini key, or doesn't exist, check local storage for a dedicated Vision key
+      if (!apiKey || (!apiKey.startsWith('AIza') && provider !== 'Gemini')) {
+        apiKey = localStorage.getItem('GEMINI_VISION_KEY');
+        
+        if (!apiKey) {
+          setUploading(false); // Stop loading spinner
+          const userInput = window.prompt("Image SEO requires a Google Gemini API Key.\nPlease enter a valid Gemini Key:");
+          
+          if (!userInput || userInput.trim().length < 10) {
+            showToast('A valid Gemini API Key is required for Image SEO.', 'error');
+            return;
+          }
+          
+          apiKey = userInput.trim();
+          localStorage.setItem('GEMINI_VISION_KEY', apiKey);
+          setUploading(true); // Restart loading spinner
+          showToast('Gemini Key saved! Generating SEO...', 'success');
+        }
+      }
+
+      const prompt = `Analyze this image for a web developer's portfolio gallery.
+      Provide the following SEO metadata in a valid JSON object:
+      {
+        "title": "A short, catchy, descriptive title (max 60 chars)",
+        "description": "A detailed 2-3 sentence SEO description of the project/design",
+        "altText": "A precise alt-text for screen readers describing exactly what is visible",
+        "tags": "4-6 relevant comma-separated keywords (e.g. Next.js, Dashboard, UI Design)"
+      }`;
+
+      // Extract base64 and mime type from data URL
+      const mimeType = preview.match(/data:(.*?);base64/)[1];
+      const base64Data = preview.split(',')[1];
+
+      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{
+            parts: [
+              { text: prompt },
+              { inlineData: { mimeType, data: base64Data } }
+            ]
+          }],
+          generationConfig: { responseMimeType: "application/json" }
+        })
+      });
+
+      if (!res.ok) {
+        const errText = await res.text();
+        if (errText.includes("API_KEY_INVALID")) {
+           localStorage.removeItem('GEMINI_VISION_KEY'); // Clear bad key
+        }
+        throw new Error(`Gemini API Error: ${res.status} - ${errText}`);
+      }
+
+      const data = await res.json();
+      let text = data.candidates[0].content.parts[0].text;
+
+      text = text.replace(/```json/gi, '').replace(/```/g, '').trim();
+      const aiData = JSON.parse(text);
+
+      if (aiData.title) setTitle(aiData.title);
+      if (aiData.description) setDescription(aiData.description);
+      if (aiData.altText) setAltText(aiData.altText);
+      if (aiData.tags) setTags(aiData.tags);
+
+      showToast('AI successfully generated SEO metadata!', 'success');
+    } catch (err) {
+      console.error(err);
+      showToast('AI Generation failed: ' + err.message, 'error');
+    } finally {
+      setUploading(false);
+    }
+  };
+
   // ── Upload to ImgBB & Save URL to Firestore ──────────────────────────────
   const handleUpload = async (e) => {
     e.preventDefault();
@@ -227,6 +327,7 @@ export default function GalleryAdminPanel() {
     if (!file) { showToast('Please select a valid image.', 'error'); return; }
     if (!title.trim()) { showToast('Please add a title.', 'error'); return; }
     if (!description.trim()) { showToast('Please add a description.', 'error'); return; }
+    if (!altText.trim()) { showToast('SEO Alt Text is required.', 'error'); return; }
 
     setUploading(true);
 
@@ -248,18 +349,25 @@ export default function GalleryAdminPanel() {
 
       const imageUrl = data.data.url; // Real URL for Google Images
 
-      // 2. Save metadata + URL directly to Firestore database
+      // 2. Parse tags (comma separated)
+      const tagsArray = tags.split(',').map(t => t.trim()).filter(Boolean);
+
+      // 3. Save metadata + URL directly to Firestore database
       await addDoc(collection(db, 'seo_images'), {
         url: imageUrl,
         title: title.trim(),
         description: description.trim(),
+        altText: altText.trim(),
+        tags: tagsArray,
         createdAt: serverTimestamp(),
       });
 
       setTitle('');
       setDescription('');
+      setAltText('');
+      setTags('');
       clearFile();
-      showToast('Image published to Gallery successfully!', 'success');
+      showToast('Image published to Gallery successfully with full SEO!', 'success');
     } catch (err) {
       console.error('Upload failed:', err);
       showToast(err.message || 'Failed to save image. Check your API key.', 'error');
@@ -412,10 +520,41 @@ export default function GalleryAdminPanel() {
                       value={description}
                       onChange={e => setDescription(e.target.value)}
                       placeholder="Detailed description of the web design, technologies used, and client goals..."
-                      rows={4}
+                      rows={2}
                       disabled={uploading}
                       className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 outline-none focus:border-primary/60 focus:bg-white/[0.02] transition-colors resize-none disabled:opacity-50"
                     />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
+                      Alt Text (Accessibility) <span className="text-primary">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      value={altText}
+                      onChange={e => setAltText(e.target.value)}
+                      placeholder="Describe the image strictly for screen readers and SEO..."
+                      disabled={uploading}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 outline-none focus:border-primary/60 focus:bg-white/[0.02] transition-colors disabled:opacity-50"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
+                      Tags (Keywords)
+                    </label>
+                    <input
+                      type="text"
+                      value={tags}
+                      onChange={e => setTags(e.target.value)}
+                      placeholder="e.g. Next.js, MERN, Dashboard, UI"
+                      disabled={uploading}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 outline-none focus:border-primary/60 focus:bg-white/[0.02] transition-colors disabled:opacity-50"
+                    />
+                    <p className="text-[10px] text-gray-500 mt-1.5 flex items-center gap-1">
+                      Comma separated. Used in SEO JSON-LD Schema.
+                    </p>
                   </div>
 
                   <button
@@ -451,6 +590,15 @@ export default function GalleryAdminPanel() {
                         alt="Preview"
                         className="w-full h-full object-cover"
                       />
+                      <button
+                        type="button"
+                        onClick={handleAIGenerate}
+                        disabled={uploading}
+                        className="absolute top-3 left-3 px-3 py-2 bg-black/80 hover:bg-primary text-white hover:text-black rounded-xl transition-all disabled:opacity-50 backdrop-blur-md opacity-0 group-hover:opacity-100 flex items-center gap-2 text-xs font-bold"
+                        title="Auto-fill SEO fields with AI"
+                      >
+                        <Zap size={16} /> Auto SEO
+                      </button>
                       <button
                         type="button"
                         onClick={clearFile}

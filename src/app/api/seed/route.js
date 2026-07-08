@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { collection, addDoc, serverTimestamp, getDocs, query, where } from 'firebase/firestore';
+import { collection, addDoc, updateDoc, serverTimestamp, getDocs, query, where } from 'firebase/firestore';
 import { db } from '@/firebase';
 import { STATIC_BLOGS } from '@/data/staticBlogs';
 import { STATIC_POEMS } from '@/data/staticPoems';
@@ -19,17 +19,23 @@ export async function GET() {
       const q = query(blogsRef, where('slug', '==', blog.slug));
       const snap = await getDocs(q);
       
+      const { id, ...blogData } = blog;
+      
       if (snap.empty) {
-        // Strip id from static data before saving to firestore
-        const { id, ...blogData } = blog;
         await addDoc(blogsRef, {
           ...blogData,
           createdAt: serverTimestamp(),
           updatedAt: serverTimestamp(),
           views: 0,
-          published: true, // Make sure published is true
+          published: true,
         });
         blogsAdded++;
+      } else {
+        const docRef = snap.docs[0].ref;
+        await updateDoc(docRef, {
+          ...blogData,
+          updatedAt: serverTimestamp(),
+        });
       }
     }
 

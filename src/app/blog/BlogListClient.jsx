@@ -8,19 +8,18 @@ import {
   Palette, Server, Shield, TrendingUp, Zap
 } from 'lucide-react';
 
-// ─── Category config with icons ──────────────────────────────────────────────
-const CATEGORIES = [
-  { label: 'All Articles', value: 'all', icon: <Layers size={13} /> },
-  { label: 'System Design',  value: 'System Design',   icon: <TrendingUp size={13} /> },
-  { label: 'Next.js & SEO',  value: 'Next.js & SEO',   icon: <Zap size={13} /> },
-  { label: 'React',          value: 'React',            icon: <Code2 size={13} /> },
-  { label: 'Backend',        value: 'Backend',          icon: <Server size={13} /> },
-  { label: 'Backend Architecture', value: 'Backend Architecture', icon: <Server size={13} /> },
-  { label: 'Frontend',       value: 'Frontend',         icon: <Palette size={13} /> },
-  { label: 'Design',         value: 'Design',           icon: <Palette size={13} /> },
-  { label: 'Freelancing',    value: 'Freelancing',      icon: <Briefcase size={13} /> },
-  { label: 'Career',         value: 'Career',           icon: <Briefcase size={13} /> },
-];
+// ─── Icon map for dynamic categories ─────────────────────────────────────────
+const CATEGORY_ICONS = {
+  'System Design':        <TrendingUp size={13} />,
+  'Next.js & SEO':        <Zap size={13} />,
+  'React':                <Code2 size={13} />,
+  'Backend':              <Server size={13} />,
+  'Backend Architecture': <Server size={13} />,
+  'Frontend':             <Palette size={13} />,
+  'Design':               <Palette size={13} />,
+  'Freelancing':          <Briefcase size={13} />,
+  'Career':               <Briefcase size={13} />,
+};
 
 // ─── Format date nicely ───────────────────────────────────────────────────────
 function formatDate(dateStr) {
@@ -195,7 +194,15 @@ export default function BlogListClient({ initialBlogs }) {
   // Derive unique categories present in the actual posts
   const presentCategories = useMemo(() => {
     const cats = new Set(initialBlogs.map(b => b.category).filter(Boolean));
-    return CATEGORIES.filter(c => c.value === 'all' || cats.has(c.value));
+    const dynamicCats = Array.from(cats).map(cat => ({
+      label: cat,
+      value: cat,
+      icon: CATEGORY_ICONS[cat] || <Layers size={13} />
+    }));
+    return [
+      { label: 'All Articles', value: 'all', icon: <Layers size={13} /> },
+      ...dynamicCats
+    ];
   }, [initialBlogs]);
 
   // Filter logic

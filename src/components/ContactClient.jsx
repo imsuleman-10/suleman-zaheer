@@ -1,6 +1,5 @@
 "use client";
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, MessageSquare, CheckCircle2 } from 'lucide-react';
 import { db } from '@/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
@@ -136,26 +135,21 @@ export default function ContactClient() {
         </div>
 
         </div>
-      <motion.div 
-        initial={{ opacity: 0, x: 20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        className="p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-white/5 border border-white/10 relative overflow-hidden shadow-2xl"
+      <div 
+        className="p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-white/5 border border-white/10 relative overflow-hidden shadow-2xl animate-in slide-in-from-right-8 fade-in duration-700"
       >
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
         
         {status === 'success' ? (
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }} 
-            animate={{ opacity: 1, scale: 1 }}
-            className="text-center py-12"
+          <div 
+            className="text-center py-12 animate-in zoom-in fade-in duration-500"
           >
             <div className="w-20 h-20 bg-green-500/10 border border-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle2 className="text-green-500" size={40} />
             </div>
             <h3 className="text-2xl font-bold mb-2 text-white">Message Sent!</h3>
             <p className="text-gray-400">Thank you for reaching out. I'll get back to you shortly.</p>
-          </motion.div>
+          </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -224,7 +218,7 @@ export default function ContactClient() {
           <MessageSquare size={16} />
           <span>Directly stored in Admin Dashboard</span>
         </div>
-      </motion.div>
+      </div>
     </div>
     </>
   );

@@ -2,7 +2,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Code2, Globe, Database } from 'lucide-react';
+import { ArrowRight, Code2, Globe, Database, Download } from 'lucide-react';
+
 
 const Hero = () => {
   const videoRef = useRef(null);
@@ -43,6 +44,8 @@ const Hero = () => {
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         <video
           ref={videoRef}
+          aria-label="Suleman Zaheer - Full Stack Developer Background Workspace Video"
+          title="Suleman Zaheer Developer Workspace"
           className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-70 grayscale-[0.5]"
           muted
           playsInline
@@ -71,11 +74,10 @@ const Hero = () => {
             Available for new projects
           </motion.div>
 
-          <div>
-            <div className="text-4xl sm:text-5xl md:text-8xl font-display font-extrabold mb-4 md:mb-6 tracking-tight text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-8xl font-display font-extrabold mb-4 md:mb-6 tracking-tight text-white">
               Suleman <span className="text-primary italic">Zaheer</span>
-            </div>
-          </div>
+              <span className="block text-lg sm:text-2xl font-normal text-gray-400 mt-2 tracking-normal">Full Stack MERN Developer & Software Engineer</span>
+            </h1>
 
           <motion.p 
             initial={{ opacity: 1, y: 0 }}
@@ -95,12 +97,16 @@ const Hero = () => {
             <Link href="/projects" className="px-8 py-4 bg-primary text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all hover:scale-105 shadow-xl shadow-primary/20">
               Explore Projects <ArrowRight size={20} />
             </Link>
-            <Link href="https://wa.me/923285778715" target="_blank" className="px-8 py-4 bg-[#25D366] text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all hover:scale-105 shadow-xl shadow-[#25D366]/20">
-              WhatsApp Me
-            </Link>
-            <Link href="/cv" className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-bold hover:bg-white/10 transition-all text-center flex items-center justify-center">
-              Download CV
-            </Link>
+
+            <a
+              href="/suleman-zaheer-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-bold hover:bg-white/10 transition-all text-center flex items-center justify-center gap-2"
+            >
+              <Download size={18} /> Download CV
+            </a>
+
           </motion.div>
 
           {/* Stats/Icons */}

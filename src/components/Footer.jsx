@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6" title="Suleman Zaheer – Official Portfolio">
               <div className="w-12 h-12 overflow-hidden rounded-xl border border-white/10 relative">
-                <Image src="/assets/suleman-zaheer-logo.png" alt="Suleman Zaheer Logo" fill className="object-cover" />
+                <Image src="/assets/suleman-zaheer-logo.png" alt="Suleman Zaheer Logo" fill sizes="48px" className="object-cover" />
               </div>
               <span className="text-2xl font-display font-bold">
                 SAM<span className="text-primary italic">.</span>

@@ -4,37 +4,37 @@
   <!-- ===== MAIN PAGES ===== -->
   <url>
     <loc>https://suleman-zaheer.vercel.app/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/about</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/projects</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/cv</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/contact</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/author</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -42,117 +42,159 @@
   <!-- ===== BLOG ===== -->
   <url>
     <loc>https://suleman-zaheer.vercel.app/blog</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/blog/scaling-mern-stack-enterprise</loc>
-    <lastmod>2025-05-20</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/blog/nextjs-server-components-seo-blueprint</loc>
-    <lastmod>2025-05-21</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/blog/cs-student-production-code-roadmap</loc>
-    <lastmod>2025-05-22</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/blog/firebase-vs-supabase-2025-comparison</loc>
-    <lastmod>2025-05-23</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/blog/tailwind-css-scalable-design-system</loc>
-    <lastmod>2025-05-18</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/blog/land-first-international-freelance-client-pakistan</loc>
-    <lastmod>2025-05-15</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/blog/psychology-ux-design-interfaces-users-love</loc>
-    <lastmod>2025-05-10</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/blog/react-performance-optimization-usememo-usecallback</loc>
-    <lastmod>2025-05-08</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/blog/building-secure-rest-apis-nodejs</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suleman-zaheer.vercel.app/blog/firebase-vs-custom-backend</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suleman-zaheer.vercel.app/blog/freelancing-developer-brand-building</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suleman-zaheer.vercel.app/blog/mastering-tailwind-css</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suleman-zaheer.vercel.app/blog/modern-react-state-management</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suleman-zaheer.vercel.app/blog/nodejs-backend-design-patterns</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suleman-zaheer.vercel.app/blog/resilient-rest-apis-typescript-express</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suleman-zaheer.vercel.app/blog/web-vitals-nextjs-optimization</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- ===== POETRY ===== -->
   <url>
     <loc>https://suleman-zaheer.vercel.app/poetry</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/poetry/%D8%B4%D8%B1%D9%8A%D9%83%D9%90-%D8%AD%D9%8A%D8%A7%D8%AA</loc>
-    <lastmod>2025-05-10</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/poetry/dhuein-se-ji-dar-raha-hai</loc>
-    <lastmod>2025-05-12</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/poetry/%D9%85-%D8%B3%D9%8A-%D9%85%D8%B3%D9%84%D9%83-%D9%88-%D9%85%D8%AD%D8%A8%D8%AA</loc>
-    <lastmod>2025-05-14</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/poetry/the-coder-at-midnight</loc>
-    <lastmod>2025-05-16</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/poetry/watan-ki-mitti</loc>
-    <lastmod>2025-05-18</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/poetry/between-the-lines</loc>
-    <lastmod>2025-05-20</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/poetry/khamoshi-ki-zaban</loc>
-    <lastmod>2025-05-22</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://suleman-zaheer.vercel.app/poetry/raat-ki-tanhai</loc>
-    <lastmod>2025-05-24</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -160,7 +202,7 @@
   <!-- ===== GALLERY ===== -->
   <url>
     <loc>https://suleman-zaheer.vercel.app/gallery-seo</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

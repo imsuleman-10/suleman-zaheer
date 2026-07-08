@@ -3,6 +3,7 @@ const nextConfig = {
   // ✅ NO 'output: export' — Vercel runs Next.js natively with full SSR/ISR support.
   // Removing this enables: Server Components, generateMetadata, ISR revalidation,
   // and Vercel Image Optimization — all critical for perfect SEO.
+  allowedDevOrigins: ['192.168.100.10'],
   images: {
     // ✅ Vercel Image Optimization is now active (no unoptimized: true)
     // This auto-serves WebP/AVIF, lazy loading, and correct sizes.

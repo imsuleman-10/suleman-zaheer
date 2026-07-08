@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Code2 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -27,20 +26,13 @@ export default function ProjectsClient({ projects, categories }) {
       </div>
 
       {/* Projects Grid */}
-      <motion.div 
-        layout
+      <div 
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
-        <AnimatePresence mode='popLayout'>
           {filteredProjects.map((project, index) => (
-            <motion.div
+            <div
               key={project.title}
-              layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.3 }}
-              className="group bg-white/5 border border-white/10 rounded-[2rem] overflow-hidden hover:border-primary/50 transition-all flex flex-col"
+              className="group bg-white/5 border border-white/10 rounded-[2rem] overflow-hidden hover:border-primary/50 transition-all duration-300 flex flex-col animate-in fade-in zoom-in duration-500"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image 
@@ -78,10 +70,9 @@ export default function ProjectsClient({ projects, categories }) {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </AnimatePresence>
-      </motion.div>
+      </div>
     </>
   );
 }

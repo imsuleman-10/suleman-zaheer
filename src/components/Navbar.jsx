@@ -12,11 +12,23 @@ const Navbar = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+    // requestAnimationFrame polling: runs 60x per second, directly reads
+    // window.scrollY. Cannot fail regardless of CSS or scroll container.
+    let rafId;
+    let lastState = false;
+
+    const tick = () => {
+      const y = window.scrollY || window.pageYOffset || 0;
+      const newState = y > 50;
+      if (newState !== lastState) {
+        lastState = newState;
+        setScrolled(newState);
+      }
+      rafId = requestAnimationFrame(tick);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    rafId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafId);
   }, []);
 
   const navLinks = [
@@ -28,26 +40,61 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'py-4 bg-black/60 backdrop-blur-md border-b border-white/10' : 'py-6 bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-12 h-12 overflow-hidden rounded-xl border border-white/10 group-hover:scale-110 transition-transform relative">
-              <Image src="/assets/suleman-zaheer-logo.png" alt="SAM Logo" fill className="object-cover" />
-            </div>
-            <span className="text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-              SAM<span className="text-primary italic">.</span>
-            </span>
-          </Link>
+    <>
+      <nav
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 9999,
+          transition: 'background-color 0.3s ease, padding 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
+          padding: scrolled ? '12px 0' : '24px 0',
+          backgroundColor: scrolled ? 'rgba(3, 3, 10, 0.95)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(16px)' : 'none',
+          WebkitBackdropFilter: scrolled ? 'blur(16px)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : '1px solid transparent',
+          boxShadow: scrolled ? '0 8px 32px rgba(0,0,0,0.6)' : 'none',
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
 
-          {/* Desktop Links */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2 group">
+              <div
+                style={{
+                  width: 48,
+                  height: 48,
+                  borderRadius: 12,
+                  overflow: 'hidden',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  transition: 'transform 0.2s ease',
+                }}
+                className="relative group-hover:scale-110"
+              >
+                <Image
+                  src="/assets/suleman-zaheer-logo.png"
+                  alt="SAM Logo"
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                />
+              </div>
+              <span className="text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                SAM<span className="text-primary italic">.</span>
+              </span>
+            </Link>
+
+            {/* Desktop Nav Links */}
+            <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.path}
-                  className={`relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${pathname === link.path ? 'text-primary' : 'text-gray-300'}`}
+                  className={`relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+                    pathname === link.path ? 'text-primary' : 'text-gray-300'
+                  }`}
                 >
                   {link.name}
                   {pathname === link.path && (
@@ -62,61 +109,72 @@ const Navbar = () => {
                 href="https://wa.me/923285778715"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-medium transition-all hover:scale-105 active:scale-95"
+                className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-semibold transition-all hover:scale-105 active:scale-95"
               >
                 Hire Me
               </a>
             </div>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2"
-            >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+            {/* Mobile Hamburger */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-300 hover:text-white p-2"
+                aria-label="Toggle menu"
+              >
+                {isOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
+            </div>
+
           </div>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/10"
-          >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-4 text-base font-medium border-l-4 ${pathname === link.path ? 'bg-primary/10 border-primary text-primary' : 'border-transparent text-gray-300'}`}
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <div className="pt-4 pb-2 px-3">
-                <a
-                  href="https://wa.me/923285778715"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full text-center bg-primary text-white py-3 rounded-xl font-bold"
-                >
-                  Hire Me
-                </a>
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              style={{
+                backgroundColor: 'rgba(0,0,0,0.97)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                borderBottom: '1px solid rgba(255,255,255,0.1)',
+              }}
+            >
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`block px-3 py-4 text-base font-medium border-l-4 ${
+                      pathname === link.path
+                        ? 'bg-primary/10 border-primary text-primary'
+                        : 'border-transparent text-gray-300'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                <div className="pt-4 pb-2 px-3">
+                  <a
+                    href="https://wa.me/923285778715"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                    className="block w-full text-center bg-primary text-white py-3 rounded-xl font-bold"
+                  >
+                    Hire Me
+                  </a>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </>
   );
 };
 
