@@ -5,26 +5,31 @@ import { FadeIn, ScaleIn } from '@/components/animations/MotionWrapper';
 import Script from 'next/script';
 
 export const metadata = {
-  title: "About Suleman Zaheer | Software Engineer & Poet",
-  description: "Read the biography of Suleman Zaheer, a Full Stack Developer, Software Engineer, and Urdu Poet. Discover his MERN stack expertise and education at UET Lahore.",
+  title: "About Suleman Zaheer | Software Engineer, Web Developer & Urdu Poet – Lahore, Pakistan",
+  description: "Suleman Zaheer is a professional Software Engineer and Web Developer from Shahdara, Lahore, Pakistan. CS student at UET Lahore. Expert in Web App Development, Mobile App Development, Serverless Apps & Custom Website without backend. Founder of SAMStack Studio. Also an acclaimed Urdu poet.",
   keywords: [
     "About Suleman Zaheer", "Suleman Zaheer Biography", "Software Engineer Lahore",
-    "UET Lahore Computer Science", "MERN Stack Expert", "Full Stack Developer Profile"
+    "Web Developer Shahdara Lahore", "Web App Developer Pakistan", "Mobile App Developer Lahore",
+    "Serverless App Developer Pakistan", "Custom Website Developer Lahore",
+    "UET Lahore Computer Science", "MERN Stack Expert Lahore", "Full Stack Developer Profile",
+    "SAMStack Studio Founder", "Urdu Poet Lahore", "Suleman Zaheer Mughal"
   ],
   alternates: {
     canonical: "https://suleman-zaheer.vercel.app/about",
   },
   openGraph: {
-    title: "About Suleman Zaheer | Elite Software Engineer",
-    description: "Suleman Zaheer's professional journey. Full Stack MERN Developer, Next.js specialist, and CS student at UET Lahore.",
+    title: "About Suleman Zaheer | Software Engineer, Web & Mobile App Developer – Lahore",
+    description: "Suleman Zaheer – professional Software Engineer from Shahdara, Lahore. Expert in Web App, Mobile App, Serverless App & Custom Website Development. CS student at UET Lahore. Founder of SAMStack Studio.",
     url: "https://suleman-zaheer.vercel.app/about",
+    siteName: "Suleman Zaheer Official Portfolio",
     type: "profile",
-    images: [{ url: "/assets/suleman-zaheer-software-engineer.jpg", width: 800, height: 800, alt: "Suleman Zaheer - Biography and Skills" }],
+    locale: "en_PK",
+    images: [{ url: "/assets/suleman-zaheer-software-engineer.jpg", width: 800, height: 800, alt: "Suleman Zaheer – Software Engineer & Web Developer from Lahore, Pakistan" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Suleman Zaheer Biography | Developer & Poet",
-    description: "Read the professional biography of Suleman Zaheer. MERN Stack developer and Urdu poet from Lahore.",
+    title: "About Suleman Zaheer | Software Engineer, Web & Mobile App Developer | Lahore",
+    description: "Suleman Zaheer – Software Engineer, Web App, Mobile App & Custom Website Developer from Shahdara, Lahore. CS student at UET Lahore. Urdu Poet.",
     images: ["/assets/suleman-zaheer-software-engineer.jpg"],
     creator: "@imsuleman_10",
   },

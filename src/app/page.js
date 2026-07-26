@@ -5,28 +5,32 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: "Suleman Zaheer | Full Stack Developer in Pakistan",
-  description: "Hire Suleman Zaheer, a top Full Stack MERN Developer & Software Engineer in Lahore. Specializing in Next.js, React & Node.js. Build your scalable web app today!",
+  title: "Suleman Zaheer | Software Engineer & Web Developer in Lahore – Web App, Mobile App, Custom Website",
+  description: "Hire Suleman Zaheer – a professional Software Engineer and Web Developer in Lahore (Shahdara), Pakistan. Expert in Web App Development, Mobile App Development, Serverless Apps & Custom Websites without backend. CS student at UET Lahore. Founder of SAMStack Studio.",
   keywords: [
-    "Suleman Zaheer", "Full Stack Developer Lahore", "MERN Stack Expert Pakistan",
-    "Next.js Developer", "Hire Software Engineer", "Custom Web Apps", "SAMStack Studio"
+    "Suleman Zaheer", "Software Engineer Lahore", "Web Developer Lahore",
+    "Web App Developer Pakistan", "Mobile App Developer Lahore",
+    "Serverless App Developer Pakistan", "Custom Website Developer Lahore",
+    "Custom Website Without Backend", "Hire Software Engineer Pakistan",
+    "Web Developer Shahdara Lahore", "MERN Stack Developer Lahore",
+    "Next.js Developer Pakistan", "SAMStack Studio", "Full Stack Developer Lahore"
   ],
   alternates: {
     canonical: "https://suleman-zaheer.vercel.app/",
   },
   openGraph: {
-    title: "Suleman Zaheer | Full Stack Developer & Software Engineer",
-    description: "Official portfolio of Suleman Zaheer. Top Full Stack MERN Developer, Next.js Expert, and Founder of SAMStack Studio in Lahore, Pakistan.",
+    title: "Suleman Zaheer | Software Engineer & Web Developer – Web App, Mobile App, Custom Website | Lahore",
+    description: "Official portfolio of Suleman Zaheer. Expert in Web App, Mobile App, Serverless & Custom Website Development. CS student at UET Lahore. Founder of SAMStack Studio, Lahore, Pakistan.",
     url: "https://suleman-zaheer.vercel.app/",
     siteName: "Suleman Zaheer Official Portfolio",
     type: "profile",
     locale: "en_PK",
-    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer - Top Full Stack Developer in Pakistan" }],
+    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer - Software Engineer & Web Developer in Lahore, Pakistan" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Suleman Zaheer | Software Engineer & Web Developer",
-    description: "Building scalable enterprise web applications using React, Next.js, Node.js & Laravel. Hire Suleman Zaheer from Lahore, Pakistan.",
+    title: "Suleman Zaheer | Software Engineer & Web Developer | Lahore, Pakistan",
+    description: "Web App, Mobile App, Serverless App & Custom Website Developer in Lahore. CS student at UET Lahore. Expert in React, Next.js, Node.js & Firebase.",
     images: ["/assets/suleman-zaheer-full-stack-developer.jpg"],
     creator: "@imsuleman_10",
   },
@@ -42,7 +46,7 @@ export default function Home() {
         name: 'Who is Suleman Zaheer?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer is a Full Stack MERN Developer and a Computer Science student at UET Lahore. He specializes in building web applications using Next.js, React, Node.js, and MongoDB.'
+          text: 'Suleman Zaheer (سلیمان ظہیر) is a professional Software Engineer, Full Stack Web Developer, Mobile App Developer, and Urdu Poet from Shahdara Town, Lahore, Pakistan. He is a Computer Science student at UET Lahore and the founder of SAMStack Studio.'
         }
       },
       {
@@ -50,7 +54,47 @@ export default function Home() {
         name: 'What services does Suleman Zaheer provide?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer provides full-stack web development services including MERN Stack development, Next.js applications, Laravel systems, and REST API development.'
+          text: 'Suleman Zaheer provides four core services: 1) Web App Development – Full stack MERN/Next.js applications. 2) Mobile App Development – Cross-platform React Native apps for iOS and Android. 3) Serverless Mobile App – Firebase-powered apps with no dedicated backend. 4) Custom Website without backend – Static sites, landing pages and portfolios using Next.js or HTML/CSS/JS.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Where is Suleman Zaheer located?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Suleman Zaheer is based in Shahdara Town, Lahore, Punjab, Pakistan. He serves clients locally in Lahore and nationwide across Pakistan, as well as internationally through remote work.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Is Suleman Zaheer available for hire in Lahore?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! Suleman Zaheer is available for freelance and project-based work in Lahore, Shahdara, and across Pakistan. He also accepts remote international projects. Contact him at samstacktechs@gmail.com or visit suleman-zaheer.vercel.app/contact.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can Suleman Zaheer build a mobile app?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Suleman Zaheer offers Mobile App Development using React Native, capable of building cross-platform apps for both iOS and Android. He also specializes in Serverless Mobile Apps powered by Firebase – no dedicated server required.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can Suleman Zaheer build a custom website without a backend?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Suleman Zaheer specializes in custom website development without a backend. He builds fast, SEO-optimized static websites, landing pages, and portfolio sites using Next.js static export, HTML, CSS, and JavaScript – no server required.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What tech stack does Suleman Zaheer use?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Suleman Zaheer uses a modern tech stack: Frontend – React.js, Next.js, TypeScript, Tailwind CSS, Framer Motion. Backend – Node.js, Express.js, Laravel (PHP). Mobile – React Native. Cloud/DB – MongoDB, MySQL, Firebase, Vercel.'
         }
       },
       {
@@ -58,15 +102,23 @@ export default function Home() {
         name: 'Which university does Suleman Zaheer attend?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer is currently pursuing his Bachelor of Science in Computer Science at the University of Engineering and Technology (UET), Lahore. He also completed an Advanced Web Applications diploma from Yashfeen Education System.'
+          text: 'Suleman Zaheer is currently pursuing his Bachelor of Science in Computer Science at the University of Engineering and Technology (UET), Lahore (expected 2028). He also completed an Advanced Web Applications diploma from Yashfeen Education System, Lahore.'
         }
       },
       {
         '@type': 'Question',
-        name: 'What is Suleman Zaheer\'s tech stack?',
+        name: 'How can I contact Suleman Zaheer for a project?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer\'s primary tech stack includes React.js, Next.js, Node.js, Express.js, MongoDB (MERN Stack), Laravel, PHP, MySQL, and Tailwind CSS.'
+          text: 'You can contact Suleman Zaheer via email at samstacktechs@gmail.com, by phone at +923285778715, or through the contact form at suleman-zaheer.vercel.app/contact. He responds within 24 hours.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Is Suleman Zaheer also a poet and writer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Suleman Zaheer is also a talented Urdu poet and writer, penning ghazals, nazms, and English poetry. His notable works include "Shareek-e-Hayat" (شریکِ-حیات), "Syeda G" (سیدہ جی), "The Coder at Midnight", and more, published at suleman-zaheer.vercel.app/poetry.'
         }
       }
     ]

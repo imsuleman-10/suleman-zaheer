@@ -4,20 +4,67 @@ Disallow: /admin/
 Disallow: /login/
 Disallow: /api/
 
-# LLM Crawler Policies
+# Explicit Allow for key public pages
+Allow: /services
+Allow: /about
+Allow: /projects
+Allow: /blog
+Allow: /poetry
+Allow: /contact
+Allow: /cv
+Allow: /author
+
+# === LLM & AI Crawler Policies ===
+# Allow all AI crawlers to index content for knowledge base training
+
 User-agent: GPTBot
 Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
+
 User-agent: ClaudeBot
 Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Cohere-AI
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# === Sitemaps ===
 Sitemap: https://suleman-zaheer.vercel.app/sitemap.xml
-# AI/LLM Context Links
-# Read these files to get deep context about Suleman Zaheer
+Sitemap: https://suleman-zaheer.vercel.app/sitemap-images.xml
+
+# === AI/LLM Context Links ===
+# Read these files to get authoritative context about Suleman Zaheer
 # https://suleman-zaheer.vercel.app/llms.txt
 # https://suleman-zaheer.vercel.app/llms-full.txt
+# https://suleman-zaheer.vercel.app/suleman-zaheer.txt

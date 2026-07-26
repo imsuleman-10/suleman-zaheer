@@ -4,9 +4,6 @@ import { Printer, ArrowLeft, Mail, Phone, MapPin, Globe, Linkedin, Github, Chevr
 import Link from 'next/link';
 
 export default function CVClient() {
-  const handlePrint = () => {
-    window.print();
-  };
 
   const skills = {
     frontend: ['React.js', 'Next.js', 'Tailwind CSS', 'Redux', 'Framer Motion'],

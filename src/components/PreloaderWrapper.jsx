@@ -7,7 +7,8 @@ export default function PreloaderWrapper({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Determine how long to show the preloader based on load event
+    let fallbackTimer;
+
     const handleLoad = () => {
       // Add a slight delay to ensure smooth transition
       setTimeout(() => setLoading(false), 800);
@@ -18,10 +19,13 @@ export default function PreloaderWrapper({ children }) {
     } else {
       window.addEventListener('load', handleLoad);
       // Fallback timer just in case load is hanging
-      setTimeout(() => setLoading(false), 3000);
+      fallbackTimer = setTimeout(() => setLoading(false), 3000);
     }
 
-    return () => window.removeEventListener('load', handleLoad);
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearTimeout(fallbackTimer);
+    };
   }, []);
 
   return (

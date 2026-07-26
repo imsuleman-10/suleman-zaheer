@@ -4,7 +4,6 @@ import { Mail, Phone, MapPin, Send, MessageSquare, CheckCircle2 } from 'lucide-r
 import { db } from '@/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import emailjs from '@emailjs/browser';
-import Script from 'next/script';
 
 export default function ContactClient() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });

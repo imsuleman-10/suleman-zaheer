@@ -3,27 +3,31 @@ import { FadeIn } from '@/components/animations/MotionWrapper';
 import ProjectsClient from '@/components/ProjectsClient';
 
 export const metadata = {
-  title: "Projects by Suleman Zaheer | MERN Stack Portfolio",
-  description: "Explore the enterprise-grade web development projects by Suleman Zaheer. MERN Stack apps, Laravel systems, E-Learning platforms, and React masterpieces.",
+  title: "Projects by Suleman Zaheer | Web App, Mobile App & Custom Website Portfolio – Lahore, Pakistan",
+  description: "Explore enterprise-grade projects by Suleman Zaheer – Software Engineer & Web Developer in Lahore, Pakistan. Portfolio includes MERN Stack Web Apps, React Native Mobile Apps, Firebase Serverless Apps, and Custom Website builds. CS student at UET Lahore.",
   keywords: [
-    "Suleman Zaheer Projects", "MERN Stack Portfolio", "React.js Projects",
-    "Laravel Web Application", "Full Stack Projects Lahore", "Top Web Developer Portfolio"
+    "Suleman Zaheer Projects", "Web App Development Portfolio Lahore", "Mobile App Developer Portfolio Pakistan",
+    "Serverless App Portfolio", "Custom Website Portfolio Pakistan", "MERN Stack Portfolio Lahore",
+    "Next.js Projects Pakistan", "React Native App Portfolio", "Firebase App Developer Portfolio",
+    "Full Stack Projects Lahore", "Software Engineer Portfolio Lahore", "SAMStack Studio Projects"
   ],
   alternates: {
     canonical: "https://suleman-zaheer.vercel.app/projects",
   },
   openGraph: {
-    title: "Projects by Suleman Zaheer | Full Stack Web Development Portfolio",
-    description: "Premium web applications engineered by Suleman Zaheer using MERN Stack, Next.js, and Laravel.",
+    title: "Projects by Suleman Zaheer | Web App, Mobile App & Custom Website Portfolio | Lahore",
+    description: "Portfolio of Suleman Zaheer – Web Apps (MERN/Next.js), Mobile Apps (React Native), Serverless Apps (Firebase), and Custom Websites. Software Engineer from Lahore, Pakistan.",
     url: "https://suleman-zaheer.vercel.app/projects",
-    images: [{ url: "/assets/elearning_mockup_1775925031066.png", width: 1200, height: 630, alt: "Suleman Zaheer Projects Portfolio" }],
-    type: "website"
+    siteName: "Suleman Zaheer Official Portfolio",
+    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer Projects Portfolio – Web App, Mobile App & Custom Website Developer in Lahore" }],
+    type: "website",
+    locale: "en_PK"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Projects by Suleman Zaheer | Full Stack Developer Portfolio",
-    description: "Enterprise-grade web applications built by Suleman Zaheer with MERN Stack and Laravel.",
-    images: ["/assets/elearning_mockup_1775925031066.png"],
+    title: "Projects by Suleman Zaheer | Web App, Mobile App & Custom Website Developer | Lahore",
+    description: "Enterprise-grade projects by Suleman Zaheer – MERN Stack, React Native, Firebase & Custom Website builds. Software Engineer from Lahore, Pakistan.",
+    images: ["/assets/suleman-zaheer-full-stack-developer.jpg"],
     creator: "@imsuleman_10",
   },
 };
