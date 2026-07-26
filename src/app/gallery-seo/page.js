@@ -70,17 +70,19 @@ const buildGallerySchema = (images) => ({
     url: img.url,
     contentUrl: img.url,
     thumbnailUrl: img.url,
-    name: img.title || 'Portfolio Project',
-    description: img.description || 'Web development project snapshot',
-    caption: img.altText || img.title || 'Suleman Zaheer Web Design',
-    keywords: img.tags ? img.tags.join(', ') : 'Web Design, UI, Full Stack, Next.js',
+    name: `${img.title || 'Portfolio Project'} by Suleman Zaheer`,
+    description: img.description || 'Web development project snapshot by Suleman Zaheer, Software Engineer in Lahore.',
+    caption: `${img.title || 'Project'} - Engineered by Suleman Zaheer, Web Developer in Shahdara, Lahore, Pakistan.`,
+    keywords: img.tags ? `${img.tags.join(', ')}, Suleman Zaheer, Software Engineer, Lahore, Web Developer, Shahdara` : 'Suleman Zaheer, Software Engineer, Web Developer, Lahore, Shahdara',
     author: {
       '@type': 'Person',
-      name: 'Suleman Zaheer'
+      name: 'Suleman Zaheer',
+      url: 'https://suleman-zaheer.vercel.app'
     },
     creator: {
       '@type': 'Person',
-      name: 'Suleman Zaheer'
+      name: 'Suleman Zaheer',
+      url: 'https://suleman-zaheer.vercel.app'
     }
   }))
 });
@@ -142,8 +144,8 @@ export default async function GallerySEO() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={img.url}
-                    alt={img.title || 'Portfolio Image'}
-                    title={img.title}
+                    alt={`${img.title || 'Portfolio Project'} - Engineered by Suleman Zaheer, Software Engineer from Lahore`}
+                    title={`${img.title || 'Project'} by Suleman Zaheer`}
                     className="w-full h-auto object-cover scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
                     // Elite LCP Trick: Eager load top images, lazy load the rest
                     loading={isAboveTheFold ? "eager" : "lazy"}

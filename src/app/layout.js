@@ -562,6 +562,62 @@ export default function RootLayout({ children }) {
           text: 'Agree on terms, timeline and milestone payments. Suleman starts building your project with regular progress updates.'
         }
       ]
+    },
+
+    // 9. ProfilePage Schema – Google's 2024 Standard for Personal Entities
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ProfilePage',
+      '@id': 'https://suleman-zaheer.vercel.app/#profilepage',
+      mainEntity: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
+      name: 'Suleman Zaheer – Official Profile',
+      headline: 'Software Engineer, Web Developer, and Urdu Poet from Lahore, Pakistan',
+      url: 'https://suleman-zaheer.vercel.app/',
+      image: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg',
+      dateCreated: '2024-01-01',
+      dateModified: new Date().toISOString().split('T')[0]
+    },
+
+    // 10. CreativeWork (Poetry) – Establishes the "Writer/Poet" Entity
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      '@id': 'https://suleman-zaheer.vercel.app/#poetry-collection',
+      name: 'Suleman Zaheer Poetry Collection',
+      alternateName: 'سلیمان ظہیر کی شاعری',
+      author: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
+      genre: 'Urdu Poetry, Ghazal, Nazm',
+      url: 'https://suleman-zaheer.vercel.app/poetry',
+      inLanguage: 'ur',
+      description: 'A collection of classic and contemporary Urdu poetry written by Suleman Zaheer.'
+    },
+
+    // 11. SoftwareApplication – Establishes the "Engineer/Developer" Entity
+    {
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      '@id': 'https://suleman-zaheer.vercel.app/#software-projects',
+      name: 'SAMStack Software Solutions',
+      applicationCategory: 'WebApplication',
+      operatingSystem: 'Web, iOS, Android',
+      author: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
+      url: 'https://suleman-zaheer.vercel.app/projects',
+      description: 'Enterprise-grade Web Applications, Mobile Apps, and Serverless Systems developed by Suleman Zaheer.'
+    },
+
+    // 12. ImageObject – Targeted SEO for Personal Photos
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ImageObject',
+      '@id': 'https://suleman-zaheer.vercel.app/#primaryimage',
+      url: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg',
+      contentUrl: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg',
+      name: 'Suleman Zaheer – Software Engineer & Web Developer',
+      caption: 'Suleman Zaheer (سلیمان ظہیر), a professional Software Engineer, Web Developer, and Urdu Poet from Shahdara, Lahore, Pakistan.',
+      description: 'Portrait of Suleman Zaheer working as a Full Stack Web Developer and Mobile App Developer in Lahore, Pakistan.',
+      keywords: 'Suleman Zaheer, Software Engineer, Web Developer, Lahore, Shahdara, Poet, MERN Stack',
+      author: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
+      creator: { '@id': 'https://suleman-zaheer.vercel.app/#person' }
     }
   ];
 

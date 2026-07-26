@@ -74,9 +74,10 @@ async function getAuthorData() {
 
 // ─── JSON-LD Schema ────────────────────────────────────────────────────────────
 function buildJsonLd(poems, blogCount) {
-  return {
+  const person = {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': 'https://suleman-zaheer.vercel.app/#author-person',
     name: 'Suleman Zaheer',
     url: 'https://suleman-zaheer.vercel.app',
     image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
@@ -84,9 +85,8 @@ function buildJsonLd(poems, blogCount) {
       'https://github.com/imsuleman-10',
       'https://www.linkedin.com/in/suleman-zaheer-mughal',
     ],
-    jobTitle: 'Full Stack Developer, Author & Researcher',
-    description:
-      'Suleman Zaheer is a full-stack developer, Urdu/English poet, blogger, and researcher from Lahore, Pakistan. Currently pursuing BS Computer Science at UET Lahore.',
+    jobTitle: 'Full Stack Developer, Author, Poet & Researcher',
+    description: 'Suleman Zaheer is a full-stack developer, Urdu/English poet, blogger, and researcher from Lahore, Pakistan. Currently pursuing BS Computer Science at UET Lahore.',
     alumniOf: {
       '@type': 'CollegeOrUniversity',
       name: 'University of Engineering and Technology (UET) Lahore',
@@ -100,8 +100,26 @@ function buildJsonLd(poems, blogCount) {
       'Web Development', 'MERN Stack', 'Next.js', 'Poetry', 'Urdu Literature',
       'Research Writing', 'Blogging', 'Software Engineering',
     ],
-    numberOfItems: blogCount,
-    workExample: poems.slice(0, 5).map(p => ({
+  };
+
+  const profilePage = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    '@id': 'https://suleman-zaheer.vercel.app/author/#profilepage',
+    mainEntity: { '@id': 'https://suleman-zaheer.vercel.app/#author-person' },
+    name: 'Suleman Zaheer | Author, Writer & Researcher',
+    url: 'https://suleman-zaheer.vercel.app/author',
+    image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
+  };
+
+  const creativeWork = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    '@id': 'https://suleman-zaheer.vercel.app/author/#creative-works',
+    name: 'Literary Works of Suleman Zaheer',
+    author: { '@id': 'https://suleman-zaheer.vercel.app/#author-person' },
+    description: 'A collection of poems, research articles, and technical blogs authored by Suleman Zaheer.',
+    hasPart: poems.slice(0, 5).map(p => ({
       '@type': 'CreativeWork',
       additionalType: 'Poem',
       name: p.title,
@@ -110,6 +128,8 @@ function buildJsonLd(poems, blogCount) {
       url: `https://suleman-zaheer.vercel.app/poetry/${p.slug}`,
     })),
   };
+
+  return [person, profilePage, creativeWork];
 }
 
 export default async function AuthorPage() {

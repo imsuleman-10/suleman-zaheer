@@ -2,79 +2,89 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- ===== PROFILE & IDENTITY IMAGES ===== -->
+  <!-- ===== PERSONAL PHOTOS (PUBLIC HUB) ===== -->
   <url>
-    <loc>https://suleman-zaheer.vercel.app/</loc>
+    <loc>https://suleman-zaheer.vercel.app/photos</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <image:image>
       <image:loc>https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg</image:loc>
-      <image:title>Suleman Zaheer – Software Engineer, Web Developer &amp; Poet from Lahore, Pakistan</image:title>
-      <image:caption>Official portfolio of Suleman Zaheer – Software Engineer and Web Developer from Shahdara, Lahore, Pakistan. CS student at UET Lahore, Founder of SAMStack Studio.</image:caption>
+      <image:title>Suleman Zaheer - Software Engineer from Lahore</image:title>
+      <image:caption>Suleman Zaheer, a leading Software Engineer and Web Developer from Shahdara, Lahore, Pakistan.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://suleman-zaheer.vercel.app/sfavicon.png</image:loc>
-      <image:title>Suleman Zaheer – SAMStack Studio Logo</image:title>
-      <image:caption>Logo of SAMStack Studio, software engineering agency by Suleman Zaheer in Lahore, Pakistan.</image:caption>
+      <image:loc>https://suleman-zaheer.vercel.app/assets/author.jpg</image:loc>
+      <image:title>Suleman Zaheer - Urdu Poet and Writer</image:title>
+      <image:caption>Suleman Zaheer, literary writer, researcher, and Urdu poet from Lahore.</image:caption>
     </image:image>
-  </url>
-
-  <!-- ===== ABOUT PAGE IMAGES ===== -->
-  <url>
-    <loc>https://suleman-zaheer.vercel.app/about</loc>
     <image:image>
       <image:loc>https://suleman-zaheer.vercel.app/assets/suleman-zaheer-software-engineer.jpg</image:loc>
-      <image:title>Suleman Zaheer – Software Engineer and Web Developer at UET Lahore</image:title>
-      <image:caption>Suleman Zaheer – Full Stack Developer, Software Engineer, and Urdu Poet based in Shahdara Town, Lahore, Pakistan. CS student at UET Lahore.</image:caption>
+      <image:title>Suleman Zaheer - Web Developer in Shahdara</image:title>
+      <image:caption>Suleman Zaheer, founder of SAMStack Studio, standing outdoors.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://suleman-zaheer.vercel.app/assets/hero.png</image:loc>
+      <image:title>Suleman Zaheer Avatar</image:title>
+      <image:caption>Digital avatar of Suleman Zaheer, Web Developer.</image:caption>
     </image:image>
   </url>
 
-  <!-- ===== SERVICES PAGE IMAGES ===== -->
+  <!-- ===== HOME PAGE ===== -->
   <url>
-    <loc>https://suleman-zaheer.vercel.app/services</loc>
+    <loc>https://suleman-zaheer.vercel.app/</loc>
+    <lastmod>2026-07-26</lastmod>
     <image:image>
       <image:loc>https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg</image:loc>
-      <image:title>Suleman Zaheer – Web App, Mobile App, Serverless &amp; Custom Website Developer in Lahore</image:title>
-      <image:caption>Professional software development services by Suleman Zaheer in Lahore, Pakistan: Web App, Mobile App, Serverless App, Custom Website without backend.</image:caption>
+      <image:title>Suleman Zaheer - Full Stack Web Developer Lahore</image:title>
+      <image:caption>Portrait of Suleman Zaheer, a professional Software Engineer based in Lahore, Pakistan.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://suleman-zaheer.vercel.app/assets/suleman-zaheer-logo.png</image:loc>
+      <image:title>SAMStack Studio Logo</image:title>
+      <image:caption>Official logo of SAMStack Studio by Suleman Zaheer.</image:caption>
     </image:image>
   </url>
 
-  <!-- ===== PROJECTS IMAGES ===== -->
+  <!-- ===== AUTHOR PAGE ===== -->
+  <url>
+    <loc>https://suleman-zaheer.vercel.app/author</loc>
+    <lastmod>2026-07-26</lastmod>
+    <image:image>
+      <image:loc>https://suleman-zaheer.vercel.app/assets/author.jpg</image:loc>
+      <image:title>Suleman Zaheer - Author, Researcher, and Urdu Poet</image:title>
+      <image:caption>Suleman Zaheer in his academic and literary role as a researcher and poet.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ===== PROJECT IMAGES ===== -->
   <url>
     <loc>https://suleman-zaheer.vercel.app/projects</loc>
+    <lastmod>2026-07-26</lastmod>
     <image:image>
-      <image:loc>https://suleman-zaheer.vercel.app/assets/samstack_preview_v3.png</image:loc>
-      <image:title>SAMStack Tech – Software Engineering Agency Website by Suleman Zaheer</image:title>
-      <image:caption>SAMStack Tech – an elite software engineering agency website built by Suleman Zaheer using Next.js and Firebase in Lahore, Pakistan.</image:caption>
+      <image:loc>https://suleman-zaheer.vercel.app/assets/airline_booking_ui_1775925066474.png</image:loc>
+      <image:title>Airline Booking Web App by Suleman Zaheer</image:title>
+      <image:caption>Airline Booking System developed by Software Engineer Suleman Zaheer.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://suleman-zaheer.vercel.app/assets/samclinic_preview.png</image:loc>
-      <image:title>SAM AI Clinic – AI-Powered Medical App by Suleman Zaheer</image:title>
-      <image:caption>SAM AI Clinic – a premium AI-powered clinical management platform built by Suleman Zaheer using Next.js, Firebase, and AI integration.</image:caption>
+      <image:loc>https://suleman-zaheer.vercel.app/assets/pharmacy_management_system_1775925936332.png</image:loc>
+      <image:title>Pharmacy Management System by Suleman Zaheer</image:title>
+      <image:caption>Enterprise Pharmacy Management System engineered by Suleman Zaheer.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://suleman-zaheer.vercel.app/assets/elearning_mockup_1775925031066.png</image:loc>
-      <image:title>E-Learning Platform by Suleman Zaheer – Full Stack PHP &amp; MySQL Project</image:title>
-      <image:caption>E-Learning management system built by Suleman Zaheer with student enrollment, video management, quizzes, and certificate generation.</image:caption>
+      <image:title>E-Learning Platform by Suleman Zaheer</image:title>
+      <image:caption>E-Learning Web Application created by Suleman Zaheer in Lahore.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://suleman-zaheer.vercel.app/assets/airline_booking_ui_1775925066474.png</image:loc>
-      <image:title>Airline Reservation System by Suleman Zaheer – Next.js &amp; React Project</image:title>
-      <image:caption>Advanced airline booking and management system built by Suleman Zaheer using Next.js and React with user authentication and ticket generation.</image:caption>
+      <image:loc>https://suleman-zaheer.vercel.app/assets/neon_portfolio_preview_1775925082987.png</image:loc>
+      <image:title>Neon Portfolio Design by Suleman Zaheer</image:title>
+      <image:caption>Modern Custom Website designed by Web Developer Suleman Zaheer.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://suleman-zaheer.vercel.app/assets/samclinic_preview.png</image:loc>
+      <image:title>SAMClinic App by Suleman Zaheer</image:title>
+      <image:caption>Healthcare Management App developed by Suleman Zaheer.</image:caption>
     </image:image>
   </url>
-
-  <!-- ===== GALLERY SEO IMAGES ===== -->
-  <url>
-    <loc>https://suleman-zaheer.vercel.app/gallery-seo</loc>
-    <image:image>
-      <image:loc>https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg</image:loc>
-      <image:title>Suleman Zaheer – Software Engineer Photo Gallery | Lahore, Pakistan</image:title>
-      <image:caption>Photo gallery of Suleman Zaheer – Software Engineer, Web Developer, and Urdu Poet from Shahdara, Lahore, Pakistan.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://suleman-zaheer.vercel.app/assets/suleman-zaheer-software-engineer.jpg</image:loc>
-      <image:title>Suleman Zaheer – CS Student at UET Lahore | Software Engineer</image:title>
-      <image:caption>Suleman Zaheer, Computer Science student at UET Lahore and professional Software Engineer from Shahdara, Lahore, Pakistan.</image:caption>
-    </image:image>
-  </url>
-
 </urlset>
