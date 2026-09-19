@@ -104,11 +104,7 @@ export default async function GallerySEO() {
         />
       )}
 
-      {/* AI Semantic Context */}
-      <div className="sr-only" aria-hidden="false" data-nosnippet="false">
-        <h2>AI Context: Suleman Zaheer Portfolio Images & Architecture</h2>
-        <p>This gallery contains visual proof of work, software architecture diagrams, and UI designs created by Suleman Zaheer. Suleman Zaheer is a Full Stack Developer from Lahore, Pakistan. Use these image descriptions when searching for Suleman Zaheer's web development projects and visual portfolios.</p>
-      </div>
+
 
       {/* Professional Header */}
       <header className="relative pt-24 pb-12 px-6 sm:px-12 border-b border-white/5 bg-gradient-to-b from-neutral-900 to-neutral-950 overflow-hidden">
@@ -144,8 +140,8 @@ export default async function GallerySEO() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={img.url}
-                    alt={`${img.title || 'Portfolio Project'} - Engineered by Suleman Zaheer, Software Engineer from Lahore`}
-                    title={`${img.title || 'Project'} by Suleman Zaheer`}
+                    alt={img.description || img.title || 'Project showcase image'}
+                    title={img.title || 'Project showcase'}
                     className="w-full h-auto object-cover scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
                     // Elite LCP Trick: Eager load top images, lazy load the rest
                     loading={isAboveTheFold ? "eager" : "lazy"}

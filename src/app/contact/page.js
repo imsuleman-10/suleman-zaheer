@@ -146,7 +146,7 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([localBusinessSchema, contactPageSchema]) }}
       />
-      <div className="sr-only" aria-hidden="false" data-nosnippet="false">
+      <div className="sr-only" aria-hidden="false">
         <h2>Contact Suleman Zaheer â€“ Hire Software Engineer & Web Developer in Lahore, Pakistan</h2>
         <p>
           This is the official contact and hiring page for Suleman Zaheer, a professional Software Engineer and Web Developer based in Shahdara Town, Lahore, Pakistan.
