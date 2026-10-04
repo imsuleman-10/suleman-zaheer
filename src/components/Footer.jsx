@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Github, Linkedin, Instagram, Facebook, Heart } from 'lucide-react';
+import { Github, Linkedin, Instagram, Facebook, Heart, ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 
 const Footer = () => {
@@ -56,6 +56,7 @@ const Footer = () => {
               <li><Link href="/blog" className="text-gray-400 hover:text-primary transition-colors" title="Suleman Zaheer Blog">Blog</Link></li>
               <li><Link href="/cv" className="text-gray-400 hover:text-primary transition-colors" title="Suleman Zaheer CV">CV / Resume</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-primary transition-colors" title="Contact Suleman Zaheer">Contact</Link></li>
+              <li className="pt-2"><a href="https://samstack-tech.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-white transition-colors font-medium flex items-center gap-1" title="SAMStack Studio Agency">My Agency: SAMStack Studio <ArrowUpRight size={14} /></a></li>
             </ul>
           </nav>
 

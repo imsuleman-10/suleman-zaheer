@@ -10,17 +10,18 @@ export { STATIC_BLOGS };
 
 
 export const metadata = {
-  title: 'Suleman Zaheer Blog | Software Engineering & MERN Stack',
-  description: 'Technical articles by Suleman Zaheer. Deep dives into MERN Stack, Next.js, React performance, API design, and modern software engineering in Pakistan.',
+  title: 'Research & Technical Blogs by Suleman Zaheer | Data Analysis, Next.js, Flutter & Business Growth',
+  description: 'Deep dives into software architecture, data analysis, business scaling strategies, and modern web/mobile technologies by Suleman Zaheer. Research papers, technical blogs, and industry insights.',
   keywords: [
-    'Suleman Zaheer Blog', 'Developer Blog Pakistan',
-    'MERN Stack Tutorial', 'Next.js Development Guide',
-    'Software Engineering Articles', 'React Performance Tips'
+    'Suleman Zaheer Blog', 'Suleman Zaheer Research Papers', 'Tech Blog Pakistan',
+    'Data Analysis Blog', 'Next.js vs React Native', 'Flutter Performance Guide',
+    'Business Growth Technology Blog', 'Software Engineering Research',
+    'GEO Optimization Research', 'Predictive Analytics Blog Pakistan'
   ],
   alternates: { canonical: 'https://suleman-zaheer.vercel.app/blog' },
   openGraph: {
-    title: 'Suleman Zaheer Blog | Software Engineering',
-    description: 'Expert technical articles and tutorials on MERN Stack, Next.js, React, and Backend Architecture by Suleman Zaheer.',
+    title: 'Research & Technical Blogs by Suleman Zaheer',
+    description: 'Expert articles and research papers on Data Analysis, Next.js, Flutter, and Business Growth strategies by Suleman Zaheer.',
     url: 'https://suleman-zaheer.vercel.app/blog',
     siteName: 'Suleman Zaheer Official Portfolio',
     type: 'website',
@@ -29,14 +30,14 @@ export const metadata = {
         url: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
         width: 1200,
         height: 1200,
-        alt: 'Suleman Zaheer - Full Stack Developer & Technical Writer',
+        alt: 'Suleman Zaheer - Business Growth Partner & Technical Writer',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Suleman Zaheer Blog | Software Engineering',
-    description: 'Expert articles on MERN, Next.js, React, Node.js, and Software Engineering by Suleman Zaheer.',
+    title: 'Suleman Zaheer Blog | Research & Business Growth',
+    description: 'Expert articles on Data Analysis, Next.js, Flutter, and scaling businesses by Suleman Zaheer.',
     image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
     creator: '@imsuleman_10',
   },

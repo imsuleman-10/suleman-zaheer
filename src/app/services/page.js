@@ -1,11 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import { Globe, Smartphone, Zap, Layout, ArrowUpRight, CheckCircle, MapPin, Mail, Phone } from 'lucide-react';
+import { Globe, Smartphone, Zap, Layout, ArrowUpRight, CheckCircle, MapPin, Mail, Phone, Database } from 'lucide-react';
 
 export const metadata = {
-  title: "Services by Suleman Zaheer | Web App, Mobile App, Android App, Desktop App, Shopify Store, SEO – Lahore, Pakistan",
-  description: "Hire Suleman Zaheer for professional Web App Development, Mobile App Development, Android App Development, Desktop App Development, Shopify Store Development, and SEO Services in Lahore, Pakistan. Expert Software Engineer & SEO Specialist based in Shahdara, Lahore. CS student at UET Lahore.",
+  title: "Services by Suleman Zaheer | Next.js, Flutter, Data Analysis, Shopify, SEO – Lahore, Pakistan",
+  description: "Hire Suleman Zaheer for professional Next.js Web Apps, Flutter Mobile Apps, Data Analysis, Shopify Store Development, and SEO Services in Lahore, Pakistan. Expert Software Engineer & Business Growth Partner.",
   keywords: [
+    "Next.js Developer Lahore", "Flutter Developer Pakistan", "Data Analyst Lahore",
+    "Data Analysis Services Pakistan", "Business Growth Consultant Lahore",
     "Web App Development Lahore", "Mobile App Developer Pakistan", "Android App Developer Lahore",
     "Android App Development Pakistan", "Desktop App Developer Pakistan", "Desktop App Development Lahore",
     "Shopify Developer Lahore", "Shopify Store Development Pakistan", "Shopify Expert Pakistan",
@@ -13,7 +15,7 @@ export const metadata = {
     "Technical SEO Pakistan", "Local SEO Lahore", "GEO Optimization Pakistan",
     "Serverless App Developer Lahore", "Custom Website Without Backend Pakistan",
     "Hire Software Engineer Lahore", "React Native Developer Pakistan",
-    "Firebase App Developer Lahore", "Next.js Developer Pakistan", "MERN Stack Developer Lahore",
+    "Firebase App Developer Lahore", "MERN Stack Developer Lahore",
     "Shopify Theme Developer Lahore", "E-Commerce Developer Pakistan",
     "Electron.js Desktop App Developer Lahore",
     "Website Development Lahore Pakistan", "Website Developer Near Me Lahore",
@@ -23,18 +25,18 @@ export const metadata = {
   ],
   alternates: { canonical: "https://suleman-zaheer.vercel.app/services" },
   openGraph: {
-    title: "Services | Suleman Zaheer – Web App, Mobile App, Android, Desktop, Shopify & SEO | Lahore",
-    description: "Professional Software Development & Digital Services by Suleman Zaheer in Lahore, Pakistan. Web Apps, Mobile Apps, Android Apps, Desktop Apps, Shopify Stores, and SEO Services.",
+    title: "Services | Suleman Zaheer – Next.js, Flutter, Data Analysis & SEO | Lahore",
+    description: "Professional Software Development & Digital Services by Suleman Zaheer in Lahore, Pakistan. Next.js Web Apps, Flutter Apps, Data Analysis, Shopify Stores, and SEO Services.",
     url: "https://suleman-zaheer.vercel.app/services",
     siteName: "Suleman Zaheer Official Portfolio",
     type: "website",
     locale: "en_PK",
-    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer Services – Software Engineer, Android Developer, Shopify Expert & SEO Specialist in Lahore" }],
+    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer Services – Software Engineer, Flutter Developer, Data Analyst & SEO Specialist in Lahore" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services | Suleman Zaheer – Web App, Mobile App, Android, Desktop, Shopify & SEO",
-    description: "Hire Suleman Zaheer for Web App, Mobile App, Android App, Desktop App, Shopify Store, and SEO services in Lahore, Pakistan.",
+    title: "Services | Suleman Zaheer – Next.js, Flutter, Data Analysis & SEO",
+    description: "Hire Suleman Zaheer for Next.js, Flutter, Data Analysis, Shopify Store, and SEO services in Lahore, Pakistan.",
     images: ["/assets/suleman-zaheer-full-stack-developer.jpg"],
     creator: "@imsuleman_10",
   },
@@ -42,26 +44,50 @@ export const metadata = {
 
 const services = [
   {
+    id: "data-analysis",
+    icon: Database,
+    color: "text-indigo-400",
+    bgColor: "bg-indigo-400/10",
+    borderColor: "border-indigo-400/20",
+    title: "Data Analysis & Business Intelligence",
+    subtitle: "Data-Driven Decisions for Business Growth",
+    description: "Transform your raw business data into actionable insights. Suleman Zaheer provides comprehensive data analysis, visualization, and predictive modeling services to help businesses in Pakistan optimize operations, understand customer behavior, and drive revenue growth.",
+    features: [
+      "Data Cleaning & Preprocessing",
+      "Interactive Dashboards (Power BI / Tableau)",
+      "Statistical Analysis & Predictive Modeling",
+      "Customer Behavior & Sales Analytics",
+      "Database Architecture & SQL Optimization",
+      "Python-based Data Pipelines (Pandas, NumPy)",
+      "Web Scraping & Data Extraction",
+      "Automated Reporting Systems"
+    ],
+    technologies: ["Python", "Pandas", "SQL", "Power BI", "Tableau", "Jupyter", "Web Scraping"],
+    useCases: ["Retail & E-Commerce Analytics", "Financial Forecasting", "Inventory Optimization", "Market Research", "Operational Efficiency"],
+    price: "Starting from PKR 50,000",
+    deliveryTime: "1–4 weeks",
+  },
+  {
     id: "web-app",
     icon: Globe,
     color: "text-blue-400",
     bgColor: "bg-blue-400/10",
     borderColor: "border-blue-400/20",
     title: "Web App Development",
-    subtitle: "Full Stack MERN & Next.js Applications",
-    description: "Build powerful, scalable, and enterprise-grade web applications using the MERN Stack (MongoDB, Express.js, React, Node.js) and Next.js. Suleman Zaheer delivers high-performance, SEO-optimized web apps for businesses and startups in Lahore and across Pakistan.",
+    subtitle: "Enterprise Next.js & MERN Architecture",
+    description: "Build powerful, scalable, and enterprise-grade web applications tailored for business growth. Specializing in high-performance Next.js architectures (Server Components, SEO domination) and robust MERN stack backends. Suleman Zaheer delivers digital ecosystems that scale with your business.",
     features: [
+      "Enterprise Next.js App Router Architecture",
       "Full Stack MERN (MongoDB, Express, React, Node.js)",
-      "Next.js App Router with Server Components",
-      "REST API & Database Architecture",
-      "User Authentication & Authorization",
-      "Admin Dashboards & CMS",
-      "SEO Optimization & Core Web Vitals",
-      "Responsive & Mobile-First Design",
-      "Firebase & Cloud Integration"
+      "REST & GraphQL API Engineering",
+      "Advanced User Authentication & Role Management",
+      "Custom Admin Dashboards & ERP Systems",
+      "Core Web Vitals & Technical SEO Optimization",
+      "B2B SaaS Platform Development",
+      "Cloud & Serverless Integrations"
     ],
-    technologies: ["React.js", "Next.js", "Node.js", "MongoDB", "Express.js", "Firebase", "TypeScript", "Tailwind CSS"],
-    useCases: ["E-Commerce Platforms", "Business Management Systems", "SaaS Applications", "Educational Portals", "Booking Systems"],
+    technologies: ["Next.js", "React.js", "Node.js", "TypeScript", "MongoDB", "PostgreSQL", "Tailwind CSS", "Firebase"],
+    useCases: ["B2B SaaS Platforms", "E-Commerce Marketplaces", "Business ERP Systems", "High-Traffic Portals", "Fintech Dashboards"],
     price: "Starting from PKR 75,000",
     deliveryTime: "2–8 weeks",
   },
@@ -72,20 +98,20 @@ const services = [
     bgColor: "bg-purple-400/10",
     borderColor: "border-purple-400/20",
     title: "Mobile App Development",
-    subtitle: "Cross-Platform iOS & Android Apps",
-    description: "Develop cross-platform mobile applications for iOS and Android using React Native. Suleman Zaheer builds beautiful, performant, and user-friendly mobile apps for businesses in Lahore, Pakistan, and internationally. One codebase, two platforms – maximum efficiency.",
+    subtitle: "High-Performance Cross-Platform Apps (Flutter)",
+    description: "Develop seamless, native-feeling mobile applications for iOS and Android using Flutter. Suleman Zaheer engineers beautiful, lightning-fast mobile experiences designed to engage users and drive business growth. One unified codebase, two powerful platforms.",
     features: [
-      "React Native Cross-Platform Development",
-      "iOS & Android from One Codebase",
-      "Firebase Backend Integration",
-      "Push Notifications & Real-time Data",
-      "Offline-First Architecture",
-      "App Store & Play Store Submission",
-      "UI/UX Design & Animations",
-      "Performance Optimization"
+      "Flutter Cross-Platform Engineering",
+      "Native iOS & Android from One Codebase",
+      "Custom UI/UX Animations & Interactions",
+      "Complex State Management (Riverpod/Provider)",
+      "Offline-First Architecture & Sync",
+      "App Store & Play Store Deployment",
+      "REST API & Firebase Integration",
+      "Performance & Memory Optimization"
     ],
-    technologies: ["React Native", "Firebase", "Expo", "JavaScript", "TypeScript", "Redux", "Zustand"],
-    useCases: ["Delivery & Logistics Apps", "Healthcare Apps", "E-Commerce Mobile Apps", "Social Platforms", "Business Tools"],
+    technologies: ["Flutter", "Dart", "Firebase", "REST APIs", "Riverpod", "SQLite", "Stripe/JazzCash"],
+    useCases: ["Fintech & Wallet Apps", "E-Commerce Mobile Stores", "On-Demand Delivery Platforms", "Health & Fitness Trackers", "Corporate Internal Tools"],
     price: "Starting from PKR 85,000",
     deliveryTime: "4–12 weeks",
   },
@@ -97,19 +123,19 @@ const services = [
     borderColor: "border-green-400/20",
     title: "Android App Development",
     subtitle: "Dedicated Android Apps for Google Play Store",
-    description: "Get a dedicated, high-performance Android application built by Suleman Zaheer in Lahore. Specialized Android development optimized for Pakistani market needs – Google Play Store submission, Urdu language support, JazzCash/EasyPaisa integration, Google Maps, and Firebase-powered real-time features.",
+    description: "Get a dedicated, high-performance Android application built with Flutter or React Native, optimized for the Pakistani market. Complete with Google Play Store submission, Urdu language RTL support, JazzCash/EasyPaisa integration, and Firebase real-time infrastructure.",
     features: [
-      "Android-Optimized React Native Development",
-      "Google Play Store Submission & Listing",
-      "Google Maps Integration",
+      "Android-Optimized Flutter Development",
+      "Google Play Store Submission & ASO",
+      "Google Maps & Geolocation Integration",
       "JazzCash & EasyPaisa In-App Payments",
       "Firebase Push Notifications (FCM)",
-      "Offline Mode with Local Storage",
+      "Hardware Integration (Camera, Bluetooth)",
       "Urdu Language & RTL Support",
-      "Material Design UI/UX"
+      "Material Design 3 UI/UX"
     ],
-    technologies: ["React Native", "Android SDK", "Firebase", "Google Play Console", "FCM", "Google Maps API", "Expo"],
-    useCases: ["Local Delivery Services", "Food Ordering Apps", "POS Android Apps", "Community Platforms", "Business Management"],
+    technologies: ["Flutter", "React Native", "Android SDK", "Firebase", "Google Play Console", "FCM", "Google Maps API"],
+    useCases: ["Local Delivery Services", "POS Android Terminals", "B2B Field Agent Apps", "Community Platforms", "Business Management"],
     price: "Starting from PKR 70,000",
     deliveryTime: "3–10 weeks",
   },
@@ -182,7 +208,7 @@ const services = [
     ],
     technologies: ["Next.js", "JSON-LD Schema", "Google Search Console", "Google Analytics 4", "Core Web Vitals", "Sitemap XML"],
     useCases: ["Local Businesses in Lahore", "E-Commerce Stores", "Freelancers & Agencies", "Restaurant & Food Businesses", "Professional Portfolios"],
-    price: "Starting from PKR 30,000",
+    price: "Starting from PKR 45,000",
     deliveryTime: "2–6 weeks (ongoing)",
   },
   {
@@ -322,7 +348,7 @@ export default function ServicesPage() {
         areaServed: [{ '@type': 'City', name: 'Lahore' }, { '@type': 'Country', name: 'Pakistan' }, { '@type': 'Place', name: 'Worldwide' }],
         serviceType: 'SEO & Website Optimization',
         url: 'https://suleman-zaheer.vercel.app/services#seo',
-        offers: { '@type': 'Offer', priceCurrency: 'PKR', price: '30000' }
+        offers: { '@type': 'Offer', priceCurrency: 'PKR', price: '45000' }
       },
       {
         '@type': 'Service',
@@ -362,7 +388,7 @@ export default function ServicesPage() {
             name: 'How much does it cost to hire Suleman Zaheer for a web app in Pakistan?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Suleman Zaheer pricing: SEO from PKR 30,000 | Custom website from PKR 45,000 | Shopify store from PKR 55,000 | Serverless mobile app from PKR 65,000 | Android app from PKR 70,000 | Web app from PKR 75,000 | Desktop app from PKR 80,000 | Mobile app from PKR 85,000.'
+              text: 'Suleman Zaheer pricing: SEO from PKR 45,000 | Custom website from PKR 45,000 | Shopify store from PKR 55,000 | Serverless mobile app from PKR 65,000 | Android app from PKR 70,000 | Web app from PKR 75,000 | Desktop app from PKR 80,000 | Mobile app from PKR 85,000.'
             }
           },
           {
@@ -452,72 +478,104 @@ export default function ServicesPage() {
         <div className="space-y-16">
           {services.map((service, idx) => {
             const Icon = service.icon;
+            const linkHref = service.id === 'seo' ? '/services/seo-services' :
+                             service.id === 'data-analysis' ? '/services/data-analysis' :
+                             service.id === 'web-app' ? '/services/mern-stack-development' :
+                             service.id === 'mobile-app' || service.id === 'android-app' ? '/services/flutter-app-development' :
+                             '/contact';
+
             return (
               <div
                 key={service.id}
                 id={service.id}
-                className={`group relative rounded-[2.5rem] border ${service.borderColor} bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-500 overflow-hidden`}
+                className={`group relative rounded-[2.5rem] border ${service.borderColor} bg-white/[0.01] hover:bg-white/[0.02] backdrop-blur-3xl transition-all duration-500 overflow-hidden hover:shadow-[0_0_50px_-15px] ${service.color.replace('text-', 'shadow-')}`}
               >
-                <div className="p-8 sm:p-12 lg:p-16">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-                    <div>
-                      <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${service.bgColor} border ${service.borderColor} mb-6`}>
-                        <Icon size={32} className={service.color} />
+                {/* Subtle gradient orb behind each card */}
+                <div className={`absolute -top-40 -right-40 w-80 h-80 ${service.bgColor.replace('/10', '/20')} rounded-full blur-[100px] opacity-0 group-hover:opacity-50 transition-opacity duration-700 pointer-events-none`} />
+                
+                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="relative p-6 sm:p-10 z-10">
+                  <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-12 items-stretch">
+                    
+                    {/* Left Column - Core Info */}
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-6 mb-6">
+                        <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${service.bgColor} border ${service.borderColor} group-hover:scale-110 transition-transform duration-500 shadow-lg flex-shrink-0`}>
+                          <Icon size={28} className={service.color} />
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-3 mb-2">
+                            <span className="text-white/20 text-xs font-mono font-bold">0{idx + 1}</span>
+                            <span className={`text-[10px] font-black uppercase tracking-widest ${service.color} px-3 py-1 rounded-full ${service.bgColor} border ${service.borderColor}`}>
+                              {service.subtitle}
+                            </span>
+                          </div>
+                          <h2 className="text-2xl sm:text-3xl font-black text-white leading-tight speakable">
+                            {service.title}
+                          </h2>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className="text-gray-500 text-sm font-mono">0{idx + 1}</span>
-                        <span className={`text-xs font-bold uppercase tracking-widest ${service.color} px-3 py-1 rounded-full ${service.bgColor}`}>
-                          {service.subtitle}
-                        </span>
-                      </div>
-                      <h2 className="text-3xl sm:text-4xl font-black text-white mb-4 leading-tight speakable">
-                        {service.title}
-                      </h2>
-                      <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
+                      
+                      <p className="text-gray-400 text-base leading-relaxed mb-8">
                         {service.description}
                       </p>
-                      <div className="flex flex-wrap items-center gap-4 mb-8">
-                        <span className={`font-bold text-sm ${service.color}`}>{service.price}</span>
-                        <span className="text-gray-600 text-sm">|</span>
-                        <span className="text-sm text-gray-400">Delivery: <span className="text-white font-semibold">{service.deliveryTime}</span></span>
+                      
+                      <div className="flex flex-wrap items-center gap-4 mb-8 bg-black/40 p-4 rounded-xl border border-white/5 w-fit">
+                        <div>
+                          <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">Starting Price</p>
+                          <span className={`font-black text-lg ${service.color}`}>{service.price}</span>
+                        </div>
+                        <div className="w-px h-8 bg-white/10 mx-2"></div>
+                        <div>
+                          <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">Delivery Time</p>
+                          <span className="text-white font-bold text-sm">{service.deliveryTime}</span>
+                        </div>
                       </div>
-                      <div className="flex flex-wrap gap-2 mb-8">
+                      
+                      <div className="flex flex-wrap gap-2 mb-8 mt-auto">
                         {service.technologies.map((tech) => (
-                          <span key={tech} className="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs text-gray-300 font-medium">
+                          <span key={tech} className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300 font-medium group-hover:border-white/20 group-hover:bg-white/10 transition-colors">
                             {tech}
                           </span>
                         ))}
                       </div>
+                      
                       <Link
-                        href="/contact"
-                        className={`inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-sm uppercase tracking-wider transition-all duration-300 ${service.bgColor} ${service.color} border ${service.borderColor} hover:scale-105`}
+                        href={linkHref}
+                        className={`inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-300 ${service.bgColor} ${service.color} border ${service.borderColor} hover:scale-105 hover:shadow-[0_0_30px_-5px] hover:${service.color.replace('text-', 'shadow-')}`}
                       >
-                        Hire Me for This <ArrowUpRight size={16} />
+                        Explore Service <ArrowUpRight size={16} />
                       </Link>
                     </div>
-                    <div className="space-y-6">
-                      <div>
-                        <h3 className="text-white font-bold text-lg mb-4">What&apos;s Included:</h3>
-                        <ul className="space-y-3">
+
+                    {/* Right Column - Features & Use Cases */}
+                    <div className="flex flex-col h-full space-y-4">
+                      <div className="bg-black/20 rounded-2xl p-6 border border-white/5 flex-grow">
+                        <h3 className="text-white font-bold text-base mb-4 flex items-center gap-2">
+                          <CheckCircle size={18} className={service.color} /> What&apos;s Included
+                        </h3>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
                           {service.features.map((feature) => (
-                            <li key={feature} className="flex items-start gap-3 text-gray-400 text-sm">
-                              <CheckCircle size={16} className={`${service.color} flex-shrink-0 mt-0.5`} />
-                              <span>{feature}</span>
+                            <li key={feature} className="flex items-start gap-2 text-gray-400 text-xs group/feature">
+                              <div className={`mt-1.5 w-1 h-1 rounded-full ${service.bgColor.replace('/10', '')} group-hover/feature:scale-150 transition-transform flex-shrink-0`} />
+                              <span className="leading-relaxed group-hover/feature:text-gray-300 transition-colors">{feature}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
-                      <div>
-                        <h3 className="text-white font-bold text-lg mb-4">Use Cases:</h3>
+                      
+                      <div className="bg-black/20 rounded-2xl p-6 border border-white/5">
+                        <h3 className="text-white font-bold text-sm mb-3">Ideal For:</h3>
                         <div className="flex flex-wrap gap-2">
                           {service.useCases.map((useCase) => (
-                            <span key={useCase} className="px-3 py-1.5 rounded-xl bg-white/[0.03] border border-white/5 text-xs text-gray-400">
+                            <span key={useCase} className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-[11px] text-gray-400 font-medium hover:text-white transition-colors">
                               {useCase}
                             </span>
                           ))}
                         </div>
                       </div>
                     </div>
+                    
                   </div>
                 </div>
               </div>
@@ -538,45 +596,45 @@ export default function ServicesPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "UET Lahore – CS Student", desc: "Studying Computer Science at Pakistan's top engineering university, ensuring a deep theoretical foundation." },
-              { title: "Real-World Projects", desc: "Built enterprise platforms, AI clinics, e-learning systems, and airline reservation systems." },
-              { title: "Lahore & Shahdara Based", desc: "Local developer in Lahore (Shahdara Town) – available for in-person meetings and local projects." },
-              { title: "Full Transparency", desc: "Regular progress updates, clean code, detailed documentation, and post-delivery support." },
-              { title: "Modern Tech Stack", desc: "Latest technologies: Next.js 14, React Native, Firebase, TypeScript, and Tailwind CSS." },
-              { title: "Competitive PKR Pricing", desc: "Professional-quality development at Pakistan-friendly pricing with flexible milestone-based payments." }
+              { title: "UET Lahore – CS Student", desc: "Studying Computer Science at Pakistan's top engineering university, ensuring a deep theoretical foundation.", icon: "🎓" },
+              { title: "Real-World Projects", desc: "Built enterprise platforms, AI clinics, e-learning systems, and airline reservation systems.", icon: "🚀" },
+              { title: "Lahore & Shahdara Based", desc: "Local developer in Lahore (Shahdara Town) – available for in-person meetings and local projects.", icon: "📍" },
+              { title: "Full Transparency", desc: "Regular progress updates, clean code, detailed documentation, and post-delivery support.", icon: "🔍" },
+              { title: "Modern Tech Stack", desc: "Latest technologies: Next.js 14, React Native, Firebase, TypeScript, and Tailwind CSS.", icon: "⚡" },
+              { title: "Competitive PKR Pricing", desc: "Professional-quality development at Pakistan-friendly pricing with flexible milestone-based payments.", icon: "💰" }
             ].map((item, i) => (
-              <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/20 transition-colors">
-                <h3 className="text-primary font-bold text-base mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+              <div key={i} className="group p-8 rounded-[2rem] bg-gradient-to-br from-white/[0.03] to-transparent border border-white/5 hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_-10px_rgba(37,99,235,0.2)]">
+                <div className="text-4xl mb-6 group-hover:scale-110 group-hover:-rotate-3 transition-transform origin-left">{item.icon}</div>
+                <h3 className="text-white font-bold text-xl mb-3">{item.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-primary rounded-[2.5rem] p-10 sm:p-16 text-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_white_0%,_transparent_70%)]" />
+        <div className="bg-gradient-to-br from-primary/20 to-transparent border border-primary/20 rounded-[2.5rem] p-10 sm:p-16 text-center relative overflow-hidden backdrop-blur-xl">
+          <div className="absolute inset-0 bg-primary/5 opacity-50 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent pointer-events-none" />
           <h2 className="text-3xl sm:text-5xl font-black text-white mb-4 relative z-10 speakable">
             Ready to Start Your Project?
           </h2>
-          <p className="text-white/80 text-lg mb-2 relative z-10">
+          <p className="text-gray-300 text-lg mb-2 relative z-10">
             <strong>Suleman Zaheer</strong> – Software Engineer &amp; Web Developer, Lahore, Pakistan
           </p>
-          <p className="text-white/70 text-sm mb-10 relative z-10">
+          <p className="text-gray-400 text-sm mb-10 relative z-10">
             Shahdara Town, Lahore | samstacktechs@gmail.com | +923285778715
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white text-primary px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-neutral-100 transition-all shadow-xl"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_0_30px_-5px_rgba(14,165,233,0.5)]"
             >
               <Mail size={16} /> Contact Me Now
             </Link>
             <a
               href="tel:+923285778715"
-              className="inline-flex items-center gap-2 bg-white/10 text-white border border-white/20 px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-white/20 transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-white/5 text-white border border-white/10 px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-white/10 hover:border-white/20 transition-all"
             >
               <Phone size={16} /> Call Now
             </a>

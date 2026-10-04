@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Code2, Globe, Database, Download } from 'lucide-react';
+import { ArrowRight, Code2, Globe, Database, Download, Smartphone, PenTool } from 'lucide-react';
 
 
 const Hero = () => {
@@ -76,16 +76,16 @@ const Hero = () => {
 
           <h1 className="text-4xl sm:text-5xl md:text-8xl font-display font-extrabold mb-4 md:mb-6 tracking-tight text-white">
               Suleman <span className="text-primary italic">Zaheer</span>
-              <span className="block text-lg sm:text-2xl font-normal text-gray-400 mt-2 tracking-normal">Full Stack MERN Developer & Software Engineer</span>
+              <span className="block text-lg sm:text-2xl font-normal text-gray-400 mt-2 tracking-normal">Business Growth Partner & Multi-Stack Expert</span>
             </h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-lg md:text-2xl text-gray-400 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed"
+            className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto mb-8 md:mb-10 leading-relaxed"
           >
-            I am <span className="text-white font-semibold">Suleman Zaheer</span>. I bridge the gap between Computer Science and Industrial Manufacturing by building scalable, high-performance web applications.
+            I engineer digital ecosystems that scale businesses. Blending <span className="text-white font-semibold">Next.js, Flutter, and Data Analytics</span> with the art of storytelling and literature.
           </motion.p>
 
           <motion.div 
@@ -118,15 +118,19 @@ const Hero = () => {
           >
             <div className="flex flex-col items-center gap-2">
               <Globe size={24} />
-              <span className="text-xs uppercase tracking-widest font-bold">Web</span>
+              <span className="text-xs uppercase tracking-widest font-bold">Web Developer</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <Smartphone size={24} />
+              <span className="text-xs uppercase tracking-widest font-bold">App Developer</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Database size={24} />
-              <span className="text-xs uppercase tracking-widest font-bold">MERN</span>
+              <span className="text-xs uppercase tracking-widest font-bold">Data Analyst</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <Code2 size={24} />
-              <span className="text-xs uppercase tracking-widest font-bold">Scale</span>
+              <PenTool size={24} />
+              <span className="text-xs uppercase tracking-widest font-bold">Writer & Poet</span>
             </div>
           </motion.div>
         </motion.div>

@@ -5,35 +5,32 @@ import { FadeIn, ScaleIn } from '@/components/animations/MotionWrapper';
 import Script from 'next/script';
 
 export const metadata = {
-  title: "About Suleman Zaheer | Software Engineer, Android Developer, Shopify Expert & SEO Specialist – Lahore, Pakistan",
-  description: "Suleman Zaheer is a professional Software Engineer, Web Developer, Android App Developer, Desktop App Developer, Shopify Expert, and SEO Specialist from Shahdara, Lahore, Pakistan. CS student at UET Lahore. Expert in Web Apps, Mobile Apps, Android Apps, Desktop Apps, Shopify Stores, and SEO. Founder of SAMStack Studio. Also an acclaimed Urdu poet.",
+  title: "About Suleman Zaheer | MERN, Laravel & Flutter Developer – Lahore, Pakistan",
+  description: "Learn about Suleman Zaheer – Expert MERN Stack, Next.js, Laravel & Flutter Developer from Shahdara, Lahore, Pakistan. Business Growth Partner & Founder of SAMStack Studio.",
   keywords: [
-    "About Suleman Zaheer", "Suleman Zaheer Biography", "Software Engineer Lahore",
-    "Web Developer Shahdara Lahore", "Web App Developer Pakistan", "Mobile App Developer Lahore",
-    "Android App Developer Lahore", "Android App Developer Pakistan",
-    "Desktop App Developer Lahore", "Desktop App Development Pakistan",
-    "Shopify Developer Lahore", "Shopify Expert Pakistan",
-    "SEO Expert Lahore", "SEO Services Pakistan", "Technical SEO Lahore",
-    "Website Development Lahore Pakistan",
-    "UET Lahore Computer Science", "MERN Stack Expert Lahore", "Full Stack Developer Profile",
-    "SAMStack Studio Founder", "Urdu Poet Lahore", "Suleman Zaheer Mughal"
+    "About Suleman Zaheer", "Who is Suleman Zaheer", "Suleman Zaheer Biography",
+    "Business Growth Consultant Lahore", "Data Analyst Lahore", "Flutter Developer Pakistan",
+    "Next.js Expert Lahore", "MERN Stack Developer Lahore", "Laravel Developer Pakistan",
+    "Software Tester QA Lahore", "SEO Expert Lahore", "UET Lahore Computer Science",
+    "Govt Islamia College Civil Lines Lahore", "SAMStack Studio Founder",
+    "Urdu Poet Lahore", "Suleman Zaheer Mughal", "Suleman Zaheer UET"
   ],
   alternates: {
     canonical: "https://suleman-zaheer.vercel.app/about",
   },
   openGraph: {
-    title: "About Suleman Zaheer | Software Engineer, Android Developer, Shopify Expert & SEO Specialist – Lahore",
-    description: "Suleman Zaheer – professional Software Engineer from Shahdara, Lahore. Expert in Web Apps, Mobile Apps, Android Apps, Desktop Apps, Shopify Stores, and SEO Services. CS student at UET Lahore. Founder of SAMStack Studio.",
+    title: "About Suleman Zaheer | MERN, Laravel & Flutter Developer – Lahore",
+    description: "Learn about Suleman Zaheer – Expert MERN Stack, Next.js, Laravel & Flutter Developer from Shahdara, Lahore. Business Growth Partner & Founder of SAMStack Studio.",
     url: "https://suleman-zaheer.vercel.app/about",
     siteName: "Suleman Zaheer Official Portfolio",
     type: "profile",
     locale: "en_PK",
-    images: [{ url: "/assets/suleman-zaheer-software-engineer.jpg", width: 800, height: 800, alt: "Suleman Zaheer – Software Engineer, Android Developer, Shopify Expert & SEO Specialist from Lahore, Pakistan" }],
+    images: [{ url: "/assets/suleman-zaheer-software-engineer.jpg", width: 800, height: 800, alt: "Suleman Zaheer – MERN, Laravel & Flutter Developer from Lahore, Pakistan" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Suleman Zaheer | Software Engineer, Android Developer, Shopify Expert & SEO Specialist | Lahore",
-    description: "Suleman Zaheer – Software Engineer, Android App Developer, Desktop App Developer, Shopify Expert, and SEO Specialist from Shahdara, Lahore. CS student at UET Lahore.",
+    title: "About Suleman Zaheer | MERN, Laravel & Flutter Developer | Lahore",
+    description: "Learn about Suleman Zaheer – Expert MERN, Next.js, Laravel & Flutter Developer from Lahore, Pakistan. Founder of SAMStack Studio.",
     images: ["/assets/suleman-zaheer-software-engineer.jpg"],
     creator: "@imsuleman_10",
   },
@@ -49,9 +46,9 @@ export default function AboutPage() {
     },
     {
       degree: "Intermediate in Computer Science (ICS)",
-      school: "980 Marks Achievement",
-      period: "Completed",
-      desc: "Demonstrated exceptional analytical and problem-solving abilities, laying a strong foundation for a career in technology."
+      school: "Govt Islamia College Civil Lines, Lahore",
+      period: "Completed (980 Marks)",
+      desc: "Demonstrated strong analytical skills and academic dedication during higher secondary education."
     },
     {
       degree: "Advanced Web Applications",
@@ -62,10 +59,10 @@ export default function AboutPage() {
   ];
 
   const skills = [
-    { category: "Frontend Engineering", items: ["React.js", "Next.js", "TypeScript / ES6+", "Tailwind CSS v4", "Framer Motion"] },
-    { category: "Backend Architecture", items: ["Node.js", "Express API", "RESTful Services", "PHP", "Laravel Framework"] },
-    { category: "Database & Cloud", items: ["MongoDB / Mongoose", "MySQL / SQL", "Firebase Platform", "Cloud Storage"] },
-    { category: "DevOps & Tooling", items: ["Git Workflow", "GitHub Actions", "Vercel Deployment", "NPM / Yarn", "Postman / API Testing"] }
+    { category: "Frontend Engineering", items: ["React.js", "Next.js", "Flutter", "Tailwind CSS"] },
+    { category: "Backend Architecture", items: ["Node.js", "MERN Stack", "PHP", "Laravel Framework"] },
+    { category: "Testing & QA", items: ["Manual Testing", "Automated Testing", "Bug Tracking", "Performance Profiling"] },
+    { category: "SEO & Growth", items: ["Technical SEO", "GEO / AEO", "Data Analysis", "Predictive Modeling"] }
   ];
 
   const certifications = [
@@ -74,18 +71,116 @@ export default function AboutPage() {
     { title: "Advanced Problem Solving Strategies", issuer: "Stanford University (Online Module)" }
   ];
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfilePage',
-    mainEntity: {
-      '@type': 'Person',
-      name: 'Suleman Zaheer',
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ProfilePage',
+      '@id': 'https://suleman-zaheer.vercel.app/about#profilepage',
+      name: 'About Suleman Zaheer - Full Stack Developer & Data Analyst',
       url: 'https://suleman-zaheer.vercel.app/about',
-      jobTitle: 'Full Stack Developer',
-      knowsAbout: ['Software Engineering', 'MERN Stack', 'Next.js', 'React', 'Node.js', 'Laravel', 'Urdu Poetry'],
-      description: 'Suleman Zaheer is a highly motivated Computer Science student at UET Lahore and a Full Stack Web Developer. He is the founder of SAMStack Studio.'
+      description: 'Official About page of Suleman Zaheer - MERN Stack, Next.js, Laravel & Flutter Developer from Lahore, Pakistan.',
+      mainEntity: {
+        '@type': 'Person',
+        '@id': 'https://suleman-zaheer.vercel.app/#person',
+        name: 'Suleman Zaheer',
+        alternateName: ['سلیمان ظہیر', 'Suleman Zaheer Mughal', 'S. Zaheer'],
+        url: 'https://suleman-zaheer.vercel.app',
+        image: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-software-engineer.jpg',
+        jobTitle: 'MERN Stack, Next.js, Laravel & Flutter Developer | Data Analyst | QA Tester',
+        description: 'Suleman Zaheer is an expert full stack developer and data analyst based in Shahdara Town, Lahore, Pakistan. He is currently pursuing a B.S. in Computer Science at UET Lahore (2024-2028) and is the founder of SAMStack Studio. He specializes in MERN Stack, Next.js, Laravel, and Flutter development for enterprise clients.',
+        nationality: { '@type': 'Country', name: 'Pakistan' },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Shahdara Town',
+          addressLocality: 'Lahore',
+          addressRegion: 'Punjab',
+          addressCountry: 'PK',
+        },
+        email: 'samstacktechs@gmail.com',
+        telephone: '+923285778715',
+        sameAs: [
+          'https://github.com/imsuleman-10',
+          'https://www.linkedin.com/in/suleman-zaheer-mughal',
+          'https://www.instagram.com/imsuleman.10/',
+          'https://web.facebook.com/Iamsuleman.10',
+          'https://x.com/imsuleman_10',
+        ],
+        alumniOf: [
+          {
+            '@type': 'CollegeOrUniversity',
+            name: 'University of Engineering and Technology (UET) Lahore',
+            sameAs: 'https://uet.edu.pk/'
+          },
+          {
+            '@type': 'EducationalOrganization',
+            name: 'Govt Islamia College Civil Lines, Lahore'
+          }
+        ],
+        knowsAbout: [
+          'MERN Stack Development', 'Next.js App Router', 'Laravel PHP Framework',
+          'Flutter & Dart Mobile Apps', 'Data Analysis with Python', 'Power BI & Tableau',
+          'Technical SEO & GEO', 'AEO & LLMO', 'QA Testing & Automation',
+          'MongoDB', 'Node.js', 'React.js', 'Urdu Poetry & Literature'
+        ],
+        hasCredential: [
+          { '@type': 'EducationalOccupationalCredential', name: 'Python Specialization for Data Analysis', credentialCategory: 'Certificate', recognizedBy: { '@type': 'Organization', name: 'Coursera & Scrimba' } },
+          { '@type': 'EducationalOccupationalCredential', name: 'Cybersecurity Fundamentals', credentialCategory: 'Certificate', recognizedBy: { '@type': 'Organization', name: 'University of Maryland' } }
+        ],
+        worksFor: {
+          '@type': 'Organization',
+          '@id': 'https://suleman-zaheer.vercel.app/#organization',
+          name: 'SAMStack Studio',
+          url: 'https://suleman-zaheer.vercel.app'
+        }
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Who is Suleman Zaheer?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Suleman Zaheer is a Full Stack Developer and Data Analyst based in Shahdara Town, Lahore, Pakistan. He is a Computer Science student at UET Lahore (expected graduation 2028) and the founder of SAMStack Studio. He specializes in MERN Stack, Next.js, Laravel, Flutter, Data Analysis, QA Testing, and SEO.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What technologies does Suleman Zaheer specialize in?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Suleman Zaheer specializes in MERN Stack (MongoDB, Express.js, React.js, Node.js), Next.js App Router, Laravel PHP framework, Flutter & Dart for cross-platform mobile apps, Python for Data Analysis, and Technical SEO including GEO, AEO, and LLMO optimization.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Where did Suleman Zaheer study?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Suleman Zaheer completed his Intermediate in Computer Science (ICS) with 980 marks from Govt Islamia College Civil Lines, Lahore. He is currently pursuing a B.S. in Computer Science at the University of Engineering and Technology (UET), Lahore, expected to graduate in 2028.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What is SAMStack Studio?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'SAMStack Studio is a professional software development agency founded by Suleman Zaheer in Lahore, Pakistan. It offers MERN Stack web apps, Next.js applications, Laravel backends, Flutter mobile apps, Data Analytics, SEO, and QA Testing for businesses across Pakistan and internationally.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Is Suleman Zaheer available for freelance projects?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Suleman Zaheer is available for freelance and enterprise projects from clients in Pakistan and internationally. Contact him at samstacktechs@gmail.com or +923285778715 for a free project consultation.'
+          }
+        }
+      ]
     }
-  };
+  ];
 
   return (
     <div className="pt-32 pb-24 relative overflow-hidden">
@@ -158,13 +253,13 @@ export default function AboutPage() {
           <div className="lg:col-span-2">
             <div className="prose prose-invert prose-lg max-w-none text-gray-400 mb-16 space-y-6">
               <p className="leading-relaxed">
-                I am <span className="text-white font-bold">Suleman Zaheer</span>, a Computer Science student at <span className="text-primary font-bold">UET Lahore</span> (Expected 2028). Based in <span className="text-white font-semibold">Shahdara Town, Lahore</span>, I bridge the gap between Computer Science and Industrial Manufacturing by building scalable, high-performance web applications.
+                I am <span className="text-white font-bold">Suleman Zaheer</span>, a Computer Science student at <span className="text-primary font-bold">UET Lahore</span> (Expected 2028). Based in <span className="text-white font-semibold">Shahdara Town, Lahore</span>, I don't just write code—I engineer digital ecosystems that serve as growth engines for businesses. By blending modern frameworks with analytical thinking, I transform complex bottlenecks into seamless automated systems.
               </p>
               <p className="leading-relaxed">
-                As the founder of <span className="text-primary font-bold">SAMStack Studio</span>, I lead a collaborative team of skilled friends focused on digitalizing complex business operations, such as MJ Brothers. We specialize in full-stack web development using <span className="text-white">the MERN stack and Laravel</span>. My focus is not just on design but also on performance, robust backend logic, and clean coding practices.
+                As the founder of <span className="text-primary font-bold">SAMStack Studio</span>, I lead a technical team focused on solving industrial and enterprise challenges. We specialize in cross-platform mobile apps via <span className="text-white">Flutter</span>, high-performance web architectures via <span className="text-white">Next.js, MERN Stack & Laravel</span>, and leveraging <span className="text-white">Data Analytics</span> for strategic decision-making. We also ensure enterprise-grade reliability through rigorous <span className="text-white">QA Testing</span> and maximize visibility via <span className="text-white">SEO & GEO</span>.
               </p>
               <p className="leading-relaxed">
-                Driven by a passion for system design and automation, I seamlessly integrate complex backend architectures with intuitive frontend interfaces. Beyond code, I am a passionate <span className="text-primary font-bold">writer and poet</span>, weaving philosophy and technology into words that explore the profound depths of human experience. My mission is to deliver high-impact, enterprise-grade software while staying deeply connected to creative expression.
+                My approach is dual-natured: the analytical rigor of a <span className="text-primary font-bold">Software Researcher and Data Analyst</span>, combined with the creative depth of an <span className="text-primary font-bold">Urdu Poet and Writer</span>. I regularly author technical blogs and research papers, exploring the intersection of machine logic and human emotion. My ultimate mission is to deliver enterprise-grade digital products that don't just function—they dominate their respective markets.
               </p>
             </div>
 
@@ -245,7 +340,7 @@ export default function AboutPage() {
               </div>
               <h4 className="text-2xl font-bold mb-4 text-white">Let's Work Together</h4>
               <p className="text-gray-400 text-sm mb-8 leading-relaxed">
-                Currently available for MERN stack freelance work, remote internships, and collaborative project opportunities.
+                Currently available for Next.js, MERN, Laravel, and Flutter freelance work, remote internships, and collaborative project opportunities.
               </p>
               <a 
                 href="mailto:samstacktechs@gmail.com" 

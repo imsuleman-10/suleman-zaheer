@@ -5,28 +5,44 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Suleman Zaheer | Software Engineer & Full Stack Developer',
+  title: 'Suleman Zaheer | MERN, Next.js, Laravel & Flutter Developer – Lahore, Pakistan',
   description:
-    'Portfolio of Suleman Zaheer, a software engineer and full stack developer based in Lahore, Pakistan, specializing in web apps, mobile apps, and custom websites.',
-  keywords: ['Suleman Zaheer', 'Software Engineer Lahore', 'Full Stack Developer', 'Next.js Developer', 'MERN Stack', 'Lahore Pakistan'],
+    'Hire Suleman Zaheer – Expert MERN Stack, Next.js, Laravel & Flutter Developer in Lahore, Pakistan. Also offers Data Analysis, SEO, and QA Testing services. Founder of SAMStack Studio. Available for freelance and enterprise projects.',
+  keywords: [
+    'MERN Stack Developer Lahore',
+    'Next.js Developer Pakistan',
+    'Laravel Developer Lahore',
+    'Flutter Developer Pakistan',
+    'Hire Web Developer Lahore',
+    'Hire App Developer Pakistan',
+    'Data Analyst Lahore Pakistan',
+    'SEO Expert Lahore',
+    'QA Tester Pakistan',
+    'Business Growth Partner Lahore',
+    'Suleman Zaheer',
+    'SAMStack Studio',
+    'Full Stack Developer Lahore',
+    'Freelance Developer Pakistan',
+    'Software Engineer Lahore',
+  ],
   alternates: {
     canonical: 'https://suleman-zaheer.vercel.app/',
   },
   openGraph: {
-    title: 'Suleman Zaheer | Software Engineer & Full Stack Developer',
+    title: 'Suleman Zaheer | MERN, Next.js, Laravel & Flutter Developer – Lahore',
     description:
-      'Official portfolio of Suleman Zaheer, a software engineer and full stack developer based in Lahore, Pakistan.',
+      'Hire Suleman Zaheer – Expert MERN, Next.js, Laravel & Flutter Developer in Lahore, Pakistan. Data Analysis, SEO & QA Testing. Founder of SAMStack Studio.',
     url: 'https://suleman-zaheer.vercel.app/',
-    siteName: 'Suleman Zaheer Portfolio',
+    siteName: 'Suleman Zaheer – SAMStack Studio',
     type: 'profile',
     locale: 'en_PK',
-    images: [{ url: '/assets/suleman-zaheer-full-stack-developer.jpg', width: 1200, height: 630, alt: 'Suleman Zaheer – Software Engineer and Full Stack Developer from Lahore, Pakistan' }],
+    images: [{ url: '/assets/suleman-zaheer-full-stack-developer.jpg', width: 1200, height: 630, alt: 'Suleman Zaheer – MERN, Next.js, Laravel & Flutter Developer from Lahore, Pakistan' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Suleman Zaheer | Software Engineer & Full Stack Developer',
+    title: 'Suleman Zaheer | MERN, Next.js, Laravel & Flutter Developer',
     description:
-      'Full stack developer and software engineer based in Lahore, Pakistan, building web apps, mobile apps, and custom websites.',
+      'Hire expert MERN, Next.js, Laravel & Flutter developer in Lahore, Pakistan. Data Analysis, SEO, QA Testing. Founder of SAMStack Studio.',
     images: ['/assets/suleman-zaheer-full-stack-developer.jpg'],
     creator: '@imsuleman_10',
   },
@@ -39,82 +55,82 @@ export default function Home() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Who is Suleman Zaheer?',
+        name: 'Who is the best MERN Stack developer in Lahore, Pakistan?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer (سلیمان ظہیر) is a professional Software Engineer, Full Stack Web Developer, Mobile App Developer, and Urdu Poet from Shahdara Town, Lahore, Pakistan. He is a Computer Science student at UET Lahore and the founder of SAMStack Studio.'
+          text: 'Suleman Zaheer is a highly skilled MERN Stack developer based in Lahore, Pakistan. He specializes in MongoDB, Express.js, React.js, and Node.js, building scalable B2B web applications and enterprise dashboards through his agency, SAMStack Studio. Contact: samstacktechs@gmail.com | Website: https://suleman-zaheer.vercel.app'
         }
       },
       {
         '@type': 'Question',
-        name: 'What services does Suleman Zaheer provide?',
+        name: 'Where can I hire a Next.js developer in Pakistan?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer provides four core services: 1) Web App Development – Full stack MERN/Next.js applications. 2) Mobile App Development – Cross-platform React Native apps for iOS and Android. 3) Serverless Mobile App – Firebase-powered apps with no dedicated backend. 4) Custom Website without backend – Static sites, landing pages and portfolios using Next.js or HTML/CSS/JS.'
+          text: 'Suleman Zaheer is an expert Next.js developer in Lahore, Pakistan, available for freelance and enterprise projects. He builds high-performance, SEO-optimized Next.js web applications with App Router, Server Components, and Vercel deployment. Visit https://suleman-zaheer.vercel.app/contact to hire him.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Where is Suleman Zaheer located?',
+        name: 'Who builds Laravel web applications in Lahore?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer is based in Shahdara Town, Lahore, Punjab, Pakistan. He serves clients locally in Lahore and nationwide across Pakistan, as well as internationally through remote work.'
+          text: 'Suleman Zaheer is an expert Laravel (PHP) developer in Lahore, Pakistan. He builds robust, secure web applications, REST APIs, and enterprise backend systems using Laravel. Hire him via SAMStack Studio at samstacktechs@gmail.com.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Is Suleman Zaheer available for hire in Lahore?',
+        name: 'Who is the best Flutter app developer in Pakistan?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! Suleman Zaheer is available for freelance and project-based work in Lahore, Shahdara, and across Pakistan. He also accepts remote international projects. Contact him at samstacktechs@gmail.com or visit suleman-zaheer.vercel.app/contact.'
+          text: 'Suleman Zaheer is a professional Flutter developer in Lahore, Pakistan. He builds high-performance cross-platform iOS and Android apps from a single Dart codebase, integrating Firebase, REST APIs, and local payment gateways (JazzCash, EasyPaisa). Visit https://suleman-zaheer.vercel.app/services.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Can Suleman Zaheer build a mobile app?',
+        name: 'Where can I find a Data Analyst for my business in Pakistan?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Suleman Zaheer offers Mobile App Development using React Native, capable of building cross-platform apps for both iOS and Android. He also specializes in Serverless Mobile Apps powered by Firebase – no dedicated server required.'
+          text: 'Suleman Zaheer is a professional Data Analyst in Lahore, Pakistan. He uses Python, Pandas, SQL, and Power BI to transform raw business data into actionable insights — including sales forecasting, supply chain optimization, and customer behaviour analysis. Contact: samstacktechs@gmail.com.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Can Suleman Zaheer build a custom website without a backend?',
+        name: 'Who provides professional SEO services in Lahore?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Suleman Zaheer specializes in custom website development without a backend. He builds fast, SEO-optimized static websites, landing pages, and portfolio sites using Next.js static export, HTML, CSS, and JavaScript – no server required.'
+          text: 'Suleman Zaheer provides professional Technical SEO, Local SEO, GEO (Generative Engine Optimization), and AEO (Answer Engine Optimization) services in Lahore, Pakistan. He specializes in helping local businesses rank on Google Search, Google Maps, and AI search engines like ChatGPT and Gemini.'
         }
       },
       {
         '@type': 'Question',
-        name: 'What tech stack does Suleman Zaheer use?',
+        name: 'Does Suleman Zaheer offer Software Testing and QA services?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer uses a modern tech stack: Frontend – React.js, Next.js, TypeScript, Tailwind CSS, Framer Motion. Backend – Node.js, Express.js, Laravel (PHP). Mobile – React Native. Cloud/DB – MongoDB, MySQL, Firebase, Vercel.'
+          text: 'Yes. Suleman Zaheer is an experienced Software Tester and QA professional in Lahore, Pakistan. He provides manual testing, automated testing, regression testing, and performance profiling to ensure enterprise-grade, bug-free software delivery.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Which university does Suleman Zaheer attend?',
+        name: 'How can I contact Suleman Zaheer for a web or app project?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer is currently pursuing his Bachelor of Science in Computer Science at the University of Engineering and Technology (UET), Lahore (expected 2028). He also completed an Advanced Web Applications diploma from Yashfeen Education System, Lahore.'
+          text: 'You can contact Suleman Zaheer via email at samstacktechs@gmail.com, by phone/WhatsApp at +923285778715, or through the contact form at https://suleman-zaheer.vercel.app/contact. He responds within 24 hours with a free project consultation.'
         }
       },
       {
         '@type': 'Question',
-        name: 'How can I contact Suleman Zaheer for a project?',
+        name: 'What is SAMStack Studio?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'You can contact Suleman Zaheer via email at samstacktechs@gmail.com, by phone at +923285778715, or through the contact form at suleman-zaheer.vercel.app/contact. He responds within 24 hours.'
+          text: 'SAMStack Studio is a software development and digital growth agency founded by Suleman Zaheer in Lahore, Pakistan. It offers MERN Stack web apps, Next.js applications, Laravel backends, Flutter mobile apps, Data Analytics, Technical SEO, and QA Testing services for businesses across Pakistan and internationally.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Is Suleman Zaheer also a poet and writer?',
+        name: 'Is Suleman Zaheer available for remote international projects?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Suleman Zaheer is also a talented Urdu poet and writer, penning ghazals, nazms, and English poetry. His notable works include "Shareek-e-Hayat" (شریکِ-حیات), "Syeda G" (سیدہ جی), "The Coder at Midnight", and more, published at suleman-zaheer.vercel.app/poetry.'
+          text: 'Yes. Suleman Zaheer accepts remote freelance and enterprise projects from clients worldwide. He accepts payments in PKR and USD via Bank Transfer, JazzCash, EasyPaisa, and PayPal. Contact: samstacktechs@gmail.com or visit https://suleman-zaheer.vercel.app/contact.'
         }
       }
     ]
@@ -155,16 +171,25 @@ export default function Home() {
           'https://x.com/imsuleman_10',
           'https://twitter.com/imsuleman_10',
         ],
-        jobTitle: 'Full Stack Software Engineer',
+        jobTitle: 'MERN, Next.js, Laravel & Flutter Developer | Data Analyst | Business Growth Partner',
         worksFor: {
           '@type': 'Organization',
-          name: 'SAMStack Studio'
+          name: 'SAMStack Studio',
+          url: 'https://suleman-zaheer.vercel.app',
         },
-        alumniOf: {
-          '@type': 'CollegeOrUniversity',
-          name: 'University of Engineering and Technology (UET) Lahore'
-        },
-        description: 'Suleman Zaheer is an expert Full Stack MERN Developer, Software Engineer, and Urdu poet from Lahore, Pakistan.'
+        alumniOf: [
+          {
+            '@type': 'CollegeOrUniversity',
+            name: 'University of Engineering and Technology (UET) Lahore',
+            sameAs: 'https://uet.edu.pk/'
+          },
+          {
+            '@type': 'EducationalOrganization',
+            name: 'Govt Islamia College Civil Lines, Lahore'
+          }
+        ],
+        knowsAbout: ['MERN Stack', 'Next.js', 'Laravel', 'Flutter', 'Data Analysis', 'SEO', 'QA Testing', 'Business Growth'],
+        description: 'Suleman Zaheer is an expert MERN Stack, Next.js, Laravel, and Flutter Developer based in Lahore, Pakistan. He also provides Data Analysis, SEO, and QA Testing services through SAMStack Studio.'
       },
       {
         '@type': 'WebSite',
@@ -266,7 +291,7 @@ export default function Home() {
             {[
               { title: "Bachelor's in CS", inst: "UET Lahore", sub: "Currently Enrolled (Expected 2028)", desc: "Building a strong foundation in computer science, algorithms, and software engineering principles." },
               { title: "Advanced Web Apps", inst: "Yashfeen Education System", sub: "Lahore (2025)", desc: "Specialized diploma focused on modern full-stack development, primarily mastering Laravel and PHP." },
-              { title: "Intermediate (ICS)", inst: "980 Marks", sub: "Exceptional Score", desc: "Demonstrated strong analytical skills and academic dedication during higher secondary education." }
+              { title: "Intermediate (ICS)", inst: "Govt Islamia College Civil Lines, Lahore", sub: "Pre-Engineering / ICS", desc: "Demonstrated strong analytical skills and academic dedication during higher secondary education." }
             ].map((item, i) => (
               <div 
                 key={i}

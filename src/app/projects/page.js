@@ -3,30 +3,30 @@ import { FadeIn } from '@/components/animations/MotionWrapper';
 import ProjectsClient from '@/components/ProjectsClient';
 
 export const metadata = {
-  title: "Projects by Suleman Zaheer | Web App, Mobile App & Custom Website Portfolio – Lahore, Pakistan",
-  description: "Explore enterprise-grade projects by Suleman Zaheer – Software Engineer & Web Developer in Lahore, Pakistan. Portfolio includes MERN Stack Web Apps, React Native Mobile Apps, Firebase Serverless Apps, and Custom Website builds. CS student at UET Lahore.",
+  title: "Projects & Case Studies by Suleman Zaheer | Next.js, Flutter & Enterprise Portfolio – Lahore, Pakistan",
+  description: "Explore enterprise-grade case studies by Suleman Zaheer – Business Growth Partner & Software Engineer in Lahore. Portfolio includes Next.js Web Apps, Flutter Mobile Apps, Data Analytics Dashboards, and B2B SaaS Platforms.",
   keywords: [
-    "Suleman Zaheer Projects", "Web App Development Portfolio Lahore", "Mobile App Developer Portfolio Pakistan",
-    "Serverless App Portfolio", "Custom Website Portfolio Pakistan", "MERN Stack Portfolio Lahore",
-    "Next.js Projects Pakistan", "React Native App Portfolio", "Firebase App Developer Portfolio",
-    "Full Stack Projects Lahore", "Software Engineer Portfolio Lahore", "SAMStack Studio Projects"
+    "Suleman Zaheer Projects", "Software Development Portfolio Lahore", "Next.js Projects Pakistan",
+    "Flutter App Portfolio", "Data Analytics Case Studies", "B2B SaaS Portfolio",
+    "Enterprise Web App Portfolio Lahore", "Business Growth Case Studies Pakistan",
+    "Software Engineer Portfolio Lahore", "SAMStack Studio Projects"
   ],
   alternates: {
     canonical: "https://suleman-zaheer.vercel.app/projects",
   },
   openGraph: {
-    title: "Projects by Suleman Zaheer | Web App, Mobile App & Custom Website Portfolio | Lahore",
-    description: "Portfolio of Suleman Zaheer – Web Apps (MERN/Next.js), Mobile Apps (React Native), Serverless Apps (Firebase), and Custom Websites. Software Engineer from Lahore, Pakistan.",
+    title: "Projects & Case Studies by Suleman Zaheer | Next.js, Flutter & Enterprise Portfolio | Lahore",
+    description: "Portfolio of Suleman Zaheer – Enterprise Next.js Web Apps, Flutter Mobile Apps, Data Analytics, and B2B Platforms. Business Growth Partner from Lahore, Pakistan.",
     url: "https://suleman-zaheer.vercel.app/projects",
     siteName: "Suleman Zaheer Official Portfolio",
-    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer Projects Portfolio – Web App, Mobile App & Custom Website Developer in Lahore" }],
+    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer Projects Portfolio – Next.js, Flutter & Data Analytics in Lahore" }],
     type: "website",
     locale: "en_PK"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Projects by Suleman Zaheer | Web App, Mobile App & Custom Website Developer | Lahore",
-    description: "Enterprise-grade projects by Suleman Zaheer – MERN Stack, React Native, Firebase & Custom Website builds. Software Engineer from Lahore, Pakistan.",
+    title: "Projects by Suleman Zaheer | Next.js, Flutter & Enterprise Solutions | Lahore",
+    description: "Enterprise-grade projects by Suleman Zaheer – Next.js, Flutter, Data Analytics & B2B SaaS Platforms. Business Growth Partner from Lahore, Pakistan.",
     images: ["/assets/suleman-zaheer-full-stack-developer.jpg"],
     creator: "@imsuleman_10",
   },
@@ -101,27 +101,81 @@ export default function ProjectsPage() {
 
   const categories = ['All', 'Next.js', 'Full-Stack', 'Frontend', 'PHP', 'C++'];
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    name: 'Projects by Suleman Zaheer – Full Stack Web Development Portfolio',
-    description: 'Explore web development projects by Suleman Zaheer — MERN Stack applications, Laravel systems, E-Learning platforms, and more.',
-    url: 'https://suleman-zaheer.vercel.app/projects',
-    author: {
-      '@type': 'Person',
-      name: 'Suleman Zaheer',
-      '@id': 'https://suleman-zaheer.vercel.app/#person'
-    },
-    hasPart: projects.map(proj => ({
-      '@type': 'CreativeWork',
-      name: proj.title,
-      description: proj.desc,
-      creator: {
-        '@type': 'Person',
-        name: 'Suleman Zaheer'
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      '@id': 'https://suleman-zaheer.vercel.app/projects#collectionpage',
+      name: 'Projects & Case Studies by Suleman Zaheer',
+      description: 'Enterprise-grade web and mobile application projects by Suleman Zaheer — MERN Stack, Next.js, Laravel, Flutter, Data Analytics, and AI-powered platforms built for businesses in Pakistan and internationally.',
+      url: 'https://suleman-zaheer.vercel.app/projects',
+      author: { '@type': 'Person', '@id': 'https://suleman-zaheer.vercel.app/#person', name: 'Suleman Zaheer' },
+      mainEntity: {
+        '@type': 'ItemList',
+        name: 'Software Projects by Suleman Zaheer',
+        itemListElement: projects.map((proj, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          item: {
+            '@type': 'SoftwareApplication',
+            name: proj.title,
+            description: proj.desc,
+            url: proj.link !== '#' ? proj.link : 'https://suleman-zaheer.vercel.app/projects',
+            applicationCategory: 'WebApplication',
+            operatingSystem: 'Web Browser',
+            author: { '@type': 'Person', name: 'Suleman Zaheer', '@id': 'https://suleman-zaheer.vercel.app/#person' },
+            keywords: proj.tech.join(', ')
+          }
+        }))
       }
-    }))
-  };
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://suleman-zaheer.vercel.app/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://suleman-zaheer.vercel.app/projects' }
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What kind of projects has Suleman Zaheer built?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Suleman Zaheer has built enterprise-grade web and mobile applications including: SAMStack Studio (Next.js agency platform), SAM AI Clinic (AI-powered healthcare management), an E-Learning System (PHP/MySQL), Airline Reservation System, and various full-stack applications using MERN Stack, Laravel, and Flutter.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Can Suleman Zaheer build a Next.js or MERN Stack web app?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Suleman Zaheer specializes in building production-grade Next.js and MERN Stack web applications. His projects include SaaS platforms, ERP systems, clinic management platforms, and agency websites with Firebase real-time databases and RESTful APIs.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Does Suleman Zaheer have Flutter or mobile app projects?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Suleman Zaheer builds cross-platform Flutter applications for iOS and Android. His mobile projects include healthcare apps, e-commerce stores, fintech wallets, and enterprise field-agent tools with Firebase, REST API, and local payment integrations (JazzCash, EasyPaisa).'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Where can I see Suleman Zaheer\'s GitHub portfolio?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Suleman Zaheer\'s open-source code and projects are available on GitHub at https://github.com/imsuleman-10. You can also view his full portfolio and case studies at https://suleman-zaheer.vercel.app/projects.'
+          }
+        }
+      ]
+    }
+  ];
 
   return (
     <div className="pt-32 pb-24">

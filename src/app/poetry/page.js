@@ -7,34 +7,39 @@ import { STATIC_POEMS } from '@/data/staticPoems';
 export { STATIC_POEMS };
 
 export const metadata = {
-  title: 'Urdu Poetry & Ghazals by Suleman Zaheer | Writer & Poet',
-  description: 'Explore the literary works of Suleman Zaheer. A curated sanctuary of deep Urdu Ghazals, Nazms, and English poetry by the renowned writer and software engineer.',
+  title: 'Urdu Poetry & Literature by Suleman Zaheer (سلیمان ظہیر) | Ghazals, Nazms & English Poems',
+  description: 'Explore the literary works of Suleman Zaheer – where machine logic meets human emotion. A curated collection of deep Urdu Ghazals, Nazms, and English poetry. Suleman Zaheer is a software engineer, data analyst, and published poet from Lahore, Pakistan.',
   keywords: [
-    'Suleman Zaheer Poetry', 'Suleman Zaheer Poet', 'Urdu Ghazals', 'Pakistani Poet',
-    'Syeda G Poetry', 'Suleman Zaheer Urdu Shayari', 'Modern Urdu Poetry',
-    'English Poems by Suleman Zaheer', 'Urdu Nazms', 'Suleman Zaheer Writer'
+    'Suleman Zaheer Poetry', 'Suleman Zaheer Poet', 'سلیمان ظہیر شاعری',
+    'Urdu Ghazals Online', 'Pakistani Poet Lahore', 'Modern Urdu Poetry 2025',
+    'Suleman Zaheer Urdu Shayari', 'English Poems Pakistani Poet',
+    'Urdu Nazms Collection', 'Suleman Zaheer Writer', 'Poet Software Engineer Pakistan',
+    'Urdu Shayari Lahore', 'سلیمان ظہیر'
   ],
   alternates: { canonical: 'https://suleman-zaheer.vercel.app/poetry' },
   openGraph: {
-    title: 'Urdu Poetry & Ghazals by Suleman Zaheer',
-    description: 'A curated sanctuary of deep and soulful Urdu Ghazals, Nazms, and English poems by Suleman Zaheer.',
+    title: 'Urdu Poetry & Ghazals by Suleman Zaheer | سلیمان ظہیر شاعری',
+    description: 'A curated sanctuary of deep and soulful Urdu Ghazals, Nazms, and English poems by Suleman Zaheer – software engineer and poet from Lahore, Pakistan.',
     url: 'https://suleman-zaheer.vercel.app/poetry',
     siteName: 'Suleman Zaheer Portfolio',
     type: 'website',
+    locale: 'en_PK',
     images: [
       {
         url: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
         width: 1200,
         height: 1200,
-        alt: 'Suleman Zaheer - Urdu Poet and Writer',
+        alt: 'Suleman Zaheer - Urdu Poet and Writer from Lahore, Pakistan',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Urdu Poetry by Suleman Zaheer',
-    description: 'A curated sanctuary of deep Urdu Ghazals, Nazms, and English poems.',
-    image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
+    title: 'Urdu Poetry by Suleman Zaheer | سلیمان ظہیر',
+    description: 'Deep Urdu Ghazals, Nazms, and English poems by Suleman Zaheer – poet and software engineer from Lahore.',
+    images: ['https://suleman-zaheer.vercel.app/assets/author.jpg'],
+    creator: '@imsuleman_10',
+    site: '@imsuleman_10',
   },
 };
 
@@ -90,41 +95,80 @@ async function getPoems() {
 export default async function PoetryPage() {
   const poems = await getPoems();
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    name: 'Poetry Collection — Suleman Zaheer',
-    description:
-      'A premium collection of Urdu Ghazals, Nazms, and English poems by Suleman Zaheer. Immersive, deep, and soulful.',
-    url: 'https://suleman-zaheer.vercel.app/poetry',
-    author: {
-      '@type': 'Person',
-      name: 'Suleman Zaheer',
-      url: 'https://suleman-zaheer.vercel.app',
-      image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
-      sameAs: ['https://github.com/imsuleman-10', 'https://www.linkedin.com/in/suleman-zaheer-mughal'],
-    },
-    hasPart: poems.map((poem) => ({
-      '@type': 'CreativeWork',
-      additionalType: 'Poem',
-      headline: poem.title,
-      genre: poem.type,
-      inLanguage: poem.language === 'Urdu' ? 'ur' : 'en',
-      keywords: poem.romanKeywords || '',
-      author: { 
-        '@type': 'Person', 
+  const schemaArray = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      '@id': 'https://suleman-zaheer.vercel.app/poetry#collectionpage',
+      name: 'Urdu Poetry & Literature Collection by Suleman Zaheer',
+      description: 'A premium curated collection of Urdu Ghazals, Nazms, and English poems by Suleman Zaheer - software engineer and poet from Lahore, Pakistan.',
+      url: 'https://suleman-zaheer.vercel.app/poetry',
+      inLanguage: ['ur', 'en'],
+      author: {
+        '@type': 'Person',
+        '@id': 'https://suleman-zaheer.vercel.app/#person',
         name: 'Suleman Zaheer',
+        alternateName: 'سلیمان ظہیر',
+        url: 'https://suleman-zaheer.vercel.app',
         image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
+        sameAs: ['https://github.com/imsuleman-10', 'https://www.linkedin.com/in/suleman-zaheer-mughal', 'https://x.com/imsuleman_10'],
       },
-      url: `https://suleman-zaheer.vercel.app/poetry/${poem.slug}`,
-    })),
-  };
+      hasPart: poems.map((poem) => ({
+        '@type': 'CreativeWork',
+        additionalType: 'Poem',
+        headline: poem.title,
+        genre: poem.type,
+        inLanguage: poem.language === 'Urdu' ? 'ur' : 'en',
+        keywords: poem.romanKeywords || '',
+        author: { '@type': 'Person', '@id': 'https://suleman-zaheer.vercel.app/#person', name: 'Suleman Zaheer' },
+        url: `https://suleman-zaheer.vercel.app/poetry/${poem.slug}`,
+      })),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://suleman-zaheer.vercel.app/' },
+        { '@type': 'ListItem', position: 2, name: 'Poetry', item: 'https://suleman-zaheer.vercel.app/poetry' }
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Who is the author of these Urdu poems and ghazals?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Suleman Zaheer (سلیمان ظہیر) is the author of all Urdu Ghazals, Nazms, and English poetry featured on this platform. He is a software engineer, data analyst, and published poet from Lahore, Pakistan.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What kind of poetry does Suleman Zaheer write?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Suleman Zaheer writes classical and modern Urdu Ghazals, deep Urdu Nazms, and philosophical English poetry. His work uniquely blends the precision of technical logic with profound human emotions, creating a distinctive voice in contemporary Urdu literature.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'In what languages does Suleman Zaheer write poetry?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Suleman Zaheer primarily writes poetry in Urdu (اردو) in classical forms such as Ghazal and Nazm, as well as in English. His Urdu poetry resonates deeply with Pakistani literary tradition while incorporating modern themes of technology and human consciousness.'
+          }
+        }
+      ]
+    }
+  ];
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaArray) }}
       />
 
       <PoetryClient initialPoems={poems} />

@@ -12,29 +12,21 @@ const Navbar = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    // requestAnimationFrame polling: runs 60x per second, directly reads
-    // window.scrollY. Cannot fail regardless of CSS or scroll container.
-    let rafId;
-    let lastState = false;
-
-    const tick = () => {
-      const y = window.scrollY || window.pageYOffset || 0;
-      const newState = y > 50;
-      if (newState !== lastState) {
-        lastState = newState;
-        setScrolled(newState);
-      }
-      rafId = requestAnimationFrame(tick);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
     };
+    
+    // Initial check
+    handleScroll();
 
-    rafId = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafId);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Projects', path: '/projects' },
+    { name: 'Services', path: '/services' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -48,13 +40,13 @@ const Navbar = () => {
           left: 0,
           right: 0,
           zIndex: 9999,
-          transition: 'background-color 0.3s ease, padding 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
+          transition: 'background-color 0.3s ease, padding 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease',
           padding: scrolled ? '12px 0' : '24px 0',
-          backgroundColor: scrolled ? 'rgba(3, 3, 10, 0.95)' : 'transparent',
-          backdropFilter: scrolled ? 'blur(16px)' : 'none',
-          WebkitBackdropFilter: scrolled ? 'blur(16px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : '1px solid transparent',
-          boxShadow: scrolled ? '0 8px 32px rgba(0,0,0,0.6)' : 'none',
+          backgroundColor: scrolled ? 'rgba(10, 10, 10, 0.85)' : 'transparent', // True neutral-950/black to match the page perfectly
+          backdropFilter: scrolled ? 'blur(20px)' : 'none',
+          WebkitBackdropFilter: scrolled ? 'blur(20px)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(255,255,255,0.1)' : '1px solid transparent',
+          boxShadow: scrolled ? '0 10px 30px -10px rgba(0,0,0,0.8)' : 'none',
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

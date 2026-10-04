@@ -16,40 +16,26 @@ const outfit = Outfit({
 export const metadata = {
   metadataBase: new URL('https://suleman-zaheer.vercel.app'),
   title: {
-    default: 'Suleman Zaheer | Software Engineer, Web Developer, Android App, Shopify & SEO Expert – Lahore, Pakistan',
+    default: 'Suleman Zaheer | Business Growth Partner & Multi-Stack Expert – Lahore, Pakistan',
     template: '%s | Suleman Zaheer',
   },
   description:
-    'Suleman Zaheer – Professional Software Engineer & Web Developer in Lahore, Pakistan. Expert in Web App Development, Mobile App Development, Android App Development, Desktop App Development, Shopify Store Development, and SEO Services. Founder of SAMStack Studio. CS student at UET Lahore.',
+    'Suleman Zaheer – Business Growth Partner & Software Engineer in Lahore, Pakistan. Core Stack: MERN, Next.js, Laravel, Flutter, Data Analysis, SEO, and QA Testing. Founder of SAMStack Studio.',
   keywords: [
     'Suleman Zaheer',
-    'Software Engineer Lahore',
-    'Full Stack Developer Pakistan',
-    'Next.js Developer',
-    'MERN Stack Developer',
-    'Web Developer Lahore',
-    'Mobile App Developer Pakistan',
-    'Android App Developer Lahore',
-    'Android App Developer Pakistan',
-    'Desktop App Developer Lahore',
-    'Desktop App Development Pakistan',
-    'Shopify Developer Lahore',
-    'Shopify Store Development Pakistan',
-    'Shopify Expert Pakistan',
+    'MERN Stack Developer Lahore',
+    'Next.js Expert Pakistan',
+    'Laravel Developer Lahore',
+    'Flutter App Developer Pakistan',
+    'Data Analyst Lahore',
     'SEO Expert Lahore',
-    'SEO Services Pakistan',
-    'SEO Services Lahore',
+    'QA Tester Pakistan',
+    'Software Engineer Lahore',
+    'Business Growth Consultant',
     'Website Development Lahore',
-    'Website Development Pakistan',
-    'Website Developer Near Me Lahore',
     'Web App Development Lahore',
-    'React Native Developer Pakistan',
-    'Firebase Developer Lahore',
     'SAMStack Studio',
-    'Electron.js Desktop App Pakistan',
-    'E-Commerce Developer Lahore',
     'Technical SEO Pakistan',
-    'Local SEO Lahore',
   ],
   authors: [{ name: 'Suleman Zaheer', url: 'https://suleman-zaheer.vercel.app/' }],
   creator: 'Suleman Zaheer',
@@ -86,9 +72,9 @@ export const metadata = {
   },
   manifest: '/manifest.json',
   openGraph: {
-    title: 'Suleman Zaheer | Software Engineer & Full Stack Developer',
+    title: 'Suleman Zaheer | Business Growth Partner & Multi-Stack Expert',
     description:
-      'Official portfolio of Suleman Zaheer, a software engineer and full stack developer based in Lahore, Pakistan.',
+      'Official portfolio of Suleman Zaheer, an engineer focused on scaling businesses through Data Analysis, Next.js, and Flutter in Pakistan.',
     url: 'https://suleman-zaheer.vercel.app/',
     siteName: 'Suleman Zaheer Portfolio',
     images: [
@@ -96,7 +82,7 @@ export const metadata = {
         url: '/assets/suleman-zaheer-full-stack-developer.jpg',
         width: 1200,
         height: 630,
-        alt: 'Suleman Zaheer – Software Engineer and Full Stack Developer from Lahore, Pakistan',
+        alt: 'Suleman Zaheer – Business Growth Partner and Software Engineer from Lahore, Pakistan',
       },
     ],
     locale: 'en_PK',
@@ -104,9 +90,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Suleman Zaheer | Software Engineer & Full Stack Developer',
+    title: 'Suleman Zaheer | Business Growth Partner',
     description:
-      'Full stack developer and software engineer based in Lahore, Pakistan, building web apps, mobile apps, and custom websites.',
+      'Building digital ecosystems to scale businesses via Next.js, Flutter, and Data Analytics in Pakistan.',
     images: ['/assets/suleman-zaheer-full-stack-developer.jpg'],
     creator: '@imsuleman_10',
     site: '@imsuleman_10',
@@ -140,7 +126,7 @@ export default function RootLayout({ children }) {
         'SAMStack Studio',
         'Suleman Zaheer Developer'
       ],
-      description: 'Official portfolio website of Suleman Zaheer – Software Engineer, Web Developer, Mobile App Developer, and Urdu Poet based in Shahdara, Lahore, Pakistan. Founder of SAMStack Studio.',
+      description: 'Official portfolio of Suleman Zaheer – Business Growth Partner, Data Analyst, Next.js & Flutter Expert, and Literature Author based in Lahore, Pakistan. Founder of SAMStack Studio.',
       url: 'https://suleman-zaheer.vercel.app/',
       inLanguage: ['en-PK', 'ur'],
       publisher: {
@@ -175,39 +161,27 @@ export default function RootLayout({ children }) {
         height: 630,
         caption: 'Suleman Zaheer – Software Engineer, Web Developer and Urdu Poet from Lahore, Pakistan'
       },
-      description: 'Suleman Zaheer is a professional Software Engineer, Full Stack Web Developer, Mobile App Developer, Android App Developer, Desktop App Developer, Shopify Expert, SEO Specialist, and Urdu Poet based in Shahdara Town, Lahore, Pakistan. He is a Computer Science student at UET Lahore and founder of SAMStack Studio. He specializes in Web App Development, Mobile App Development, Android App Development, Desktop App Development, Shopify Store Development, SEO Services, Serverless Apps, and Custom Websites.',
-      jobTitle: 'Software Engineer, Web Developer, Android App Developer, Desktop App Developer, Shopify Expert, SEO Specialist & Urdu Poet',
-      disambiguatingDescription: 'Suleman Zaheer (سلیمان ظہیر) – Software Engineer, Web Developer, Android Developer, Desktop App Developer, Shopify Expert, and SEO Specialist from Shahdara, Lahore, Pakistan. CS student at UET Lahore. GitHub: imsuleman-10. Founder of SAMStack Studio.',
+      description: 'Suleman Zaheer is a Business Growth Partner, Data Analyst, MERN Stack Developer, Next.js Architect, Laravel Developer, Flutter Expert, SEO Specialist, QA Tester, and Urdu Poet based in Shahdara Town, Lahore, Pakistan.',
+      jobTitle: 'Business Growth Partner, MERN/Next.js/Laravel/Flutter Developer, Data Analyst, SEO Specialist & QA Tester',
+      disambiguatingDescription: 'Suleman Zaheer (سلیمان ظہیر) – Software Engineer and Data Analyst with expertise in MERN, Next.js, Laravel, Flutter, SEO, and Testing.',
       knowsAbout: [
-        'Web App Development',
-        'Mobile App Development',
-        'Android App Development',
-        'Desktop App Development',
-        'Shopify Store Development',
-        'Shopify Theme Development',
-        'E-Commerce Development',
-        'SEO – Search Engine Optimization',
-        'Technical SEO',
-        'Local SEO',
-        'GEO – Generative Engine Optimization',
-        'AEO – Answer Engine Optimization',
-        'LLM Optimization',
-        'Core Web Vitals',
-        'Serverless Mobile App Development',
-        'Custom Website Development',
-        'Full Stack Web Development',
         'MERN Stack',
         'Next.js',
-        'React.js',
-        'React Native',
-        'Electron.js',
-        'Node.js',
-        'Firebase',
         'Laravel',
-        'Software Engineering',
-        'Database Architecture',
-        'Urdu Poetry',
-        'Creative Writing'
+        'Flutter',
+        'Data Analysis',
+        'SEO',
+        'Software Testing',
+        'QA (Quality Assurance)',
+        'React.js',
+        'Node.js',
+        'MongoDB',
+        'PostgreSQL',
+        'Python',
+        'Power BI',
+        'Technical SEO',
+        'GEO – Generative Engine Optimization',
+        'Business Growth Strategy'
       ],
       knowsLanguage: [
         { '@type': 'Language', name: 'English' },
@@ -231,6 +205,17 @@ export default function RootLayout({ children }) {
           address: {
             '@type': 'PostalAddress',
             addressLocality: 'Lahore',
+            addressRegion: 'Punjab',
+            addressCountry: 'Pakistan'
+          }
+        },
+        {
+          '@type': 'EducationalOrganization',
+          name: 'Govt Islamia College Civil Lines, Lahore',
+          alternateName: ['Islamia College Civil Lines', 'Govt Islamia College Lahore'],
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Civil Lines, Lahore',
             addressRegion: 'Punjab',
             addressCountry: 'Pakistan'
           }
@@ -272,33 +257,27 @@ export default function RootLayout({ children }) {
       hasOccupation: [
         {
           '@type': 'Occupation',
-          name: 'Software Engineer, Web Developer & Mobile App Developer',
+          name: 'Software Engineer (MERN, Next.js, Laravel & Flutter)',
           occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
-          skills: 'Web App Development, Mobile App Development, Android App Development, Desktop App Development, Shopify Store Development, SEO Services, Serverless Apps, Custom Websites, React.js, Next.js, Node.js, Express.js, MongoDB, Firebase, Laravel, PHP, MySQL, REST APIs, JavaScript, TypeScript, Tailwind CSS, React Native, Electron.js, Shopify Liquid'
+          skills: 'MERN Stack, Next.js, Laravel, Flutter, React.js, Node.js, MongoDB, PostgreSQL, PHP, Dart'
         },
         {
           '@type': 'Occupation',
-          name: 'Android App Developer & Desktop App Developer',
+          name: 'Business Growth Partner & Data Analyst',
           occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
-          skills: 'Android App Development, React Native, Google Play Store, Desktop App Development, Electron.js, Cross-Platform Apps'
+          skills: 'Business Growth Strategy, Data Analysis, Python, Pandas, SQL, Power BI, Predictive Modeling'
         },
         {
           '@type': 'Occupation',
-          name: 'Shopify Expert & E-Commerce Developer',
+          name: 'SEO Specialist & QA Tester',
           occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
-          skills: 'Shopify Development, Shopify Theme Customization, Liquid Templating, E-Commerce SEO, JazzCash Integration, EasyPaisa Integration, Stripe, PayPal'
-        },
-        {
-          '@type': 'Occupation',
-          name: 'SEO Specialist & Digital Marketing Expert',
-          occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
-          skills: 'Technical SEO, Local SEO, On-Page SEO, Off-Page SEO, GEO, AEO, LLM Optimization, Core Web Vitals, Schema Markup, JSON-LD, Google Search Console'
+          skills: 'Technical SEO, Local SEO, GEO, AEO, Software Testing, Quality Assurance, Automated Testing, Manual Testing'
         },
         {
           '@type': 'Occupation',
           name: 'Urdu Poet & Writer',
           occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
-          skills: 'Urdu Poetry, Ghazal, Nazm, Creative Writing, English Poetry'
+          skills: 'Urdu Poetry, Ghazal, Nazm, Creative Writing'
         }
       ],
       address: {
@@ -373,9 +352,9 @@ export default function RootLayout({ children }) {
       '@context': 'https://schema.org',
       '@type': ['LocalBusiness', 'ProfessionalService'],
       '@id': 'https://suleman-zaheer.vercel.app/#localbusiness',
-      name: 'Suleman Zaheer – Software Engineer & Web Developer',
+      name: 'Suleman Zaheer – Business Growth Partner',
       alternateName: 'SAMStack Studio',
-      description: 'Professional Software Engineering and Web Development services by Suleman Zaheer. Specializing in Web App Development, Mobile App Development, Serverless Apps, and Custom Websites. Based in Shahdara, Lahore, Pakistan.',
+      description: 'Professional Data Analysis, Flutter App Development, Next.js Web Apps, and International SEO services by Suleman Zaheer. Based in Shahdara, Lahore, Pakistan.',
       url: 'https://suleman-zaheer.vercel.app/',
       image: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg',
       logo: 'https://suleman-zaheer.vercel.app/sfavicon.png',
@@ -412,8 +391,16 @@ export default function RootLayout({ children }) {
         itemListElement: [
           {
             '@type': 'Offer',
+            name: 'Data Analysis & Business Intelligence',
+            description: 'Data cleaning, visualization (Power BI/Tableau), and predictive modeling for business growth in Pakistan.',
+            priceCurrency: 'PKR',
+            price: '50000',
+            url: 'https://suleman-zaheer.vercel.app/services#data-analysis'
+          },
+          {
+            '@type': 'Offer',
             name: 'Web App Development',
-            description: 'Full Stack MERN/Next.js Web Application Development. Scalable, enterprise-grade apps for businesses in Lahore, Pakistan.',
+            description: 'Enterprise Next.js & MERN Architecture for scalable B2B SaaS platforms and portals.',
             priceCurrency: 'PKR',
             price: '75000',
             url: 'https://suleman-zaheer.vercel.app/services#web-app'
@@ -421,7 +408,7 @@ export default function RootLayout({ children }) {
           {
             '@type': 'Offer',
             name: 'Mobile App Development',
-            description: 'Cross-platform Mobile App Development using React Native and Firebase for iOS and Android.',
+            description: 'High-performance cross-platform Mobile App Development using Flutter for iOS and Android.',
             priceCurrency: 'PKR',
             price: '85000',
             url: 'https://suleman-zaheer.vercel.app/services#mobile-app'
@@ -429,7 +416,7 @@ export default function RootLayout({ children }) {
           {
             '@type': 'Offer',
             name: 'Android App Development',
-            description: 'Dedicated Android App Development using React Native for Google Play Store. Push notifications, Google Maps, Firebase, offline mode.',
+            description: 'Dedicated Android App Development using Flutter for Google Play Store. Push notifications, Google Maps, Firebase.',
             priceCurrency: 'PKR',
             price: '70000',
             url: 'https://suleman-zaheer.vercel.app/services#android-app'
@@ -477,27 +464,21 @@ export default function RootLayout({ children }) {
         ]
       },
       serviceType: [
+        'Data Analysis & Business Intelligence',
         'Web App Development',
         'Mobile App Development',
-        'Android App Development',
+        'Flutter Development',
+        'Next.js Enterprise Architecture',
         'Desktop App Development',
         'Shopify Store Development',
-        'Shopify Theme Development',
-        'E-Commerce Development',
         'SEO – Search Engine Optimization',
-        'Technical SEO',
-        'Local SEO Lahore',
         'GEO – Generative Engine Optimization',
         'AEO – Answer Engine Optimization',
-        'Serverless Mobile App Development',
-        'Custom Website Development',
-        'Full Stack MERN Development',
-        'Next.js Development',
-        'React Native Development',
-        'Electron.js Desktop Development',
-        'Firebase Integration',
-        'Laravel Development',
-        'REST API Development'
+        'LLM Optimization',
+        'Technical SEO',
+        'Local SEO Lahore',
+        'Python Predictive Modeling',
+        'Power BI Dashboards'
       ],
       openingHoursSpecification: {
         '@type': 'OpeningHoursSpecification',
@@ -571,8 +552,8 @@ export default function RootLayout({ children }) {
     {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Hire Suleman Zaheer – Software Engineer, Android Developer, Shopify Expert & SEO Specialist in Lahore',
-      description: 'Step-by-step guide to hiring Suleman Zaheer for Web App, Mobile App, Android App, Desktop App, Shopify Store development, or SEO services.',
+      name: 'How to Hire Suleman Zaheer – Business Growth Partner & Flutter/Next.js Expert in Lahore',
+      description: 'Step-by-step guide to hiring Suleman Zaheer for Data Analysis, Flutter Mobile Apps, Next.js Web Apps, Shopify Store development, or SEO services.',
       totalTime: 'PT24H',
       tool: [
         { '@type': 'HowToTool', name: 'Email' },
@@ -657,8 +638,8 @@ export default function RootLayout({ children }) {
       '@id': 'https://suleman-zaheer.vercel.app/#primaryimage',
       url: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg',
       contentUrl: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg',
-      name: 'Suleman Zaheer – Software Engineer & Web Developer',
-      caption: 'Suleman Zaheer (سلیمان ظہیر), a professional Software Engineer, Web Developer, and Urdu Poet from Shahdara, Lahore, Pakistan.',
+      name: 'Suleman Zaheer – Business Growth Partner & Software Engineer',
+      caption: 'Suleman Zaheer (سلیمان ظہیر), a professional Data Analyst, Flutter/Next.js Expert, and Literature Author from Shahdara, Lahore, Pakistan.',
       description: 'Portrait of Suleman Zaheer working as a Full Stack Web Developer and Mobile App Developer in Lahore, Pakistan.',
       keywords: 'Suleman Zaheer, Software Engineer, Web Developer, Lahore, Shahdara, Poet, MERN Stack',
       author: { '@id': 'https://suleman-zaheer.vercel.app/#person' },

@@ -1,34 +1,32 @@
-﻿import React from 'react';
+import React from 'react';
 import ContactClient from '@/components/ContactClient';
 
 export const metadata = {
-  title: "Contact Suleman Zaheer | Hire Web App, Mobile App & Custom Website Developer â€“ Lahore, Pakistan",
-  description: "Hire Suleman Zaheer â€“ a professional Software Engineer and Web Developer in Lahore (Shahdara), Pakistan. Available for Web App Development, Mobile App Development, Serverless App, and Custom Website projects. Contact now: samstacktechs@gmail.com | +923285778715.",
+  title: "Contact Suleman Zaheer | Hire MERN, Laravel & Flutter Expert – Lahore, Pakistan",
+  description: "Hire Suleman Zaheer – Expert MERN Stack, Next.js, Laravel, and Flutter Developer in Lahore. Available for Data Analysis, QA Testing, and SEO Services. Contact: samstacktechs@gmail.com | +923285778715.",
   keywords: [
-    "Hire Suleman Zaheer", "Contact Suleman Zaheer", "Hire Web Developer Lahore",
-    "Hire Software Engineer Lahore", "Hire Web App Developer Pakistan",
-    "Hire Mobile App Developer Lahore", "Hire Serverless App Developer Pakistan",
-    "Hire Custom Website Developer Lahore", "Hire MERN Developer Pakistan",
-    "Hire Next.js Developer Pakistan", "Freelance Web Developer Lahore",
-    "SAMStack Studio Contact", "Software Engineer for Hire Shahdara Lahore",
-    "Web Developer Near Me Lahore", "Hire Full Stack Developer Pakistan"
+    "Hire Suleman Zaheer", "Contact Suleman Zaheer", "Hire MERN Developer Lahore",
+    "Hire Flutter Developer Pakistan", "Hire Laravel Developer Lahore",
+    "Hire Next.js Developer Pakistan", "Hire Software Engineer Lahore",
+    "Hire Web App Developer Pakistan", "Freelance Data Analyst Lahore",
+    "SAMStack Studio Contact", "QA Tester for Hire Lahore"
   ],
   alternates: {
     canonical: "https://suleman-zaheer.vercel.app/contact",
   },
   openGraph: {
-    title: "Contact Suleman Zaheer | Hire Web App, Mobile App & Custom Website Developer | Lahore",
-    description: "Hire Suleman Zaheer for Web App, Mobile App, Serverless App, or Custom Website development. Professional Software Engineer based in Shahdara, Lahore, Pakistan. Email: samstacktechs@gmail.com",
+    title: "Contact Suleman Zaheer | Hire MERN, Laravel & Flutter Expert | Lahore",
+    description: "Hire Suleman Zaheer for Full Stack Web Apps (Next.js/Laravel), Flutter Mobile Apps, Data Analysis, or QA Testing. Based in Shahdara, Lahore, Pakistan.",
     url: "https://suleman-zaheer.vercel.app/contact",
     siteName: "Suleman Zaheer Official Portfolio",
-    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Contact Suleman Zaheer â€“ Software Engineer & Web Developer in Lahore" }],
+    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Contact Suleman Zaheer – MERN, Laravel & Flutter Expert in Lahore" }],
     type: "website",
     locale: "en_PK"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Suleman Zaheer | Hire Web App, Mobile App & Custom Website Developer | Lahore",
-    description: "Hire Suleman Zaheer for Web App, Mobile App, Serverless App, or Custom Website development in Lahore, Pakistan. Available for freelance and project-based work.",
+    title: "Contact Suleman Zaheer | MERN, Laravel & Flutter Expert | Lahore",
+    description: "Hire Suleman Zaheer for Data Analysis, Next.js, Flutter, or SEO services in Lahore, Pakistan. Available for freelance and project-based work.",
     images: ["/assets/suleman-zaheer-full-stack-developer.jpg"],
     creator: "@imsuleman_10",
   },
@@ -39,15 +37,15 @@ export default function ContactPage() {
     "@context": "https://schema.org",
     "@type": ["ProfessionalService", "LocalBusiness"],
     "@id": "https://suleman-zaheer.vercel.app/#localbusiness",
-    "name": "Suleman Zaheer â€“ Software Engineer & Web Developer",
+    "name": "Suleman Zaheer - Software Engineer & Web Developer",
     "alternateName": "SAMStack Studio",
-    "description": "Professional Software Engineering services in Lahore, Pakistan. Offering Web App Development, Mobile App Development, Serverless Mobile App, and Custom Website without backend. Founded by Suleman Zaheer, CS student at UET Lahore.",
+    "description": "Professional Software Engineering services in Lahore, Pakistan. Offering MERN Stack, Next.js, Laravel Web Apps, Flutter Mobile Apps, Data Analysis, QA Testing, and SEO Optimization. Founded by Suleman Zaheer.",
     "image": "https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg",
     "logo": "https://suleman-zaheer.vercel.app/sfavicon.png",
     "url": "https://suleman-zaheer.vercel.app",
     "telephone": "+923285778715",
     "email": "samstacktechs@gmail.com",
-    "priceRange": "PKR 45,000 â€“ PKR 85,000+",
+    "priceRange": "PKR 45,000 - PKR 85,000+",
     "currenciesAccepted": "PKR, USD",
     "paymentAccepted": "Bank Transfer, JazzCash, Easypaisa, Upwork, Fiverr",
     "address": {
@@ -81,35 +79,43 @@ export default function ContactPage() {
       "itemListElement": [
         {
           "@type": "Offer",
-          "name": "Web App Development",
-          "description": "Full Stack MERN/Next.js Web Application Development in Lahore, Pakistan",
+          "name": "Web App Development (MERN/Next.js)",
+          "description": "Enterprise-grade Next.js and MERN stack web applications.",
           "price": "75000",
           "priceCurrency": "PKR",
-          "url": "https://suleman-zaheer.vercel.app/services#web-app"
+          "url": "https://suleman-zaheer.vercel.app/services/mern-stack-development"
         },
         {
           "@type": "Offer",
-          "name": "Mobile App Development",
-          "description": "Cross-platform React Native Mobile App for iOS & Android in Lahore, Pakistan",
+          "name": "Mobile App Development (Flutter)",
+          "description": "Cross-platform mobile apps for iOS & Android.",
           "price": "85000",
           "priceCurrency": "PKR",
-          "url": "https://suleman-zaheer.vercel.app/services#mobile-app"
+          "url": "https://suleman-zaheer.vercel.app/services/flutter-app-development"
         },
         {
           "@type": "Offer",
-          "name": "Serverless Mobile App",
-          "description": "Firebase-powered Serverless Mobile App Development â€“ no backend server required",
-          "price": "65000",
-          "priceCurrency": "PKR",
-          "url": "https://suleman-zaheer.vercel.app/services#serverless-app"
-        },
-        {
-          "@type": "Offer",
-          "name": "Custom Website Without Backend",
-          "description": "Static website, landing page & portfolio without backend â€“ Next.js or HTML/CSS/JS in Lahore",
+          "name": "SEO, GEO & AEO Services",
+          "description": "Technical SEO, Generative Engine Optimization, and LLM structured data.",
           "price": "45000",
           "priceCurrency": "PKR",
-          "url": "https://suleman-zaheer.vercel.app/services#custom-website"
+          "url": "https://suleman-zaheer.vercel.app/services/seo-services"
+        },
+        {
+          "@type": "Offer",
+          "name": "QA & Software Testing",
+          "description": "Manual and automated QA testing for software applications.",
+          "price": "40000",
+          "priceCurrency": "PKR",
+          "url": "https://suleman-zaheer.vercel.app/services/qa-testing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Data Analysis",
+          "description": "Data analysis and visualization using Python and Power BI.",
+          "price": "50000",
+          "priceCurrency": "PKR",
+          "url": "https://suleman-zaheer.vercel.app/services/data-analysis"
         }
       ]
     },
@@ -123,7 +129,7 @@ export default function ContactPage() {
   const contactPageSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact Suleman Zaheer â€“ Hire Web Developer in Lahore",
+    "name": "Contact Suleman Zaheer – Hire Web Developer in Lahore",
     "description": "Contact page for Suleman Zaheer. Hire him for Web App, Mobile App, Serverless App, or Custom Website development in Lahore, Pakistan. Email: samstacktechs@gmail.com | Phone: +923285778715",
     "url": "https://suleman-zaheer.vercel.app/contact",
     "breadcrumb": {
@@ -147,7 +153,7 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify([localBusinessSchema, contactPageSchema]) }}
       />
       <div className="sr-only" aria-hidden="false">
-        <h2>Contact Suleman Zaheer â€“ Hire Software Engineer & Web Developer in Lahore, Pakistan</h2>
+        <h2>Contact Suleman Zaheer – Hire Software Engineer & Web Developer in Lahore, Pakistan</h2>
         <p>
           This is the official contact and hiring page for Suleman Zaheer, a professional Software Engineer and Web Developer based in Shahdara Town, Lahore, Pakistan.
           Services available: Web App Development (MERN/Next.js, from PKR 75,000), Mobile App Development (React Native iOS &amp; Android, from PKR 85,000),

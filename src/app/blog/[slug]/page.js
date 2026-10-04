@@ -83,16 +83,20 @@ export async function generateMetadata({ params }) {
   
   // Focused keyword list — avoids stuffing
   const keywords = [
-    ...(blog.tags || []).slice(0, 5),
-    'Suleman Zaheer Blog',
-    'MERN Stack Tutorial Pakistan',
+    ...(blog.tags || []).slice(0, 6),
+    'Suleman Zaheer',
+    `${blog.category || 'Software Development'} Pakistan`,
+    'SAMStack Studio',
   ].join(', ');
+
+  const canonicalUrl = `https://suleman-zaheer.vercel.app/blog/${blog.slug}`;
+  const coverImg = blog.coverImage || 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg';
 
   return {
     title,
     description,
     keywords,
-    alternates: { canonical: `https://suleman-zaheer.vercel.app/blog/${blog.slug}` },
+    alternates: { canonical: canonicalUrl },
     authors: [{ name: 'Suleman Zaheer', url: 'https://suleman-zaheer.vercel.app' }],
     creator: 'Suleman Zaheer',
     publisher: 'Suleman Zaheer',
@@ -101,27 +105,26 @@ export async function generateMetadata({ params }) {
       description,
       type: 'article',
       publishedTime: blog.publishedAt || blog.createdAt,
+      modifiedTime: blog.updatedAt || blog.publishedAt || blog.createdAt,
       authors: ['Suleman Zaheer'],
-      tags: [...(blog.tags || []), 'Suleman Zaheer', 'سلیمان ظہیر'],
-      images: blog.coverImage
-        ? [{ url: blog.coverImage, width: 1200, height: 630, alt: `${blog.title} by Suleman Zaheer` }]
-        : [
-            { url: 'https://suleman-zaheer.vercel.app/assets/author.jpg', width: 1200, height: 1200, alt: 'Suleman Zaheer - Author' },
-            { url: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg', width: 1200, height: 630 }
-          ],
+      section: blog.category || 'Technology',
+      tags: [...(blog.tags || []), 'Suleman Zaheer', 'سلیمان ظہیر', 'Pakistan', 'SAMStack Studio'],
+      images: [{ url: coverImg, width: 1200, height: 630, alt: `${blog.title} – by Suleman Zaheer` }],
+      siteName: 'Suleman Zaheer – SAMStack Studio',
+      locale: 'en_PK',
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: blog.coverImage
-        ? [blog.coverImage]
-        : ['https://suleman-zaheer.vercel.app/assets/author.jpg'],
+      images: [coverImg],
       creator: '@imsuleman_10',
+      site: '@imsuleman_10',
     },
     other: {
       'article:author': 'Suleman Zaheer',
       'article:publisher': 'https://suleman-zaheer.vercel.app',
+      'article:section': blog.category || 'Technology',
     }
   };
 }
@@ -137,15 +140,23 @@ export default async function Page({ params }) {
     return <BlogPostClient initialPost={null} />;
   }
 
+  const plainText = blog.content ? blog.content.replace(/<[^>]*>?/gm, '') : '';
+  const wordCount = plainText.split(/\s+/).filter(Boolean).length;
+  const coverImg = blog.coverImage || 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg';
+  const canonicalUrl = `https://suleman-zaheer.vercel.app/blog/${blog.slug}`;
+
   const jsonLd = [
     {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
-      '@id': `https://suleman-zaheer.vercel.app/blog/${blog.slug}#article`,
-      headline: `${blog.title} by Suleman Zaheer`,
-      alternativeHeadline: blog.title,
+      '@id': `${canonicalUrl}#article`,
+      headline: blog.title,
+      alternativeHeadline: `${blog.title} – Suleman Zaheer`,
       description: blog.excerpt || '',
-      articleBody: blog.content ? blog.content.substring(0, 500).replace(/<[^>]*>?/gm, '') : '',
+      articleBody: plainText.substring(0, 1000),
+      wordCount,
+      inLanguage: 'en-PK',
+      articleSection: blog.category || 'Technology',
       datePublished: blog.publishedAt || blog.createdAt || new Date().toISOString(),
       dateModified: blog.updatedAt || blog.publishedAt || new Date().toISOString(),
       author: {
@@ -154,59 +165,92 @@ export default async function Page({ params }) {
         name: 'Suleman Zaheer',
         alternateName: ['سلیمان ظہیر', 'Suleman Zaheer Mughal'],
         url: 'https://suleman-zaheer.vercel.app',
-        image: 'https://suleman-zaheer.vercel.app/assets/author.jpg',
-        jobTitle: 'Full Stack Developer & Technical Writer',
+        image: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-software-engineer.jpg',
+        jobTitle: 'MERN, Next.js, Laravel & Flutter Developer | Data Analyst | Business Growth Partner',
         sameAs: [
           'https://github.com/imsuleman-10',
           'https://www.linkedin.com/in/suleman-zaheer-mughal',
+          'https://x.com/imsuleman_10',
         ],
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Suleman Zaheer',
+        '@id': 'https://suleman-zaheer.vercel.app/#organization',
+        name: 'SAMStack Studio',
+        url: 'https://suleman-zaheer.vercel.app',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-logo.png',
-          width: 400,
-          height: 400,
+          url: 'https://suleman-zaheer.vercel.app/sfavicon.png',
+          width: 512,
+          height: 512,
         },
       },
-      creator: {
+      keywords: [
+        ...(blog.tags || []),
+        'Suleman Zaheer',
+        blog.category || 'Technology',
+        'Pakistan',
+        'SAMStack Studio',
+      ].join(', '),
+      image: {
+        '@type': 'ImageObject',
+        url: coverImg,
+        width: 1200,
+        height: 630,
+        caption: `${blog.title} – Suleman Zaheer`,
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': canonicalUrl,
+      },
+      url: canonicalUrl,
+      isPartOf: {
+        '@type': 'Blog',
+        '@id': 'https://suleman-zaheer.vercel.app/blog#blog',
+        name: 'Suleman Zaheer – Developer Blog',
+        publisher: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
+      },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', 'h2', '.article-summary'],
+      },
+      copyrightHolder: {
         '@type': 'Person',
         name: 'Suleman Zaheer',
         '@id': 'https://suleman-zaheer.vercel.app/#person',
       },
-      keywords: [
-        ...(blog.tags || []),
-        `${blog.title} Suleman Zaheer`,
-        'Suleman Zaheer',
-        'Technical Blog'
-      ].join(', '),
-      image: {
-        '@type': 'ImageObject',
-        url: blog.coverImage || 'https://suleman-zaheer.vercel.app/assets/author.jpg',
-        width: 1200,
-        height: 630,
-        caption: `${blog.title} by Suleman Zaheer`,
-      },
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': `https://suleman-zaheer.vercel.app/blog/${blog.slug}`,
-      },
-      url: `https://suleman-zaheer.vercel.app/blog/${blog.slug}`,
-      copyrightHolder: {
-        '@type': 'Person',
-        name: 'Suleman Zaheer',
-      },
       copyrightYear: new Date(blog.publishedAt || Date.now()).getFullYear(),
+      license: 'https://creativecommons.org/licenses/by-nc/4.0/',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: `What is this article about?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `This article, titled "${blog.title}", is written by Suleman Zaheer. It covers topics related to ${blog.category || 'Software Development'} and provides technical insights and solutions. Read the full article on SAMStack Studio's blog.`
+          }
+        },
+        {
+          '@type': 'Question',
+          name: `Who wrote the article "${blog.title}"?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `The article "${blog.title}" was written by Suleman Zaheer, a MERN Stack, Next.js, Laravel, and Flutter Developer based in Lahore, Pakistan.`
+          }
+        }
+      ]
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Suleman Zaheer', item: 'https://suleman-zaheer.vercel.app' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://suleman-zaheer.vercel.app' },
         { '@type': 'ListItem', position: 2, name: 'Developer Blog', item: 'https://suleman-zaheer.vercel.app/blog' },
-        { '@type': 'ListItem', position: 3, name: blog.title, item: `https://suleman-zaheer.vercel.app/blog/${blog.slug}` },
+        { '@type': 'ListItem', position: 3, name: blog.title, item: canonicalUrl },
       ],
     }
   ];
