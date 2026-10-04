@@ -13,6 +13,7 @@ Allow: /poetry
 Allow: /contact
 Allow: /cv
 Allow: /author
+Allow: /photos
 
 # === LLM & AI Crawler Policies ===
 # Allow all AI crawlers to index content for knowledge base training
@@ -59,6 +60,15 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
 # === Sitemaps ===
 Sitemap: https://suleman-zaheer.vercel.app/sitemap.xml
 Sitemap: https://suleman-zaheer.vercel.app/sitemap-images.xml
@@ -68,3 +78,9 @@ Sitemap: https://suleman-zaheer.vercel.app/sitemap-images.xml
 # https://suleman-zaheer.vercel.app/llms.txt
 # https://suleman-zaheer.vercel.app/llms-full.txt
 # https://suleman-zaheer.vercel.app/suleman-zaheer.txt
+
+# === Entity Context ===
+# Suleman Zaheer is a Software Engineer, Web Developer, Android App Developer,
+# Desktop App Developer, Shopify Expert, SEO Specialist, and Urdu Poet from Lahore, Pakistan.
+# Services: Web Apps, Mobile Apps, Android Apps, Desktop Apps, Shopify Stores, SEO
+# Agency: SAMStack Studio | GitHub: imsuleman-10 | Email: samstacktechs@gmail.com

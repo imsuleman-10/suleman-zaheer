@@ -16,18 +16,40 @@ const outfit = Outfit({
 export const metadata = {
   metadataBase: new URL('https://suleman-zaheer.vercel.app'),
   title: {
-    default: 'Suleman Zaheer | Software Engineer & Full Stack Developer',
+    default: 'Suleman Zaheer | Software Engineer, Web Developer, Android App, Shopify & SEO Expert – Lahore, Pakistan',
     template: '%s | Suleman Zaheer',
   },
   description:
-    'Portfolio of Suleman Zaheer, a software engineer and full stack developer based in Lahore, Pakistan, specializing in web apps, mobile apps, and custom websites.',
+    'Suleman Zaheer – Professional Software Engineer & Web Developer in Lahore, Pakistan. Expert in Web App Development, Mobile App Development, Android App Development, Desktop App Development, Shopify Store Development, and SEO Services. Founder of SAMStack Studio. CS student at UET Lahore.',
   keywords: [
     'Suleman Zaheer',
     'Software Engineer Lahore',
-    'Full Stack Developer',
+    'Full Stack Developer Pakistan',
     'Next.js Developer',
-    'MERN Stack',
-    'Lahore Pakistan',
+    'MERN Stack Developer',
+    'Web Developer Lahore',
+    'Mobile App Developer Pakistan',
+    'Android App Developer Lahore',
+    'Android App Developer Pakistan',
+    'Desktop App Developer Lahore',
+    'Desktop App Development Pakistan',
+    'Shopify Developer Lahore',
+    'Shopify Store Development Pakistan',
+    'Shopify Expert Pakistan',
+    'SEO Expert Lahore',
+    'SEO Services Pakistan',
+    'SEO Services Lahore',
+    'Website Development Lahore',
+    'Website Development Pakistan',
+    'Website Developer Near Me Lahore',
+    'Web App Development Lahore',
+    'React Native Developer Pakistan',
+    'Firebase Developer Lahore',
+    'SAMStack Studio',
+    'Electron.js Desktop App Pakistan',
+    'E-Commerce Developer Lahore',
+    'Technical SEO Pakistan',
+    'Local SEO Lahore',
   ],
   authors: [{ name: 'Suleman Zaheer', url: 'https://suleman-zaheer.vercel.app/' }],
   creator: 'Suleman Zaheer',
@@ -153,12 +175,24 @@ export default function RootLayout({ children }) {
         height: 630,
         caption: 'Suleman Zaheer – Software Engineer, Web Developer and Urdu Poet from Lahore, Pakistan'
       },
-      description: 'Suleman Zaheer is a professional Software Engineer, Full Stack Web Developer, Mobile App Developer, and Urdu Poet based in Shahdara Town, Lahore, Pakistan. He is a Computer Science student at UET Lahore and founder of SAMStack Studio. He specializes in Web App Development, Mobile App Development, Serverless Apps, and Custom Websites.',
-      jobTitle: 'Software Engineer, Web Developer, Mobile App Developer & Urdu Poet',
-      disambiguatingDescription: 'Suleman Zaheer (سلیمان ظہیر) – Software Engineer and Web Developer from Shahdara, Lahore, Pakistan. CS student at UET Lahore. GitHub: imsuleman-10. Founder of SAMStack Studio.',
+      description: 'Suleman Zaheer is a professional Software Engineer, Full Stack Web Developer, Mobile App Developer, Android App Developer, Desktop App Developer, Shopify Expert, SEO Specialist, and Urdu Poet based in Shahdara Town, Lahore, Pakistan. He is a Computer Science student at UET Lahore and founder of SAMStack Studio. He specializes in Web App Development, Mobile App Development, Android App Development, Desktop App Development, Shopify Store Development, SEO Services, Serverless Apps, and Custom Websites.',
+      jobTitle: 'Software Engineer, Web Developer, Android App Developer, Desktop App Developer, Shopify Expert, SEO Specialist & Urdu Poet',
+      disambiguatingDescription: 'Suleman Zaheer (سلیمان ظہیر) – Software Engineer, Web Developer, Android Developer, Desktop App Developer, Shopify Expert, and SEO Specialist from Shahdara, Lahore, Pakistan. CS student at UET Lahore. GitHub: imsuleman-10. Founder of SAMStack Studio.',
       knowsAbout: [
         'Web App Development',
         'Mobile App Development',
+        'Android App Development',
+        'Desktop App Development',
+        'Shopify Store Development',
+        'Shopify Theme Development',
+        'E-Commerce Development',
+        'SEO – Search Engine Optimization',
+        'Technical SEO',
+        'Local SEO',
+        'GEO – Generative Engine Optimization',
+        'AEO – Answer Engine Optimization',
+        'LLM Optimization',
+        'Core Web Vitals',
         'Serverless Mobile App Development',
         'Custom Website Development',
         'Full Stack Web Development',
@@ -166,6 +200,7 @@ export default function RootLayout({ children }) {
         'Next.js',
         'React.js',
         'React Native',
+        'Electron.js',
         'Node.js',
         'Firebase',
         'Laravel',
@@ -237,9 +272,27 @@ export default function RootLayout({ children }) {
       hasOccupation: [
         {
           '@type': 'Occupation',
-          name: 'Software Engineer & Web Developer',
+          name: 'Software Engineer, Web Developer & Mobile App Developer',
           occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
-          skills: 'Web App Development, Mobile App Development, Serverless Apps, Custom Websites, React.js, Next.js, Node.js, Express.js, MongoDB, Firebase, Laravel, PHP, MySQL, REST APIs, JavaScript, TypeScript, Tailwind CSS, React Native'
+          skills: 'Web App Development, Mobile App Development, Android App Development, Desktop App Development, Shopify Store Development, SEO Services, Serverless Apps, Custom Websites, React.js, Next.js, Node.js, Express.js, MongoDB, Firebase, Laravel, PHP, MySQL, REST APIs, JavaScript, TypeScript, Tailwind CSS, React Native, Electron.js, Shopify Liquid'
+        },
+        {
+          '@type': 'Occupation',
+          name: 'Android App Developer & Desktop App Developer',
+          occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
+          skills: 'Android App Development, React Native, Google Play Store, Desktop App Development, Electron.js, Cross-Platform Apps'
+        },
+        {
+          '@type': 'Occupation',
+          name: 'Shopify Expert & E-Commerce Developer',
+          occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
+          skills: 'Shopify Development, Shopify Theme Customization, Liquid Templating, E-Commerce SEO, JazzCash Integration, EasyPaisa Integration, Stripe, PayPal'
+        },
+        {
+          '@type': 'Occupation',
+          name: 'SEO Specialist & Digital Marketing Expert',
+          occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
+          skills: 'Technical SEO, Local SEO, On-Page SEO, Off-Page SEO, GEO, AEO, LLM Optimization, Core Web Vitals, Schema Markup, JSON-LD, Google Search Console'
         },
         {
           '@type': 'Occupation',
@@ -355,12 +408,12 @@ export default function RootLayout({ children }) {
       ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Software Development Services by Suleman Zaheer',
+        name: 'Software Development & Digital Services by Suleman Zaheer',
         itemListElement: [
           {
             '@type': 'Offer',
             name: 'Web App Development',
-            description: 'Full Stack MERN/Next.js Web Application Development. Scalable, enterprise-grade apps for businesses.',
+            description: 'Full Stack MERN/Next.js Web Application Development. Scalable, enterprise-grade apps for businesses in Lahore, Pakistan.',
             priceCurrency: 'PKR',
             price: '75000',
             url: 'https://suleman-zaheer.vercel.app/services#web-app'
@@ -372,6 +425,38 @@ export default function RootLayout({ children }) {
             priceCurrency: 'PKR',
             price: '85000',
             url: 'https://suleman-zaheer.vercel.app/services#mobile-app'
+          },
+          {
+            '@type': 'Offer',
+            name: 'Android App Development',
+            description: 'Dedicated Android App Development using React Native for Google Play Store. Push notifications, Google Maps, Firebase, offline mode.',
+            priceCurrency: 'PKR',
+            price: '70000',
+            url: 'https://suleman-zaheer.vercel.app/services#android-app'
+          },
+          {
+            '@type': 'Offer',
+            name: 'Desktop App Development',
+            description: 'Cross-platform Desktop Application Development using Electron.js and React.js for Windows, macOS, and Linux. POS systems, inventory management, business tools.',
+            priceCurrency: 'PKR',
+            price: '80000',
+            url: 'https://suleman-zaheer.vercel.app/services#desktop-app'
+          },
+          {
+            '@type': 'Offer',
+            name: 'Shopify Store Development',
+            description: 'Complete e-commerce Shopify store setup, custom theme development, JazzCash/EasyPaisa/Stripe payment integration, and Shopify SEO for businesses in Pakistan.',
+            priceCurrency: 'PKR',
+            price: '55000',
+            url: 'https://suleman-zaheer.vercel.app/services#shopify-store'
+          },
+          {
+            '@type': 'Offer',
+            name: 'SEO & Website Optimization',
+            description: 'Full SEO services: Technical SEO, Local SEO for Lahore/Pakistan, GEO (AI Search), AEO, LLM Optimization, Core Web Vitals, and schema markup.',
+            priceCurrency: 'PKR',
+            price: '30000',
+            url: 'https://suleman-zaheer.vercel.app/services#seo'
           },
           {
             '@type': 'Offer',
@@ -394,11 +479,22 @@ export default function RootLayout({ children }) {
       serviceType: [
         'Web App Development',
         'Mobile App Development',
+        'Android App Development',
+        'Desktop App Development',
+        'Shopify Store Development',
+        'Shopify Theme Development',
+        'E-Commerce Development',
+        'SEO – Search Engine Optimization',
+        'Technical SEO',
+        'Local SEO Lahore',
+        'GEO – Generative Engine Optimization',
+        'AEO – Answer Engine Optimization',
         'Serverless Mobile App Development',
         'Custom Website Development',
         'Full Stack MERN Development',
         'Next.js Development',
         'React Native Development',
+        'Electron.js Desktop Development',
         'Firebase Integration',
         'Laravel Development',
         'REST API Development'
@@ -434,7 +530,7 @@ export default function RootLayout({ children }) {
         height: 512
       },
       founder: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
-      description: 'SAMStack Studio is a software engineering agency founded by Suleman Zaheer, offering Web App Development, Mobile App Development, Serverless Apps, and Custom Website services in Lahore, Pakistan.',
+      description: 'SAMStack Studio is a full-service software engineering and digital agency founded by Suleman Zaheer in Lahore, Pakistan. Services: Web App Development, Mobile App Development, Android App Development, Desktop App Development, Shopify Store Development, SEO & Website Optimization, Serverless Apps, and Custom Websites.',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Qazi Park, Shahdara Town',
@@ -475,8 +571,8 @@ export default function RootLayout({ children }) {
     {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Hire Suleman Zaheer – Software Engineer & Web Developer in Lahore',
-      description: 'Step-by-step guide to hiring Suleman Zaheer for Web App, Mobile App, Serverless App, or Custom Website development.',
+      name: 'How to Hire Suleman Zaheer – Software Engineer, Android Developer, Shopify Expert & SEO Specialist in Lahore',
+      description: 'Step-by-step guide to hiring Suleman Zaheer for Web App, Mobile App, Android App, Desktop App, Shopify Store development, or SEO services.',
       totalTime: 'PT24H',
       tool: [
         { '@type': 'HowToTool', name: 'Email' },

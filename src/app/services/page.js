@@ -3,31 +3,38 @@ import Link from 'next/link';
 import { Globe, Smartphone, Zap, Layout, ArrowUpRight, CheckCircle, MapPin, Mail, Phone } from 'lucide-react';
 
 export const metadata = {
-  title: "Services by Suleman Zaheer | Web App, Mobile App, Serverless & Custom Website – Lahore, Pakistan",
-  description: "Hire Suleman Zaheer for professional Web App Development, Mobile App Development, Serverless Mobile App, and Custom Website without backend in Lahore, Pakistan. Expert Software Engineer based in Shahdara, Lahore. CS student at UET Lahore.",
+  title: "Services by Suleman Zaheer | Web App, Mobile App, Android App, Desktop App, Shopify Store, SEO – Lahore, Pakistan",
+  description: "Hire Suleman Zaheer for professional Web App Development, Mobile App Development, Android App Development, Desktop App Development, Shopify Store Development, and SEO Services in Lahore, Pakistan. Expert Software Engineer & SEO Specialist based in Shahdara, Lahore. CS student at UET Lahore.",
   keywords: [
-    "Web App Development Lahore", "Mobile App Developer Pakistan", "Serverless App Developer Lahore",
-    "Custom Website Without Backend Pakistan", "Hire Software Engineer Lahore",
-    "React Native Developer Pakistan", "Firebase App Developer Lahore",
-    "Next.js Developer Pakistan", "MERN Stack Developer Lahore",
+    "Web App Development Lahore", "Mobile App Developer Pakistan", "Android App Developer Lahore",
+    "Android App Development Pakistan", "Desktop App Developer Pakistan", "Desktop App Development Lahore",
+    "Shopify Developer Lahore", "Shopify Store Development Pakistan", "Shopify Expert Pakistan",
+    "SEO Services Lahore", "SEO Expert Pakistan", "SEO Expert Lahore",
+    "Technical SEO Pakistan", "Local SEO Lahore", "GEO Optimization Pakistan",
+    "Serverless App Developer Lahore", "Custom Website Without Backend Pakistan",
+    "Hire Software Engineer Lahore", "React Native Developer Pakistan",
+    "Firebase App Developer Lahore", "Next.js Developer Pakistan", "MERN Stack Developer Lahore",
+    "Shopify Theme Developer Lahore", "E-Commerce Developer Pakistan",
+    "Electron.js Desktop App Developer Lahore",
+    "Website Development Lahore Pakistan", "Website Developer Near Me Lahore",
     "Custom Website Developer Shahdara Lahore", "Web Developer Near Me Lahore",
     "Suleman Zaheer Services", "SAMStack Studio Services",
     "Full Stack Developer for Hire Lahore", "Professional Web Developer Pakistan"
   ],
   alternates: { canonical: "https://suleman-zaheer.vercel.app/services" },
   openGraph: {
-    title: "Services | Suleman Zaheer – Web App, Mobile App, Serverless & Custom Website | Lahore",
-    description: "Professional Software Development services by Suleman Zaheer in Lahore, Pakistan. Web Apps, Mobile Apps, Serverless Apps, and Custom Websites. Expert from Shahdara, Lahore.",
+    title: "Services | Suleman Zaheer – Web App, Mobile App, Android, Desktop, Shopify & SEO | Lahore",
+    description: "Professional Software Development & Digital Services by Suleman Zaheer in Lahore, Pakistan. Web Apps, Mobile Apps, Android Apps, Desktop Apps, Shopify Stores, and SEO Services.",
     url: "https://suleman-zaheer.vercel.app/services",
     siteName: "Suleman Zaheer Official Portfolio",
     type: "website",
     locale: "en_PK",
-    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer Services – Software Engineer & Web Developer in Lahore" }],
+    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer Services – Software Engineer, Android Developer, Shopify Expert & SEO Specialist in Lahore" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services | Suleman Zaheer – Web App, Mobile App, Serverless & Custom Website",
-    description: "Hire Suleman Zaheer for Web App, Mobile App, Serverless App, and Custom Website development in Lahore, Pakistan.",
+    title: "Services | Suleman Zaheer – Web App, Mobile App, Android, Desktop, Shopify & SEO",
+    description: "Hire Suleman Zaheer for Web App, Mobile App, Android App, Desktop App, Shopify Store, and SEO services in Lahore, Pakistan.",
     images: ["/assets/suleman-zaheer-full-stack-developer.jpg"],
     creator: "@imsuleman_10",
   },
@@ -81,6 +88,102 @@ const services = [
     useCases: ["Delivery & Logistics Apps", "Healthcare Apps", "E-Commerce Mobile Apps", "Social Platforms", "Business Tools"],
     price: "Starting from PKR 85,000",
     deliveryTime: "4–12 weeks",
+  },
+  {
+    id: "android-app",
+    icon: Smartphone,
+    color: "text-green-400",
+    bgColor: "bg-green-400/10",
+    borderColor: "border-green-400/20",
+    title: "Android App Development",
+    subtitle: "Dedicated Android Apps for Google Play Store",
+    description: "Get a dedicated, high-performance Android application built by Suleman Zaheer in Lahore. Specialized Android development optimized for Pakistani market needs – Google Play Store submission, Urdu language support, JazzCash/EasyPaisa integration, Google Maps, and Firebase-powered real-time features.",
+    features: [
+      "Android-Optimized React Native Development",
+      "Google Play Store Submission & Listing",
+      "Google Maps Integration",
+      "JazzCash & EasyPaisa In-App Payments",
+      "Firebase Push Notifications (FCM)",
+      "Offline Mode with Local Storage",
+      "Urdu Language & RTL Support",
+      "Material Design UI/UX"
+    ],
+    technologies: ["React Native", "Android SDK", "Firebase", "Google Play Console", "FCM", "Google Maps API", "Expo"],
+    useCases: ["Local Delivery Services", "Food Ordering Apps", "POS Android Apps", "Community Platforms", "Business Management"],
+    price: "Starting from PKR 70,000",
+    deliveryTime: "3–10 weeks",
+  },
+  {
+    id: "desktop-app",
+    icon: Layout,
+    color: "text-orange-400",
+    bgColor: "bg-orange-400/10",
+    borderColor: "border-orange-400/20",
+    title: "Desktop App Development",
+    subtitle: "Windows, macOS & Linux Apps with Electron.js",
+    description: "Suleman Zaheer builds powerful cross-platform desktop applications using Electron.js and React.js. Perfect for businesses in Lahore needing offline software – POS systems, inventory management, factory management tools, and enterprise internal tools that run natively on Windows, macOS, and Linux.",
+    features: [
+      "Electron.js + React.js Desktop Apps",
+      "Windows (.exe), macOS (.dmg), Linux (.AppImage) Builds",
+      "Offline-First with Local SQLite Database",
+      "System Tray & Native Notifications",
+      "Auto-Updater (OTA Updates)",
+      "Custom Installer & Packaging",
+      "Print & PDF Generation",
+      "Hardware Integration (Barcode, Printers)"
+    ],
+    technologies: ["Electron.js", "React.js", "Node.js", "SQLite", "Tailwind CSS", "IPC Renderer"],
+    useCases: ["POS (Point of Sale) Systems", "Inventory Management", "Factory Management Software", "Auto-Parts Business Tools", "Offline Enterprise Tools"],
+    price: "Starting from PKR 80,000",
+    deliveryTime: "4–12 weeks",
+  },
+  {
+    id: "shopify-store",
+    icon: Globe,
+    color: "text-emerald-400",
+    bgColor: "bg-emerald-400/10",
+    borderColor: "border-emerald-400/20",
+    title: "Shopify Store Development",
+    subtitle: "Complete E-Commerce Shopify Stores for Pakistan & International",
+    description: "Suleman Zaheer builds complete, professional Shopify stores optimized for Pakistani and international markets. From custom theme development to JazzCash/EasyPaisa payment integration, product catalog setup, and Shopify SEO – everything you need to start selling online.",
+    features: [
+      "Custom Shopify Theme Development / Premium Theme Customization",
+      "JazzCash, EasyPaisa, Stripe & PayPal Payment Integration",
+      "Product Catalog & Collection Setup",
+      "Shopify SEO Optimization",
+      "Mobile-Responsive Design",
+      "Abandoned Cart Recovery",
+      "Shopify App Integration (Email, Chat, Reviews)",
+      "Shipping & Tax Configuration"
+    ],
+    technologies: ["Shopify", "Liquid", "HTML/CSS", "JavaScript", "Shopify CLI", "Shopify Apps", "Metafields"],
+    useCases: ["Clothing & Fashion Brands", "Electronics Sellers", "Food & Grocery Stores", "Handmade Crafts", "International Dropshipping"],
+    price: "Starting from PKR 55,000",
+    deliveryTime: "1–4 weeks",
+  },
+  {
+    id: "seo",
+    icon: ArrowUpRight,
+    color: "text-rose-400",
+    bgColor: "bg-rose-400/10",
+    borderColor: "border-rose-400/20",
+    title: "SEO & Website Optimization",
+    subtitle: "Technical SEO, Local SEO, GEO, AEO & LLM Optimization",
+    description: "Suleman Zaheer provides full-service SEO to help your website rank on Google, appear in AI answers (ChatGPT, Gemini, Perplexity), and attract clients in Lahore and Pakistan. Covers Technical SEO, Local SEO, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), Core Web Vitals, and LLM optimization via llms.txt.",
+    features: [
+      "Technical SEO Audit & Fix",
+      "On-Page SEO (Meta Tags, Headings, Keywords)",
+      "Local SEO for Lahore/Pakistan Businesses",
+      "GEO – Appear in ChatGPT, Gemini & Perplexity Results",
+      "AEO – FAQ Schema & Structured Answer Content",
+      "LLM Optimization via llms.txt Implementation",
+      "Core Web Vitals (LCP, CLS, INP) Optimization",
+      "Sitemap, robots.txt & Google Search Console Setup"
+    ],
+    technologies: ["Next.js", "JSON-LD Schema", "Google Search Console", "Google Analytics 4", "Core Web Vitals", "Sitemap XML"],
+    useCases: ["Local Businesses in Lahore", "E-Commerce Stores", "Freelancers & Agencies", "Restaurant & Food Businesses", "Professional Portfolios"],
+    price: "Starting from PKR 30,000",
+    deliveryTime: "2–6 weeks (ongoing)",
   },
   {
     id: "serverless-app",
@@ -179,6 +282,50 @@ export default function ServicesPage() {
       },
       {
         '@type': 'Service',
+        '@id': 'https://suleman-zaheer.vercel.app/services#android-app',
+        name: 'Android App Development',
+        description: 'Dedicated Android App Development using React Native for Google Play Store submission. JazzCash/EasyPaisa payments, Google Maps, Firebase push notifications, offline mode.',
+        provider: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
+        areaServed: [{ '@type': 'City', name: 'Lahore' }, { '@type': 'Country', name: 'Pakistan' }],
+        serviceType: 'Android App Development',
+        url: 'https://suleman-zaheer.vercel.app/services#android-app',
+        offers: { '@type': 'Offer', priceCurrency: 'PKR', price: '70000' }
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://suleman-zaheer.vercel.app/services#desktop-app',
+        name: 'Desktop App Development',
+        description: 'Cross-platform desktop application development using Electron.js for Windows, macOS, and Linux. POS systems, inventory management, factory management tools, and enterprise software.',
+        provider: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
+        areaServed: [{ '@type': 'City', name: 'Lahore' }, { '@type': 'Country', name: 'Pakistan' }],
+        serviceType: 'Desktop App Development',
+        url: 'https://suleman-zaheer.vercel.app/services#desktop-app',
+        offers: { '@type': 'Offer', priceCurrency: 'PKR', price: '80000' }
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://suleman-zaheer.vercel.app/services#shopify-store',
+        name: 'Shopify Store Development',
+        description: 'Complete e-commerce Shopify store setup, custom theme development, JazzCash/EasyPaisa/Stripe/PayPal payment integration, and Shopify SEO optimization for businesses in Pakistan.',
+        provider: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
+        areaServed: [{ '@type': 'City', name: 'Lahore' }, { '@type': 'Country', name: 'Pakistan' }],
+        serviceType: 'Shopify Store Development',
+        url: 'https://suleman-zaheer.vercel.app/services#shopify-store',
+        offers: { '@type': 'Offer', priceCurrency: 'PKR', price: '55000' }
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://suleman-zaheer.vercel.app/services#seo',
+        name: 'SEO & Website Optimization',
+        description: 'Full SEO services by Suleman Zaheer: Technical SEO, Local SEO for Lahore/Pakistan, GEO (AI Search Engines), AEO (Answer Engine Optimization), LLM Optimization, Core Web Vitals, and JSON-LD structured data.',
+        provider: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
+        areaServed: [{ '@type': 'City', name: 'Lahore' }, { '@type': 'Country', name: 'Pakistan' }, { '@type': 'Place', name: 'Worldwide' }],
+        serviceType: 'SEO & Website Optimization',
+        url: 'https://suleman-zaheer.vercel.app/services#seo',
+        offers: { '@type': 'Offer', priceCurrency: 'PKR', price: '30000' }
+      },
+      {
+        '@type': 'Service',
         '@id': 'https://suleman-zaheer.vercel.app/services#serverless-app',
         name: 'Serverless Mobile App Development',
         description: 'Serverless Mobile App Development using Firebase (Firestore, Auth, Cloud Functions) by Suleman Zaheer – no dedicated backend server required.',
@@ -204,10 +351,10 @@ export default function ServicesPage() {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'What web development services does Suleman Zaheer offer in Lahore?',
+            name: 'What software development services does Suleman Zaheer offer in Lahore?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Suleman Zaheer offers 4 services in Lahore: 1) Web App Development (MERN/Next.js), 2) Mobile App Development (React Native), 3) Serverless Mobile App (Firebase), 4) Custom Website without backend (Next.js/HTML/CSS/JS).'
+              text: 'Suleman Zaheer offers 8 services in Lahore: 1) Web App Development (MERN/Next.js), 2) Mobile App Development (React Native), 3) Android App Development (Google Play Store), 4) Desktop App Development (Electron.js), 5) Shopify Store Development, 6) SEO & Website Optimization, 7) Serverless Mobile App (Firebase), 8) Custom Website without backend (Next.js/HTML/CSS/JS).'
             }
           },
           {
@@ -215,7 +362,39 @@ export default function ServicesPage() {
             name: 'How much does it cost to hire Suleman Zaheer for a web app in Pakistan?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Suleman Zaheer pricing starts at PKR 45,000 for custom website without backend, PKR 65,000 for serverless mobile app, PKR 75,000 for full web app, and PKR 85,000 for mobile app development.'
+              text: 'Suleman Zaheer pricing: SEO from PKR 30,000 | Custom website from PKR 45,000 | Shopify store from PKR 55,000 | Serverless mobile app from PKR 65,000 | Android app from PKR 70,000 | Web app from PKR 75,000 | Desktop app from PKR 80,000 | Mobile app from PKR 85,000.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Does Suleman Zaheer build Android apps in Lahore?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Suleman Zaheer is a professional Android App Developer in Lahore, Pakistan. He builds Android applications using React Native and submits them to Google Play Store. Features include Google Maps, JazzCash/EasyPaisa payments, Firebase push notifications, and Urdu language support.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Does Suleman Zaheer build Shopify stores in Pakistan?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Suleman Zaheer is a Shopify Expert in Lahore, Pakistan. He builds complete Shopify stores with custom theme development, JazzCash, EasyPaisa, Stripe, and PayPal payment integration, SEO optimization, and full product catalog setup.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Does Suleman Zaheer provide SEO services in Lahore?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Suleman Zaheer provides full SEO services in Lahore including Technical SEO, Local SEO, GEO (Generative Engine Optimization for AI like ChatGPT/Gemini), AEO (Answer Engine Optimization), LLM Optimization via llms.txt, Core Web Vitals optimization, and structured data schema markup.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Does Suleman Zaheer build desktop applications?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Suleman Zaheer builds cross-platform desktop applications for Windows, macOS, and Linux using Electron.js and React.js. Ideal for POS systems, inventory management, factory management tools, and enterprise business software.'
             }
           },
           {
@@ -231,7 +410,7 @@ export default function ServicesPage() {
             name: 'Does Suleman Zaheer build mobile apps in Lahore?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes. Suleman Zaheer builds cross-platform mobile apps for iOS and Android using React Native. He also builds serverless mobile apps using Firebase with no dedicated backend needed.'
+              text: 'Yes. Suleman Zaheer builds cross-platform mobile apps for iOS and Android using React Native. He also builds dedicated Android apps and serverless mobile apps using Firebase with no dedicated backend needed.'
             }
           }
         ]

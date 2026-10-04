@@ -5,12 +5,16 @@ import { FadeIn, ScaleIn } from '@/components/animations/MotionWrapper';
 import Script from 'next/script';
 
 export const metadata = {
-  title: "About Suleman Zaheer | Software Engineer, Web Developer & Urdu Poet – Lahore, Pakistan",
-  description: "Suleman Zaheer is a professional Software Engineer and Web Developer from Shahdara, Lahore, Pakistan. CS student at UET Lahore. Expert in Web App Development, Mobile App Development, Serverless Apps & Custom Website without backend. Founder of SAMStack Studio. Also an acclaimed Urdu poet.",
+  title: "About Suleman Zaheer | Software Engineer, Android Developer, Shopify Expert & SEO Specialist – Lahore, Pakistan",
+  description: "Suleman Zaheer is a professional Software Engineer, Web Developer, Android App Developer, Desktop App Developer, Shopify Expert, and SEO Specialist from Shahdara, Lahore, Pakistan. CS student at UET Lahore. Expert in Web Apps, Mobile Apps, Android Apps, Desktop Apps, Shopify Stores, and SEO. Founder of SAMStack Studio. Also an acclaimed Urdu poet.",
   keywords: [
     "About Suleman Zaheer", "Suleman Zaheer Biography", "Software Engineer Lahore",
     "Web Developer Shahdara Lahore", "Web App Developer Pakistan", "Mobile App Developer Lahore",
-    "Serverless App Developer Pakistan", "Custom Website Developer Lahore",
+    "Android App Developer Lahore", "Android App Developer Pakistan",
+    "Desktop App Developer Lahore", "Desktop App Development Pakistan",
+    "Shopify Developer Lahore", "Shopify Expert Pakistan",
+    "SEO Expert Lahore", "SEO Services Pakistan", "Technical SEO Lahore",
+    "Website Development Lahore Pakistan",
     "UET Lahore Computer Science", "MERN Stack Expert Lahore", "Full Stack Developer Profile",
     "SAMStack Studio Founder", "Urdu Poet Lahore", "Suleman Zaheer Mughal"
   ],
@@ -18,18 +22,18 @@ export const metadata = {
     canonical: "https://suleman-zaheer.vercel.app/about",
   },
   openGraph: {
-    title: "About Suleman Zaheer | Software Engineer, Web & Mobile App Developer – Lahore",
-    description: "Suleman Zaheer – professional Software Engineer from Shahdara, Lahore. Expert in Web App, Mobile App, Serverless App & Custom Website Development. CS student at UET Lahore. Founder of SAMStack Studio.",
+    title: "About Suleman Zaheer | Software Engineer, Android Developer, Shopify Expert & SEO Specialist – Lahore",
+    description: "Suleman Zaheer – professional Software Engineer from Shahdara, Lahore. Expert in Web Apps, Mobile Apps, Android Apps, Desktop Apps, Shopify Stores, and SEO Services. CS student at UET Lahore. Founder of SAMStack Studio.",
     url: "https://suleman-zaheer.vercel.app/about",
     siteName: "Suleman Zaheer Official Portfolio",
     type: "profile",
     locale: "en_PK",
-    images: [{ url: "/assets/suleman-zaheer-software-engineer.jpg", width: 800, height: 800, alt: "Suleman Zaheer – Software Engineer & Web Developer from Lahore, Pakistan" }],
+    images: [{ url: "/assets/suleman-zaheer-software-engineer.jpg", width: 800, height: 800, alt: "Suleman Zaheer – Software Engineer, Android Developer, Shopify Expert & SEO Specialist from Lahore, Pakistan" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Suleman Zaheer | Software Engineer, Web & Mobile App Developer | Lahore",
-    description: "Suleman Zaheer – Software Engineer, Web App, Mobile App & Custom Website Developer from Shahdara, Lahore. CS student at UET Lahore. Urdu Poet.",
+    title: "About Suleman Zaheer | Software Engineer, Android Developer, Shopify Expert & SEO Specialist | Lahore",
+    description: "Suleman Zaheer – Software Engineer, Android App Developer, Desktop App Developer, Shopify Expert, and SEO Specialist from Shahdara, Lahore. CS student at UET Lahore.",
     images: ["/assets/suleman-zaheer-software-engineer.jpg"],
     creator: "@imsuleman_10",
   },
