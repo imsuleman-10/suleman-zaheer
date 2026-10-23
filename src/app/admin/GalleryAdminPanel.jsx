@@ -1,13 +1,14 @@
 "use client";
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { db } from '@/firebase';
+import { db, storage } from '@/firebase';
 import {
   collection, query, orderBy, onSnapshot,
   addDoc, deleteDoc, doc, serverTimestamp
 } from 'firebase/firestore';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import {
   Upload, Trash2, ExternalLink, ImagePlus,
-  X, CheckCircle, AlertCircle, CloudUpload, Eye, Zap, Key, Link as LinkIcon, Sparkles, Cpu
+  X, CheckCircle, AlertCircle, CloudUpload, Eye, Zap, Link as LinkIcon, Cpu
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -137,8 +138,7 @@ export default function GalleryAdminPanel() {
   const [images, setImages] = useState([]);
   const [loadingImages, setLoadingImages] = useState(true);
 
-  // Settings: ImgBB Key & Groq Key
-  const [imgbbKey, setImgbbKey] = useState('');
+  // Settings: Groq Key only (Firebase Storage used for uploads — no external key needed)
   const [groqKey, setGroqKey] = useState('');
 
   // Mode: 'file' or 'url'
@@ -164,11 +164,8 @@ export default function GalleryAdminPanel() {
     setToast({ message, type });
   }, []);
 
-  // Load saved keys on mount
+  // Load saved Groq key on mount
   useEffect(() => {
-    const savedImgbb = localStorage.getItem('IMGBB_API_KEY');
-    if (savedImgbb) setImgbbKey(savedImgbb);
-
     const savedGroq = localStorage.getItem('GROQ_API_KEY');
     if (savedGroq) {
       setGroqKey(savedGroq);
@@ -346,33 +343,15 @@ export default function GalleryAdminPanel() {
         }
         finalImageUrl = directUrl.trim();
       } else {
-        // File upload mode
+        // File upload via Firebase Storage — no external API key needed
         if (!file) { throw new Error('Please select an image file to upload.'); }
-        
-        let activeKey = imgbbKey;
-        if (!activeKey) {
-          const promptKey = window.prompt("ImgBB API Key is required for free direct hosting.\nEnter your ImgBB Key (api.imgbb.com):");
-          if (!promptKey || !promptKey.trim()) {
-            throw new Error('ImgBB API key is required for direct file upload.');
-          }
-          activeKey = promptKey.trim();
-          setImgbbKey(activeKey);
-          localStorage.setItem('IMGBB_API_KEY', activeKey);
-        }
 
-        const formData = new FormData();
-        formData.append('image', file);
-        
-        const res = await fetch(`https://api.imgbb.com/1/upload?key=${activeKey}`, {
-          method: 'POST',
-          body: formData
-        });
-        
-        const data = await res.json();
-        if (!data.success) {
-          throw new Error(data.error?.message || 'ImgBB Upload Failed');
-        }
-        finalImageUrl = data.data.url;
+        showToast('Uploading to Firebase Storage...', 'success');
+        const ext = file.name.split('.').pop();
+        const safeName = `seo_gallery/${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`;
+        const storageRef = ref(storage, safeName);
+        await uploadBytes(storageRef, file);
+        finalImageUrl = await getDownloadURL(storageRef);
       }
 
       // Parse tags (comma separated)

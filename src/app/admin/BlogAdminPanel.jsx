@@ -121,14 +121,19 @@ export default function BlogAdminPanel() {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    let imgbbKey = localStorage.getItem('IMGBB_API_KEY');
+    let imgbbKey = localStorage.getItem('IMGBB_API_KEY')
+                  || process.env.NEXT_PUBLIC_IMGBB_API_KEY
+                  || '';
     if (!imgbbKey) {
-      const input = prompt("ImgBB API Key is required for SEO image uploads.\nPlease enter your ImgBB API Key (from api.imgbb.com):");
+      const input = prompt("ImgBB API Key required.\nGet it free from api.imgbb.com:");
       if (!input) {
         showToast('Image upload cancelled. API Key is required.', 'error');
         return;
       }
       imgbbKey = input.trim();
+      localStorage.setItem('IMGBB_API_KEY', imgbbKey);
+    } else {
+      // Always keep localStorage in sync with env var
       localStorage.setItem('IMGBB_API_KEY', imgbbKey);
     }
 
