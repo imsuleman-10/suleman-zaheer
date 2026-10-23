@@ -92,9 +92,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-sm sm:max-w-none mx-auto"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-sm sm:max-w-md md:max-w-none mx-auto"
           >
-            <Link href="/projects" className="px-6 sm:px-8 py-3 sm:py-4 bg-primary text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all hover:scale-105 shadow-xl shadow-primary/20 text-sm sm:text-base">
+            <Link href="/projects" className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-primary text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all hover:scale-105 shadow-xl shadow-primary/20 text-sm sm:text-base">
               Explore Projects <ArrowRight size={18} />
             </Link>
 
@@ -102,7 +102,7 @@ const Hero = () => {
               href="/suleman-zaheer-cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-bold hover:bg-white/10 transition-all text-center flex items-center justify-center gap-2 text-sm sm:text-base"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-bold hover:bg-white/10 transition-all text-center flex items-center justify-center gap-2 text-sm sm:text-base"
             >
               <Download size={16} /> Download CV
             </a>
