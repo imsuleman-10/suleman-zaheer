@@ -54,6 +54,7 @@ const Footer = () => {
               <li><Link href="/about" className="text-gray-400 hover:text-primary transition-colors" title="About Suleman Zaheer">About</Link></li>
               <li><Link href="/projects" className="text-gray-400 hover:text-primary transition-colors" title="Suleman Zaheer Projects">Projects</Link></li>
               <li><Link href="/blog" className="text-gray-400 hover:text-primary transition-colors" title="Suleman Zaheer Blog">Blog</Link></li>
+              <li><Link href="/photos" className="text-gray-400 hover:text-primary transition-colors" title="Photos of Suleman Zaheer">Photos & Gallery</Link></li>
               <li><Link href="/cv" className="text-gray-400 hover:text-primary transition-colors" title="Suleman Zaheer CV">CV / Resume</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-primary transition-colors" title="Contact Suleman Zaheer">Contact</Link></li>
               <li className="pt-2"><a href="https://samstack-tech.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-white transition-colors font-medium flex items-center gap-1" title="SAMStack Studio Agency">My Agency: SAMStack Studio <ArrowUpRight size={14} /></a></li>

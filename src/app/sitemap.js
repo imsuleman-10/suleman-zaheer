@@ -65,7 +65,7 @@ export default async function sitemap() {
     // Content pages
     { url: '/blog', priority: 0.85, changeFrequency: 'weekly' },
     { url: '/poetry', priority: 0.8, changeFrequency: 'weekly' },
-    { url: '/photos', priority: 0.7, changeFrequency: 'weekly' },
+    { url: '/photos', priority: 0.9, changeFrequency: 'daily' },
     { url: '/author', priority: 0.7, changeFrequency: 'monthly' },
     { url: '/gallery-seo', priority: 0.7, changeFrequency: 'daily' },
     { url: '/sitemap', priority: 0.4, changeFrequency: 'monthly' },
