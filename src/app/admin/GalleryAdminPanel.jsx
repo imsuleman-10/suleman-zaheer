@@ -1,14 +1,13 @@
 "use client";
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { db, storage } from '@/firebase';
+import { db } from '@/firebase';
 import {
   collection, query, orderBy, onSnapshot,
   addDoc, deleteDoc, doc, serverTimestamp
 } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import {
   Upload, Trash2, ExternalLink, ImagePlus,
-  X, CheckCircle, AlertCircle, CloudUpload, Eye, Zap, Link as LinkIcon, Cpu
+  X, CheckCircle, AlertCircle, CloudUpload, Eye, Zap, Link as LinkIcon, Cpu, Github
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -343,15 +342,37 @@ export default function GalleryAdminPanel() {
         }
         finalImageUrl = directUrl.trim();
       } else {
-        // File upload via Firebase Storage — no external API key needed
+        // File upload via GitHub API → stored in public/gallery/ → served by Vercel/GitHub CDN
         if (!file) { throw new Error('Please select an image file to upload.'); }
 
-        showToast('Uploading to Firebase Storage...', 'success');
-        const ext = file.name.split('.').pop();
-        const safeName = `seo_gallery/${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`;
-        const storageRef = ref(storage, safeName);
-        await uploadBytes(storageRef, file);
-        finalImageUrl = await getDownloadURL(storageRef);
+        showToast('Committing to GitHub repo... ⏳', 'success');
+
+        // Convert file to raw base64 (no data URL prefix)
+        const base64 = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            // Strip the "data:image/...;base64," prefix
+            const result = reader.result;
+            resolve(result.split(',')[1]);
+          };
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+
+        // Generate SEO-friendly filename: suleman-zaheer-{timestamp}.{ext}
+        const ext = file.name.split('.').pop().toLowerCase();
+        const seoFilename = `suleman-zaheer-${Date.now()}.${ext}`;
+
+        const res = await fetch('/api/upload-to-github', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ base64, filename: seoFilename }),
+        });
+
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'GitHub upload failed.');
+
+        finalImageUrl = data.url; // raw.githubusercontent.com CDN URL
       }
 
       // Parse tags (comma separated)
@@ -422,9 +443,12 @@ export default function GalleryAdminPanel() {
               <span className="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20 flex items-center gap-1 font-mono">
                 <Cpu size={11} /> Groq Powered ({GROQ_EXACT_MODEL})
               </span>
+              <span className="bg-blue-500/10 text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded border border-blue-500/20 flex items-center gap-1 font-mono">
+                <Github size={11} /> GitHub CDN
+              </span>
             </div>
             <p className="text-gray-400 text-xs mt-1 max-w-xl">
-              Upload photos that will be automatically analyzed by <strong>Groq AI ({GROQ_EXACT_MODEL})</strong>, published live on <strong>/photos</strong>, and indexed by Google for <strong>"Suleman Zaheer"</strong>.
+              Upload photos → <strong>Groq AI ({GROQ_EXACT_MODEL})</strong> generates SEO → committed to <strong>GitHub repo</strong> → served by <strong>Vercel CDN</strong> → indexed by Google for <strong>&quot;Suleman Zaheer&quot;</strong>.
             </p>
           </div>
 

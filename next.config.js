@@ -1,4 +1,4 @@
-﻿/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   // HTTP Compression (Gzip/Brotli) — reduces text payloads by ~70%
   compress: true,
@@ -16,6 +16,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'i.ibb.co', port: '', pathname: '/**' },
       { protocol: 'https', hostname: 'ibb.co', port: '', pathname: '/**' },
       { protocol: 'https', hostname: 'img.youtube.com', port: '', pathname: '/**' },
+      { protocol: 'https', hostname: 'raw.githubusercontent.com', port: '', pathname: '/**' },
     ],
   },
 
