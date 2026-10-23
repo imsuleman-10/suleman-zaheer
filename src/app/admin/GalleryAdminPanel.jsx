@@ -7,9 +7,23 @@ import {
 } from 'firebase/firestore';
 import {
   Upload, Trash2, ExternalLink, ImagePlus,
-  X, CheckCircle, AlertCircle, CloudUpload, Eye, Zap, Key, Link as LinkIcon, Sparkles
+  X, CheckCircle, AlertCircle, CloudUpload, Eye, Zap, Key, Link as LinkIcon, Sparkles, Cpu
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+
+// Safe resolution for Groq API Key (reads from NEXT_PUBLIC_GROQ_API_KEY or localStorage)
+const getInitialGroqKey = () => {
+  if (typeof process !== 'undefined' && process.env?.NEXT_PUBLIC_GROQ_API_KEY) {
+    return process.env.NEXT_PUBLIC_GROQ_API_KEY;
+  }
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('GROQ_API_KEY') || '';
+  }
+  return '';
+};
+
+// Exact current active model ID on Groq for Vision & Multimodal analysis
+const GROQ_EXACT_MODEL = 'qwen/qwen3.8-27b';
 
 // ─── Toast Notification ──────────────────────────────────────────────────────
 function Toast({ message, type, onClose }) {
@@ -102,7 +116,7 @@ function ImageCard({ img, onDelete, deleting }) {
           {img.description}
         </p>
         <div className="pt-3 mt-auto flex items-center justify-between border-t border-white/10">
-          <span className="text-[10px] text-primary/70 flex items-center gap-1 font-semibold">
+          <span className="text-[10px] text-emerald-400 flex items-center gap-1 font-semibold">
             <Zap size={10} /> Live on /photos
           </span>
           <button
@@ -123,9 +137,9 @@ export default function GalleryAdminPanel() {
   const [images, setImages] = useState([]);
   const [loadingImages, setLoadingImages] = useState(true);
 
-  // Settings: ImgBB Key
+  // Settings: ImgBB Key & Groq Key
   const [imgbbKey, setImgbbKey] = useState('');
-  const [keyInput, setKeyInput] = useState('');
+  const [groqKey, setGroqKey] = useState('');
 
   // Mode: 'file' or 'url'
   const [uploadMode, setUploadMode] = useState('file');
@@ -140,6 +154,7 @@ export default function GalleryAdminPanel() {
   const [isDragging, setIsDragging] = useState(false);
 
   const [uploading, setUploading] = useState(false);
+  const [analyzingWithGroq, setAnalyzingWithGroq] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
 
   const [toast, setToast] = useState(null);
@@ -149,22 +164,20 @@ export default function GalleryAdminPanel() {
     setToast({ message, type });
   }, []);
 
-  // Load ImgBB key from local storage on mount
+  // Load saved keys on mount
   useEffect(() => {
-    const savedKey = localStorage.getItem('IMGBB_API_KEY');
-    if (savedKey) {
-      setImgbbKey(savedKey);
-      setKeyInput(savedKey);
+    const savedImgbb = localStorage.getItem('IMGBB_API_KEY');
+    if (savedImgbb) setImgbbKey(savedImgbb);
+
+    const savedGroq = localStorage.getItem('GROQ_API_KEY');
+    if (savedGroq) {
+      setGroqKey(savedGroq);
+    } else {
+      const initialKey = getInitialGroqKey();
+      setGroqKey(initialKey);
+      if (initialKey) localStorage.setItem('GROQ_API_KEY', initialKey);
     }
   }, []);
-
-  const saveImgbbKey = (e) => {
-    e.preventDefault();
-    if (!keyInput.trim()) return showToast('Please enter a valid API key', 'error');
-    localStorage.setItem('IMGBB_API_KEY', keyInput.trim());
-    setImgbbKey(keyInput.trim());
-    showToast('API Key saved successfully! You can now upload images.', 'success');
-  };
 
   // ── Fetch images from Firestore ──────────────────────────────────────────
   useEffect(() => {
@@ -219,12 +232,98 @@ export default function GalleryAdminPanel() {
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
-  // Auto-Fill preset specifically optimized to rank for "Suleman Zaheer" on Google
+  // ── Groq AI Vision & SEO Analysis ───────────────────────────
+  const handleGenerateWithGroq = async () => {
+    const imageSource = uploadMode === 'url' ? directUrl.trim() : preview;
+    if (!imageSource) {
+      showToast('Please upload an image file or enter an image URL first.', 'error');
+      return;
+    }
+
+    setAnalyzingWithGroq(true);
+    showToast(`Groq AI (${GROQ_EXACT_MODEL}) is analyzing image for SEO...`, 'success');
+
+    try {
+      let activeGroqKey = groqKey.trim() || getInitialGroqKey();
+      if (!activeGroqKey) {
+        const inputKey = window.prompt("Enter your Groq API Key:");
+        if (inputKey && inputKey.trim()) {
+          activeGroqKey = inputKey.trim();
+          setGroqKey(activeGroqKey);
+          localStorage.setItem('GROQ_API_KEY', activeGroqKey);
+        } else {
+          throw new Error('Groq API Key is required for AI Vision SEO analysis.');
+        }
+      }
+      
+      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${activeGroqKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: GROQ_EXACT_MODEL,
+          messages: [
+            {
+              role: 'system',
+              content: 'You are a world-class SEO and personal branding specialist for Suleman Zaheer (Business Growth Partner, Full Stack Software Engineer specializing in MERN, Next.js, Laravel, Flutter, and published Urdu Poet based in Lahore, Pakistan). Analyze the provided image and generate pure JSON SEO metadata optimized for Google Image Search and Google Knowledge Graph. Return ONLY a JSON object with keys: "title", "altText", "description", "tags". Make sure "Suleman Zaheer" is prominently included in title, altText, and tags.'
+            },
+            {
+              role: 'user',
+              content: [
+                {
+                  type: 'text',
+                  text: 'Analyze this photo and generate high-ranking SEO metadata for Google Image Search and brand recognition for Suleman Zaheer. Return ONLY valid JSON format without markdown code fences.'
+                },
+                {
+                  type: 'image_url',
+                  image_url: {
+                    url: imageSource
+                  }
+                }
+              ]
+            }
+          ],
+          temperature: 0.2,
+          max_tokens: 350
+        })
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error?.message || `Groq API Error (${response.status})`);
+      }
+
+      let rawContent = data.choices?.[0]?.message?.content || '';
+      rawContent = rawContent.replace(/```json/gi, '').replace(/```/g, '').trim();
+
+      const parsed = JSON.parse(rawContent);
+
+      if (parsed.title) setTitle(parsed.title);
+      if (parsed.altText) setAltText(parsed.altText);
+      if (parsed.description) setDescription(parsed.description);
+      if (parsed.tags) {
+        setTags(Array.isArray(parsed.tags) ? parsed.tags.join(', ') : parsed.tags);
+      }
+
+      showToast(`Groq AI (${GROQ_EXACT_MODEL}) generated full SEO metadata!`, 'success');
+    } catch (err) {
+      console.error('Groq SEO Error:', err);
+      // Fallback: If vision call fails, generate high-value default SEO
+      handleAutoFillSEO();
+      showToast(`Groq Notice: ${err.message}. Applied Suleman Zaheer SEO preset.`, 'error');
+    } finally {
+      setAnalyzingWithGroq(false);
+    }
+  };
+
+  // Instant 1-click fallback preset
   const handleAutoFillSEO = () => {
-    setTitle('Suleman Zaheer – Full Stack Software Engineer');
-    setAltText('Suleman Zaheer – Software Engineer and Web Developer in Lahore');
+    setTitle('Suleman Zaheer – Full Stack Software Engineer & Writer');
+    setAltText('Suleman Zaheer – Software Engineer and Web Developer in Lahore, Pakistan');
     setDescription('Official photograph of Suleman Zaheer, Full Stack Software Engineer, Next.js & Flutter Developer, and Urdu Poet from Shahdara, Lahore, Pakistan.');
-    setTags('Suleman Zaheer, Suleman Zaheer Photos, Suleman Zaheer Software Engineer, Lahore Developer, SAMStack');
+    setTags('Suleman Zaheer, Suleman Zaheer Photos, Software Engineer Lahore, Full Stack Developer, SAMStack');
     showToast('SEO fields auto-optimized for Google "Suleman Zaheer" Search!', 'success');
   };
 
@@ -341,12 +440,12 @@ export default function GalleryAdminPanel() {
                 <ImagePlus size={22} className="text-primary" />
                 SEO Photo Gallery Manager
               </h2>
-              <span className="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">
-                Google Search Indexed
+              <span className="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20 flex items-center gap-1 font-mono">
+                <Cpu size={11} /> Groq Powered ({GROQ_EXACT_MODEL})
               </span>
             </div>
             <p className="text-gray-400 text-xs mt-1 max-w-xl">
-              Upload photos and portraits that will be automatically published on the public <strong>/photos</strong> page and indexed by Google Images for <strong>"Suleman Zaheer"</strong>.
+              Upload photos that will be automatically analyzed by <strong>Groq AI ({GROQ_EXACT_MODEL})</strong>, published live on <strong>/photos</strong>, and indexed by Google for <strong>"Suleman Zaheer"</strong>.
             </p>
           </div>
 
@@ -427,20 +526,24 @@ export default function GalleryAdminPanel() {
                       <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                         Image Title <span className="text-primary">*</span>
                       </label>
+                      
+                      {/* Groq AI Trigger Button */}
                       <button
                         type="button"
-                        onClick={handleAutoFillSEO}
-                        className="text-[10px] text-primary hover:underline flex items-center gap-1 font-bold cursor-pointer"
-                        title="Auto-fill with verified Suleman Zaheer keywords"
+                        onClick={handleGenerateWithGroq}
+                        disabled={analyzingWithGroq || (!preview && !directUrl.trim())}
+                        className="text-[11px] font-bold text-emerald-400 hover:text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-lg flex items-center gap-1.5 transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                        title="Analyze image with Groq Vision and generate SEO metadata"
                       >
-                        <Sparkles size={11} /> Auto-Optimize for Suleman Zaheer
+                        <Zap size={13} className={analyzingWithGroq ? 'animate-spin' : ''} />
+                        {analyzingWithGroq ? 'Analyzing with Groq...' : 'Auto-SEO with Groq AI'}
                       </button>
                     </div>
                     <input
                       type="text"
                       value={title}
                       onChange={e => setTitle(e.target.value)}
-                      placeholder="e.g., Suleman Zaheer – Full Stack Software Engineer"
+                      placeholder="e.g., Suleman Zaheer – Full Stack Software Engineer in Lahore"
                       disabled={uploading}
                       className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-gray-600 outline-none focus:border-primary/60 transition-colors"
                     />
@@ -454,7 +557,7 @@ export default function GalleryAdminPanel() {
                       type="text"
                       value={altText}
                       onChange={e => setAltText(e.target.value)}
-                      placeholder="e.g., Suleman Zaheer – Software Engineer in Lahore"
+                      placeholder="e.g., Suleman Zaheer – Software Engineer and Web Developer in Lahore"
                       disabled={uploading}
                       className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-gray-600 outline-none focus:border-primary/60 transition-colors"
                     />
@@ -496,7 +599,7 @@ export default function GalleryAdminPanel() {
                     {uploading ? (
                       <>
                         <div className="w-3.5 h-3.5 border-2 border-black/60 border-t-transparent rounded-full animate-spin" />
-                        Publishing to Google & Gallery...
+                        Publishing to Google & /photos...
                       </>
                     ) : (
                       <>
@@ -508,25 +611,44 @@ export default function GalleryAdminPanel() {
 
                 {/* Right: Media Preview / File Drop */}
                 <div className="order-1 lg:order-2 h-full min-h-[260px]">
-                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
-                    {uploadMode === 'file' ? 'Upload Image File' : 'Image Preview'}
-                  </label>
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">
+                      {uploadMode === 'file' ? 'Upload Image File' : 'Image Preview'}
+                    </label>
+                    <span className="text-[10px] text-gray-500 font-mono">
+                      Groq Model: {GROQ_EXACT_MODEL}
+                    </span>
+                  </div>
 
                   {uploadMode === 'file' ? (
                     preview ? (
                       <div className="relative rounded-2xl overflow-hidden border border-white/10 h-[calc(100%-24px)] min-h-[220px] bg-black/40 group">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={preview} alt="Preview" className="w-full h-full object-cover" />
+                        
+                        {/* Quick Groq Button on hover */}
+                        <button
+                          type="button"
+                          onClick={handleGenerateWithGroq}
+                          disabled={analyzingWithGroq}
+                          className="absolute top-3 left-3 px-3 py-1.5 bg-black/80 hover:bg-emerald-500 text-white hover:text-black rounded-xl transition-all text-xs font-bold flex items-center gap-1.5 backdrop-blur-md cursor-pointer"
+                          title="Generate SEO metadata with Groq AI"
+                        >
+                          <Zap size={14} className="text-emerald-400" /> Auto-SEO (Groq)
+                        </button>
+
                         <button
                           type="button"
                           onClick={clearFile}
-                          className="absolute top-3 right-3 p-2 bg-black/80 hover:bg-red-500 text-white rounded-xl transition-all"
+                          className="absolute top-3 right-3 p-2 bg-black/80 hover:bg-red-500 text-white rounded-xl transition-all cursor-pointer"
+                          title="Clear image"
                         >
                           <X size={16} />
                         </button>
+
                         <div className="absolute bottom-0 left-0 right-0 bg-black/80 p-2.5 text-xs text-gray-200 truncate flex justify-between">
                           <span className="truncate">{file?.name}</span>
-                          <span className="text-emerald-400 font-bold text-[10px]">READY</span>
+                          <span className="text-emerald-400 font-bold text-[10px]">READY FOR GROQ</span>
                         </div>
                       </div>
                     ) : (
@@ -555,13 +677,24 @@ export default function GalleryAdminPanel() {
                   ) : (
                     <div className="relative rounded-2xl overflow-hidden border border-white/10 h-[calc(100%-24px)] min-h-[220px] bg-black/40 flex items-center justify-center">
                       {directUrl ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={directUrl}
-                          alt="Direct URL Preview"
-                          className="w-full h-full object-cover"
-                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                        />
+                        <div className="w-full h-full relative">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={directUrl}
+                            alt="Direct URL Preview"
+                            className="w-full h-full object-cover"
+                            onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                          />
+                          <button
+                            type="button"
+                            onClick={handleGenerateWithGroq}
+                            disabled={analyzingWithGroq}
+                            className="absolute top-3 left-3 px-3 py-1.5 bg-black/80 hover:bg-emerald-500 text-white hover:text-black rounded-xl transition-all text-xs font-bold flex items-center gap-1.5 backdrop-blur-md cursor-pointer"
+                            title="Generate SEO with Groq"
+                          >
+                            <Zap size={14} className="text-emerald-400" /> Auto-SEO (Groq)
+                          </button>
+                        </div>
                       ) : (
                         <div className="text-center p-6 text-gray-500">
                           <LinkIcon size={28} className="mx-auto mb-2 text-gray-600" />
