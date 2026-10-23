@@ -107,27 +107,27 @@ export default async function GallerySEO() {
 
 
       {/* Professional Header */}
-      <header className="relative pt-24 pb-12 px-6 sm:px-12 border-b border-white/5 bg-gradient-to-b from-neutral-900 to-neutral-950 overflow-hidden">
+      <header className="relative pt-24 sm:pt-32 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8 border-b border-white/5 bg-gradient-to-b from-neutral-900 to-neutral-950 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight mb-3 sm:mb-6">
             Creative <span className="text-primary">Portfolio</span>
           </h1>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
             A curated collection of digital experiences, software architectures, and creative web designs engineered by Suleman Zaheer.
           </p>
         </div>
       </header>
 
       {/* Gallery Content */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-12 py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
         {images.length === 0 ? (
-          <div className="text-center py-32 border border-dashed border-white/10 rounded-3xl bg-white/[0.02]">
-            <h2 className="text-2xl font-bold text-gray-300 mb-2">Gallery is empty</h2>
-            <p className="text-gray-500">Currently indexing new projects. Check back soon.</p>
+          <div className="text-center py-20 sm:py-32 border border-dashed border-white/10 rounded-2xl sm:rounded-3xl bg-white/[0.02]">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-300 mb-2">Gallery is empty</h2>
+            <p className="text-gray-500 text-sm">Currently indexing new projects. Check back soon.</p>
           </div>
         ) : (
-          <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+          <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 sm:gap-6 space-y-4 sm:space-y-6">
             {images.map((img, index) => {
               // LCP Optimization: Above-the-fold images get priority fetching
               const isAboveTheFold = index < 4; 
@@ -135,7 +135,7 @@ export default async function GallerySEO() {
               return (
                 <figure
                   key={img.id}
-                  className="break-inside-avoid relative group rounded-2xl overflow-hidden bg-neutral-900 border border-white/5 hover:border-primary/50 transition-all duration-500"
+                  className="break-inside-avoid relative group rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-900 border border-white/5 hover:border-primary/50 transition-all duration-500"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -149,11 +149,11 @@ export default async function GallerySEO() {
                     decoding="async"
                   />
 
-                  <figcaption className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <h2 className="text-lg font-bold text-white mb-2 leading-tight">
+                  <figcaption className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 sm:p-6">
+                    <h2 className="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2 leading-tight">
                       {img.title}
                     </h2>
-                    <p className="text-sm text-gray-300 line-clamp-3">
+                    <p className="text-xs sm:text-sm text-gray-300 line-clamp-3">
                       {img.description}
                     </p>
                   </figcaption>

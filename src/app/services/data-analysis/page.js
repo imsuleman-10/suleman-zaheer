@@ -100,10 +100,10 @@ export default function DataAnalysisPage() {
   ];
 
   return (
-    <div className="pt-32 pb-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="pt-24 sm:pt-32 pb-16 sm:pb-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <nav className="text-sm text-gray-500 mb-10 flex items-center gap-2">
+      <nav className="text-xs sm:text-sm text-gray-500 mb-6 sm:mb-10 flex flex-wrap items-center gap-2">
         <Link href="/" className="hover:text-white transition-colors">Home</Link>
         <span>/</span>
         <Link href="/services" className="hover:text-white transition-colors">Services</Link>
@@ -111,37 +111,37 @@ export default function DataAnalysisPage() {
         <span className="text-primary">Data Analysis</span>
       </nav>
 
-      <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+      <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white mb-4 sm:mb-6 leading-tight break-words">
         Data Analysis & <span className="text-primary">Business Intelligence</span>
       </h1>
-      <p className="text-gray-400 text-lg mb-10 max-w-3xl">
+      <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 max-w-3xl leading-relaxed">
         Transform your raw business data into strategic competitive advantage. <strong className="text-white">Suleman Zaheer</strong> delivers Python-powered analytics, interactive Power BI dashboards, and predictive models that drive measurable business growth.
       </p>
 
-      <div className="grid md:grid-cols-2 gap-6 mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6 mb-10 sm:mb-16">
         {[
           'Data Cleaning & Preprocessing', 'Exploratory Data Analysis (EDA)',
           'Power BI & Tableau Dashboards', 'Python Data Pipelines (Pandas, NumPy)',
           'Predictive Modeling (Scikit-learn)', 'Statistical Analysis & Hypothesis Testing',
           'SQL Database Optimization', 'Automated Reporting Systems'
         ].map(f => (
-          <div key={f} className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-xl">
-            <span className="text-primary text-lg">✓</span>
-            <span className="text-gray-300 text-sm font-medium">{f}</span>
+          <div key={f} className="flex items-center gap-3 p-3.5 sm:p-4 bg-white/5 border border-white/10 rounded-xl">
+            <span className="text-primary text-base sm:text-lg">✓</span>
+            <span className="text-gray-300 text-xs sm:text-sm font-medium">{f}</span>
           </div>
         ))}
       </div>
 
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12">
-        <h2 className="text-2xl font-bold text-white mb-4">Pricing & Timeline</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div><span className="text-gray-500 text-sm">Starting Price</span><p className="text-white font-bold text-xl">PKR 50,000</p></div>
-          <div><span className="text-gray-500 text-sm">Delivery Time</span><p className="text-white font-bold text-xl">1 – 4 Weeks</p></div>
+      <div className="bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-8 mb-8 sm:mb-12">
+        <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Pricing & Timeline</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div><span className="text-gray-500 text-xs sm:text-sm">Starting Price</span><p className="text-white font-bold text-lg sm:text-xl">PKR 50,000</p></div>
+          <div><span className="text-gray-500 text-xs sm:text-sm">Delivery Time</span><p className="text-white font-bold text-lg sm:text-xl">1 – 4 Weeks</p></div>
         </div>
       </div>
 
       <div className="text-center">
-        <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all">
+        <Link href="/contact" className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all text-sm sm:text-base">
           Hire for Data Analysis →
         </Link>
       </div>

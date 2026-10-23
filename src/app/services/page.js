@@ -454,17 +454,17 @@ export default function ServicesPage() {
 
 
       {/* Page Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-20">
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-6">
-            <MapPin size={12} /> Shahdara, Lahore, Pakistan – Available Worldwide
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-4 sm:mb-6">
+            <MapPin size={12} /> Shahdara, Lahore – Available Worldwide
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight speakable" data-speakable="true">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white mb-4 sm:mb-6 leading-tight tracking-tight speakable" data-speakable="true">
             Professional <span className="text-primary italic">Development</span>
             <br className="hidden sm:block" />
             <span className="text-gray-500">Services in Lahore</span>
           </h1>
-          <p className="text-gray-400 text-lg sm:text-xl leading-relaxed speakable">
+          <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed speakable px-2">
             I am <span className="text-white font-bold">Suleman Zaheer</span>, a Software Engineer &amp; Web Developer based in{' '}
             <span className="text-primary font-semibold">Shahdara, Lahore</span>. I build{' '}
             <strong className="text-white">Web Apps, Mobile Apps, Serverless Apps &amp; Custom Websites</strong>{' '}
@@ -494,38 +494,38 @@ export default function ServicesPage() {
                 <div className={`absolute -top-40 -right-40 w-80 h-80 ${service.bgColor.replace('/10', '/20')} rounded-full blur-[100px] opacity-0 group-hover:opacity-50 transition-opacity duration-700 pointer-events-none`} />
                 
                 <div className="absolute inset-0 bg-gradient-to-br from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <div className="relative p-6 sm:p-10 z-10">
-                  <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-12 items-stretch">
+                <div className="relative p-4 sm:p-6 md:p-10 z-10">
+                  <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-6 lg:gap-12 items-stretch">
                     
                     {/* Left Column - Core Info */}
                     <div className="flex flex-col">
-                      <div className="flex items-center gap-6 mb-6">
-                        <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${service.bgColor} border ${service.borderColor} group-hover:scale-110 transition-transform duration-500 shadow-lg flex-shrink-0`}>
-                          <Icon size={28} className={service.color} />
+                      <div className="flex items-start sm:items-center gap-4 sm:gap-6 mb-4 sm:mb-6">
+                        <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl ${service.bgColor} border ${service.borderColor} group-hover:scale-110 transition-transform duration-500 shadow-lg flex-shrink-0`}>
+                          <Icon size={22} className={`sm:w-7 sm:h-7 ${service.color}`} />
                         </div>
-                        <div>
-                          <div className="flex items-center gap-3 mb-2">
+                        <div className="min-w-0">
+                          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-1 sm:mb-2">
                             <span className="text-white/20 text-xs font-mono font-bold">0{idx + 1}</span>
-                            <span className={`text-[10px] font-black uppercase tracking-widest ${service.color} px-3 py-1 rounded-full ${service.bgColor} border ${service.borderColor}`}>
+                            <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-widest ${service.color} px-2 sm:px-3 py-1 rounded-full ${service.bgColor} border ${service.borderColor} line-clamp-1`}>
                               {service.subtitle}
                             </span>
                           </div>
-                          <h2 className="text-2xl sm:text-3xl font-black text-white leading-tight speakable">
+                          <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-white leading-tight speakable">
                             {service.title}
                           </h2>
                         </div>
                       </div>
                       
-                      <p className="text-gray-400 text-base leading-relaxed mb-8">
+                      <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
                         {service.description}
                       </p>
                       
-                      <div className="flex flex-wrap items-center gap-4 mb-8 bg-black/40 p-4 rounded-xl border border-white/5 w-fit">
+                      <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6 sm:mb-8 bg-black/40 p-3 sm:p-4 rounded-xl border border-white/5 w-full sm:w-fit">
                         <div>
                           <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">Starting Price</p>
-                          <span className={`font-black text-lg ${service.color}`}>{service.price}</span>
+                          <span className={`font-black text-base sm:text-lg ${service.color}`}>{service.price}</span>
                         </div>
-                        <div className="w-px h-8 bg-white/10 mx-2"></div>
+                        <div className="w-px h-8 bg-white/10 mx-1 sm:mx-2"></div>
                         <div>
                           <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">Delivery Time</p>
                           <span className="text-white font-bold text-sm">{service.deliveryTime}</span>
@@ -585,16 +585,16 @@ export default function ServicesPage() {
       </section>
 
       {/* Why Hire Suleman Zaheer */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-        <div className="bg-white/[0.02] border border-white/5 rounded-[2.5rem] p-8 sm:p-14">
-          <h2 className="text-3xl sm:text-4xl font-black text-white mb-4 speakable" data-speakable="true">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24">
+        <div className="bg-white/[0.02] border border-white/5 rounded-[1.5rem] sm:rounded-[2.5rem] p-6 sm:p-8 md:p-14">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-4 speakable" data-speakable="true">
             Why Hire <span className="text-primary">Suleman Zaheer</span>?
           </h2>
-          <p className="text-gray-400 text-base sm:text-lg mb-10 max-w-2xl">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 max-w-2xl">
             A professional <strong className="text-white">Software Engineer &amp; Web Developer in Lahore, Pakistan</strong>{' '}
             with real-world experience and a CS degree from UET Lahore.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {[
               { title: "UET Lahore – CS Student", desc: "Studying Computer Science at Pakistan's top engineering university, ensuring a deep theoretical foundation.", icon: "🎓" },
               { title: "Real-World Projects", desc: "Built enterprise platforms, AI clinics, e-learning systems, and airline reservation systems.", icon: "🚀" },
@@ -603,10 +603,10 @@ export default function ServicesPage() {
               { title: "Modern Tech Stack", desc: "Latest technologies: Next.js 14, React Native, Firebase, TypeScript, and Tailwind CSS.", icon: "⚡" },
               { title: "Competitive PKR Pricing", desc: "Professional-quality development at Pakistan-friendly pricing with flexible milestone-based payments.", icon: "💰" }
             ].map((item, i) => (
-              <div key={i} className="group p-8 rounded-[2rem] bg-gradient-to-br from-white/[0.03] to-transparent border border-white/5 hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_-10px_rgba(37,99,235,0.2)]">
-                <div className="text-4xl mb-6 group-hover:scale-110 group-hover:-rotate-3 transition-transform origin-left">{item.icon}</div>
-                <h3 className="text-white font-bold text-xl mb-3">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+              <div key={i} className="group p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-gradient-to-br from-white/[0.03] to-transparent border border-white/5 hover:border-primary/30 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-4 sm:mb-6 group-hover:scale-110 group-hover:-rotate-3 transition-transform origin-left">{item.icon}</div>
+                <h3 className="text-white font-bold text-lg sm:text-xl mb-2 sm:mb-3">{item.title}</h3>
+                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -614,27 +614,27 @@ export default function ServicesPage() {
       </section>
 
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-br from-primary/20 to-transparent border border-primary/20 rounded-[2.5rem] p-10 sm:p-16 text-center relative overflow-hidden backdrop-blur-xl">
+        <div className="bg-gradient-to-br from-primary/20 to-transparent border border-primary/20 rounded-[1.5rem] sm:rounded-[2.5rem] p-6 sm:p-10 md:p-16 text-center relative overflow-hidden backdrop-blur-xl">
           <div className="absolute inset-0 bg-primary/5 opacity-50 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent pointer-events-none" />
-          <h2 className="text-3xl sm:text-5xl font-black text-white mb-4 relative z-10 speakable">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white mb-4 relative z-10 speakable">
             Ready to Start Your Project?
           </h2>
-          <p className="text-gray-300 text-lg mb-2 relative z-10">
+          <p className="text-gray-300 text-base sm:text-lg mb-2 relative z-10">
             <strong>Suleman Zaheer</strong> – Software Engineer &amp; Web Developer, Lahore, Pakistan
           </p>
-          <p className="text-gray-400 text-sm mb-10 relative z-10">
+          <p className="text-gray-400 text-xs sm:text-sm mb-6 sm:mb-10 relative z-10">
             Shahdara Town, Lahore | samstacktechs@gmail.com | +923285778715
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center relative z-10">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-primary text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_0_30px_-5px_rgba(14,165,233,0.5)]"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 sm:px-10 py-3 sm:py-4 rounded-2xl font-black uppercase tracking-widest text-xs sm:text-sm hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_0_30px_-5px_rgba(14,165,233,0.5)]"
             >
               <Mail size={16} /> Contact Me Now
             </Link>
             <a
               href="tel:+923285778715"
-              className="inline-flex items-center justify-center gap-2 bg-white/5 text-white border border-white/10 px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-white/10 hover:border-white/20 transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-white/5 text-white border border-white/10 px-6 sm:px-10 py-3 sm:py-4 rounded-2xl font-black uppercase tracking-widest text-xs sm:text-sm hover:bg-white/10 hover:border-white/20 transition-all"
             >
               <Phone size={16} /> Call Now
             </a>

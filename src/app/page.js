@@ -392,8 +392,8 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="relative aspect-video rounded-3xl overflow-hidden group">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="relative aspect-video rounded-2xl sm:rounded-3xl overflow-hidden group">
               <Image 
                 src="/assets/elearning_mockup_1775925031066.png" 
                 alt="E-learning platform dashboard interface showing course modules and student navigation."
@@ -401,16 +401,16 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover" 
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-8">
-                <span className="text-primary text-sm font-bold uppercase tracking-wider mb-2">MERN Stack</span>
-                <h3 className="text-2xl font-bold mb-2">E-Learning Platform</h3>
-                <p className="text-gray-300">
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-8">
+                <span className="text-primary text-xs sm:text-sm font-bold uppercase tracking-wider mb-1 sm:mb-2">MERN Stack</span>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2">E-Learning Platform</h3>
+                <p className="text-gray-300 text-sm hidden sm:block">
                   Comprehensive system for user enrollment, video management, and certification.
                 </p>
               </div>
             </div>
 
-            <div className="relative aspect-video rounded-3xl overflow-hidden group">
+            <div className="relative aspect-video rounded-2xl sm:rounded-3xl overflow-hidden group">
               <Image 
                 src="/assets/airline_booking_ui_1775925066474.png" 
                 alt="Airline reservation interface with booking steps and passenger details."
@@ -418,10 +418,10 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover" 
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-8">
-                <span className="text-primary text-sm font-bold uppercase tracking-wider mb-2">Next.js & React</span>
-                <h3 className="text-2xl font-bold mb-2">Airline Reservation System</h3>
-                <p className="text-gray-300">
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-8">
+                <span className="text-primary text-xs sm:text-sm font-bold uppercase tracking-wider mb-1 sm:mb-2">Next.js & React</span>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2">Airline Reservation System</h3>
+                <p className="text-gray-300 text-sm hidden sm:block">
                   Advanced booking and management system with user accounts and ticket generation.
                 </p>
               </div>
@@ -558,9 +558,9 @@ export default function Home() {
       </section>
 
       {/* CTA - Static HTML */}
-      <section className="py-24">
+      <section className="py-16 sm:py-24">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="bg-primary rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-primary/20 group">
+          <div className="bg-primary rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-primary/20 group">
             <div className="absolute inset-0 z-0 bg-black">
               <Image 
                 src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2000" 
@@ -572,16 +572,16 @@ export default function Home() {
               <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
             </div>
             
-            <div className="absolute top-0 right-0 p-12 text-white/20 z-0">
-              <Rocket size={120} />
+            <div className="absolute top-0 right-0 p-6 sm:p-12 text-white/20 z-0 hidden sm:block">
+              <Rocket size={80} className="sm:w-[120px] sm:h-[120px]" />
             </div>
-            <h2 className="text-4xl md:text-6xl font-display font-black text-white mb-6 relative z-10 tracking-tight">Let's Build Together</h2>
-            <p className="text-white/90 text-lg md:text-xl font-medium mb-10 max-w-2xl mx-auto relative z-10">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-black text-white mb-4 sm:mb-6 relative z-10 tracking-tight">Let's Build Together</h2>
+            <p className="text-white/90 text-base sm:text-lg md:text-xl font-medium mb-6 sm:mb-10 max-w-2xl mx-auto relative z-10">
               Looking for a dedicated developer to bring your idea to life? Let's collaborate on your next project.
             </p>
             <Link 
               href="/contact" 
-              className="inline-block bg-white text-primary px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-neutral-100 transition-all relative z-10 shadow-xl"
+              className="inline-block bg-white text-primary px-8 sm:px-12 py-4 sm:py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-neutral-100 transition-all relative z-10 shadow-xl"
             >
               Consult Now
             </Link>

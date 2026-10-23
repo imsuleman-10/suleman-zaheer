@@ -40,7 +40,7 @@ export default function AdminLogin() {
         initial={{ opacity: 0, y: 30, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="max-w-md w-full p-8 sm:p-12 rounded-[2.5rem] sm:rounded-[3rem] bg-neutral-900/50 border border-white/5 backdrop-blur-2xl relative z-10 shadow-2xl overflow-hidden"
+        className="max-w-md w-full p-6 sm:p-12 rounded-3xl sm:rounded-[3rem] bg-neutral-900/50 border border-white/5 backdrop-blur-2xl relative z-10 shadow-2xl overflow-hidden"
       >
         {/* Subtle top border glow */}
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />

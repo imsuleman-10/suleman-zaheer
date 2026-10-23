@@ -35,8 +35,8 @@ function HeroPoem({ poem }) {
   return (
     <Link
       href={`/poetry/${poem.slug}`}
-      className="group relative block w-full rounded-[2.5rem] overflow-hidden border border-white/5 hover:border-rose-400/30 transition-all duration-500"
-      style={{ minHeight: '480px' }}
+      className="group relative block w-full rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden border border-white/5 hover:border-rose-400/30 transition-all duration-500"
+      style={{ minHeight: '340px' }}
     >
       {/* Cover Image from admin (SEO-indexed via ImgBB public URL) */}
       {poem.coverImage ? (
@@ -72,7 +72,7 @@ function HeroPoem({ poem }) {
       </div>
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-14">
+      <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-8 md:p-14">
         {/* Meta */}
         <div className="flex flex-wrap items-center gap-3 mb-6">
           <span className="px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-bold uppercase tracking-wider">
@@ -88,8 +88,8 @@ function HeroPoem({ poem }) {
 
         {/* Title */}
         <h2
-          className={`font-black text-white mb-6 leading-tight group-hover:text-rose-100 transition-colors duration-300
-            ${isUrdu ? 'font-urdu text-4xl md:text-5xl text-right leading-relaxed' : 'text-3xl md:text-5xl font-display'}`}
+          className={`font-black text-white mb-4 sm:mb-6 leading-tight group-hover:text-rose-100 transition-colors duration-300
+            ${isUrdu ? 'font-urdu text-2xl sm:text-3xl md:text-5xl text-right leading-relaxed' : 'text-2xl sm:text-3xl md:text-5xl font-display'}`}
           dir={isUrdu ? 'rtl' : 'ltr'}
         >
           {poem.title}
@@ -98,8 +98,8 @@ function HeroPoem({ poem }) {
         {/* Snippet */}
         {snippet && (
           <p
-            className={`text-gray-300 text-lg mb-8 leading-loose opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2
-              ${isUrdu ? 'font-urdu text-right text-xl leading-[2.5]' : 'font-serif italic'}`}
+            className={`text-gray-300 text-base sm:text-lg mb-6 sm:mb-8 leading-loose opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2
+              ${isUrdu ? 'font-urdu text-right text-lg sm:text-xl leading-[2.5]' : 'font-serif italic'}`}
             dir={isUrdu ? 'rtl' : 'ltr'}
           >
             {snippet}
@@ -253,12 +253,12 @@ function StatsBar({ poems }) {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 mb-16">
+    <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12 sm:mb-16">
       {stats.map(stat => (
-        <div key={stat.label} className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+        <div key={stat.label} className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-3 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-sm">
           <span className="text-rose-400">{stat.icon}</span>
-          <span className="text-white font-black text-lg">{stat.value}</span>
-          <span className="text-gray-500 text-xs uppercase tracking-wider">{stat.label}</span>
+          <span className="text-white font-black text-base sm:text-lg">{stat.value}</span>
+          <span className="text-gray-500 text-[10px] sm:text-xs uppercase tracking-wider">{stat.label}</span>
         </div>
       ))}
     </div>
@@ -328,11 +328,11 @@ export default function PoetryClient({ initialPoems }) {
             <span className="font-urdu text-base" dir="rtl">دل کی آواز</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black leading-tight tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-rose-100 to-rose-400/60 mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-black leading-tight tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-rose-100 to-rose-400/60 mb-6">
             Poetic <span className="italic font-medium">Symphony</span>
           </h1>
 
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed font-serif italic mb-4">
+          <p className="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed font-serif italic mb-4 px-2">
             &quot;Where silence meets expression, and emotions find their voice.&quot;
           </p>
           <p className="text-gray-500 text-sm max-w-xl mx-auto" dir="rtl" lang="ur">
@@ -344,14 +344,14 @@ export default function PoetryClient({ initialPoems }) {
         <StatsBar poems={initialPoems} />
 
         {/* ── Search & Filters ───────────────────────────────────────────── */}
-        <div className="max-w-3xl mx-auto mb-16 space-y-6">
+        <div className="max-w-3xl mx-auto mb-12 sm:mb-16 space-y-4 sm:space-y-6">
           <div className="relative group">
             <div className="absolute inset-y-0 left-5 flex items-center pointer-events-none">
               <Search className="h-5 w-5 text-gray-500 group-focus-within:text-rose-400 transition-colors" />
             </div>
             <input
               type="text"
-              className="w-full bg-white/[0.02] border border-white/10 hover:border-white/20 text-white rounded-3xl pl-14 pr-6 py-5 focus:outline-none focus:border-rose-400/40 focus:bg-white/[0.04] transition-all duration-300 placeholder:text-gray-600 placeholder:italic backdrop-blur-xl shadow-2xl"
+              className="w-full bg-white/[0.02] border border-white/10 hover:border-white/20 text-white rounded-2xl sm:rounded-3xl pl-12 sm:pl-14 pr-4 sm:pr-6 py-4 sm:py-5 focus:outline-none focus:border-rose-400/40 focus:bg-white/[0.04] transition-all duration-300 placeholder:text-gray-600 placeholder:italic backdrop-blur-xl shadow-2xl text-sm sm:text-base"
               placeholder="Search verses, titles, themes, or romanised keywords..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -413,7 +413,7 @@ export default function PoetryClient({ initialPoems }) {
         )}
 
         {/* ── Author CTA ─────────────────────────────────────────────────── */}
-        <div className="mt-24 text-center p-12 rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-rose-950/20 via-neutral-900/30 to-violet-950/20 backdrop-blur-sm relative overflow-hidden">
+        <div className="mt-16 sm:mt-24 text-center p-6 sm:p-8 md:p-12 rounded-[1.5rem] sm:rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-rose-950/20 via-neutral-900/30 to-violet-950/20 backdrop-blur-sm relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-rose-500/5 via-transparent to-violet-500/5 pointer-events-none" />
           <div className="relative z-10">
             <div className="w-20 h-20 rounded-2xl bg-rose-400/10 border border-rose-400/20 flex items-center justify-center mx-auto mb-6 overflow-hidden shadow-lg shadow-rose-500/10">

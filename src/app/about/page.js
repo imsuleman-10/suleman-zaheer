@@ -201,7 +201,7 @@ export default function AboutPage() {
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <h1 className="text-4xl sm:text-5xl md:text-8xl font-display font-black mb-6 md:mb-8 leading-[0.9] tracking-tighter text-white">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-black mb-6 md:mb-8 leading-[0.9] tracking-tighter text-white">
                 Building <span className="text-gray-600">Digital</span> <br />
                 <span className="text-primary">Experiences.</span>
               </h1>
@@ -225,7 +225,7 @@ export default function AboutPage() {
 
           <ScaleIn delay={0.4} className="relative order-1 lg:order-2">
             {/* Decent, Modern & Professional Frame */}
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 group mx-auto">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 group mx-auto">
               <div className="absolute inset-0 bg-primary/20 rounded-[3rem] blur-3xl group-hover:bg-primary/40 transition-all duration-700" />
               <div className="absolute inset-[-4px] rounded-[3.5rem] overflow-hidden">
                 <div className="absolute inset-[-200%] bg-[conic-gradient(from_0deg,transparent_30%,#0ea5e9_50%,transparent_70%)] animate-[spin_5s_linear_infinite]" />
@@ -237,7 +237,7 @@ export default function AboutPage() {
                   alt="Suleman Zaheer - Full Stack Software Engineer from UET Lahore" 
                   title="Suleman Zaheer - Full Stack Developer Profile Picture"
                   fill
-                  sizes="(max-width: 768px) 16rem, (max-width: 1024px) 18rem, 24rem"
+                  sizes="(max-width: 640px) 12rem, (max-width: 768px) 16rem, (max-width: 1024px) 20rem, 24rem"
                   className="object-cover grayscale-[0.2] transition-transform duration-1000 group-hover:scale-110 group-hover:grayscale-0" 
                 />
                 <div className="absolute inset-x-0 h-1/2 bottom-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
@@ -249,7 +249,7 @@ export default function AboutPage() {
           </ScaleIn>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
           <div className="lg:col-span-2">
             <div className="prose prose-invert prose-lg max-w-none text-gray-400 mb-16 space-y-6">
               <p className="leading-relaxed">

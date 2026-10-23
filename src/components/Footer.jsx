@@ -12,10 +12,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black border-t border-white/5 pt-20 pb-10" itemScope itemType="https://schema.org/WPFooter">
+    <footer className="bg-black border-t border-white/5 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-10" itemScope itemType="https://schema.org/WPFooter">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          <div className="md:col-span-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-16">
+          <div className="sm:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6" title="Suleman Zaheer – Official Portfolio">
               <div className="w-12 h-12 overflow-hidden rounded-xl border border-white/10 relative">
                 <Image src="/assets/suleman-zaheer-logo.png" alt="Suleman Zaheer Logo" fill sizes="48px" className="object-cover" />
@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div className="pt-6 sm:pt-10 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-center sm:text-left">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} <strong>Suleman Zaheer</strong>. All rights reserved.
           </p>

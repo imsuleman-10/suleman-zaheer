@@ -73,7 +73,7 @@ export default function NotFound() {
       >
         {/* Error Code */}
         <motion.div variants={itemVariants} className="relative mb-2">
-          <h1 className="text-[10rem] md:text-[14rem] font-black leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white/90 via-white/40 to-white/5 select-none">
+          <h1 className="text-[7rem] sm:text-[10rem] md:text-[14rem] font-black leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white/90 via-white/40 to-white/5 select-none">
             404
           </h1>
           {/* Glow behind numbers */}

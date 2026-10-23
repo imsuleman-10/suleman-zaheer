@@ -88,54 +88,54 @@ export default function ContactClient() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start">
       <div>
-        <p className="text-primary font-bold uppercase tracking-widest mb-4">
+        <p className="text-primary font-bold uppercase tracking-widest mb-4 text-sm">
           Get in Touch
         </p>
-        <h1 className="text-5xl md:text-7xl font-display font-black mb-6 leading-tight tracking-tighter text-white">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-black mb-4 sm:mb-6 leading-tight tracking-tighter text-white">
           Let's <span className="text-primary">Collaborate</span><br />
           <span className="text-gray-600">On Your Next Project.</span>
         </h1>
-        <p className="text-gray-400 text-lg mb-12 max-w-md">
+        <p className="text-gray-400 text-base sm:text-lg mb-8 sm:mb-12 max-w-md">
           Whether you have a question or just want a say hi, I'll try my best to get back to you!
         </p>
 
-        <div className="space-y-8">
-          <div className="flex items-start gap-6 group">
-            <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-              <Mail size={24} />
+        <div className="space-y-6 sm:space-y-8">
+          <div className="flex items-start gap-4 sm:gap-6 group">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 flex-shrink-0">
+              <Mail size={20} className="sm:w-6 sm:h-6" />
             </div>
             <div>
               <h4 className="text-white font-bold mb-1">Email</h4>
-              <p className="text-gray-400">samstacktechs@gmail.com</p>
+              <p className="text-gray-400 text-sm sm:text-base break-all">samstacktechs@gmail.com</p>
             </div>
           </div>
 
-          <div className="flex items-start gap-6 group">
-            <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-              <Phone size={24} />
+          <div className="flex items-start gap-4 sm:gap-6 group">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 flex-shrink-0">
+              <Phone size={20} className="sm:w-6 sm:h-6" />
             </div>
             <div>
               <h4 className="text-white font-bold mb-1">Phone</h4>
-              <p className="text-gray-400">+92 328 5778715</p>
+              <p className="text-gray-400 text-sm sm:text-base">+92 328 5778715</p>
             </div>
           </div>
 
-          <div className="flex items-start gap-6 group">
-            <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-              <MapPin size={24} />
+          <div className="flex items-start gap-4 sm:gap-6 group">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 flex-shrink-0">
+              <MapPin size={20} className="sm:w-6 sm:h-6" />
             </div>
             <div>
               <h4 className="text-white font-bold mb-1">Location</h4>
-              <p className="text-gray-400">Shahdara Town, Lahore, PK</p>
+              <p className="text-gray-400 text-sm sm:text-base">Shahdara Town, Lahore, PK</p>
             </div>
           </div>
         </div>
 
         </div>
       <div 
-        className="p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-white/5 border border-white/10 relative overflow-hidden shadow-2xl animate-in slide-in-from-right-8 fade-in duration-700"
+        className="p-5 sm:p-8 md:p-12 rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[3rem] bg-white/5 border border-white/10 relative overflow-hidden shadow-2xl"
       >
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
         

@@ -74,16 +74,16 @@ const Hero = () => {
             Available for new projects
           </motion.div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-8xl font-display font-extrabold mb-4 md:mb-6 tracking-tight text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 md:mb-6 tracking-tight text-white">
               Suleman <span className="text-primary italic">Zaheer</span>
-              <span className="block text-lg sm:text-2xl font-normal text-gray-400 mt-2 tracking-normal">Business Growth Partner & Multi-Stack Expert</span>
+              <span className="block text-base sm:text-xl md:text-2xl font-normal text-gray-400 mt-2 tracking-normal">Business Growth Partner & Multi-Stack Expert</span>
             </h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto mb-8 md:mb-10 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-6 md:mb-10 leading-relaxed px-2"
           >
             I engineer digital ecosystems that scale businesses. Blending <span className="text-white font-semibold">Next.js, Flutter, and Data Analytics</span> with the art of storytelling and literature.
           </motion.p>
@@ -92,19 +92,19 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-sm sm:max-w-none mx-auto"
           >
-            <Link href="/projects" className="px-8 py-4 bg-primary text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all hover:scale-105 shadow-xl shadow-primary/20">
-              Explore Projects <ArrowRight size={20} />
+            <Link href="/projects" className="px-6 sm:px-8 py-3 sm:py-4 bg-primary text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all hover:scale-105 shadow-xl shadow-primary/20 text-sm sm:text-base">
+              Explore Projects <ArrowRight size={18} />
             </Link>
 
             <a
               href="/suleman-zaheer-cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-bold hover:bg-white/10 transition-all text-center flex items-center justify-center gap-2"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-bold hover:bg-white/10 transition-all text-center flex items-center justify-center gap-2 text-sm sm:text-base"
             >
-              <Download size={18} /> Download CV
+              <Download size={16} /> Download CV
             </a>
 
           </motion.div>
@@ -114,23 +114,23 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.6 }}
-            className="absolute bottom-6 md:bottom-12 flex gap-8 md:gap-12 text-gray-500 scale-90 md:scale-100"
+            className="absolute bottom-4 sm:bottom-8 md:bottom-12 left-0 right-0 flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-12 text-gray-500 px-4"
           >
-            <div className="flex flex-col items-center gap-2">
-              <Globe size={24} />
-              <span className="text-xs uppercase tracking-widest font-bold">Web Developer</span>
+            <div className="flex flex-col items-center gap-1 sm:gap-2">
+              <Globe size={20} className="sm:w-6 sm:h-6" />
+              <span className="text-[10px] sm:text-xs uppercase tracking-widest font-bold">Web Dev</span>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <Smartphone size={24} />
-              <span className="text-xs uppercase tracking-widest font-bold">App Developer</span>
+            <div className="flex flex-col items-center gap-1 sm:gap-2">
+              <Smartphone size={20} className="sm:w-6 sm:h-6" />
+              <span className="text-[10px] sm:text-xs uppercase tracking-widest font-bold">App Dev</span>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <Database size={24} />
-              <span className="text-xs uppercase tracking-widest font-bold">Data Analyst</span>
+            <div className="flex flex-col items-center gap-1 sm:gap-2">
+              <Database size={20} className="sm:w-6 sm:h-6" />
+              <span className="text-[10px] sm:text-xs uppercase tracking-widest font-bold">Data</span>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <PenTool size={24} />
-              <span className="text-xs uppercase tracking-widest font-bold">Writer & Poet</span>
+            <div className="flex flex-col items-center gap-1 sm:gap-2">
+              <PenTool size={20} className="sm:w-6 sm:h-6" />
+              <span className="text-[10px] sm:text-xs uppercase tracking-widest font-bold">Writer</span>
             </div>
           </motion.div>
         </motion.div>

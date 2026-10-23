@@ -75,25 +75,25 @@ export default async function SitemapPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black pt-32 pb-20 px-4">
+    <div className="min-h-screen bg-black pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-3 sm:mb-4">
           Website <span className="text-primary italic">Sitemap</span>
         </h1>
-        <p className="text-gray-400 mb-12 max-w-2xl">
+        <p className="text-gray-400 text-sm sm:text-base mb-8 sm:mb-12 max-w-2xl leading-relaxed">
           Complete and updated navigation map for Suleman Zaheer&apos;s professional portfolio.
           All dynamic pages are fully synchronized and indexed in Google Search Console via{' '}
           <a href="/sitemap.xml" className="text-primary underline underline-offset-4 font-semibold hover:text-primary/80 transition-colors">sitemap.xml</a>.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {/* Main Pages */}
-          <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-primary/20 transition-all duration-300">
-            <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+          <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 hover:border-primary/20 transition-all duration-300">
+            <h2 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-primary inline-block animate-pulse" />
               Main Sections
             </h2>
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-sm sm:text-base">
               {mainLinks.map((link, idx) => (
                 <li key={idx}>
                   <Link href={link.path} className="flex items-center text-gray-400 hover:text-primary transition-colors group/link">
@@ -106,12 +106,12 @@ export default async function SitemapPage() {
           </div>
 
           {/* Poetry Section */}
-          <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-rose-400/20 transition-all duration-300">
-            <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+          <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 hover:border-rose-400/20 transition-all duration-300">
+            <h2 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-rose-400 inline-block animate-pulse" />
               Poetry &amp; Shayari
             </h2>
-            <ul className="space-y-3 max-h-[400px] overflow-y-auto custom-scrollbar pr-2">
+            <ul className="space-y-3 max-h-[350px] sm:max-h-[400px] overflow-y-auto custom-scrollbar pr-2 text-sm sm:text-base">
               {poems.map((poem, idx) => (
                 <li key={idx}>
                   <Link href={`/poetry/${poem.slug}`} className="flex items-start text-gray-400 hover:text-rose-400 transition-colors group/link">
@@ -124,12 +124,12 @@ export default async function SitemapPage() {
           </div>
 
           {/* Blog Articles */}
-          <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-blue-400/20 transition-all duration-300">
-            <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+          <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 hover:border-blue-400/20 transition-all duration-300">
+            <h2 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-blue-400 inline-block animate-pulse" />
               Blog Articles
             </h2>
-            <ul className="space-y-3 max-h-[400px] overflow-y-auto custom-scrollbar pr-2">
+            <ul className="space-y-3 max-h-[350px] sm:max-h-[400px] overflow-y-auto custom-scrollbar pr-2 text-sm sm:text-base">
               {blogs.map((blog, idx) => (
                 <li key={idx}>
                   <Link href={`/blog/${blog.slug}`} className="flex items-start text-gray-400 hover:text-blue-400 transition-colors group/link">

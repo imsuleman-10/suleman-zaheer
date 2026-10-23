@@ -40,17 +40,17 @@ export default function CVClient() {
     <div className="min-h-screen bg-slate-100 text-slate-900 font-sans selection:bg-primary/20">
 
       {/* Top bar */}
-      <div className="bg-white border-b border-slate-200 py-3 px-6 no-print sticky top-0 z-50 shadow-sm">
+      <div className="bg-white border-b border-slate-200 py-3 px-4 sm:px-6 no-print sticky top-0 z-50 shadow-sm">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors font-medium text-sm">
-            <ArrowLeft size={16} /> Back to Portfolio
+          <Link href="/" className="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors font-medium text-xs sm:text-sm">
+            <ArrowLeft size={16} /> Back
           </Link>
           <button
             type="button"
             onClick={() => window.print()}
-            className="flex items-center gap-2 px-5 py-2 bg-slate-900 text-white rounded-lg font-bold hover:bg-slate-700 transition-all text-sm shadow cursor-pointer"
+            className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 bg-slate-900 text-white rounded-lg font-bold hover:bg-slate-700 transition-all text-xs sm:text-sm shadow cursor-pointer"
           >
-            <Printer size={15} /> Print / Save PDF
+            <Printer size={14} /> Print / PDF
           </button>
         </div>
       </div>
@@ -60,35 +60,35 @@ export default function CVClient() {
 
 
         {/* ── HEADER ─────────────────────────────────────── */}
-        <div className="bg-slate-900 text-white px-10 py-10 print:px-8 print:py-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 print:gap-4">
+        <div className="bg-slate-900 text-white px-5 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 print:px-8 print:py-6">
+          <div className="flex flex-col gap-4 sm:gap-6 print:gap-4">
 
             <div>
-              <h1 className="text-5xl font-black tracking-tight mb-1">SULEMAN ZAHEER</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-1">SULEMAN ZAHEER</h1>
               <div className="flex items-center gap-3 mt-2">
-                <div className="h-[3px] w-10 bg-cyan-400" />
-                <p className="text-cyan-400 font-bold uppercase tracking-[0.2em] text-sm">Full-Stack Software Engineer</p>
+                <div className="h-[3px] w-8 sm:w-10 bg-cyan-400" />
+                <p className="text-cyan-400 font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-xs sm:text-sm">Full-Stack Software Engineer</p>
               </div>
-              <p className="text-slate-400 text-sm mt-3 max-w-sm">CS Student at UET Lahore · MERN Stack · SAMStack Studio Founder</p>
+              <p className="text-slate-400 text-xs sm:text-sm mt-3 max-w-sm">CS Student at UET Lahore · MERN Stack · SAMStack Studio Founder</p>
             </div>
-            <div className="grid grid-cols-1 gap-y-2 text-sm text-slate-300">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-y-1.5 sm:gap-y-2 text-xs sm:text-sm text-slate-300">
               <a href="mailto:sulemanzaheer09@gmail.com" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
-                <Mail size={13} className="text-cyan-400" /> sulemanzaheer09@gmail.com
+                <Mail size={12} className="text-cyan-400 flex-shrink-0" /> <span className="truncate">sulemanzaheer09@gmail.com</span>
               </a>
               <a href="tel:+923285778715" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
-                <Phone size={13} className="text-cyan-400" /> +92 328 5778715
+                <Phone size={12} className="text-cyan-400 flex-shrink-0" /> +92 328 5778715
               </a>
               <div className="flex items-center gap-2">
-                <MapPin size={13} className="text-cyan-400" /> Lahore, Pakistan
+                <MapPin size={12} className="text-cyan-400 flex-shrink-0" /> Lahore, Pakistan
               </div>
               <a href="https://suleman-zaheer.vercel.app" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
-                <Globe size={13} className="text-cyan-400" /> suleman-zaheer.vercel.app
+                <Globe size={12} className="text-cyan-400 flex-shrink-0" /> <span className="truncate">suleman-zaheer.vercel.app</span>
               </a>
               <a href="https://github.com/imsuleman-10" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
-                <Github size={13} className="text-cyan-400" /> github.com/imsuleman-10
+                <Github size={12} className="text-cyan-400 flex-shrink-0" /> <span className="truncate">github.com/imsuleman-10</span>
               </a>
               <a href="https://linkedin.com/in/suleman-zaheer-mughal" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
-                <Linkedin size={13} className="text-cyan-400" /> linkedin.com/in/suleman-zaheer
+                <Linkedin size={12} className="text-cyan-400 flex-shrink-0" /> <span className="truncate">linkedin.com/in/suleman-zaheer</span>
               </a>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function CVClient() {
         <div className="grid grid-cols-1 md:grid-cols-12">
 
           {/* LEFT MAIN */}
-          <div className="md:col-span-8 px-10 py-8 space-y-8 border-r border-slate-100 print:px-6 print:py-4 print:space-y-5">
+          <div className="md:col-span-8 px-5 sm:px-8 md:px-10 py-6 sm:py-8 space-y-6 sm:space-y-8 md:border-r border-b md:border-b-0 border-slate-100 print:px-6 print:py-4 print:space-y-5">
 
             {/* Professional Summary */}
 
@@ -171,7 +171,7 @@ export default function CVClient() {
           </div>
 
           {/* RIGHT SIDEBAR */}
-          <div className="md:col-span-4 bg-slate-50 px-8 py-8 space-y-8 print:px-6 print:py-4 print:space-y-6">
+          <div className="md:col-span-4 bg-slate-50 px-5 sm:px-6 md:px-8 py-6 sm:py-8 space-y-6 sm:space-y-8 print:px-6 print:py-4 print:space-y-6">
 
             {/* Skills */}
 
@@ -247,7 +247,7 @@ export default function CVClient() {
         </div>
 
         {/* Footer */}
-        <div className="px-10 py-4 border-t border-slate-100 bg-slate-50 text-center text-[11px] text-slate-400 print:px-6 print:py-2 print:text-[10px]">
+        <div className="px-5 sm:px-10 py-4 border-t border-slate-100 bg-slate-50 text-center text-[10px] sm:text-[11px] text-slate-400 print:px-6 print:py-2 print:text-[10px]">
           References available upon request · sulemanzaheer09@gmail.com · suleman-zaheer.vercel.app
         </div>
 

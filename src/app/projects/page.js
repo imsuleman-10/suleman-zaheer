@@ -178,19 +178,19 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <div className="pt-32 pb-24">
+    <div className="pt-24 sm:pt-32 pb-16 sm:pb-24">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <FadeIn>
-            <h1 className="text-4xl md:text-6xl font-display font-black leading-tight tracking-tight text-white">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-display font-black leading-tight tracking-tight text-white">
               Featured <span className="text-gray-600">Works</span><br/>
               <span className="text-primary italic font-medium">& Case Studies</span>
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg mt-8">
+            <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base md:text-lg mt-4 sm:mt-6">
               Exploring the intersection of design and technology through a variety of web and software projects.
             </p>
           </FadeIn>

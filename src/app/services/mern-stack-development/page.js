@@ -129,11 +129,11 @@ export default function MERNStackPage() {
   ];
 
   return (
-    <div className="pt-32 pb-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="pt-24 sm:pt-32 pb-16 sm:pb-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Breadcrumb */}
-      <nav className="text-sm text-gray-500 mb-10 flex items-center gap-2">
+      <nav className="text-xs sm:text-sm text-gray-500 mb-6 sm:mb-10 flex flex-wrap items-center gap-2">
         <Link href="/" className="hover:text-white transition-colors">Home</Link>
         <span>/</span>
         <Link href="/services" className="hover:text-white transition-colors">Services</Link>
@@ -141,51 +141,51 @@ export default function MERNStackPage() {
         <span className="text-primary">MERN Stack Development</span>
       </nav>
 
-      <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+      <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white mb-4 sm:mb-6 leading-tight break-words">
         MERN Stack <span className="text-primary">Development</span>
       </h1>
-      <p className="text-gray-400 text-lg mb-10 max-w-3xl">
+      <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 max-w-3xl leading-relaxed">
         Expert MongoDB, Express.js, React.js & Node.js web application development by <strong className="text-white">Suleman Zaheer</strong> — Lahore, Pakistan. Building scalable B2B SaaS platforms, enterprise ERP systems, and production-grade REST APIs.
       </p>
 
-      <div className="grid md:grid-cols-2 gap-6 mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6 mb-10 sm:mb-16">
         {[
           'Full Stack MERN Web Applications', 'REST & GraphQL API Engineering', 'MongoDB Database Architecture',
           'React.js Component Libraries', 'Node.js & Express.js Backend', 'JWT & Role-Based Authentication',
           'B2B SaaS Platform Development', 'Real-time Features with WebSockets'
         ].map(f => (
-          <div key={f} className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-xl">
-            <span className="text-primary text-lg">✓</span>
-            <span className="text-gray-300 text-sm font-medium">{f}</span>
+          <div key={f} className="flex items-center gap-3 p-3.5 sm:p-4 bg-white/5 border border-white/10 rounded-xl">
+            <span className="text-primary text-base sm:text-lg">✓</span>
+            <span className="text-gray-300 text-xs sm:text-sm font-medium">{f}</span>
           </div>
         ))}
       </div>
 
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12">
-        <h2 className="text-2xl font-bold text-white mb-4">Pricing & Timeline</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div><span className="text-gray-500 text-sm">Starting Price</span><p className="text-white font-bold text-xl">PKR 75,000</p></div>
-          <div><span className="text-gray-500 text-sm">Delivery Time</span><p className="text-white font-bold text-xl">2 – 8 Weeks</p></div>
+      <div className="bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-8 mb-8 sm:mb-12">
+        <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Pricing & Timeline</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div><span className="text-gray-500 text-xs sm:text-sm">Starting Price</span><p className="text-white font-bold text-lg sm:text-xl">PKR 75,000</p></div>
+          <div><span className="text-gray-500 text-xs sm:text-sm">Delivery Time</span><p className="text-white font-bold text-lg sm:text-xl">2 – 8 Weeks</p></div>
         </div>
       </div>
 
-      <div className="mb-16">
-        <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-        <div className="space-y-4">
+      <div className="mb-10 sm:mb-16">
+        <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-3 sm:space-y-4">
           {[
             { q: 'What can be built with MERN Stack?', a: 'B2B SaaS platforms, ERP systems, e-commerce marketplaces, real-time collaboration tools, fintech dashboards, social media platforms, and any complex data-intensive web application.' },
             { q: 'Do you offer post-deployment support?', a: 'Yes. All MERN Stack projects include 30 days of free post-deployment bug fixing and support. Extended maintenance packages are available.' },
           ].map(({ q, a }) => (
-            <div key={q} className="p-6 bg-white/5 border border-white/10 rounded-xl">
-              <h3 className="text-white font-semibold mb-2">{q}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{a}</p>
+            <div key={q} className="p-4 sm:p-6 bg-white/5 border border-white/10 rounded-xl">
+              <h3 className="text-white font-semibold text-sm sm:text-base mb-1.5 sm:mb-2">{q}</h3>
+              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{a}</p>
             </div>
           ))}
         </div>
       </div>
 
       <div className="text-center">
-        <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all">
+        <Link href="/contact" className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all text-sm sm:text-base">
           Hire Suleman Zaheer for MERN Stack →
         </Link>
       </div>

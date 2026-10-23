@@ -105,6 +105,14 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  themeColor: '#000000',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: 'cover',
+};
+
 import Providers from "@/components/Providers";
 
 export default function RootLayout({ children }) {

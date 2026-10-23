@@ -119,38 +119,58 @@ export default function AuthorPageClient({ poems, blogCount }) {
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* Left: Profile */}
           <div>
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-rose-400/5 border border-rose-400/20 text-rose-300 text-xs font-bold mb-8 uppercase tracking-widest">
+            {/* Mobile Avatar */}
+            <div className="flex lg:hidden items-center gap-4 mb-6">
+              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-rose-500/30 to-violet-500/20 border-2 border-rose-400/40 shadow-xl shadow-rose-500/20 overflow-hidden flex-shrink-0">
+                <Image
+                  src="/assets/author.jpg"
+                  alt="Suleman Zaheer - Author, Poet & Researcher"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+              <div>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-400/10 border border-rose-400/20 text-rose-300 text-[10px] font-bold uppercase tracking-wider mb-1">
+                  <Feather size={10} /> Author · Poet · Researcher
+                </span>
+                <p className="text-xl font-urdu text-rose-300/80" dir="rtl" lang="ur">سلیمان ظہیر</p>
+              </div>
+            </div>
+
+            {/* Desktop Eyebrow */}
+            <div className="hidden lg:inline-flex items-center gap-2 px-5 py-2 rounded-full bg-rose-400/5 border border-rose-400/20 text-rose-300 text-xs font-bold mb-8 uppercase tracking-widest">
               <Feather size={12} />
               Author · Poet · Researcher
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-none tracking-tighter mb-4">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black leading-tight sm:leading-none tracking-tighter mb-3 sm:mb-4">
               <span className="text-white">Suleman</span><br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-violet-400 to-primary">Zaheer</span>
             </h1>
-            <p className="text-2xl font-urdu text-rose-300/70 mb-6" dir="rtl" lang="ur">سلیمان ظہیر</p>
+            <p className="hidden lg:block text-2xl font-urdu text-rose-300/70 mb-6" dir="rtl" lang="ur">سلیمان ظہیر</p>
 
-            <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-lg">
+            <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-lg">
               A writer who codes, and a coder who writes. Suleman Zaheer is an Urdu and English poet,
               independent researcher, blogger, and full-stack developer from Lahore, Pakistan —
               where technology meets the timeless art of storytelling.
             </p>
 
             {/* Meta pills */}
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
               {[
                 { icon: <MapPin size={12} />, text: 'Lahore, Pakistan' },
                 { icon: <GraduationCap size={12} />, text: 'BS CS · UET Lahore' },
                 { icon: <Feather size={12} />, text: `${poems.length} Published Poems` },
                 { icon: <BookOpen size={12} />, text: `${blogCount} Blog Articles` },
               ].map(({ icon, text }) => (
-                <span key={text} className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-xs font-medium">
+                <span key={text} className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-[11px] sm:text-xs font-medium">
                   <span className="text-rose-400">{icon}</span>
                   {text}
                 </span>
@@ -158,17 +178,17 @@ export default function AuthorPageClient({ poems, blogCount }) {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
               <Link
                 href="/poetry"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-rose-500 to-violet-600 text-white px-7 py-3.5 rounded-2xl font-bold text-sm hover:opacity-90 transition-all hover:scale-105 shadow-lg shadow-rose-500/20"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-rose-500 to-violet-600 text-white px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm hover:opacity-90 transition-all hover:scale-105 shadow-lg shadow-rose-500/20"
               >
                 <Feather size={16} />
                 Read My Poetry
               </Link>
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white px-7 py-3.5 rounded-2xl font-bold text-sm hover:bg-white/10 transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm hover:bg-white/10 transition-all"
               >
                 <BookOpen size={16} />
                 Read My Blog
@@ -177,7 +197,7 @@ export default function AuthorPageClient({ poems, blogCount }) {
                 href="https://wa.me/923285778715"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-7 py-3.5 rounded-2xl font-bold text-sm hover:bg-primary/20 transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-primary/10 border border-primary/20 text-primary px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm hover:bg-primary/20 transition-all"
               >
                 Collaborate
                 <ArrowUpRight size={16} />
@@ -258,64 +278,64 @@ export default function AuthorPageClient({ poems, blogCount }) {
       </section>
 
       {/* ── DUAL IDENTITY ─────────────────────────────────────────────────── */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <p className="text-primary text-xs font-black uppercase tracking-widest mb-3">Two Worlds, One Voice</p>
-          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">The Author &amp; The Developer</h2>
+      <section className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-14">
+          <p className="text-primary text-[10px] sm:text-xs font-black uppercase tracking-widest mb-2 sm:mb-3">Two Worlds, One Voice</p>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">The Author &amp; The Developer</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
           {/* Writer Identity */}
-          <div className="relative p-10 rounded-[2.5rem] border border-rose-400/15 bg-gradient-to-br from-rose-950/20 to-neutral-900/50 overflow-hidden group hover:-translate-y-2 transition-all duration-500">
+          <div className="relative p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] border border-rose-400/15 bg-gradient-to-br from-rose-950/20 to-neutral-900/50 overflow-hidden group hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-500">
             <div className="absolute top-0 right-0 w-48 h-48 bg-rose-500/5 rounded-full blur-2xl group-hover:bg-rose-500/10 transition-all duration-700" />
             <div className="relative z-10">
-              <div className="w-14 h-14 rounded-2xl bg-rose-400/10 border border-rose-400/20 flex items-center justify-center mb-7">
-                <PenLine size={26} className="text-rose-400" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-rose-400/10 border border-rose-400/20 flex items-center justify-center mb-5 sm:mb-7">
+                <PenLine size={24} className="text-rose-400" />
               </div>
-              <h3 className="text-2xl font-black text-white mb-4">The Writer &amp; Poet</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              <h3 className="text-xl sm:text-2xl font-black text-white mb-3 sm:mb-4">The Writer &amp; Poet</h3>
+              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6">
                 Suleman writes with a depth that transcends language. His Urdu ghazals draw from the classical
                 traditions of Mir and Ghalib, while his English poetry bridges modern anxiety with timeless human
                 emotion. As a blogger, he translates complex technical realities into narratives that inspire developers
                 across Pakistan and beyond.
               </p>
-              <div className="space-y-2 mb-8">
+              <div className="space-y-2 mb-6 sm:mb-8">
                 {['Urdu Ghazals & Nazms', 'English Poetry', 'Technical Blogging', 'Research Writing', 'Literary Analysis'].map(s => (
-                  <div key={s} className="flex items-center gap-2 text-sm text-gray-400">
+                  <div key={s} className="flex items-center gap-2 text-xs sm:text-sm text-gray-400">
                     <div className="w-1.5 h-1.5 rounded-full bg-rose-400 flex-shrink-0" />
                     {s}
                   </div>
                 ))}
               </div>
-              <Link href="/poetry" className="inline-flex items-center gap-2 text-rose-300 text-sm font-bold hover:text-rose-200 transition-colors">
+              <Link href="/poetry" className="inline-flex items-center gap-2 text-rose-300 text-xs sm:text-sm font-bold hover:text-rose-200 transition-colors">
                 Explore Poetry Collection <ArrowUpRight size={14} />
               </Link>
             </div>
           </div>
 
           {/* Researcher Identity */}
-          <div className="relative p-10 rounded-[2.5rem] border border-violet-400/15 bg-gradient-to-br from-violet-950/20 to-neutral-900/50 overflow-hidden group hover:-translate-y-2 transition-all duration-500">
+          <div className="relative p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] border border-violet-400/15 bg-gradient-to-br from-violet-950/20 to-neutral-900/50 overflow-hidden group hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-500">
             <div className="absolute top-0 right-0 w-48 h-48 bg-violet-500/5 rounded-full blur-2xl group-hover:bg-violet-500/10 transition-all duration-700" />
             <div className="relative z-10">
-              <div className="w-14 h-14 rounded-2xl bg-violet-400/10 border border-violet-400/20 flex items-center justify-center mb-7">
-                <FlaskConical size={26} className="text-violet-400" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-violet-400/10 border border-violet-400/20 flex items-center justify-center mb-5 sm:mb-7">
+                <FlaskConical size={24} className="text-violet-400" />
               </div>
-              <h3 className="text-2xl font-black text-white mb-4">The Researcher</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              <h3 className="text-xl sm:text-2xl font-black text-white mb-3 sm:mb-4">The Researcher</h3>
+              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6">
                 As an academic researcher, Suleman approaches problems with the same rigour he applies to code.
                 His research interests span human-computer interaction, the intersection of technology and literature
                 in the Global South, and the socio-economic impact of digital transformation in Pakistan's emerging
                 tech ecosystem. His blog posts double as research-grade explorations.
               </p>
-              <div className="space-y-2 mb-8">
+              <div className="space-y-2 mb-6 sm:mb-8">
                 {['Human-Computer Interaction', 'Technology & Society', 'Pakistan Tech Ecosystem', 'Digital Transformation', 'Software Engineering Research'].map(s => (
-                  <div key={s} className="flex items-center gap-2 text-sm text-gray-400">
+                  <div key={s} className="flex items-center gap-2 text-xs sm:text-sm text-gray-400">
                     <div className="w-1.5 h-1.5 rounded-full bg-violet-400 flex-shrink-0" />
                     {s}
                   </div>
                 ))}
               </div>
-              <Link href="/blog" className="inline-flex items-center gap-2 text-violet-300 text-sm font-bold hover:text-violet-200 transition-colors">
+              <Link href="/blog" className="inline-flex items-center gap-2 text-violet-300 text-xs sm:text-sm font-bold hover:text-violet-200 transition-colors">
                 Read Research Articles <ArrowUpRight size={14} />
               </Link>
             </div>
@@ -344,12 +364,13 @@ export default function AuthorPageClient({ poems, blogCount }) {
       )}
 
       {/* ── TIMELINE ──────────────────────────────────────────────────────── */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16">
+      {/* ── TIMELINE ──────────────────────────────────────────────────────── */}
+      <section className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Journey */}
           <div>
-            <p className="text-primary text-xs font-black uppercase tracking-widest mb-3">The Journey</p>
-            <h2 className="text-3xl font-black text-white mb-10">Milestones</h2>
+            <p className="text-primary text-[10px] sm:text-xs font-black uppercase tracking-widest mb-2 sm:mb-3">The Journey</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-white mb-6 sm:mb-10">Milestones</h2>
             <div className="space-y-0">
               <TimelineItem active year="2024 – Present" title="BS Computer Science" org="UET Lahore" icon={<GraduationCap size={16} />}
                 desc="Pursuing a Bachelor's in CS at one of Pakistan's most prestigious engineering universities, blending academic rigour with real-world development." />
@@ -364,9 +385,9 @@ export default function AuthorPageClient({ poems, blogCount }) {
 
           {/* Skills */}
           <div>
-            <p className="text-primary text-xs font-black uppercase tracking-widest mb-3">Core Capabilities</p>
-            <h2 className="text-3xl font-black text-white mb-10">Technical Expertise</h2>
-            <div className="space-y-0 p-6 rounded-[2rem] bg-white/[0.02] border border-white/5">
+            <p className="text-primary text-[10px] sm:text-xs font-black uppercase tracking-widest mb-2 sm:mb-3">Core Capabilities</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-white mb-6 sm:mb-10">Technical Expertise</h2>
+            <div className="space-y-0 p-4 sm:p-6 rounded-2xl sm:rounded-[2rem] bg-white/[0.02] border border-white/5">
               <Skill label="Next.js / React (SSR & SEO)" level="Expert" />
               <Skill label="Node.js / Express / APIs" level="Advanced" />
               <Skill label="Firebase / Firestore" level="Advanced" />
@@ -380,41 +401,41 @@ export default function AuthorPageClient({ poems, blogCount }) {
       </section>
 
       {/* ── INTERACTIVE WORKSPACE ────────────────────────────────────────── */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/5">
-        <div className="text-center mb-14">
-          <p className="text-rose-400 text-xs font-black uppercase tracking-widest mb-3">Behind the Scenes</p>
-          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">The Creative Workspace</h2>
-          <p className="text-gray-400 text-sm max-w-xl mx-auto mt-4">
+      <section className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/5">
+        <div className="text-center mb-8 sm:mb-14">
+          <p className="text-rose-400 text-[10px] sm:text-xs font-black uppercase tracking-widest mb-2 sm:mb-3">Behind the Scenes</p>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">The Creative Workspace</h2>
+          <p className="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto mt-3 sm:mt-4">
             A peek into the two environments where ideas are written — whether compiled by a machine or interpreted by the human heart.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
           {/* Left: VS Code Mockup */}
-          <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-neutral-900/50 flex flex-col min-h-[380px] shadow-2xl shadow-violet-500/5 group hover:border-violet-500/30 transition-all duration-300">
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 bg-neutral-900/50 flex flex-col min-h-[340px] sm:min-h-[380px] shadow-2xl shadow-violet-500/5 group hover:border-violet-500/30 transition-all duration-300">
             {/* Editor Top Bar */}
             <div className="flex items-center justify-between px-4 py-3 bg-neutral-950/80 border-b border-white/5">
               <div className="flex items-center gap-2">
-                <span className="w-3 w-3 rounded-full bg-rose-500/80 block" />
-                <span className="w-3 w-3 rounded-full bg-yellow-500/80 block" />
-                <span className="w-3 w-3 rounded-full bg-green-500/80 block" />
+                <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80 block" />
+                <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80 block" />
+                <span className="w-2.5 h-2.5 rounded-full bg-green-500/80 block" />
               </div>
-              <span className="text-xs text-gray-500 font-mono">suleman-zaheer.js</span>
-              <div className="w-12" />
+              <span className="text-[11px] sm:text-xs text-gray-500 font-mono">suleman-zaheer.js</span>
+              <div className="w-8" />
             </div>
             {/* Editor Tabs */}
-            <div className="flex bg-neutral-950/40 text-xs text-gray-500 border-b border-white/5 font-mono">
-              <div className="px-4 py-2 border-r border-white/5 bg-neutral-900/80 text-violet-400 flex items-center gap-1.5 font-semibold">
+            <div className="flex bg-neutral-950/40 text-[11px] sm:text-xs text-gray-500 border-b border-white/5 font-mono overflow-x-auto">
+              <div className="px-3 sm:px-4 py-2 border-r border-white/5 bg-neutral-900/80 text-violet-400 flex items-center gap-1.5 font-semibold shrink-0">
                 <Code2 size={12} className="text-violet-400" />
                 suleman-zaheer.js
               </div>
-              <div className="px-4 py-2 border-r border-white/5 flex items-center gap-1.5 opacity-60">
+              <div className="px-3 sm:px-4 py-2 border-r border-white/5 flex items-center gap-1.5 opacity-60 shrink-0">
                 <Cpu size={12} />
                 next.config.js
               </div>
             </div>
             {/* Code lines */}
-            <div className="p-6 font-mono text-sm leading-relaxed overflow-x-auto flex-1 select-none text-left">
+            <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto flex-1 select-none text-left">
               <pre className="text-gray-400">
                 <code>
 {`1  const developer = {
@@ -435,31 +456,31 @@ export default function AuthorPageClient({ poems, blogCount }) {
           </div>
 
           {/* Right: Poetry Manuscript / Notebook Mockup */}
-          <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-neutral-900/50 to-rose-950/10 flex flex-col min-h-[380px] shadow-2xl shadow-rose-500/5 group hover:border-rose-400/30 transition-all duration-300">
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-neutral-900/50 to-rose-950/10 flex flex-col min-h-[340px] sm:min-h-[380px] shadow-2xl shadow-rose-500/5 group hover:border-rose-400/30 transition-all duration-300">
             {/* Notebook Header */}
-            <div className="flex items-center justify-between px-6 py-4 bg-neutral-950/40 border-b border-white/5">
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-neutral-950/40 border-b border-white/5">
               <div className="flex items-center gap-2">
                 <Feather size={14} className="text-rose-400" />
-                <span className="text-xs text-rose-300 font-bold uppercase tracking-wider">Notebook · Selected Verse</span>
+                <span className="text-[11px] sm:text-xs text-rose-300 font-bold uppercase tracking-wider">Notebook · Selected Verse</span>
               </div>
               <span className="text-[10px] text-gray-500 uppercase tracking-widest font-mono">Page 14</span>
             </div>
             {/* Poetry Content */}
-            <div className="p-8 flex flex-col justify-center flex-1 relative bg-neutral-900/30" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px)', backgroundSize: '100% 2.2rem' }}>
-              <div className="relative z-10 text-center space-y-6 my-auto">
-                <div className="space-y-4">
-                  <p className="text-2xl font-serif italic text-gray-200 leading-relaxed font-urdu" dir="rtl">
+            <div className="p-5 sm:p-8 flex flex-col justify-center flex-1 relative bg-neutral-900/30" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px)', backgroundSize: '100% 2.2rem' }}>
+              <div className="relative z-10 text-center space-y-4 sm:space-y-6 my-auto">
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="text-xl sm:text-2xl font-serif italic text-gray-200 leading-relaxed font-urdu" dir="rtl">
                     مثالِ موج ہوا کو سکوں نہیں ملتا<br />
                     میں ڈھونڈتا ہوں جسے وہ کہیں نہیں ملتا
                   </p>
-                  <p className="text-sm font-serif italic text-gray-400 leading-relaxed max-w-sm mx-auto">
+                  <p className="text-xs sm:text-sm font-serif italic text-gray-400 leading-relaxed max-w-sm mx-auto">
                     &quot;Like the wandering wind, there is no rest,<br />
                     The one I seek cannot be found.&quot;
                   </p>
                 </div>
                 <div className="w-12 h-px bg-rose-400/30 mx-auto" />
-                <div className="space-y-3">
-                  <p className="text-base font-serif italic text-gray-300 leading-relaxed">
+                <div className="space-y-2 sm:space-y-3">
+                  <p className="text-xs sm:text-base font-serif italic text-gray-300 leading-relaxed">
                     Lines of logic guide the cursor's dynamic trail,<br />
                     But lines of verse speak of the storms behind the veil.
                   </p>
@@ -471,13 +492,13 @@ export default function AuthorPageClient({ poems, blogCount }) {
       </section>
 
       {/* ── FAQ SECTION ────────────────────────────────────────────────────── */}
-      <section className="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/5">
-        <div className="text-center mb-14">
-          <p className="text-primary text-xs font-black uppercase tracking-widest mb-3">Questions & Answers</p>
-          <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight">Frequently Asked Questions</h2>
-          <p className="text-gray-500 text-sm mt-3">Learn more about Suleman's technical background, creative philosophy, and services</p>
+      <section className="py-12 sm:py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/5">
+        <div className="text-center mb-8 sm:mb-14">
+          <p className="text-primary text-[10px] sm:text-xs font-black uppercase tracking-widest mb-2 sm:mb-3">Questions & Answers</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">Frequently Asked Questions</h2>
+          <p className="text-gray-500 text-xs sm:text-sm mt-2 sm:mt-3">Learn more about Suleman's technical background, creative philosophy, and services</p>
         </div>
-        <div className="bg-white/[0.01] border border-white/5 rounded-3xl p-6 md:p-8 space-y-2">
+        <div className="bg-white/[0.01] border border-white/5 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 space-y-2">
           <FAQItem 
             question="Who is Suleman Zaheer?" 
             answer="Suleman Zaheer is a full-stack developer, Urdu/English poet, blogger, and independent researcher based in Lahore, Pakistan. Currently pursuing a Bachelor of Science in Computer Science at UET Lahore, he works at the intersection of technological logic and artistic expression." 
@@ -498,12 +519,12 @@ export default function AuthorPageClient({ poems, blogCount }) {
       </section>
 
       {/* ── CONTACT / SOCIAL ──────────────────────────────────────────────── */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-black text-white mb-3">Connect with Suleman</h2>
-          <p className="text-gray-500 text-sm">For collaborations, literary discussions, or project inquiries</p>
+      <section className="py-10 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-black text-white mb-2 sm:mb-3">Connect with Suleman</h2>
+          <p className="text-gray-500 text-xs sm:text-sm">For collaborations, literary discussions, or project inquiries</p>
         </div>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">
           {[
             { href: 'https://github.com/imsuleman-10', icon: <Github size={18} />, label: 'GitHub', sub: '@imsuleman-10' },
             { href: 'https://www.linkedin.com/in/suleman-zaheer-mughal', icon: <Linkedin size={18} />, label: 'LinkedIn', sub: 'Connect professionally' },
@@ -515,12 +536,12 @@ export default function AuthorPageClient({ poems, blogCount }) {
               href={href}
               target={href.startsWith('http') ? '_blank' : undefined}
               rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="flex items-center gap-4 px-6 py-4 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all group"
+              className="flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all group"
             >
-              <span className="text-gray-400 group-hover:text-primary transition-colors">{icon}</span>
-              <div>
-                <div className="text-sm font-bold text-white">{label}</div>
-                <div className="text-xs text-gray-500">{sub}</div>
+              <span className="text-gray-400 group-hover:text-primary transition-colors flex-shrink-0">{icon}</span>
+              <div className="min-w-0">
+                <div className="text-sm font-bold text-white truncate">{label}</div>
+                <div className="text-[11px] sm:text-xs text-gray-500 truncate">{sub}</div>
               </div>
             </a>
           ))}
