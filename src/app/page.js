@@ -557,6 +557,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section - Verified AEO & GEO Search Answers matching Schema */}
+      <section className="py-20 sm:py-28 bg-black/60 border-t border-white/5 relative">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <div className="text-primary font-mono text-xs tracking-[0.3em] uppercase mb-3 flex items-center justify-center gap-3">
+              <span className="w-8 h-px bg-primary" />
+              Frequently Asked Questions
+              <span className="w-8 h-px bg-primary" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4">
+              Questions & <span className="text-primary italic">Answers</span>
+            </h2>
+            <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+              Verified facts about Suleman Zaheer's software engineering stack, client work, and digital services in Lahore, Pakistan.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqJsonLd.mainEntity.map((faq, idx) => (
+              <details
+                key={idx}
+                className="group bg-white/[0.02] border border-white/10 hover:border-primary/40 rounded-2xl p-5 sm:p-6 transition-all duration-300 open:bg-white/[0.04]"
+              >
+                <summary className="font-bold text-base sm:text-lg text-white cursor-pointer list-none flex items-center justify-between gap-4">
+                  <span>{faq.name}</span>
+                  <span className="text-primary text-xl transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
+                </summary>
+                <p className="text-sm sm:text-base text-gray-300 leading-relaxed mt-4 pt-4 border-t border-white/5">
+                  {faq.acceptedAnswer.text}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA - Static HTML */}
       <section className="py-16 sm:py-24">
         <div className="max-w-5xl mx-auto px-4">
