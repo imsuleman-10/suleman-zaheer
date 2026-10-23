@@ -10,6 +10,11 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "allowScripts": {
+    "@firebase/util": true,
+    "protobufjs": true,
+    "sharp": true
+  },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@google/generative-ai": "^0.24.1",
