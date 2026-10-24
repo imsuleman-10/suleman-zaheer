@@ -22,7 +22,13 @@ export const metadata = {
   description:
     'Suleman Zaheer – Top-Rated Lead Software Engineer & Business Growth Partner in Lahore, Pakistan. Full-Stack Web (MERN, Next.js, Laravel), Mobile Apps (Flutter), Desktop Software (Electron.js), Python Automation & Web Scraping, AI Solutions, Data Analytics & SEO.',
   keywords: [
+    // === PERSONAL BRAND ===
     'Suleman Zaheer',
+    'Suleman Zaheer Mughal',
+    'سلیمان ظہیر',
+    'imsuleman-10',
+    'SAMStack Studio',
+    // === LAHORE ===
     'Best Developer in Lahore',
     'Best Software Engineer Pakistan',
     'Full Stack Web Developer Lahore',
@@ -39,7 +45,7 @@ export const metadata = {
     'Python Automation Engineer',
     'Web Scraping Expert Pakistan',
     'Bot Developer Lahore',
-    'WhatsApp Bot Developer',
+    'WhatsApp Bot Developer Pakistan',
     'AI Developer Pakistan',
     'AI Solutions Engineer Lahore',
     'Data Analyst Lahore',
@@ -48,9 +54,60 @@ export const metadata = {
     'GEO Generative Engine Optimization',
     'QA Tester Pakistan',
     'Software Engineer Lahore',
-    'SAMStack Studio',
     'Hire Developer in Pakistan',
-    'Custom Software Developer Lahore'
+    'Custom Software Developer Lahore',
+    // === KARACHI ===
+    'Web Developer Karachi',
+    'Software Engineer Karachi',
+    'Mobile App Developer Karachi',
+    'Flutter Developer Karachi',
+    'AI Developer Karachi',
+    'Python Automation Karachi',
+    'Best Developer Karachi',
+    'Next.js Developer Karachi',
+    // === ISLAMABAD / RAWALPINDI ===
+    'Web Developer Islamabad',
+    'Software Engineer Islamabad',
+    'Mobile App Developer Islamabad',
+    'Flutter Developer Islamabad',
+    'AI Developer Islamabad',
+    'Best Developer Islamabad',
+    'Web Developer Rawalpindi',
+    'Software Engineer Rawalpindi',
+    'Mobile App Developer Rawalpindi',
+    // === FAISALABAD ===
+    'Web Developer Faisalabad',
+    'Software Engineer Faisalabad',
+    'Mobile App Developer Faisalabad',
+    'Desktop App Developer Faisalabad',
+    // === MULTAN ===
+    'Web Developer Multan',
+    'Software Engineer Multan',
+    'Mobile App Developer Multan',
+    // === PESHAWAR / KPK ===
+    'Web Developer Peshawar',
+    'Software Engineer Peshawar',
+    'Mobile App Developer KPK',
+    'Automation Developer KPK',
+    // === SIALKOT / GUJRANWALA ===
+    'Web Developer Sialkot',
+    'Software Engineer Gujranwala',
+    'Mobile App Developer Sialkot',
+    // === QUETTA / BALOCHISTAN ===
+    'Web Developer Quetta',
+    'Software Engineer Balochistan',
+    // === NATIONWIDE ===
+    'Best Software Engineer in Pakistan',
+    'Top Web Developer in Pakistan',
+    'Top Mobile App Developer Pakistan',
+    'Top AI Developer Pakistan',
+    'Top Automation Expert Pakistan',
+    'Best Full Stack Developer Pakistan',
+    'Freelance Developer Pakistan',
+    'Remote Developer Pakistan',
+    'Hire Developer Pakistan',
+    'Software Development Agency Pakistan',
+    'SAMStack Studio Pakistan'
   ],
   authors: [{ name: 'Suleman Zaheer', url: 'https://suleman-zaheer.vercel.app/' }],
   creator: 'Suleman Zaheer',
@@ -174,7 +231,9 @@ export default function RootLayout({ children }) {
       givenName: 'Suleman',
       familyName: 'Zaheer',
       additionalName: 'Mughal',
-      alternateName: ['سلیمان ظہیر', 'Suleman Zaheer Mughal', 'imsuleman-10'],
+      alternateName: ['سلیمان ظہیر', 'Suleman Zaheer Mughal', 'imsuleman-10', 'SAMStack Suleman'],
+      birthDate: '2007-02-01',
+      birthPlace: { '@type': 'Place', name: 'Shahdara Town, Lahore, Punjab, Pakistan' },
       url: 'https://suleman-zaheer.vercel.app/',
       image: {
         '@type': 'ImageObject',
@@ -347,7 +406,11 @@ export default function RootLayout({ children }) {
         'https://web.facebook.com/Iamsuleman.10',
         'https://x.com/imsuleman_10',
         'https://twitter.com/imsuleman_10',
-        'https://suleman-zaheer.vercel.app/'
+        'https://suleman-zaheer.vercel.app/',
+        'https://suleman-zaheer.vercel.app/about',
+        'https://suleman-zaheer.vercel.app/cv',
+        'https://www.wikidata.org/wiki/Q137024185',
+        'https://g.co/kgs/SulemanZaheer'
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
@@ -428,11 +491,40 @@ export default function RootLayout({ children }) {
       },
       hasMap: 'https://maps.google.com/?q=Shahdara+Town,+Lahore,+Pakistan',
       areaServed: [
+        // Lahore (Base)
         { '@type': 'AdministrativeArea', name: 'Shahdara Town, Lahore' },
         { '@type': 'City', name: 'Lahore' },
         { '@type': 'AdministrativeArea', name: 'Punjab, Pakistan' },
+        // All Major Pakistani Cities
+        { '@type': 'City', name: 'Karachi' },
+        { '@type': 'City', name: 'Islamabad' },
+        { '@type': 'City', name: 'Rawalpindi' },
+        { '@type': 'City', name: 'Faisalabad' },
+        { '@type': 'City', name: 'Multan' },
+        { '@type': 'City', name: 'Peshawar' },
+        { '@type': 'City', name: 'Quetta' },
+        { '@type': 'City', name: 'Sialkot' },
+        { '@type': 'City', name: 'Gujranwala' },
+        { '@type': 'City', name: 'Hyderabad' },
+        { '@type': 'City', name: 'Abbottabad' },
+        { '@type': 'City', name: 'Gujrat' },
+        { '@type': 'City', name: 'Sargodha' },
+        { '@type': 'City', name: 'Bahawalpur' },
+        { '@type': 'City', name: 'Sukkur' },
+        // Provinces
+        { '@type': 'AdministrativeArea', name: 'Sindh, Pakistan' },
+        { '@type': 'AdministrativeArea', name: 'Khyber Pakhtunkhwa (KPK), Pakistan' },
+        { '@type': 'AdministrativeArea', name: 'Balochistan, Pakistan' },
+        { '@type': 'AdministrativeArea', name: 'Islamabad Capital Territory, Pakistan' },
+        // National & International
         { '@type': 'Country', name: 'Pakistan' },
-        { '@type': 'Place', name: 'Worldwide (Remote)' }
+        { '@type': 'Place', name: 'Worldwide (Remote)' },
+        { '@type': 'Place', name: 'United States' },
+        { '@type': 'Place', name: 'United Kingdom' },
+        { '@type': 'Place', name: 'United Arab Emirates' },
+        { '@type': 'Place', name: 'Saudi Arabia' },
+        { '@type': 'Place', name: 'Canada' },
+        { '@type': 'Place', name: 'Australia' }
       ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
@@ -733,11 +825,24 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-        {/* Geo-Targeting & Local SEO (Lahore, Pakistan) */}
-        <meta name="geo.region" content="PK-PB" />
-        <meta name="geo.placename" content="Lahore, Shahdara Town, Punjab, Pakistan" />
+        {/* Geo-Targeting & Local SEO – All Pakistan + Lahore Base */}
+        <meta name="geo.region" content="PK" />
+        <meta name="geo.placename" content="Lahore, Islamabad, Karachi, Rawalpindi, Faisalabad, Multan, Peshawar, Quetta, Sialkot, Gujranwala, Punjab, Sindh, KPK, Balochistan, Pakistan" />
         <meta name="geo.position" content="31.6084;74.2833" />
         <meta name="ICBM" content="31.6084, 74.2833" />
+        {/* Pakistan Nation-Wide Coverage */}
+        <meta name="coverage" content="Worldwide" />
+        <meta name="distribution" content="Global" />
+        <meta name="target" content="all" />
+        <meta name="HandheldFriendly" content="True" />
+        {/* Knowledge Graph Entity Signals */}
+        <meta name="entity-name" content="Suleman Zaheer" />
+        <meta name="entity-type" content="Person" />
+        <meta name="entity-dob" content="2007-02-01" />
+        <meta name="entity-nationality" content="Pakistani" />
+        <meta name="entity-profession" content="Lead Software Engineer, Full-Stack Developer, Automation Engineer, AI Solutions Engineer" />
+        <meta name="entity-location" content="Lahore, Punjab, Pakistan" />
+        <meta name="entity-org" content="SAMStack Studio" />
 
         {/* LLMO & AEO (AI Models & Knowledge Engines) */}
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Knowledge Base" />
