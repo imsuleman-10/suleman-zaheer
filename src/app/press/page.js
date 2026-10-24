@@ -207,8 +207,9 @@ export default function PressPage() {
                   <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">WhatsApp</p>
                   <a href="https://wa.me/923285778715" className="text-white text-sm font-semibold">+92 328 5778715</a>
                 </div>
-                <div className="pt-4 border-t border-white/5 space-y-3">
                   {[
+                    { label: 'Wikipedia Profile (User:Imsuleman)', href: 'https://en.wikipedia.org/wiki/User:Imsuleman' },
+                    { label: 'Wikidata Entity (Q141839182)', href: 'https://www.wikidata.org/wiki/Q141839182' },
                     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/suleman-zaheer-mughal' },
                     { label: 'GitHub', href: 'https://github.com/imsuleman-10' },
                     { label: 'Twitter / X', href: 'https://x.com/imsuleman_10' },

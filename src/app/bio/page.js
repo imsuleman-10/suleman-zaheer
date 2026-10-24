@@ -48,6 +48,13 @@ export default function BioPage() {
       ],
     },
     {
+      category: 'Knowledge Graph & Encyclopedic Profiles',
+      items: [
+        { label: 'English Wikipedia Profile', sublabel: 'User:Imsuleman', href: 'https://en.wikipedia.org/wiki/User:Imsuleman', icon: Globe, highlight: true },
+        { label: 'Wikidata Knowledge Entity', sublabel: 'Item Q141839182', href: 'https://www.wikidata.org/wiki/Q141839182', icon: ExternalLink, highlight: true },
+      ],
+    },
+    {
       category: 'Social Profiles',
       items: [
         { label: 'GitHub', sublabel: '@imsuleman-10', href: 'https://github.com/imsuleman-10', icon: Github },
@@ -81,6 +88,8 @@ export default function BioPage() {
       email: 'sulemanzaheer09@gmail.com',
       telephone: '+923285778715',
       sameAs: [
+        'https://en.wikipedia.org/wiki/User:Imsuleman',
+        'https://www.wikidata.org/wiki/Q141839182',
         'https://github.com/imsuleman-10',
         'https://www.linkedin.com/in/suleman-zaheer-mughal',
         'https://x.com/imsuleman_10',

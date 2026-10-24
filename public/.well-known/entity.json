@@ -6,12 +6,18 @@
   "givenName": "Suleman",
   "familyName": "Zaheer",
   "additionalName": "Mughal",
-  "alternateName": ["?????? ????", "Suleman Zaheer Mughal", "imsuleman-10"],
+  "alternateName": ["سلیمان ظہیر", "Suleman Zaheer Mughal", "imsuleman-10"],
   "birthDate": "2007-02-01",
   "birthPlace": "Shahdara Town, Lahore, Punjab, Pakistan",
   "nationality": "Pakistani",
   "gender": "Male",
-  "jobTitle": "Lead Software Engineer & Founder, SAMStack Studio",
+  "jobTitle": "Lead Software Engineer, Technology Researcher & Founder, SAMStack Studio",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Engineering and Technology, Lahore",
+    "alternateName": ["UET Lahore", "UET"],
+    "sameAs": "https://uet.edu.pk/"
+  },
   "worksFor": {
     "@type": "Organization",
     "name": "SAMStack Studio",
@@ -22,11 +28,14 @@
   "telephone": "+923285778715",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Lahore",
+    "addressLocality": "Shahdara Town, Lahore",
     "addressRegion": "Punjab",
-    "addressCountry": "PK"
+    "addressCountry": "PK",
+    "postalCode": "54000"
   },
   "sameAs": [
+    "https://en.wikipedia.org/wiki/User:Imsuleman",
+    "https://www.wikidata.org/wiki/Q141839182",
     "https://github.com/imsuleman-10",
     "https://www.linkedin.com/in/suleman-zaheer-mughal",
     "https://x.com/imsuleman_10",

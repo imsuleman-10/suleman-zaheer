@@ -14,6 +14,22 @@ export const metadata = {
 export default function MentionsPage() {
   const mentions = [
     {
+      source: 'English Wikipedia',
+      category: 'Encyclopedia & Knowledge Vault',
+      url: 'https://en.wikipedia.org/wiki/User:Imsuleman',
+      quote:
+        'Suleman Zaheer (born 1 February 2007) is documented on Wikipedia (User:Imsuleman) as a Pakistani lead software engineer, technology researcher, writer, and Urdu poet educated in Computer Science at UET Lahore.',
+      verified: true,
+    },
+    {
+      source: 'Wikidata Knowledge Base',
+      category: 'Semantic Entity (Q141839182)',
+      url: 'https://www.wikidata.org/wiki/Q141839182',
+      quote:
+        'Wikidata item Q141839182 establishes Suleman Zaheer as an official digital entity in the global Wikimedia Knowledge Graph, verifying his education at UET Lahore, citizenship, DOB, and software engineering career.',
+      verified: true,
+    },
+    {
       source: 'GitHub Community',
       category: 'Open Source',
       url: 'https://github.com/imsuleman-10',
