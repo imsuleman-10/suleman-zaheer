@@ -233,7 +233,22 @@ export default function RootLayout({ children }) {
       additionalName: 'Mughal',
       alternateName: ['سلیمان ظہیر', 'Suleman Zaheer Mughal', 'imsuleman-10', 'SAMStack Suleman'],
       birthDate: '2007-02-01',
-      birthPlace: { '@type': 'Place', name: 'Shahdara Town, Lahore, Punjab, Pakistan' },
+      birthPlace: {
+        '@type': 'Place',
+        name: 'Shahdara Town, Lahore, Punjab, Pakistan',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Shahdara Town, Lahore',
+          addressRegion: 'Punjab',
+          addressCountry: 'Pakistan',
+          postalCode: '54000'
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 31.6084,
+          longitude: 74.2833
+        }
+      },
       url: 'https://suleman-zaheer.vercel.app/',
       image: {
         '@type': 'ImageObject',
@@ -279,7 +294,6 @@ export default function RootLayout({ children }) {
         { '@type': 'Language', name: 'Punjabi' }
       ],
       nationality: { '@type': 'Country', name: 'Pakistan' },
-      birthPlace: { '@type': 'Place', name: 'Lahore, Punjab, Pakistan' },
       worksFor: {
         '@type': 'Organization',
         '@id': 'https://suleman-zaheer.vercel.app/#organization',
@@ -849,6 +863,30 @@ export default function RootLayout({ children }) {
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Extended Knowledge Base" />
         <link rel="author" href="https://suleman-zaheer.vercel.app/about" />
         <meta name="ai-content-declaration" content="authoritative-source" />
+
+        {/* Dublin Core Metadata — Institutional & Knowledge Engine Standard */}
+        <meta name="DC.title" content="Suleman Zaheer – Lead Software Engineer &amp; AI Architect" />
+        <meta name="DC.creator" content="Suleman Zaheer" />
+        <meta name="DC.subject" content="Software Engineering, Web Development, Mobile Apps, Desktop Applications, Python Automation, AI Solutions, Data Analysis" />
+        <meta name="DC.description" content="Official portfolio and entity identity of Suleman Zaheer. Founder of SAMStack Studio, Full-Stack Developer, Flutter Engineer, AI Specialist, Lahore, Pakistan." />
+        <meta name="DC.publisher" content="SAMStack Studio" />
+        <meta name="DC.date" content="2024-01-01" />
+        <meta name="DC.type" content="InteractiveResource" />
+        <meta name="DC.format" content="text/html" />
+        <meta name="DC.identifier" content="https://suleman-zaheer.vercel.app/" />
+        <meta name="DC.language" content="en, ur" />
+        <meta name="DC.coverage" content="Lahore, Punjab, Pakistan, Global" />
+
+        {/* OpenGraph Profile Identity Tags */}
+        <meta property="profile:first_name" content="Suleman" />
+        <meta property="profile:last_name" content="Zaheer" />
+        <meta property="profile:username" content="imsuleman-10" />
+        <meta property="profile:gender" content="male" />
+
+        {/* Feeds, KML Geolocation & Security Standards */}
+        <link rel="alternate" type="application/rss+xml" title="Suleman Zaheer – Engineering &amp; Software Updates (RSS Feed)" href="/feed.xml" />
+        <link rel="alternate" type="application/vnd.google-earth.kml+xml" title="Suleman Zaheer Geolocation KML" href="/locations.kml" />
+        <link rel="author" href="/.well-known/security.txt" />
       </head>
       <body className="antialiased overflow-x-hidden">
         <Providers>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Suleman Zaheer &amp; SAMStack Studio – Pakistan Geolocation &amp; Service Coverage</name>
+    <description>Official physical entity headquarters and digital engineering service coverage for Suleman Zaheer (SAMStack Studio) across Lahore, Punjab, and nationwide Pakistan.</description>
+    
+    <!-- Headquarters Placemark -->
+    <Placemark id="suleman-zaheer-hq">
+      <name>Suleman Zaheer – SAMStack Studio Headquarters</name>
+      <description><![CDATA[
+        <h1>Suleman Zaheer – Lead Software Engineer &amp; AI Architect</h1>
+        <p><strong>Founder:</strong> SAMStack Studio</p>
+        <p><strong>Address:</strong> Qazi Park, Shahdara Town, Lahore, Punjab 54000, Pakistan</p>
+        <p><strong>Phone:</strong> +92 328 5778715</p>
+        <p><strong>Email:</strong> samstacktechs@gmail.com</p>
+        <p><strong>Website:</strong> <a href="https://suleman-zaheer.vercel.app/">https://suleman-zaheer.vercel.app/</a></p>
+        <p><strong>Core Services:</strong> Full-Stack Web Development (Next.js/MERN), Flutter Mobile Apps, Electron Desktop Applications, Python Automation &amp; Scraping, AI Solutions &amp; LLM Engineering.</p>
+      ]]></description>
+      <Point>
+        <coordinates>74.2833,31.6084,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- Lahore Tech Hub Service Point -->
+    <Placemark id="lahore-central-hub">
+      <name>Lahore Tech Hub &amp; UET Engineering Zone</name>
+      <description>University of Engineering and Technology (UET) Lahore &amp; Central Lahore Development Services.</description>
+      <Point>
+        <coordinates>74.3587,31.5768,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- Islamabad Capital Service Point -->
+    <Placemark id="islamabad-service-point">
+      <name>Islamabad &amp; Rawalpindi Engineering Services</name>
+      <description>Remote enterprise software development, automation, and AI consulting for businesses in Islamabad and Rawalpindi, Pakistan.</description>
+      <Point>
+        <coordinates>73.0479,33.6844,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- Karachi Commercial Service Point -->
+    <Placemark id="karachi-service-point">
+      <name>Karachi Financial &amp; Tech Hub Services</name>
+      <description>Scalable B2B SaaS, mobile app development, and data analytics solutions for Karachi businesses.</description>
+      <Point>
+        <coordinates>67.0011,24.8607,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- Faisalabad & Industrial Service Point -->
+    <Placemark id="faisalabad-service-point">
+      <name>Faisalabad Industrial &amp; Textile Software Solutions</name>
+      <description>Custom ERP, POS desktop systems, and automation scripts for textile and manufacturing enterprises.</description>
+      <Point>
+        <coordinates>73.0791,31.4504,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
