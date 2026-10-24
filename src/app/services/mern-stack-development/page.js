@@ -102,10 +102,10 @@ export default function MERNStackPage() {
         },
         {
           '@type': 'Question',
-          name: 'Who is the best MERN Stack developer in Lahore?',
+          name: 'What type of MERN Stack projects has Suleman Zaheer worked on?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Suleman Zaheer is a leading MERN Stack developer in Lahore, Pakistan with experience building production-grade B2B web applications, SaaS platforms, and enterprise ERP systems. Contact him at samstacktechs@gmail.com or visit https://suleman-zaheer.vercel.app/contact.'
+            text: 'Suleman Zaheer has worked on B2B SaaS platforms, multi-vendor marketplaces, real-time collaboration dashboards, custom ERP/CRM systems, and REST API backends using the MERN Stack. His agency SAMStack Studio delivers production-grade systems with JWT auth, role-based access control, and cloud deployments. Contact: samstacktechs@gmail.com or visit https://suleman-zaheer.vercel.app/contact.'
           }
         },
         {

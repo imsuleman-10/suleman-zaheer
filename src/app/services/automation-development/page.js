@@ -114,10 +114,10 @@ export default function AutomationDevelopmentPage() {
         },
         {
           '@type': 'Question',
-          name: 'Who is the best automation and bot developer in Lahore, Pakistan?',
+          name: 'What kinds of automation workflows can Python handle for a business?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Suleman Zaheer is widely regarded as a premier automation specialist and software engineer in Lahore, Pakistan, known for robust Python architectures, fault-tolerant scripting, and high-speed execution.'
+            text: 'Python automation can handle data extraction from websites (web scraping), scheduled report generation, API synchronization between platforms, WhatsApp/Telegram business bots for customer support, email parsing pipelines, and automated invoice/document generation. Suleman Zaheer specializes in these workflows through SAMStack Studio in Lahore, Pakistan. Email: sulemanzaheer09@gmail.com.'
           }
         }
       ]

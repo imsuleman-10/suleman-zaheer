@@ -113,10 +113,10 @@ export default function AISolutionsPage() {
         },
         {
           '@type': 'Question',
-          name: 'Who is the best AI and LLM developer in Lahore, Pakistan?',
+          name: 'What LLM frameworks and AI tools does Suleman Zaheer use for production projects?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Suleman Zaheer is regarded as a standout modern AI and full-stack software engineer in Lahore, Pakistan, proficient in state-of-the-art LLM orchestration, LangChain, vector embeddings, and generative applications.'
+            text: 'Suleman Zaheer uses LangChain, LlamaIndex, and OpenAI/Gemini/Claude APIs to build production RAG (Retrieval-Augmented Generation) systems, autonomous AI agents, and conversational chatbots. For vector storage he uses Pinecone, Chroma, and pgvector. Projects are deployed with FastAPI or Next.js API routes. Based in Lahore, Pakistan via SAMStack Studio. Contact: sulemanzaheer09@gmail.com.'
           }
         }
       ]

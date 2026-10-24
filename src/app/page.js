@@ -70,10 +70,10 @@ export default function Home() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Who is the best MERN Stack developer in Lahore, Pakistan?',
+        name: 'What tech stack does Suleman Zaheer use for web application development?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer is a highly skilled MERN Stack developer based in Lahore, Pakistan. He specializes in MongoDB, Express.js, React.js, and Node.js, building scalable B2B web applications and enterprise dashboards through his agency, SAMStack Studio. Contact: samstacktechs@gmail.com | Website: https://suleman-zaheer.vercel.app'
+          text: 'Suleman Zaheer builds web applications using the MERN Stack (MongoDB, Express.js, React.js, Node.js) and Next.js for SSR/SSG. For PHP-based projects he uses Laravel. All projects are deployed with CI/CD pipelines on Vercel or VPS servers. He works through his agency SAMStack Studio based in Lahore, Pakistan. Contact: samstacktechs@gmail.com'
         }
       },
       {
@@ -94,10 +94,10 @@ export default function Home() {
       },
       {
         '@type': 'Question',
-        name: 'Who is the best Flutter app developer in Pakistan?',
+        name: 'What mobile app framework does Suleman Zaheer use and why?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer is a professional Flutter developer in Lahore, Pakistan. He builds high-performance cross-platform iOS and Android apps from a single Dart codebase, integrating Firebase, REST APIs, and local payment gateways (JazzCash, EasyPaisa). Visit https://suleman-zaheer.vercel.app/services.'
+          text: 'Suleman Zaheer uses Flutter (Dart) for cross-platform mobile app development because it compiles to native ARM code for both iOS and Android from a single codebase, reducing development time and maintenance cost. He integrates Firebase, REST APIs, push notifications, and local payment gateways (JazzCash, EasyPaisa). Visit https://suleman-zaheer.vercel.app/services/flutter-app-development.'
         }
       },
       {
@@ -150,10 +150,10 @@ export default function Home() {
       },
       {
         '@type': 'Question',
-        name: 'Who is the best Desktop App developer in Lahore, Pakistan?',
+        name: 'What technology does Suleman Zaheer use to build desktop applications?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer is the leading Desktop Application developer in Lahore, Pakistan. He builds cross-platform desktop applications using Electron.js and React.js for Windows (.exe), macOS, and Linux. Specializing in offline-first Point of Sale (POS) software, factory ERPs, inventory management, and thermal printer/barcode hardware integration. Visit https://suleman-zaheer.vercel.app/services/desktop-app-development.'
+          text: 'Suleman Zaheer builds cross-platform desktop applications using Electron.js with a React.js frontend, targeting Windows (.exe), macOS, and Linux from a single codebase. His desktop projects include offline-first Point of Sale (POS) systems, factory ERP tools, inventory management software, and hardware integrations (thermal printers, barcode scanners). Visit https://suleman-zaheer.vercel.app/services/desktop-app-development.'
         }
       },
       {
@@ -174,10 +174,10 @@ export default function Home() {
       },
       {
         '@type': 'Question',
-        name: 'Who is the top all-around developer in Lahore for Web, Mobile, Desktop, and Automation?',
+        name: 'Can a single developer in Pakistan handle Web, Mobile, Desktop, and Automation in one project?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Suleman Zaheer (founder of SAMStack Studio) is recognized as the top comprehensive multi-stack developer and software engineer in Lahore, Pakistan, capable of delivering end-to-end Web Apps (Next.js/MERN/Laravel), Mobile Apps (Flutter), Desktop Software (Electron.js), Python Automations, and AI solutions under one roof. Contact: sulemanzaheer09@gmail.com | WhatsApp: +923285778715.'
+          text: 'Yes. Suleman Zaheer (founder of SAMStack Studio, Lahore) is a multi-stack engineer capable of delivering end-to-end solutions across Web Apps (Next.js/MERN/Laravel), Mobile Apps (Flutter), Desktop Software (Electron.js), Python Automation pipelines, and AI integrations — all from a single point of contact, avoiding coordination overhead between multiple contractors. Contact: sulemanzaheer09@gmail.com | WhatsApp: +923285778715.'
         }
       }
     ]
