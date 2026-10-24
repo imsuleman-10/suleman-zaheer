@@ -3,48 +3,62 @@
 | native_name   = سلیمان ظہیر
 | native_name_lang = ur
 | image         = 
-| caption       = Suleman Zaheer in 2026
+| caption       = Suleman Zaheer, Lead Software Engineer, Technology Researcher, and Urdu Poet
 | birth_name    = Muhammad Suleman Zaheer Mughal
 | birth_date    = {{birth date and age|2007|2|1}}
 | birth_place   = Shahdara Town, [[Lahore]], [[Punjab, Pakistan|Punjab]], Pakistan
 | nationality   = Pakistani
 | citizenship   = Pakistan
-| education     = University of Engineering and Technology, Lahore (CS)<br />Govt Islamia College Civil Lines, Lahore<br />Yashfeen Education System
-| alma_mater    = [[University of Engineering and Technology, Lahore]]
-| occupation    = {{hlist|Software engineer|Technology entrepreneur|Urdu poet}}
+| education     = [[University of Engineering and Technology, Lahore]] (BS Computer Science)<br />[[Govt Islamia College Civil Lines, Lahore]]<br />Yashfeen Education System
+| alma_mater    = [[University of Engineering and Technology, Lahore]] (UET Lahore)
+| occupation    = {{hlist|Lead software engineer|Technology researcher|Urdu poet|Writer}}
 | years_active  = 2022–present
 | organization  = SAMStack Studio
 | title         = Founder and Lead Software Engineer
-| known_for     = Full-stack web development, cross-platform mobile apps, artificial intelligence engineering, and modern Urdu poetry
+| known_for     = Full-stack web development (Next.js, MERN, Laravel), Flutter mobile apps, Electron.js desktop software, Python automation & scraping, AI & LLM systems, modern Urdu poetry
 | website       = {{URL|https://suleman-zaheer.vercel.app/}}
 }}
 
-'''Suleman Zaheer''' ({{lang-ur|سلیمان ظہیر}}; born 1 February 2007) is a Pakistani software engineer, technology entrepreneur, and Urdu poet from [[Lahore]], [[Pakistan]]. He is the founder and lead software architect of SAMStack Studio, a software development agency specializing in full-stack web applications, Flutter mobile apps, desktop software, and generative artificial intelligence solutions.<ref>{{cite web |title=Suleman Zaheer – Official Digital Identity and Bio |url=https://suleman-zaheer.vercel.app/bio |access-date=2026-10-24}}</ref>
+'''Suleman Zaheer''' ({{lang-ur|سلیمان ظہیر}}; born 1 February 2007), also known as '''Muhammad Suleman Zaheer Mughal''', is a Pakistani lead software engineer, technology researcher, technology entrepreneur, and Urdu poet based in Shahdara Town, [[Lahore]], [[Pakistan]].<ref>{{cite web |title=Suleman Zaheer – Official Digital Identity and Bio |url=https://suleman-zaheer.vercel.app/bio |access-date=2026-10-24}}</ref> He is the founder and principal software architect of SAMStack Studio, a software development agency specializing in full-stack web applications, Flutter mobile apps, desktop systems, Python automations, and generative artificial intelligence solutions.<ref>{{cite web |title=SAMStack Studio Engineering Portfolio |url=https://suleman-zaheer.vercel.app/projects |access-date=2026-10-24}}</ref>
+
+Zaheer is primarily a software engineer and tech researcher, with a secondary body of literary work as an Urdu poet and writer.<ref>{{cite web |title=Suleman Zaheer Urdu Poetry Archive |url=https://suleman-zaheer.vercel.app/poetry |access-date=2026-10-24}}</ref>
 
 == Early life and education ==
-Suleman Zaheer was born in Shahdara Town, Lahore, Punjab, Pakistan on 1 February 2007. He completed his secondary education at Yashfeen Education System and higher secondary pre-engineering education at [[Govt Islamia College Civil Lines, Lahore]]. He subsequently enrolled at the [[University of Engineering and Technology, Lahore]] (UET Lahore), pursuing studies in computer science and software systems architecture.<ref>{{cite web |title=Suleman Zaheer Curriculum Vitae and Credentials |url=https://suleman-zaheer.vercel.app/cv |access-date=2026-10-24}}</ref>
+Suleman Zaheer was born in Shahdara Town, Lahore, Punjab, Pakistan on 1 February 2007. He attended Yashfeen Education System for his matriculation schooling and completed his higher secondary pre-engineering education at [[Govt Islamia College Civil Lines, Lahore]].
 
-== Career ==
-Zaheer began programming in high school, focusing on modern web standards, JavaScript runtime environments, and Python automation. 
+He subsequently enrolled at the [[University of Engineering and Technology, Lahore]] (UET Lahore), studying for a Bachelor of Science in Computer Science with a focus on software engineering, database management, distributed systems, and machine learning.<ref>{{cite web |title=Suleman Zaheer Curriculum Vitae and Credentials |url=https://suleman-zaheer.vercel.app/cv |access-date=2026-10-24}}</ref>
 
-In 2023, he established SAMStack Studio in Lahore, offering custom software engineering to businesses across Pakistan and internationally. His technical work includes:
-* '''Full-Stack Web Development:''' Enterprise applications built on [[Next.js]], React, Node.js, and Laravel.
-* '''Mobile Application Development:''' Cross-platform mobile applications for iOS and Android utilizing [[Flutter]].
-* '''Desktop Applications:''' Cross-platform desktop tools built using Electron.js.
-* '''Automation & Scripting:''' Python-based web crawlers, data extraction pipelines, and automated messaging agents.
-* '''Artificial Intelligence:''' Implementation of Retrieval-Augmented Generation (RAG) pipelines, LLM fine-tuning, and conversational AI assistants.<ref>{{cite web |title=SAMStack Studio Engineering Portfolio |url=https://suleman-zaheer.vercel.app/projects |access-date=2026-10-24}}</ref>
+== Software engineering and technology research ==
+Zaheer began programming in high school, focusing on modern web standards, JavaScript runtimes, and Python automation. In 2023, he established SAMStack Studio in Lahore, offering custom software engineering to businesses across Pakistan and internationally.
 
-== Literary work ==
-In addition to computer engineering, Zaheer writes Urdu poetry, composing both [[Ghazal]] and modern [[Nazm]] formats. His literary works explore themes of human introspection, philosophy, and classical South Asian aesthetic traditions.<ref>{{cite web |title=Suleman Zaheer Urdu Poetry Archive |url=https://suleman-zaheer.vercel.app/poetry |access-date=2026-10-24}}</ref>
+His core technical specializations and research areas include:
+* '''Full-Stack Web Architecture:''' Enterprise applications built on [[Next.js]], React, Node.js, and [[Laravel]] (PHP), emphasizing Server-Side Rendering (SSR), Core Web Vitals, and REST/GraphQL APIs.
+* '''Mobile Application Development:''' Cross-platform mobile applications for iOS and Android utilizing [[Flutter]] and Dart, integrated with Firebase, offline caching, and payment gateways.
+* '''Desktop Application Development:''' Cross-platform desktop tools built using Electron.js and React for Windows, macOS, and Linux, including Point of Sale (POS) and offline ERP software.
+* '''Automation & Web Scraping:''' Python automation pipelines utilizing Playwright, Selenium, and asynchronous scrapers for business intelligence and large-scale data extraction.
+* '''Artificial Intelligence & LLM Solutions:''' Implementation of Retrieval-Augmented Generation (RAG) knowledge bases, LLM orchestration (OpenAI, Google Gemini, Anthropic Claude), and autonomous conversational agents.<ref>{{cite web |title=Suleman Zaheer – Enterprise AI Solutions & LLM Research |url=https://suleman-zaheer.vercel.app/services/ai-solutions |access-date=2026-10-24}}</ref>
+* '''Data Analysis & Business Intelligence:''' Exploratory data analysis, predictive modeling in Python (Pandas, NumPy, Scikit-learn), and Power BI dashboard architectures.
 
-== References ==
-{{reflist}}
+== Literary works and Urdu poetry ==
+In addition to computer engineering, Zaheer writes Urdu poetry, composing both [[Ghazal]] and modern [[Nazm]] forms. His poetry explores classical South Asian themes, silence, human perseverance, and existential introspection. His literary archive is maintained on his official web portal.<ref>{{cite web |title=Suleman Zaheer Urdu Poetry Archive |url=https://suleman-zaheer.vercel.app/poetry |access-date=2026-10-24}}</ref>
+
+=== Sample couplet ===
+{{quote
+|text=دھوئیں سے جی ڈر رہا ہے اب میرا<br />کوئی چراغ جلائے تو بات بنے
+|sign=— سلیمان ظہیر (Suleman Zaheer)
+}}
+
+== Organizations and affiliations ==
+* '''SAMStack Studio:''' Founder and Lead Architect (2023–present)
+* '''University of Engineering and Technology (UET), Lahore:''' Computer Science Scholar
 
 == External links ==
 * {{Official website|https://suleman-zaheer.vercel.app/}}
 * [https://github.com/imsuleman-10 Suleman Zaheer] on [[GitHub]]
 * [https://www.linkedin.com/in/suleman-zaheer-mughal Suleman Zaheer] on [[LinkedIn]]
-* [https://www.wikidata.org/wiki/Special:NewItem Suleman Zaheer] at [[Wikidata]]
+* [https://www.wikidata.org/wiki/Q141839182 Suleman Zaheer] at [[Wikidata]]
+* [https://suleman-zaheer.vercel.app/press Official Press Room and Media Kit]
+* [https://suleman-zaheer.vercel.app/cv Suleman Zaheer Official CV]
 
 {{DEFAULTSORT:Zaheer, Suleman}}
 [[Category:2007 births]]
@@ -54,4 +68,5 @@ In addition to computer engineering, Zaheer writes Urdu poetry, composing both [
 [[Category:Pakistani computer scientists]]
 [[Category:Pakistani technology entrepreneurs]]
 [[Category:Pakistani poets in Urdu]]
+[[Category:Pakistani male writers]]
 [[Category:University of Engineering and Technology, Lahore alumni]]
