@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suleman Zaheer – Google Knowledge Panel 1-Click Activator</title>
+  <title>Suleman Zaheer – Multi-Platform Entity & Authority Activator</title>
   <style>
     :root {
       --bg: #09090b;
@@ -14,129 +14,125 @@
       --text: #f4f4f5;
       --text-muted: #a1a1aa;
       --success: #10b981;
+      --purple: #a855f7;
+      --amber: #f59e0b;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     body { background-color: var(--bg); color: var(--text); padding: 40px 20px; line-height: 1.6; }
-    .container { max-width: 900px; margin: 0 auto; }
-    header { margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+    .container { max-width: 950px; margin: 0 auto; }
+    header { margin-bottom: 36px; border-bottom: 1px solid var(--border); padding-bottom: 24px; }
     h1 { font-size: 2rem; color: #fff; margin-bottom: 8px; }
-    p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
+    p.subtitle { color: var(--text-muted); font-size: 1.05rem; }
     .badge { display: inline-block; background: rgba(14, 165, 233, 0.15); color: var(--primary); padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 12px; }
     .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 24px; transition: border-color 0.2s; }
     .card:hover { border-color: #3f3f46; }
-    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-    h2 { font-size: 1.3rem; color: #fff; }
-    .step-num { background: var(--primary); color: #fff; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: bold; margin-right: 8px; }
-    .action-btn { background: var(--primary); color: #fff; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; transition: background 0.2s; }
+    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+    h2 { font-size: 1.25rem; color: #fff; display: flex; align-items: center; }
+    .step-num { background: var(--primary); color: #fff; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold; margin-right: 10px; flex-shrink: 0; }
+    .action-btn { background: var(--primary); color: #fff; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 0.88rem; transition: background 0.2s; }
     .action-btn:hover { background: var(--primary-hover); }
     .copy-btn { background: #27272a; color: #fff; border: 1px solid #3f3f46; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
-    .copy-btn:hover { background: #3f3f46; }
-    .code-box { background: #0c0a09; border: 1px solid #292524; border-radius: 8px; padding: 14px; font-family: monospace; font-size: 0.9rem; color: #e7e5e4; white-space: pre-wrap; word-break: break-all; margin: 12px 0; position: relative; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .copy-btn:hover { background: #3f3f46; border-color: #52525b; }
+    .copy-btn-primary { background: var(--primary); color: #fff; font-weight: 600; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; }
+    .copy-btn-primary:hover { background: var(--primary-hover); }
+    .code-box { background: #0c0a09; border: 1px solid #292524; border-radius: 8px; padding: 14px; font-family: monospace; font-size: 0.88rem; color: #e7e5e4; white-space: pre-wrap; word-break: break-all; margin: 12px 0; position: relative; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 14px; }
     @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
-    .check-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
-    .check-item input { margin-top: 5px; accent-color: var(--primary); }
-    .toast { position: fixed; bottom: 20px; right: 20px; background: var(--success); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; display: none; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); z-index: 1000; }
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-left: 8px; }
+    .tag-blue { background: rgba(14, 165, 233, 0.2); color: #38bdf8; }
+    .tag-purple { background: rgba(168, 85, 247, 0.2); color: #c084fc; }
+    .tag-green { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+    .toast { position: fixed; bottom: 24px; right: 24px; background: var(--success); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; display: none; box-shadow: 0 10px 20px rgba(0,0,0,0.5); z-index: 1000; }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="badge">Google Knowledge Graph &amp; Off-Page Entity Engine</div>
+    <div class="badge">Google Knowledge Graph &amp; Multi-Platform Authority Engine</div>
     <header>
-      <h1>Suleman Zaheer – 1-Click Knowledge Panel Activator</h1>
-      <p class="subtitle">Use this interactive helper to copy pre-formatted identity statements into Wikidata, Google Business Profile, and LinkedIn.</p>
+      <h1>Suleman Zaheer – Multi-Platform Profile Hub</h1>
+      <p class="subtitle">Complete, professionally drafted profiles for all major platforms. Every profile is pre-formatted with your <strong>Official Portfolio</strong> and <strong>Wikipedia Biography</strong> links.</p>
     </header>
 
-    <!-- STEP 1: WIKIDATA -->
+    <!-- PLATFORM 1: GITHUB PROFILE (README) -->
     <div class="card" style="border-color: rgba(14, 165, 233, 0.4);">
       <div class="card-header">
-        <h2><span class="step-num">1</span> Wikidata Entity: Q141839182 (Created &amp; Live!)</h2>
-        <a href="https://www.wikidata.org/wiki/Q141839182" target="_blank" class="action-btn">Open Wikidata Item Q141839182 ↗</a>
+        <h2><span class="step-num">1</span> GitHub Profile README (imsuleman-10)<span class="tag tag-blue">High Authority</span></h2>
+        <a href="https://github.com/new" target="_blank" class="action-btn">Create Repository 'imsuleman-10' ↗</a>
       </div>
-      <p style="color: #38bdf8; font-weight: 600; margin-bottom: 12px;">✅ Your official Wikidata entity has been successfully created at ID: <code>Q141839182</code>!</p>
-      <p>Log in or click the link above to view your entity. Click <em>"add statement"</em> on Wikidata to attach your DOB and Website:</p>
+      <p>Create a public repository named exactly <code>imsuleman-10</code> on GitHub to activate this dynamic profile README with official badges and links.</p>
       
-      <div class="grid">
-        <div>
-          <strong>Label (English):</strong>
-          <div class="code-box" id="wd-label">Suleman Zaheer</div>
-          <button class="copy-btn" onclick="copyText('wd-label')">Copy Label</button>
-        </div>
-        <div>
-          <strong>Description (English):</strong>
-          <div class="code-box" id="wd-desc">Pakistani software engineer, technology entrepreneur, and founder of SAMStack Studio</div>
-          <button class="copy-btn" onclick="copyText('wd-desc')">Copy Description</button>
-        </div>
+      <div style="margin-top: 12px;">
+        <button class="copy-btn copy-btn-primary" onclick="copyText('gh-profile-code')">📋 Copy Complete GitHub Profile README</button>
       </div>
 
-      <div style="margin-top: 16px;">
-        <strong>Statements to Add in Wikidata:</strong>
-        <div class="code-box" id="wd-statements">Instance of (P31): human (Q5)
-Sex or gender (P21): male (Q6581097)
-Country of citizenship (P27): Pakistan (Q843)
+      <div class="code-box" id="gh-profile-code" style="max-height: 260px; overflow-y: auto;"># Hi there, I'm Suleman Zaheer 👋
+
+<div align="center">
+
+[![Official Website](https://img.shields.io/badge/Official%20Website-suleman--zaheer.vercel.app-0ea5e9?style=for-the-badge&logo=googlechrome&logoColor=white)](https://suleman-zaheer.vercel.app/)
+[![Wikipedia](https://img.shields.io/badge/Wikipedia-User%3AImsuleman-gray?style=for-the-badge&logo=wikipedia&logoColor=white)](https://en.wikipedia.org/wiki/User:Imsuleman)
+[![Wikidata](https://img.shields.io/badge/Wikidata-Q141839182-339966?style=for-the-badge&logo=wikidata&logoColor=white)](https://www.wikidata.org/wiki/Q141839182)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-suleman--zaheer--mughal-0077b5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/suleman-zaheer-mughal)
+
+### **Lead Software Engineer • Founder @ SAMStack Studio • Urdu Poet**
+*📍 Lahore, Pakistan | 🎓 Computer Science @ University of Engineering and Technology (UET) Lahore*
+
+</div>
+
+---
+
+### 👨‍💻 About Me
+
+I am a Pakistani **Lead Software Engineer, Technology Researcher, and Entrepreneur** based in Lahore, Pakistan. I am the founder and principal architect of **[SAMStack Studio](https://suleman-zaheer.vercel.app/)**, engineering mission-critical web applications, cross-platform mobile apps, desktop systems, Python automation, and generative AI pipelines.
+
+- 🌐 **Official Website:** [https://suleman-zaheer.vercel.app/](https://suleman-zaheer.vercel.app/)
+- 📖 **Wikipedia Biography:** [en.wikipedia.org/wiki/User:Imsuleman](https://en.wikipedia.org/wiki/User:Imsuleman)
+- 🗃️ **Wikidata Entity:** [Q141839182](https://www.wikidata.org/wiki/Q141839182)
+- 🏢 **Organization:** Founder & Lead Architect @ [SAMStack Studio](https://suleman-zaheer.vercel.app/)
+- 📧 **Press & Enquiries:** sulemanzaheer09@gmail.com
+- 💬 **WhatsApp:** +92 328 5778715
+
+---
+
+### 🛠️ Core Engineering Stack
+- **Web:** Next.js 16, React, Node.js, Express, Laravel (PHP), TailwindCSS
+- **Mobile:** Flutter & Dart (iOS & Android)
+- **Desktop:** Electron.js, Node.js (Windows, macOS, Linux)
+- **Automation & Scraping:** Python, Playwright, Selenium, Asynchronous Pipelines
+- **AI & LLM:** Retrieval-Augmented Generation (RAG), OpenAI API, LangChain, Embeddings
+- **Databases:** MongoDB, PostgreSQL, MySQL, Redis</div>
+    </div>
+
+    <!-- PLATFORM 2: WIKIDATA ENTITY -->
+    <div class="card">
+      <div class="card-header">
+        <h2><span class="step-num">2</span> Wikidata Entity: Q141839182<span class="tag tag-green">Live Entity</span></h2>
+        <a href="https://www.wikidata.org/wiki/Q141839182" target="_blank" class="action-btn">Open Wikidata Item Q141839182 ↗</a>
+      </div>
+      <p>Log in to Wikidata and add these key statements under <em>"add statement"</em>:</p>
+      
+      <div class="code-box" id="wd-statements">Official website (P856): https://suleman-zaheer.vercel.app/
+GitHub username (P2037): imsuleman-10
 Date of birth (P569): 1 February 2007
 Place of birth (P19): Lahore (Q11739)
 Educated at (P69): University of Engineering and Technology, Lahore (Q1637748)
 Occupation (P106): software engineer (Q8074213)
-Official website (P856): https://suleman-zaheer.vercel.app/
-Employer / Founded (P112): SAMStack Studio</div>
-        <button class="copy-btn" onclick="copyText('wd-statements')">Copy All Statements</button>
-      </div>
+Employer / Founded (P112): SAMStack Studio
+Native language (P103): Urdu (Q1617)</div>
+      <button class="copy-btn" onclick="copyText('wd-statements')">Copy Wikidata Statements</button>
     </div>
 
-    <!-- STEP 2: GOOGLE BUSINESS PROFILE -->
+    <!-- PLATFORM 3: ENGLISH WIKIPEDIA -->
     <div class="card">
       <div class="card-header">
-        <h2><span class="step-num">2</span> Google Business Profile (Google Maps &amp; Local Entity)</h2>
-        <a href="https://business.google.com/" target="_blank" class="action-btn">Open Google Business Profile ↗</a>
+        <h2><span class="step-num">3</span> English Wikipedia Biography Draft<span class="tag tag-purple">Top Citation</span></h2>
+        <a href="https://en.wikipedia.org/wiki/User:Imsuleman?action=edit" target="_blank" class="action-btn">Edit User:Imsuleman on Wikipedia ↗</a>
       </div>
-      <p>Creates immediate Google Maps pin in Lahore and triggers local Knowledge Graph verification.</p>
-      <div class="code-box" id="gbp-details">Business Name: SAMStack Studio by Suleman Zaheer
-Category: Software Company / Computer Consultant
-Address: Qazi Park, Shahdara Town, Lahore, Punjab 54000, Pakistan
-Phone: +92 328 5778715
-Website: https://suleman-zaheer.vercel.app/
-Services: Web Development, Flutter App Development, Desktop Apps, Python Automation, AI Solutions</div>
-      <button class="copy-btn" onclick="copyText('gbp-details')">Copy Business Details</button>
-    </div>
-
-    <!-- STEP 3: LINKEDIN AUTHORITY -->
-    <div class="card">
-      <div class="card-header">
-        <h2><span class="step-num">3</span> LinkedIn Profile Entity Alignment</h2>
-        <a href="https://www.linkedin.com/in/suleman-zaheer-mughal" target="_blank" class="action-btn">Open Your LinkedIn ↗</a>
+      <p>Complete encyclopedic wikitext with infobox, education (UET Lahore), DOB, poetry sample, and external links.</p>
+      <div style="margin-top: 10px;">
+        <button class="copy-btn copy-btn-primary" onclick="copyText('wiki-code')">📋 Copy Complete Wikipedia Wikitext</button>
       </div>
-      <p>Ensure your LinkedIn headline and summary match your schema to pass Google sameAs identity verification:</p>
-      
-      <strong>Optimized Headline:</strong>
-      <div class="code-box" id="li-headline">Lead Software Engineer | Full-Stack Web (Next.js/MERN), Mobile (Flutter), Desktop & AI Solutions | Founder @ SAMStack Studio | Lahore, Pakistan</div>
-      <button class="copy-btn" onclick="copyText('li-headline')">Copy Headline</button>
-
-      <div style="margin-top: 14px;">
-        <strong>Optimized About Summary:</strong>
-        <div class="code-box" id="li-about">Suleman Zaheer is a Lead Software Engineer and Technology Entrepreneur based in Lahore, Pakistan. He is the founder of SAMStack Studio, delivering production-grade web applications, Flutter mobile apps, desktop systems, and generative AI solutions. 
-
-Education: Computer Science at University of Engineering and Technology (UET) Lahore.
-Official Portfolio: https://suleman-zaheer.vercel.app/</div>
-        <button class="copy-btn" onclick="copyText('li-about')">Copy About Summary</button>
-      </div>
-    </div>
-
-    <!-- STEP 4: ENGLISH WIKIPEDIA (USER:IMSULEMAN) -->
-    <div class="card" style="border-color: rgba(14, 165, 233, 0.4);">
-      <div class="card-header">
-        <h2><span class="step-num">4</span> English Wikipedia (en.wikipedia.org)</h2>
-        <a href="https://en.wikipedia.org/wiki/User:Imsuleman" target="_blank" class="action-btn">Open User:Imsuleman on Wikipedia ↗</a>
-      </div>
-      <p style="color: #38bdf8; font-weight: 600; margin-bottom: 8px;">Logged in as: <code>Imsuleman</code></p>
-      <p>This article is 100% grounded in your real portfolio data: <strong>UET Lahore Computer Science, DOB 1 Feb 2007, SAMStack Studio, Lead Software Engineer, Technology Researcher, Writer &amp; Poet</strong>.</p>
-      
-      <div style="margin-top: 14px;">
-        <button class="copy-btn" style="background: var(--primary); padding: 10px 18px; font-weight: bold;" onclick="copyText('wiki-code')">📋 Copy Complete Wikipedia Wikitext</button>
-        <a href="https://en.wikipedia.org/wiki/User:Imsuleman?action=edit" target="_blank" class="action-btn" style="margin-left: 10px;">1-Click Paste &amp; Save on Wikipedia ↗</a>
-      </div>
-
-      <div class="code-box" id="wiki-code" style="max-height: 280px; overflow-y: auto; margin-top: 14px;">{{Infobox person
+      <div class="code-box" id="wiki-code" style="max-height: 240px; overflow-y: auto; margin-top: 10px;">{{Infobox person
 | name          = Suleman Zaheer
 | native_name   = سلیمان ظہیر
 | native_name_lang = ur
@@ -146,7 +142,7 @@ Official Portfolio: https://suleman-zaheer.vercel.app/</div>
 | birth_place   = Shahdara Town, [[Lahore]], [[Punjab, Pakistan|Punjab]], Pakistan
 | nationality   = Pakistani
 | citizenship   = Pakistan
-| education     = [[University of Engineering and Technology, Lahore]] (BS Computer Science)<br />[[Govt Islamia College Civil Lines, Lahore]]<br />Yashfeen Education System
+| education     = [[University of Engineering and Technology, Lahore]] (BS Computer Science)<br />[[Govt Islamia College Civil Lines, Lahore]]
 | alma_mater    = [[University of Engineering and Technology, Lahore]] (UET Lahore)
 | occupation    = {{hlist|Lead software engineer|Technology researcher|Urdu poet|Writer}}
 | years_active  = 2022–present
@@ -158,39 +154,18 @@ Official Portfolio: https://suleman-zaheer.vercel.app/</div>
 
 '''Suleman Zaheer''' ({{lang-ur|سلیمان ظہیر}}; born 1 February 2007), also known as '''Muhammad Suleman Zaheer Mughal''', is a Pakistani lead software engineer, technology researcher, technology entrepreneur, and Urdu poet based in Shahdara Town, [[Lahore]], [[Pakistan]]. He is the founder and principal software architect of SAMStack Studio, a software development agency specializing in full-stack web applications, Flutter mobile apps, desktop systems, Python automations, and generative artificial intelligence solutions.
 
-Zaheer is primarily a software engineer and tech researcher, with a secondary body of literary work as an Urdu poet and writer.
-
 == Early life and education ==
-Suleman Zaheer was born in Shahdara Town, Lahore, Punjab, Pakistan on 1 February 2007. He attended Yashfeen Education System for his matriculation schooling and completed his higher secondary pre-engineering education at [[Govt Islamia College Civil Lines, Lahore]].
+Suleman Zaheer was born in Shahdara Town, Lahore on 1 February 2007. He completed higher secondary education at [[Govt Islamia College Civil Lines, Lahore]] before enrolling at the [[University of Engineering and Technology, Lahore]] (UET Lahore) for a Bachelor of Science in Computer Science.
 
-He subsequently enrolled at the [[University of Engineering and Technology, Lahore]] (UET Lahore), studying for a Bachelor of Science in Computer Science with a focus on software engineering, database management, distributed systems, and machine learning.
+== Software engineering ==
+In 2023, he established SAMStack Studio in Lahore, delivering web systems (Next.js, React, Node.js, Laravel), mobile apps (Flutter), desktop tools (Electron), and AI solutions.
 
-== Software engineering and technology research ==
-Zaheer began programming in high school, focusing on modern web standards, JavaScript runtimes, and Python automation. In 2023, he established SAMStack Studio in Lahore, offering custom software engineering to businesses across Pakistan and internationally.
-
-His core technical specializations and research areas include:
-* '''Full-Stack Web Architecture:''' Enterprise applications built on [[Next.js]], React, Node.js, and [[Laravel]] (PHP).
-* '''Mobile Application Development:''' Cross-platform mobile applications for iOS and Android utilizing [[Flutter]] and Dart.
-* '''Desktop Application Development:''' Cross-platform desktop tools built using Electron.js and React for Windows, macOS, and Linux.
-* '''Automation & Web Scraping:''' Python automation pipelines utilizing Playwright, Selenium, and asynchronous scrapers.
-* '''Artificial Intelligence & LLM Solutions:''' Implementation of Retrieval-Augmented Generation (RAG) knowledge bases, LLM orchestration, and autonomous conversational agents.
-* '''Data Analysis & Business Intelligence:''' Exploratory data analysis, predictive modeling in Python, and Power BI dashboards.
-
-== Literary works and Urdu poetry ==
-In addition to computer engineering, Zaheer writes Urdu poetry, composing both [[Ghazal]] and modern [[Nazm]] forms.
-
-=== Sample couplet ===
-{{quote
-|text=دھوئیں سے جی ڈر رہا ہے اب میرا<br />کوئی چراغ جلائے تو بات بنے
-|sign=— سلیمان ظہیر (Suleman Zaheer)
-}}
-
-== Organizations and affiliations ==
-* '''SAMStack Studio:''' Founder and Lead Architect (2023–present)
-* '''University of Engineering and Technology (UET), Lahore:''' Computer Science Scholar
+== Literary works ==
+Zaheer also writes Urdu poetry in Ghazal and Nazm forms.
 
 == External links ==
 * {{Official website|https://suleman-zaheer.vercel.app/}}
+* [https://en.wikipedia.org/wiki/User:Imsuleman Suleman Zaheer] on Wikipedia
 * [https://github.com/imsuleman-10 Suleman Zaheer] on [[GitHub]]
 * [https://www.linkedin.com/in/suleman-zaheer-mughal Suleman Zaheer] on [[LinkedIn]]
 * [https://www.wikidata.org/wiki/Q141839182 Suleman Zaheer] at [[Wikidata]]
@@ -208,18 +183,150 @@ In addition to computer engineering, Zaheer writes Urdu poetry, composing both [
 [[Category:University of Engineering and Technology, Lahore alumni]]</div>
     </div>
 
-    <!-- STEP 5: GOOGLE TOOLS -->
+    <!-- PLATFORM 4: CRUNCHBASE (FOUNDER & COMPANY) -->
     <div class="card">
       <div class="card-header">
-        <h2><span class="step-num">5</span> Verification &amp; Inspection Tools</h2>
+        <h2><span class="step-num">4</span> Crunchbase Profile (Person &amp; Company)<span class="tag tag-blue">Business Graph</span></h2>
+        <a href="https://www.crunchbase.com/add-new" target="_blank" class="action-btn">Add to Crunchbase ↗</a>
       </div>
+      <p>Crunchbase directly feeds Google's Knowledge Graph for founders and technology companies.</p>
+      
       <div class="grid">
-        <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fsuleman-zaheer.vercel.app%2F" target="_blank" class="action-btn" style="text-align: center; justify-content: center;">Google Rich Results Test ↗</a>
-        <a href="https://validator.schema.org/#url=https%3A%2F%2Fsuleman-zaheer.vercel.app%2F" target="_blank" class="action-btn" style="text-align: center; justify-content: center;">Schema.org Official Validator ↗</a>
-        <a href="https://search.google.com/search-console" target="_blank" class="action-btn" style="text-align: center; justify-content: center;">Google Search Console ↗</a>
-        <a href="https://developers.google.com/knowledge-graph" target="_blank" class="action-btn" style="text-align: center; justify-content: center;">Google Knowledge Graph Search ↗</a>
+        <div>
+          <strong>Person Profile (Suleman Zaheer):</strong>
+          <div class="code-box" id="cb-person">Full Name: Suleman Zaheer
+Primary Role: Founder & Lead Software Engineer at SAMStack Studio
+Location: Lahore, Punjab, Pakistan
+Education: University of Engineering and Technology (UET) Lahore — BS Computer Science
+Official Website: https://suleman-zaheer.vercel.app/
+Wikipedia: https://en.wikipedia.org/wiki/User:Imsuleman
+Wikidata: https://www.wikidata.org/wiki/Q141839182
+Biography: Suleman Zaheer is a Pakistani Lead Software Engineer and Founder of SAMStack Studio. Born in Lahore in 2007, he leads engineering for full-stack web, Flutter mobile apps, desktop systems, and generative AI solutions.</div>
+          <button class="copy-btn" onclick="copyText('cb-person')">Copy Person Bio</button>
+        </div>
+        <div>
+          <strong>Company Profile (SAMStack Studio):</strong>
+          <div class="code-box" id="cb-company">Organization Name: SAMStack Studio
+Founder: Suleman Zaheer
+Founded Date: 2023
+Headquarters: Shahdara Town, Lahore, Pakistan
+Industries: Software, Web Development, Mobile Apps, Artificial Intelligence
+Official Website: https://suleman-zaheer.vercel.app/
+Founder Wikipedia: https://en.wikipedia.org/wiki/User:Imsuleman
+Description: SAMStack Studio is a premier software development studio founded by Suleman Zaheer in Lahore, Pakistan, engineering custom web applications, Flutter mobile apps, desktop software, and AI automation.</div>
+          <button class="copy-btn" onclick="copyText('cb-company')">Copy Company Details</button>
+        </div>
       </div>
     </div>
+
+    <!-- PLATFORM 5: DEV.TO & MEDIUM (TECH AUTHOR) -->
+    <div class="card">
+      <div class="card-header">
+        <h2><span class="step-num">5</span> Dev.to &amp; Medium Tech Author Profiles<span class="tag tag-green">SEO Backlinks</span></h2>
+        <div>
+          <a href="https://dev.to/settings/profile" target="_blank" class="action-btn" style="margin-right: 8px;">Dev.to Profile ↗</a>
+          <a href="https://medium.com/me/settings/account" target="_blank" class="action-btn">Medium Profile ↗</a>
+        </div>
+      </div>
+      <p>High domain authority (DA 90+) blogging platforms that establish tech leadership and index backlinks instantly.</p>
+      
+      <div class="grid">
+        <div>
+          <strong>Short Bio (for Bio fields):</strong>
+          <div class="code-box" id="dev-bio">Lead Software Engineer & Founder of SAMStack Studio. Building Next.js web apps, Flutter mobile tools, and AI pipelines in Lahore, Pakistan. 
+
+🌐 https://suleman-zaheer.vercel.app
+📖 https://en.wikipedia.org/wiki/User:Imsuleman</div>
+          <button class="copy-btn" onclick="copyText('dev-bio')">Copy Short Bio</button>
+        </div>
+        <div>
+          <strong>Full About Page (for Medium/Dev.to About):</strong>
+          <div class="code-box" id="dev-about">Suleman Zaheer is a Lead Software Engineer and Technology Entrepreneur based in Lahore, Pakistan. He is the founder of SAMStack Studio and an undergraduate in Computer Science at UET Lahore.
+
+Key focus areas:
+• Full-Stack Web Architecture (Next.js, React, Node.js, Laravel)
+• Mobile Apps (Flutter / Dart)
+• Desktop Software (Electron.js)
+• Python Automation & AI/RAG Systems
+
+Official Portfolio: https://suleman-zaheer.vercel.app/
+Wikipedia: https://en.wikipedia.org/wiki/User:Imsuleman
+Wikidata: https://www.wikidata.org/wiki/Q141839182</div>
+          <button class="copy-btn" onclick="copyText('dev-about')">Copy Full About</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLATFORM 6: LINKEDIN & TWITTER / X -->
+    <div class="card">
+      <div class="card-header">
+        <h2><span class="step-num">6</span> LinkedIn &amp; X / Twitter Alignment<span class="tag tag-blue">Social Proof</span></h2>
+        <div>
+          <a href="https://www.linkedin.com/in/suleman-zaheer-mughal" target="_blank" class="action-btn" style="margin-right: 8px;">LinkedIn ↗</a>
+          <a href="https://x.com/settings/profile" target="_blank" class="action-btn">X / Twitter ↗</a>
+        </div>
+      </div>
+      
+      <div class="grid">
+        <div>
+          <strong>LinkedIn About Summary:</strong>
+          <div class="code-box" id="li-bio-full">Suleman Zaheer is a Lead Software Engineer, Technology Researcher, and Entrepreneur based in Lahore, Pakistan. Founder of SAMStack Studio.
+
+🎓 Education: BS Computer Science @ University of Engineering and Technology (UET) Lahore
+💻 Specialties: Next.js, MERN, Flutter, Electron, Python Automation, Generative AI Solutions
+
+🌐 Official Portfolio: https://suleman-zaheer.vercel.app/
+📖 Wikipedia: https://en.wikipedia.org/wiki/User:Imsuleman
+🗃️ Wikidata: https://www.wikidata.org/wiki/Q141839182</div>
+          <button class="copy-btn" onclick="copyText('li-bio-full')">Copy LinkedIn Bio</button>
+        </div>
+        <div>
+          <strong>X / Twitter Bio:</strong>
+          <div class="code-box" id="x-bio">Lead Software Engineer • Founder @ SAMStack Studio • CS @ UET Lahore • Urdu Poet 🇵🇰
+
+🌐 https://suleman-zaheer.vercel.app
+📖 https://en.wikipedia.org/wiki/User:Imsuleman</div>
+          <button class="copy-btn" onclick="copyText('x-bio')">Copy X / Twitter Bio</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLATFORM 7: ORCID & GOOGLE SCHOLAR -->
+    <div class="card">
+      <div class="card-header">
+        <h2><span class="step-num">7</span> ORCID &amp; Academic Researcher Identity<span class="tag tag-purple">Academic Entity</span></h2>
+        <a href="https://orcid.org/register" target="_blank" class="action-btn">Register on ORCID ↗</a>
+      </div>
+      <p>Establishes your academic / researcher identity recognized by Google Scholar and semantic engines.</p>
+      <div class="code-box" id="orcid-details">Name: Suleman Zaheer
+Affiliation: University of Engineering and Technology (UET), Lahore
+Department: Computer Science
+Country: Pakistan
+Keywords: Software Engineering, Distributed Systems, Retrieval-Augmented Generation, Generative AI, Natural Language Processing
+Websites:
+- Official Website: https://suleman-zaheer.vercel.app/
+- Wikipedia Biography: https://en.wikipedia.org/wiki/User:Imsuleman
+- Wikidata: https://www.wikidata.org/wiki/Q141839182</div>
+      <button class="copy-btn" onclick="copyText('orcid-details')">Copy ORCID Details</button>
+    </div>
+
+    <!-- PLATFORM 8: PRODUCT HUNT & F6S -->
+    <div class="card">
+      <div class="card-header">
+        <h2><span class="step-num">8</span> Product Hunt &amp; F6S Maker Profile<span class="tag tag-amber">Startup Ecosystem</span></h2>
+        <div>
+          <a href="https://www.producthunt.com/" target="_blank" class="action-btn" style="margin-right: 8px;">Product Hunt ↗</a>
+          <a href="https://www.f6s.com/" target="_blank" class="action-btn">F6S ↗</a>
+        </div>
+      </div>
+      <p>For startup makers and tech founders. Establishes commercial footprint.</p>
+      <div class="code-box" id="ph-bio">Headline: Founder & Lead Architect at SAMStack Studio | Full-Stack, Flutter & AI Systems
+Bio: Suleman Zaheer is a software engineer and maker from Lahore, Pakistan. Founder of SAMStack Studio, creating digital products with Next.js, Flutter, and AI automation.
+Website: https://suleman-zaheer.vercel.app/
+Wikipedia: https://en.wikipedia.org/wiki/User:Imsuleman</div>
+      <button class="copy-btn" onclick="copyText('ph-bio')">Copy Maker Bio</button>
+    </div>
+
   </div>
 
   <div id="toast" class="toast">✓ Copied to clipboard!</div>
