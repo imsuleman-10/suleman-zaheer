@@ -72,6 +72,10 @@ export default async function sitemap() {
     { url: '/author', priority: 0.7, changeFrequency: 'monthly' },
     { url: '/gallery-seo', priority: 0.7, changeFrequency: 'daily' },
     { url: '/sitemap', priority: 0.4, changeFrequency: 'monthly' },
+    // Off-page authority & entity disambiguation pages
+    { url: '/press', priority: 0.9, changeFrequency: 'monthly' },
+    { url: '/bio', priority: 0.95, changeFrequency: 'monthly' },
+    { url: '/mentions', priority: 0.85, changeFrequency: 'monthly' },
   ];
 
   const entries = staticPages.map(page => ({

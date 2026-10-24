@@ -1,0 +1,47 @@
+=== WIKIDATA QUICKSTATEMENTS — SULEMAN ZAHEER ENTITY ===
+Import URL: https://quickstatements.toolforge.org/
+
+STEP 1: Go to https://www.wikidata.org/wiki/Special:NewItem
+Fill in:
+  - Language: English
+  - Label: Suleman Zaheer
+  - Description: Pakistani software engineer and founder of SAMStack Studio
+  - Also add aliases: Suleman Zaheer Mughal, ?????? ????, imsuleman-10
+
+STEP 2: After creating the item (you get QID like Q12345678), add these properties:
+
+QUICKSTATEMENTS FORMAT (paste at https://quickstatements.toolforge.org/):
+
+LAST|P31|Q5
+LAST|P21|Q6581097
+LAST|P27|Q843
+LAST|P569|+2007-02-01T00:00:00Z/11
+LAST|P19|Q1140
+LAST|P106|Q205375
+LAST|P106|Q12405142
+LAST|P108|Q13371
+LAST|P856|"https://suleman-zaheer.vercel.app"
+LAST|P2037|"imsuleman-10"
+LAST|P4013|"imsuleman_10"
+LAST|P2003|"imsuleman.10"
+LAST|P2002|"imsuleman_10"
+
+PROPERTY KEY:
+P31  = instance of (Q5 = human)
+P21  = sex or gender (Q6581097 = male)
+P27  = country of citizenship (Q843 = Pakistan)
+P569 = date of birth (2007-02-01)
+P19  = place of birth (Q1140 = Lahore)
+P106 = occupation (Q205375 = software engineer, Q12405142 = entrepreneur)
+P108 = employer (Q13371 = UET Lahore - as student/alumnus)
+P856 = official website
+P2037 = GitHub username
+P4013 = Skype ID (use for Twitter: @imsuleman_10)
+P2003 = Instagram username
+P2002 = Twitter username
+
+AFTER CREATING:
+Copy your Wikidata QID (e.g. Q135500000) and update:
+1. layout.js sameAs array: "https://www.wikidata.org/wiki/Q135500000"
+2. llms.txt Entity ID section
+3. Email to: sulemanzaheer09@gmail.com with the QID for reference

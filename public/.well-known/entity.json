@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://suleman-zaheer.vercel.app/#person",
+  "name": "Suleman Zaheer",
+  "givenName": "Suleman",
+  "familyName": "Zaheer",
+  "additionalName": "Mughal",
+  "alternateName": ["?????? ????", "Suleman Zaheer Mughal", "imsuleman-10"],
+  "birthDate": "2007-02-01",
+  "birthPlace": "Shahdara Town, Lahore, Punjab, Pakistan",
+  "nationality": "Pakistani",
+  "gender": "Male",
+  "jobTitle": "Lead Software Engineer & Founder, SAMStack Studio",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "SAMStack Studio",
+    "url": "https://suleman-zaheer.vercel.app"
+  },
+  "url": "https://suleman-zaheer.vercel.app",
+  "email": "sulemanzaheer09@gmail.com",
+  "telephone": "+923285778715",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lahore",
+    "addressRegion": "Punjab",
+    "addressCountry": "PK"
+  },
+  "sameAs": [
+    "https://github.com/imsuleman-10",
+    "https://www.linkedin.com/in/suleman-zaheer-mughal",
+    "https://x.com/imsuleman_10",
+    "https://www.instagram.com/imsuleman.10/",
+    "https://web.facebook.com/Iamsuleman.10"
+  ]
+}

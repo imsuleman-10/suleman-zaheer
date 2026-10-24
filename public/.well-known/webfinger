@@ -1,0 +1,11 @@
+{
+  "subject": "acct:imsuleman_10@x.com",
+  "aliases": [
+    "https://suleman-zaheer.vercel.app/",
+    "https://github.com/imsuleman-10"
+  ],
+  "links": [
+    { "rel": "http://webfinger.net/rel/profile-page", "href": "https://suleman-zaheer.vercel.app/" },
+    { "rel": "self", "href": "https://suleman-zaheer.vercel.app/" }
+  ]
+}

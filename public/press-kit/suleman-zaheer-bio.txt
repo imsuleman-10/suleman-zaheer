@@ -1,0 +1,27 @@
+=== SULEMAN ZAHEER — OFFICIAL PRESS KIT BIO ===
+
+SHORT BIO (50 words):
+Suleman Zaheer is a Pakistani software engineer, founder of SAMStack Studio, and Urdu poet from Lahore. 
+Born in 2007, he specializes in full-stack web, mobile, desktop app development, Python automation, and AI solutions. 
+He is currently pursuing BS Computer Science at UET Lahore.
+
+MEDIUM BIO (100 words):
+Suleman Zaheer (born 1 February 2007, Lahore, Pakistan) is a Lead Software Engineer, entrepreneur, and Urdu poet. 
+As founder of SAMStack Studio, he delivers enterprise-grade digital solutions across Pakistan and internationally—including 
+full-stack web applications (MERN, Next.js, Laravel), cross-platform mobile apps (Flutter), desktop software (Electron.js), 
+Python automation, AI/LLM integrations, and data analytics. Currently enrolled in BS Computer Science at the University 
+of Engineering and Technology (UET) Lahore, Suleman combines the analytical precision of a software researcher with 
+the creative depth of a literary author.
+
+CONTACT FOR PRESS:
+Email: sulemanzaheer09@gmail.com
+WhatsApp: +92 328 5778715
+Portfolio: https://suleman-zaheer.vercel.app
+LinkedIn: https://www.linkedin.com/in/suleman-zaheer-mughal
+GitHub: https://github.com/imsuleman-10
+
+HIGH-RES PHOTO:
+https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg
+
+ORGANIZATION:
+SAMStack Studio — https://suleman-zaheer.vercel.app
