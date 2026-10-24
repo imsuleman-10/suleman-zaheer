@@ -2,28 +2,29 @@ import React from 'react';
 import CVClient from '@/components/CVClient';
 
 export const metadata = {
-  title: "Hire Suleman Zaheer | MERN, Laravel & Flutter Expert Resume",
-  description: "Download the official CV of Suleman Zaheer. Expert MERN Stack, Next.js, Laravel, and Flutter Developer in Lahore, Pakistan. Also providing Data Analysis, SEO & QA Testing.",
+  title: "Hire Suleman Zaheer | Full Stack Web, Mobile, Desktop & Automation Engineer Resume",
+  description: "Download the official CV of Suleman Zaheer. Expert Full-Stack (Next.js/MERN/Laravel), Mobile (Flutter), Desktop Software (Electron.js), Python Automations, AI Solutions, Data Analysis & SEO in Lahore, Pakistan.",
   keywords: [
-    "Suleman Zaheer CV", "Hire MERN Developer Lahore",
+    "Suleman Zaheer CV", "Hire MERN Developer Lahore", "Hire Desktop App Developer Pakistan",
+    "Hire Automation Developer Pakistan", "Hire Python Automation Engineer", "Hire AI Developer Pakistan",
     "Hire Laravel Developer Pakistan", "Hire Flutter Developer Pakistan",
     "Data Analyst CV Pakistan", "SEO Expert Resume Lahore", "QA Tester CV Pakistan",
-    "Next.js Expert CV"
+    "Next.js Expert CV", "Software Engineer Resume Lahore"
   ],
   alternates: {
     canonical: "https://suleman-zaheer.vercel.app/cv",
   },
   openGraph: {
-    title: "Hire Suleman Zaheer | MERN, Laravel & Flutter Expert Resume",
-    description: "View the official CV of Suleman Zaheer. Expert MERN Stack, Next.js, Laravel, and Flutter Developer based in Lahore, Pakistan.",
+    title: "Hire Suleman Zaheer | Multi-Stack Software Engineer Resume",
+    description: "View the official CV of Suleman Zaheer. Web, Mobile, Desktop & Automation Software Engineer based in Lahore, Pakistan.",
     url: "https://suleman-zaheer.vercel.app/cv",
-    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer CV - MERN, Laravel & Flutter Developer" }],
+    images: [{ url: "/assets/suleman-zaheer-full-stack-developer.jpg", width: 1200, height: 630, alt: "Suleman Zaheer CV - Software Engineer" }],
     type: "profile"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hire Suleman Zaheer | MERN, Laravel & Flutter Expert Resume",
-    description: "Professional CV of Suleman Zaheer. MERN, Next.js, Laravel & Flutter Developer from Lahore, Pakistan.",
+    title: "Hire Suleman Zaheer | Software Engineer Resume",
+    description: "Professional CV of Suleman Zaheer. Web, Mobile, Desktop, Automation & AI Developer from Lahore, Pakistan.",
     images: ["/assets/suleman-zaheer-full-stack-developer.jpg"],
     creator: "@imsuleman_10",
   },
@@ -37,7 +38,7 @@ export default function CVPage() {
       '@id': 'https://suleman-zaheer.vercel.app/cv#profilepage',
       name: 'Suleman Zaheer - Professional Resume & CV',
       url: 'https://suleman-zaheer.vercel.app/cv',
-      description: 'Official professional resume and CV of Suleman Zaheer - MERN, Next.js, Laravel & Flutter Developer from Lahore, Pakistan.',
+      description: 'Official professional resume and CV of Suleman Zaheer - Web, Mobile, Desktop, Automation & AI Developer from Lahore, Pakistan.',
       mainEntity: {
         '@type': 'Person',
         '@id': 'https://suleman-zaheer.vercel.app/#person',
@@ -45,7 +46,7 @@ export default function CVPage() {
         alternateName: ['سلیمان ظہیر', 'Suleman Zaheer Mughal'],
         url: 'https://suleman-zaheer.vercel.app',
         image: 'https://suleman-zaheer.vercel.app/assets/suleman-zaheer-full-stack-developer.jpg',
-        email: 'samstacktechs@gmail.com',
+        email: 'sulemanzaheer09@gmail.com',
         telephone: '+923285778715',
         address: {
           '@type': 'PostalAddress',
@@ -54,8 +55,8 @@ export default function CVPage() {
           addressRegion: 'Punjab',
           addressCountry: 'PK',
         },
-        jobTitle: 'MERN Stack, Next.js, Laravel & Flutter Developer | Data Analyst | QA Tester | SEO Expert',
-        description: 'Suleman Zaheer is a professional Full Stack Developer, Data Analyst, and QA Tester based in Lahore, Pakistan. He is the founder of SAMStack Studio and a Computer Science student at UET Lahore.',
+        jobTitle: 'Lead Software Engineer | Web, Mobile, Desktop, Automation & AI Specialist',
+        description: 'Suleman Zaheer is a professional Software Engineer, Multi-Stack Developer, and Automation Specialist based in Lahore, Pakistan. Founder of SAMStack Studio.',
         sameAs: [
           'https://github.com/imsuleman-10',
           'https://www.linkedin.com/in/suleman-zaheer-mughal',

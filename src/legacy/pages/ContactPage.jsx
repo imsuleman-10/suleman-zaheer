@@ -14,36 +14,15 @@ const ContactPage = () => {
     setStatus('loading');
 
     try {
-      // 1. Send email via EmailJS (works from browser - no backend needed)
+      // 1. Send email via /api/contact
       try {
-        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-        const autoReplyTemplateId = import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID;
-
-        if (serviceId && templateId && publicKey && serviceId !== 'YOUR_EMAILJS_SERVICE_ID') {
-          // Send notification email to admin
-          await emailjs.send(serviceId, templateId, {
-            from_name: formData.name,
-            from_email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-          }, publicKey);
-          console.log("Email sent via EmailJS");
-
-          // Send auto-reply to client (if template exists)
-          if (autoReplyTemplateId && autoReplyTemplateId !== 'YOUR_EMAILJS_AUTO_REPLY_TEMPLATE_ID') {
-            await emailjs.send(serviceId, autoReplyTemplateId, {
-              to_name: formData.name,
-              to_email: formData.email,
-              subject: formData.subject,
-            }, publicKey).catch(e => console.log("Auto-reply failed:", e));
-          }
-        } else {
-          console.warn("EmailJS not configured. Skipping email dispatch.");
-        }
-      } catch (emailErr) {
-        console.warn("EmailJS dispatch failed:", emailErr);
+        await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+      } catch (apiErr) {
+        console.warn("Direct API dispatch notice:", apiErr);
       }
 
       // 2. Save to Firebase Firestore (always works now)

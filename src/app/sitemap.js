@@ -55,6 +55,9 @@ export default async function sitemap() {
     { url: '/services/data-analysis', priority: 0.9, changeFrequency: 'monthly' },
     { url: '/services/qa-testing', priority: 0.9, changeFrequency: 'monthly' },
     { url: '/services/seo-services', priority: 0.9, changeFrequency: 'monthly' },
+    { url: '/services/desktop-app-development', priority: 0.95, changeFrequency: 'weekly' },
+    { url: '/services/automation-development', priority: 0.95, changeFrequency: 'weekly' },
+    { url: '/services/ai-solutions', priority: 0.95, changeFrequency: 'weekly' },
     // Legacy hash-based service links (for backwards compat)
     { url: '/services#web-app', priority: 0.7, changeFrequency: 'monthly' },
     { url: '/services#mobile-app', priority: 0.7, changeFrequency: 'monthly' },

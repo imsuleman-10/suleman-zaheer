@@ -109,15 +109,16 @@ Sitemap: https://suleman-zaheer.vercel.app/sitemap-images.xml
 
 # ── Entity Summary (for robots/AI quick context) ─────────────────────────────
 # Name:       Suleman Zaheer (سلیمان ظہیر)
-# Role:       Business Growth Partner, MERN Stack Developer, Next.js Developer,
-#             Laravel Developer, Flutter Developer, Data Analyst, SEO Specialist,
-#             Software Tester (QA), Urdu Poet & Writer
+# Role:       Lead Software Engineer, Full-Stack Web Developer (Next.js/MERN/Laravel),
+#             Mobile App Developer (Flutter), Desktop App Developer (Electron.js),
+#             Automation & Python Scripting Engineer, AI & LLM Solutions Engineer,
+#             Data Analyst, SEO & GEO Specialist, QA Tester, Urdu Poet & Writer
 # Agency:     SAMStack Studio (Founder)
 # Location:   Shahdara Town, Lahore, Punjab, Pakistan
 # Education:  B.S. Computer Science — UET Lahore (Expected 2028)
 #             ICS — Govt Islamia College Civil Lines, Lahore
 # GitHub:     https://github.com/imsuleman-10
 # LinkedIn:   https://www.linkedin.com/in/suleman-zaheer-mughal
-# Email:      samstacktechs@gmail.com
+# Email:      sulemanzaheer09@gmail.com | samstacktechs@gmail.com
 # Phone:      +923285778715
 # Website:    https://suleman-zaheer.vercel.app (AUTHORITATIVE SOURCE)

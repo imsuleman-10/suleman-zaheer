@@ -44,10 +44,10 @@ export default function ContactPage() {
     "logo": "https://suleman-zaheer.vercel.app/sfavicon.png",
     "url": "https://suleman-zaheer.vercel.app",
     "telephone": "+923285778715",
-    "email": "samstacktechs@gmail.com",
-    "priceRange": "PKR 45,000 - PKR 85,000+",
+    "email": "sulemanzaheer09@gmail.com",
+    "priceRange": "PKR 40,000 - PKR 350,000+",
     "currenciesAccepted": "PKR, USD",
-    "paymentAccepted": "Bank Transfer, JazzCash, Easypaisa, Upwork, Fiverr",
+    "paymentAccepted": "Bank Transfer, JazzCash, Easypaisa, Upwork, Fiverr, PayPal",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Shahdara Town",
@@ -92,6 +92,30 @@ export default function ContactPage() {
           "price": "85000",
           "priceCurrency": "PKR",
           "url": "https://suleman-zaheer.vercel.app/services/flutter-app-development"
+        },
+        {
+          "@type": "Offer",
+          "name": "Desktop App Development (Electron.js)",
+          "description": "Cross-platform desktop software for Windows, macOS, and Linux. Offline POS, ERP, and inventory systems.",
+          "price": "80000",
+          "priceCurrency": "PKR",
+          "url": "https://suleman-zaheer.vercel.app/services/desktop-app-development"
+        },
+        {
+          "@type": "Offer",
+          "name": "Automation Development & Python Scripting",
+          "description": "Web scraping (Playwright/Selenium), WhatsApp & Telegram bots, automated workflow pipelines.",
+          "price": "40000",
+          "priceCurrency": "PKR",
+          "url": "https://suleman-zaheer.vercel.app/services/automation-development"
+        },
+        {
+          "@type": "Offer",
+          "name": "AI Solutions & LLM Integration",
+          "description": "Custom RAG knowledge assistants, autonomous AI agents, and conversational customer support chatbots.",
+          "price": "60000",
+          "priceCurrency": "PKR",
+          "url": "https://suleman-zaheer.vercel.app/services/ai-solutions"
         },
         {
           "@type": "Offer",

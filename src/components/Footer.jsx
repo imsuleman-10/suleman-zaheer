@@ -62,14 +62,16 @@ const Footer = () => {
           </nav>
 
           <div>
-            <h4 className="text-white font-bold mb-6">Services</h4>
-            <ul className="space-y-4">
-              <li className="text-gray-400">Full Stack Web Development</li>
-              <li className="text-gray-400">MERN Stack Solutions</li>
-              <li className="text-gray-400">Next.js & React Development</li>
-              <li className="text-gray-400">Laravel & PHP Development</li>
-              <li className="text-gray-400">REST API Architecture</li>
-              <li className="text-gray-400">UI/UX Design & Consultation</li>
+            <h4 className="text-white font-bold mb-6">Expert Services</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link href="/services/mern-stack-development" className="text-gray-400 hover:text-primary transition-colors">MERN Stack Development</Link></li>
+              <li><Link href="/services/nextjs-development" className="text-gray-400 hover:text-primary transition-colors">Next.js Enterprise Apps</Link></li>
+              <li><Link href="/services/flutter-app-development" className="text-gray-400 hover:text-primary transition-colors">Flutter Mobile Apps</Link></li>
+              <li><Link href="/services/desktop-app-development" className="text-gray-400 hover:text-primary transition-colors">Desktop Software (Electron)</Link></li>
+              <li><Link href="/services/automation-development" className="text-gray-400 hover:text-primary transition-colors">Python Automation & Bots</Link></li>
+              <li><Link href="/services/ai-solutions" className="text-gray-400 hover:text-primary transition-colors">AI Solutions & RAG Systems</Link></li>
+              <li><Link href="/services/seo-services" className="text-gray-400 hover:text-primary transition-colors">Technical SEO & GEO</Link></li>
+              <li><Link href="/services/data-analysis" className="text-gray-400 hover:text-primary transition-colors">Data Analysis & Power BI</Link></li>
             </ul>
           </div>
         </div>

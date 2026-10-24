@@ -258,6 +258,54 @@ const services = [
     useCases: ["Business Landing Pages", "Personal Portfolios", "Event Pages", "Restaurant Menus", "Agency Brochures"],
     price: "Starting from PKR 45,000",
     deliveryTime: "1–3 weeks",
+  },
+  {
+    id: "automation-development",
+    icon: Zap,
+    color: "text-emerald-400",
+    bgColor: "bg-emerald-400/10",
+    borderColor: "border-emerald-400/20",
+    title: "Automation Development & Python Scripting",
+    subtitle: "Web Scraping, WhatsApp/Telegram Bots & Automated Workflows",
+    description: "Eliminate repetitive manual tasks with high-speed Python automations. Suleman Zaheer builds stealth web scrapers, WhatsApp Business bots, Telegram bots, multi-system API synchronizers, and scheduled cron data pipelines that run 24/7 on autopilot.",
+    features: [
+      "Python Task & Workflow Automation",
+      "Stealth Web Scraping (Playwright, Selenium, BeautifulSoup)",
+      "WhatsApp Business, Telegram & Discord Bots",
+      "Multi-System API Integration & Webhooks",
+      "Automated Financial & Inventory Reporting",
+      "Cloud Cron Jobs & Headless Task Execution",
+      "Google Sheets & SQL Live Sync",
+      "Zero-Human-Touch Background Pipelines"
+    ],
+    technologies: ["Python", "Playwright", "Selenium", "FastAPI", "Node.js", "Cron", "Pandas", "Telegram API"],
+    useCases: ["Market Intelligence Gathering", "Automated Lead Extraction", "E-Commerce Price Monitoring", "Automated Customer Alerts", "Multi-App Data Sync"],
+    price: "Starting from PKR 40,000",
+    deliveryTime: "1–4 weeks",
+  },
+  {
+    id: "ai-solutions",
+    icon: Globe,
+    color: "text-cyan-400",
+    bgColor: "bg-cyan-400/10",
+    borderColor: "border-cyan-400/20",
+    title: "AI Solutions & LLM Integration",
+    subtitle: "RAG Systems, Autonomous AI Agents & Custom Chatbots",
+    description: "Harness enterprise Artificial Intelligence. Suleman Zaheer engineers production RAG systems, multi-step autonomous AI agents, and conversational chatbots powered by OpenAI GPT-4o, Google Gemini, and Anthropic Claude integrated into web, mobile, and WhatsApp.",
+    features: [
+      "Custom RAG (Retrieval-Augmented Generation) Knowledge Bases",
+      "OpenAI, Google Gemini & Claude API Integrations",
+      "Autonomous Multi-Agent Systems & Task Planners",
+      "Omnichannel AI Customer Support Bots",
+      "Vector Database Architecture (Pinecone, PGVector)",
+      "Automated Content Generation & AI Data Analysis",
+      "Text-to-SQL Natural Language Queries",
+      "Enterprise Data Privacy & Security Guardrails"
+    ],
+    technologies: ["OpenAI API", "Google Gemini", "LangChain", "LlamaIndex", "Pinecone", "Python", "FastAPI", "Next.js"],
+    useCases: ["24/7 AI Customer Support", "Internal Knowledge Base Search", "Document Q&A & Summarization", "Sales Assistant Chatbots", "AI-Driven Automation"],
+    price: "Starting from PKR 60,000",
+    deliveryTime: "2–6 weeks",
   }
 ];
 
@@ -373,6 +421,28 @@ export default function ServicesPage() {
         offers: { '@type': 'Offer', priceCurrency: 'PKR', price: '45000' }
       },
       {
+        '@type': 'Service',
+        '@id': 'https://suleman-zaheer.vercel.app/services/automation-development#service',
+        name: 'Automation Development & Python Scripting',
+        description: 'Professional Automation Development, Web Scraping (Playwright/Selenium), WhatsApp/Telegram Bots, and Workflow API Automations by Suleman Zaheer in Lahore, Pakistan.',
+        provider: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
+        areaServed: [{ '@type': 'City', name: 'Lahore' }, { '@type': 'Country', name: 'Pakistan' }, { '@type': 'Place', name: 'Worldwide' }],
+        serviceType: 'Automation & Scripting Development',
+        url: 'https://suleman-zaheer.vercel.app/services/automation-development',
+        offers: { '@type': 'Offer', priceCurrency: 'PKR', price: '40000' }
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://suleman-zaheer.vercel.app/services/ai-solutions#service',
+        name: 'AI Solutions & LLM Integration',
+        description: 'Custom RAG systems, OpenAI/Gemini/Claude integrations, autonomous AI agents, and conversational intelligence chatbots by Suleman Zaheer in Lahore, Pakistan.',
+        provider: { '@id': 'https://suleman-zaheer.vercel.app/#person' },
+        areaServed: [{ '@type': 'City', name: 'Lahore' }, { '@type': 'Country', name: 'Pakistan' }, { '@type': 'Place', name: 'Worldwide' }],
+        serviceType: 'Artificial Intelligence & Machine Learning',
+        url: 'https://suleman-zaheer.vercel.app/services/ai-solutions',
+        offers: { '@type': 'Offer', priceCurrency: 'PKR', price: '60000' }
+      },
+      {
         '@type': 'FAQPage',
         mainEntity: [
           {
@@ -482,6 +552,9 @@ export default function ServicesPage() {
                              service.id === 'data-analysis' ? '/services/data-analysis' :
                              service.id === 'web-app' ? '/services/mern-stack-development' :
                              service.id === 'mobile-app' || service.id === 'android-app' ? '/services/flutter-app-development' :
+                             service.id === 'desktop-app' ? '/services/desktop-app-development' :
+                             service.id === 'automation-development' ? '/services/automation-development' :
+                             service.id === 'ai-solutions' ? '/services/ai-solutions' :
                              '/contact';
 
             return (

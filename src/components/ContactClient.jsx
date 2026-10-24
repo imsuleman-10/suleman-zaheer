@@ -14,54 +14,57 @@ export default function ContactClient() {
     setStatus('loading');
 
     try {
-      // 1. Send email via EmailJS
-      try {
-        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-        const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-        const autoReplyTemplateId = process.env.NEXT_PUBLIC_EMAILJS_AUTO_REPLY_TEMPLATE_ID;
+      // 1. Dispatch dual emails via server-side /api/contact route
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-        if (serviceId && templateId && publicKey && serviceId !== 'YOUR_EMAILJS_SERVICE_ID') {
-          await emailjs.send(serviceId, templateId, {
-            from_name: formData.name,
-            from_email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-          }, publicKey);
+      const responseData = await response.json().catch(() => ({}));
 
-          if (autoReplyTemplateId && autoReplyTemplateId !== 'YOUR_EMAILJS_AUTO_REPLY_TEMPLATE_ID') {
-            await emailjs.send(serviceId, autoReplyTemplateId, {
-              to_name: formData.name,
-              to_email: formData.email,
-              subject: formData.subject,
-            }, publicKey).catch(e => console.log("Auto-reply failed:", e));
-          }
-        }
-      } catch (emailErr) {
-        console.warn("EmailJS dispatch failed:", emailErr);
+      if (!response.ok) {
+        throw new Error(responseData.error || 'Server responded with an error');
       }
 
-      // 2. Save to Firebase Firestore
-      await addDoc(collection(db, "contactRequests"), {
-        ...formData,
-        read: false,
-        replies: [
-          {
-            sender: 'Admin',
-            text: 'Thanks for reaching out! I have received your message and will get back to you soon.',
-            timestamp: new Date().toISOString()
-          }
-        ],
-        createdAt: serverTimestamp()
-      });
-      
+      // 2. Save to Firebase Firestore for Admin Dashboard records
+      try {
+        await addDoc(collection(db, "contactRequests"), {
+          ...formData,
+          read: false,
+          replies: [
+            {
+              sender: 'Admin',
+              text: 'Thanks for reaching out! I have received your message and will get back to you soon.',
+              timestamp: new Date().toISOString()
+            }
+          ],
+          createdAt: serverTimestamp()
+        });
+      } catch (firestoreErr) {
+        console.warn("Firestore sync notice:", firestoreErr);
+      }
+
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setStatus('idle'), 5000);
+      setTimeout(() => setStatus('idle'), 7000);
     } catch (err) {
       console.error("Critical Submission Error:", err);
-      // Fallback to localStorage
+      // Fallback: save to Firestore & localStorage if API network issue
       try {
+        await addDoc(collection(db, "contactRequests"), {
+          ...formData,
+          read: false,
+          replies: [
+            {
+              sender: 'Admin',
+              text: 'Thanks for reaching out! I have received your message and will get back to you soon.',
+              timestamp: new Date().toISOString()
+            }
+          ],
+          createdAt: serverTimestamp()
+        });
+
         const newRequest = {
           id: Date.now().toString(),
           ...formData,
@@ -79,7 +82,7 @@ export default function ContactClient() {
         localStorage.setItem('localRequests', JSON.stringify([newRequest, ...existingData]));
         setStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
-        setTimeout(() => setStatus('idle'), 5000);
+        setTimeout(() => setStatus('idle'), 7000);
       } catch (localErr) {
         setStatus('error');
       }
@@ -108,7 +111,7 @@ export default function ContactClient() {
             </div>
             <div>
               <h4 className="text-white font-bold mb-1">Email</h4>
-              <p className="text-gray-400 text-sm sm:text-base break-all">samstacktechs@gmail.com</p>
+              <p className="text-gray-400 text-sm sm:text-base break-all">sulemanzaheer09@gmail.com</p>
             </div>
           </div>
 

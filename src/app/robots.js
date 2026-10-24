@@ -12,11 +12,16 @@ export default function robots() {
         userAgent: [
           'GPTBot',
           'ChatGPT-User',
+          'OAI-SearchBot',
           'ClaudeBot',
+          'Claude-Web',
           'PerplexityBot',
           'Google-Extended',
           'Applebot-Extended',
-          'Amazonbot'
+          'Amazonbot',
+          'Bytespider',
+          'cohere-ai',
+          'Meta-ExternalAgent'
         ],
         allow: [
           '/',
@@ -27,9 +32,19 @@ export default function robots() {
           '/author',
           '/projects',
           '/services',
+          '/services/desktop-app-development',
+          '/services/automation-development',
+          '/services/ai-solutions',
+          '/services/mern-stack-development',
+          '/services/nextjs-development',
+          '/services/flutter-app-development',
+          '/services/data-analysis',
+          '/services/seo-services',
+          '/services/qa-testing',
           '/blog',
           '/poetry',
-          '/cv'
+          '/cv',
+          '/contact'
         ],
         disallow: ['/admin', '/login', '/api/'],
       }

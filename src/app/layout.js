@@ -16,26 +16,41 @@ const outfit = Outfit({
 export const metadata = {
   metadataBase: new URL('https://suleman-zaheer.vercel.app'),
   title: {
-    default: 'Suleman Zaheer | Business Growth Partner & Multi-Stack Expert – Lahore, Pakistan',
+    default: 'Suleman Zaheer | Lead Software Engineer, Web, Mobile, Desktop & Automation Expert – Lahore, Pakistan',
     template: '%s | Suleman Zaheer',
   },
   description:
-    'Suleman Zaheer – Business Growth Partner & Software Engineer in Lahore, Pakistan. Core Stack: MERN, Next.js, Laravel, Flutter, Data Analysis, SEO, and QA Testing. Founder of SAMStack Studio.',
+    'Suleman Zaheer – Top-Rated Lead Software Engineer & Business Growth Partner in Lahore, Pakistan. Full-Stack Web (MERN, Next.js, Laravel), Mobile Apps (Flutter), Desktop Software (Electron.js), Python Automation & Web Scraping, AI Solutions, Data Analytics & SEO.',
   keywords: [
     'Suleman Zaheer',
+    'Best Developer in Lahore',
+    'Best Software Engineer Pakistan',
+    'Full Stack Web Developer Lahore',
     'MERN Stack Developer Lahore',
     'Next.js Expert Pakistan',
     'Laravel Developer Lahore',
     'Flutter App Developer Pakistan',
+    'Mobile App Developer Lahore',
+    'Desktop App Developer Lahore',
+    'Desktop App Development Pakistan',
+    'Electron.js Developer Pakistan',
+    'Automation Developer Lahore',
+    'Automation Developer Pakistan',
+    'Python Automation Engineer',
+    'Web Scraping Expert Pakistan',
+    'Bot Developer Lahore',
+    'WhatsApp Bot Developer',
+    'AI Developer Pakistan',
+    'AI Solutions Engineer Lahore',
     'Data Analyst Lahore',
     'SEO Expert Lahore',
+    'Technical SEO Pakistan',
+    'GEO Generative Engine Optimization',
     'QA Tester Pakistan',
     'Software Engineer Lahore',
-    'Business Growth Consultant',
-    'Website Development Lahore',
-    'Web App Development Lahore',
     'SAMStack Studio',
-    'Technical SEO Pakistan',
+    'Hire Developer in Pakistan',
+    'Custom Software Developer Lahore'
   ],
   authors: [{ name: 'Suleman Zaheer', url: 'https://suleman-zaheer.vercel.app/' }],
   creator: 'Suleman Zaheer',
@@ -169,26 +184,34 @@ export default function RootLayout({ children }) {
         height: 630,
         caption: 'Suleman Zaheer – Software Engineer, Web Developer and Urdu Poet from Lahore, Pakistan'
       },
-      description: 'Suleman Zaheer is a Business Growth Partner, Data Analyst, MERN Stack Developer, Next.js Architect, Laravel Developer, Flutter Expert, SEO Specialist, QA Tester, and Urdu Poet based in Shahdara Town, Lahore, Pakistan.',
-      jobTitle: 'Business Growth Partner, MERN/Next.js/Laravel/Flutter Developer, Data Analyst, SEO Specialist & QA Tester',
-      disambiguatingDescription: 'Suleman Zaheer (سلیمان ظہیر) – Software Engineer and Data Analyst with expertise in MERN, Next.js, Laravel, Flutter, SEO, and Testing.',
+      description: 'Suleman Zaheer is a Lead Software Engineer, Full Stack Web Developer (MERN/Next.js/Laravel), Cross-Platform Mobile Developer (Flutter), Desktop App Engineer (Electron.js), Automation Specialist (Python/Bots/Scraping), AI Solutions Engineer, Data Analyst, and Urdu Poet based in Shahdara Town, Lahore, Pakistan.',
+      jobTitle: 'Lead Software Engineer, Full Stack Web, Mobile & Desktop Architect, Automation & AI Specialist',
+      disambiguatingDescription: 'Suleman Zaheer (سلیمان ظہیر) – Software Engineer and Developer with authority across Full Stack Web, Flutter Mobile, Electron.js Desktop, Python Automations, AI Solutions, Data Analysis, and Technical SEO.',
       knowsAbout: [
+        'Full Stack Web Development',
         'MERN Stack',
-        'Next.js',
-        'Laravel',
-        'Flutter',
-        'Data Analysis',
-        'SEO',
-        'Software Testing',
-        'QA (Quality Assurance)',
+        'Next.js Enterprise Architecture',
+        'Laravel & PHP',
+        'Flutter Mobile App Development',
+        'Desktop App Development (Electron.js)',
+        'Automation Development & Python Scripting',
+        'Web Scraping & Crawling (Playwright, Selenium)',
+        'Bot Development (WhatsApp, Telegram, Discord)',
+        'AI Solutions & LLM Integration (OpenAI, Gemini, Claude)',
+        'RAG (Retrieval-Augmented Generation) Systems',
+        'Point of Sale (POS) & ERP Software',
+        'Data Analysis & Business Intelligence (Power BI, Python)',
+        'Technical SEO & Local SEO Lahore',
+        'GEO – Generative Engine Optimization',
+        'AEO – Answer Engine Optimization',
+        'LLMO – Large Language Model Optimization',
+        'Software Testing & Automated QA',
         'React.js',
         'Node.js',
         'MongoDB',
         'PostgreSQL',
-        'Python',
-        'Power BI',
-        'Technical SEO',
-        'GEO – Generative Engine Optimization',
+        'MySQL',
+        'Firebase',
         'Business Growth Strategy'
       ],
       knowsLanguage: [
@@ -265,9 +288,27 @@ export default function RootLayout({ children }) {
       hasOccupation: [
         {
           '@type': 'Occupation',
-          name: 'Software Engineer (MERN, Next.js, Laravel & Flutter)',
+          name: 'Lead Software Engineer (Full-Stack Web & Mobile)',
           occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
           skills: 'MERN Stack, Next.js, Laravel, Flutter, React.js, Node.js, MongoDB, PostgreSQL, PHP, Dart'
+        },
+        {
+          '@type': 'Occupation',
+          name: 'Desktop Application Software Engineer',
+          occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
+          skills: 'Electron.js, React.js, Windows .exe, macOS, Linux, SQLite, POS Systems, Offline Software Architecture'
+        },
+        {
+          '@type': 'Occupation',
+          name: 'Automation Engineer & Python Scripting Specialist',
+          occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
+          skills: 'Python Automation, Web Scraping, Playwright, Selenium, WhatsApp Bots, Telegram Bots, API Integrations, Cron Jobs'
+        },
+        {
+          '@type': 'Occupation',
+          name: 'AI & LLM Solutions Engineer',
+          occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
+          skills: 'Generative AI, LLM Orchestration, RAG Systems, OpenAI, Google Gemini, Anthropic Claude, LangChain, Vector Databases'
         },
         {
           '@type': 'Occupation',
@@ -279,7 +320,7 @@ export default function RootLayout({ children }) {
           '@type': 'Occupation',
           name: 'SEO Specialist & QA Tester',
           occupationLocation: { '@type': 'City', name: 'Lahore, Pakistan' },
-          skills: 'Technical SEO, Local SEO, GEO, AEO, Software Testing, Quality Assurance, Automated Testing, Manual Testing'
+          skills: 'Technical SEO, Local SEO, GEO, AEO, LLMO, Automated QA Testing, Manual Testing, Core Web Vitals'
         },
         {
           '@type': 'Occupation',
@@ -435,7 +476,23 @@ export default function RootLayout({ children }) {
             description: 'Cross-platform Desktop Application Development using Electron.js and React.js for Windows, macOS, and Linux. POS systems, inventory management, business tools.',
             priceCurrency: 'PKR',
             price: '80000',
-            url: 'https://suleman-zaheer.vercel.app/services#desktop-app'
+            url: 'https://suleman-zaheer.vercel.app/services/desktop-app-development'
+          },
+          {
+            '@type': 'Offer',
+            name: 'Automation Development & Python Scripting',
+            description: 'Web scraping, task automation, WhatsApp/Telegram bot development, and automated workflow pipelines.',
+            priceCurrency: 'PKR',
+            price: '40000',
+            url: 'https://suleman-zaheer.vercel.app/services/automation-development'
+          },
+          {
+            '@type': 'Offer',
+            name: 'AI Solutions & LLM Integration',
+            description: 'Custom RAG systems, OpenAI/Gemini/Claude integrations, autonomous AI agents, and conversational intelligence chatbots.',
+            priceCurrency: 'PKR',
+            price: '60000',
+            url: 'https://suleman-zaheer.vercel.app/services/ai-solutions'
           },
           {
             '@type': 'Offer',
@@ -451,7 +508,7 @@ export default function RootLayout({ children }) {
             description: 'Full SEO services: Technical SEO, Local SEO for Lahore/Pakistan, GEO (AI Search), AEO, LLM Optimization, Core Web Vitals, and schema markup.',
             priceCurrency: 'PKR',
             price: '30000',
-            url: 'https://suleman-zaheer.vercel.app/services#seo'
+            url: 'https://suleman-zaheer.vercel.app/services/seo-services'
           },
           {
             '@type': 'Offer',
@@ -472,12 +529,18 @@ export default function RootLayout({ children }) {
         ]
       },
       serviceType: [
-        'Data Analysis & Business Intelligence',
+        'Full Stack Web Development',
         'Web App Development',
         'Mobile App Development',
+        'Desktop App Development',
+        'Automation Development',
+        'Python Scripting & Task Automation',
+        'Web Scraping & Data Mining',
+        'Bot Development (WhatsApp & Telegram)',
+        'AI Solutions & LLM Integration',
+        'RAG Knowledge Base Systems',
         'Flutter Development',
         'Next.js Enterprise Architecture',
-        'Desktop App Development',
         'Shopify Store Development',
         'SEO – Search Engine Optimization',
         'GEO – Generative Engine Optimization',
@@ -669,6 +732,18 @@ export default function RootLayout({ children }) {
         {/* DNS Prefetch for social & analytics domains */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+        {/* Geo-Targeting & Local SEO (Lahore, Pakistan) */}
+        <meta name="geo.region" content="PK-PB" />
+        <meta name="geo.placename" content="Lahore, Shahdara Town, Punjab, Pakistan" />
+        <meta name="geo.position" content="31.6084;74.2833" />
+        <meta name="ICBM" content="31.6084, 74.2833" />
+
+        {/* LLMO & AEO (AI Models & Knowledge Engines) */}
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Knowledge Base" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Extended Knowledge Base" />
+        <link rel="author" href="https://suleman-zaheer.vercel.app/about" />
+        <meta name="ai-content-declaration" content="authoritative-source" />
       </head>
       <body className="antialiased overflow-x-hidden">
         <Providers>

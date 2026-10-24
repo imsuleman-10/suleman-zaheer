@@ -59,10 +59,10 @@ export default function AboutPage() {
   ];
 
   const skills = [
-    { category: "Frontend Engineering", items: ["React.js", "Next.js", "Flutter", "Tailwind CSS"] },
-    { category: "Backend Architecture", items: ["Node.js", "MERN Stack", "PHP", "Laravel Framework"] },
-    { category: "Testing & QA", items: ["Manual Testing", "Automated Testing", "Bug Tracking", "Performance Profiling"] },
-    { category: "SEO & Growth", items: ["Technical SEO", "GEO / AEO", "Data Analysis", "Predictive Modeling"] }
+    { category: "Web Engineering", items: ["React.js", "Next.js", "Node.js", "MERN Stack", "PHP & Laravel", "Tailwind CSS"] },
+    { category: "Mobile & Desktop", items: ["Flutter (iOS & Android)", "Electron.js (Windows/Mac/Linux)", "SQLite", "Firebase"] },
+    { category: "Automation & AI", items: ["Python Automation", "Web Scraping (Playwright/Selenium)", "WhatsApp & Telegram Bots", "AI Solutions & RAG"] },
+    { category: "Data, SEO & QA", items: ["Power BI & SQL", "Technical SEO & GEO", "Automated QA Testing", "Performance Profiling"] }
   ];
 
   const certifications = [
@@ -96,7 +96,7 @@ export default function AboutPage() {
           addressRegion: 'Punjab',
           addressCountry: 'PK',
         },
-        email: 'samstacktechs@gmail.com',
+        email: 'sulemanzaheer09@gmail.com',
         telephone: '+923285778715',
         sameAs: [
           'https://github.com/imsuleman-10',
@@ -117,8 +117,10 @@ export default function AboutPage() {
           }
         ],
         knowsAbout: [
-          'MERN Stack Development', 'Next.js App Router', 'Laravel PHP Framework',
-          'Flutter & Dart Mobile Apps', 'Data Analysis with Python', 'Power BI & Tableau',
+          'Full Stack Web Development', 'MERN Stack Development', 'Next.js App Router', 'Laravel PHP Framework',
+          'Flutter & Dart Mobile Apps', 'Desktop App Development (Electron.js)', 'Python Automation Scripting',
+          'Web Scraping & Crawling (Playwright, Selenium)', 'WhatsApp & Telegram Bot Development',
+          'AI Solutions & Custom RAG Systems', 'Data Analysis with Python', 'Power BI & Tableau',
           'Technical SEO & GEO', 'AEO & LLMO', 'QA Testing & Automation',
           'MongoDB', 'Node.js', 'React.js', 'Urdu Poetry & Literature'
         ],

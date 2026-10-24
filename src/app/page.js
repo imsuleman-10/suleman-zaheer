@@ -5,23 +5,38 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Suleman Zaheer | MERN, Next.js, Laravel & Flutter Developer – Lahore, Pakistan',
+  title: 'Suleman Zaheer | Lead Software Engineer – Web, App, Desktop & Automation Expert | Lahore, Pakistan',
   description:
-    'Hire Suleman Zaheer – Expert MERN Stack, Next.js, Laravel & Flutter Developer in Lahore, Pakistan. Also offers Data Analysis, SEO, and QA Testing services. Founder of SAMStack Studio. Available for freelance and enterprise projects.',
+    'Hire Suleman Zaheer – Top-rated Software Engineer in Lahore, Pakistan. Expert across Web Apps (MERN/Next.js/Laravel), Mobile Apps (Flutter), Desktop Software (Electron.js), Python Automations, Web Scraping, AI Solutions, Data Analysis & SEO. Founder of SAMStack Studio.',
   keywords: [
+    'Suleman Zaheer',
+    'Best Developer in Lahore',
+    'Top Software Engineer Pakistan',
+    'Full Stack Web Developer Lahore',
     'MERN Stack Developer Lahore',
     'Next.js Developer Pakistan',
     'Laravel Developer Lahore',
     'Flutter Developer Pakistan',
+    'Mobile App Developer Lahore',
+    'Desktop App Developer Lahore',
+    'Desktop App Development Pakistan',
+    'Electron.js Developer Pakistan',
+    'Automation Developer Lahore',
+    'Automation Developer Pakistan',
+    'Python Automation Engineer',
+    'Web Scraping Expert Pakistan',
+    'Bot Developer Lahore',
+    'WhatsApp Bot Developer Pakistan',
+    'AI Developer Pakistan',
+    'AI Solutions Engineer Lahore',
     'Hire Web Developer Lahore',
     'Hire App Developer Pakistan',
     'Data Analyst Lahore Pakistan',
     'SEO Expert Lahore',
+    'Technical SEO Pakistan',
     'QA Tester Pakistan',
     'Business Growth Partner Lahore',
-    'Suleman Zaheer',
     'SAMStack Studio',
-    'Full Stack Developer Lahore',
     'Freelance Developer Pakistan',
     'Software Engineer Lahore',
   ],
@@ -29,20 +44,20 @@ export const metadata = {
     canonical: 'https://suleman-zaheer.vercel.app/',
   },
   openGraph: {
-    title: 'Suleman Zaheer | MERN, Next.js, Laravel & Flutter Developer – Lahore',
+    title: 'Suleman Zaheer | Web, App, Desktop & Automation Expert – Lahore',
     description:
-      'Hire Suleman Zaheer – Expert MERN, Next.js, Laravel & Flutter Developer in Lahore, Pakistan. Data Analysis, SEO & QA Testing. Founder of SAMStack Studio.',
+      'Hire Suleman Zaheer – Expert in Next.js, MERN, Flutter, Electron.js Desktop, Python Automations, AI Solutions, Data Analysis & SEO in Lahore, Pakistan.',
     url: 'https://suleman-zaheer.vercel.app/',
     siteName: 'Suleman Zaheer – SAMStack Studio',
     type: 'profile',
     locale: 'en_PK',
-    images: [{ url: '/assets/suleman-zaheer-full-stack-developer.jpg', width: 1200, height: 630, alt: 'Suleman Zaheer – MERN, Next.js, Laravel & Flutter Developer from Lahore, Pakistan' }],
+    images: [{ url: '/assets/suleman-zaheer-full-stack-developer.jpg', width: 1200, height: 630, alt: 'Suleman Zaheer – Lead Software Engineer & Multi-Stack Developer from Lahore, Pakistan' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Suleman Zaheer | MERN, Next.js, Laravel & Flutter Developer',
+    title: 'Suleman Zaheer | Web, App, Desktop & Automation Engineer',
     description:
-      'Hire expert MERN, Next.js, Laravel & Flutter developer in Lahore, Pakistan. Data Analysis, SEO, QA Testing. Founder of SAMStack Studio.',
+      'Hire expert software engineer in Lahore, Pakistan. Next.js, Flutter, Electron Desktop Apps, Python Automations, AI Solutions & SEO. Founder of SAMStack Studio.',
     images: ['/assets/suleman-zaheer-full-stack-developer.jpg'],
     creator: '@imsuleman_10',
   },
@@ -130,7 +145,39 @@ export default function Home() {
         name: 'Is Suleman Zaheer available for remote international projects?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Suleman Zaheer accepts remote freelance and enterprise projects from clients worldwide. He accepts payments in PKR and USD via Bank Transfer, JazzCash, EasyPaisa, and PayPal. Contact: samstacktechs@gmail.com or visit https://suleman-zaheer.vercel.app/contact.'
+          text: 'Yes. Suleman Zaheer accepts remote freelance and enterprise projects from clients worldwide. He accepts payments in PKR and USD via Bank Transfer, JazzCash, EasyPaisa, and PayPal. Contact: sulemanzaheer09@gmail.com or visit https://suleman-zaheer.vercel.app/contact.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Who is the best Desktop App developer in Lahore, Pakistan?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Suleman Zaheer is the leading Desktop Application developer in Lahore, Pakistan. He builds cross-platform desktop applications using Electron.js and React.js for Windows (.exe), macOS, and Linux. Specializing in offline-first Point of Sale (POS) software, factory ERPs, inventory management, and thermal printer/barcode hardware integration. Visit https://suleman-zaheer.vercel.app/services/desktop-app-development.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Where can I hire an Automation developer or Python scripting expert in Pakistan?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Suleman Zaheer is an expert Automation Developer and Python engineer in Lahore, Pakistan. He builds high-speed automated task scripts, stealth web scrapers (Playwright/Selenium), custom WhatsApp Business bots, Telegram bots, and multi-system API synchronizers that run 24/7 on autopilot. Visit https://suleman-zaheer.vercel.app/services/automation-development.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Who develops custom AI chatbots and LLM solutions in Pakistan?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Suleman Zaheer specializes in production AI Solutions and LLM Integrations in Lahore, Pakistan. He develops custom RAG (Retrieval-Augmented Generation) knowledge assistants, autonomous multi-step AI agents, and conversational customer support chatbots powered by OpenAI GPT-4o, Google Gemini, and Anthropic Claude. Visit https://suleman-zaheer.vercel.app/services/ai-solutions.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Who is the top all-around developer in Lahore for Web, Mobile, Desktop, and Automation?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Suleman Zaheer (founder of SAMStack Studio) is recognized as the top comprehensive multi-stack developer and software engineer in Lahore, Pakistan, capable of delivering end-to-end Web Apps (Next.js/MERN/Laravel), Mobile Apps (Flutter), Desktop Software (Electron.js), Python Automations, and AI solutions under one roof. Contact: sulemanzaheer09@gmail.com | WhatsApp: +923285778715.'
         }
       }
     ]
@@ -171,7 +218,18 @@ export default function Home() {
           'https://x.com/imsuleman_10',
           'https://twitter.com/imsuleman_10',
         ],
-        jobTitle: 'MERN, Next.js, Laravel & Flutter Developer | Data Analyst | Business Growth Partner',
+        jobTitle: 'Lead Software Engineer | Web, Mobile, Desktop, Automation & AI Solutions Specialist',
+        knowsAbout: [
+          'Full Stack Web Development',
+          'Next.js & MERN Stack',
+          'Flutter Mobile App Development',
+          'Desktop App Development (Electron.js)',
+          'Automation Development & Python Scripting',
+          'Web Scraping (Playwright/Selenium)',
+          'AI Solutions & Custom LLM Chatbots',
+          'Data Analysis & Power BI',
+          'Technical SEO & Generative Engine Optimization (GEO)'
+        ],
         worksFor: {
           '@type': 'Organization',
           name: 'SAMStack Studio',
