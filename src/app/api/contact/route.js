@@ -50,7 +50,12 @@ export async function POST(request) {
       from: `"Suleman Zaheer Portfolio" <${gmailUser}>`,
       to: adminRecipient,
       replyTo: email,
-      subject: `⚡ New Project Inquiry from ${name}: "${subject || 'New Inquiry'}"`,
+      subject: `🔔 Client ne Form Fill kiya hai! Dashboard Check Karein — ${name} (${subject || 'New Lead'})`,
+      headers: {
+        'X-Priority': '1 (Highest)',
+        Importance: 'high',
+      },
+      text: `🔔 CLIENT NE FORM FILL KIYA HAI!\n\nClient Name: ${name}\nClient Email: ${email}\nSubject/Service: ${subject || 'General Inquiry'}\nTime: ${formattedDate}\n\nProject Message:\n${message}\n\nClient ne website par form fill kiya hai. Kripya apna Admin Dashboard check karein ya client ko email par reply karein.\nReply directly to: ${email}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -125,7 +130,12 @@ export async function POST(request) {
       from: `"Suleman Zaheer" <${gmailUser}>`,
       to: email,
       replyTo: gmailUser,
-      subject: `Thank you for reaching out, ${name}! | Suleman Zaheer`,
+      subject: `Aapka Form Receive Ho Gaya Hai! Thank You, ${name} | Suleman Zaheer`,
+      headers: {
+        'X-Priority': '1 (Highest)',
+        Importance: 'high',
+      },
+      text: `Hello ${name},\n\nThank you for reaching out! Aapka message receive ho chuka hai regarding "${subject || 'your project inquiry'}".\n\nI personally review every inquiry and will respond with timeline, scope, and technical recommendations within 12 to 24 hours.\n\nNeed urgent assistance? Chat on WhatsApp: https://wa.me/923285778715\n\nBest regards,\nSuleman Zaheer\nLead Software Engineer & Business Growth Partner\nShahdara Town, Lahore, Pakistan\nhttps://suleman-zaheer.vercel.app`,
       html: `
         <!DOCTYPE html>
         <html>

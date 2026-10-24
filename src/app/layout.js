@@ -423,7 +423,7 @@ export default function RootLayout({ children }) {
         'https://suleman-zaheer.vercel.app/',
         'https://suleman-zaheer.vercel.app/about',
         'https://suleman-zaheer.vercel.app/cv',
-        'https://www.wikidata.org/wiki/Q137024185',
+        'https://www.wikidata.org/wiki/Q141839182',
         'https://g.co/kgs/SulemanZaheer'
       ],
       mainEntityOfPage: {
