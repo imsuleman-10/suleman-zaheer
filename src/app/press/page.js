@@ -207,18 +207,22 @@ export default function PressPage() {
                   <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">WhatsApp</p>
                   <a href="https://wa.me/923285778715" className="text-white text-sm font-semibold">+92 328 5778715</a>
                 </div>
-                  {[
-                    { label: 'Wikipedia Profile (User:Imsuleman)', href: 'https://en.wikipedia.org/wiki/User:Imsuleman' },
-                    { label: 'Wikidata Entity (Q141839182)', href: 'https://www.wikidata.org/wiki/Q141839182' },
-                    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/suleman-zaheer-mughal' },
-                    { label: 'GitHub', href: 'https://github.com/imsuleman-10' },
-                    { label: 'Twitter / X', href: 'https://x.com/imsuleman_10' },
-                  ].map(({ label, href }) => (
-                    <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center justify-between text-gray-400 hover:text-primary text-sm transition-colors group">
-                      {label} <ExternalLink size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </a>
-                  ))}
+                <div>
+                  <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Verified Profiles</p>
+                  <div className="flex flex-col gap-2">
+                    {[
+                      { label: 'Wikipedia Profile (User:Imsuleman)', href: 'https://en.wikipedia.org/wiki/User:Imsuleman' },
+                      { label: 'Wikidata Entity (Q141839182)', href: 'https://www.wikidata.org/wiki/Q141839182' },
+                      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/suleman-zaheer-mughal' },
+                      { label: 'GitHub', href: 'https://github.com/imsuleman-10' },
+                      { label: 'Twitter / X', href: 'https://x.com/imsuleman_10' },
+                    ].map(({ label, href }) => (
+                      <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                        className="flex items-center justify-between text-gray-400 hover:text-primary text-sm transition-colors group">
+                        {label} <ExternalLink size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
